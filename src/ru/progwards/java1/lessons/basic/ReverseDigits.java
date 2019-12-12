@@ -1,4 +1,4 @@
-package ru.progwards.ru.progwards.java1.lessons.basics;
+package ru.progwards.java1.lessons.basic;
 /*
 * 1.1 Реализовать функцию
 public static int reverseDigits(int number), которая получает параметром number трёхзначное положительное число, а вернуть должна число в котором цифры идут в обратном порядке
