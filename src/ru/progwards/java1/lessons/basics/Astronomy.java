@@ -1,5 +1,5 @@
 package ru.progwards.java1.lessons.basics;
-//jupiter = 71492 нужно сделать его в инт, потом в дабл...
+//jupiter = 71492 нужно сделать его в инт, потом в дабл...так работает , но не так ...ну и ладно
 public class Astronomy {
 
     final static Double pi = 3.14;
@@ -25,25 +25,23 @@ public class Astronomy {
     }
 
     public static Double earthVsMercury(){
-        double ea = earth / mercury ;
-        ea = sphereSquare(ea);
-        System.out.println(ea);
+        double ea = earthSquare() / mercurySquare() ;
+//        System.out.println(ea);
         return ea;
     }
 
     public static Double earthVsJupiter(){
-        double ea = earth / jupiter ;
-        ea = sphereSquare(ea);
-        System.out.println(ea);
+        double ea = earthSquare() / jupiterSquare();
+//        System.out.println(ea);
         return ea;
     }
 
     public static void main(String[] args) {
 
-  /*  earthSquare();
-    mercurySquare();
-    jupiterSquare();
-    earthVsMercury();
-    earthVsJupiter();*/
+  //  earthSquare();
+  //  mercurySquare();
+  //  jupiterSquare();
+  //  earthVsMercury();
+  //  earthVsJupiter();
     }
 }
