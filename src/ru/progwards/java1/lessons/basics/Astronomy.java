@@ -1,4 +1,4 @@
-package ru.progwards.ru.progwards.java1.basics;
+package ru.progwards.java1.lessons.basics;
 
 //В этой задаче нужно будет реализовать функции, вычисляющих разные астрономические величины.
 // Во всех функциях, где это необходимо, считаем число π = 3.14

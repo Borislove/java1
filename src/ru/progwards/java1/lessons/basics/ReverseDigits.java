@@ -5,29 +5,27 @@ public static int reverseDigits(int number), которая получает п�
 *  (например, если на вход передаётся 123, то функция должна вернуть 321).
 *
 * 2 вариант преобразовать число в строку и сделать реверс
+* моя не понимать! 
 */
 
 public class ReverseDigits {
 
-            public static int reverseDigits(int number) {
+    final static int number = 123;
 
-            int a;
-            int b;
-            int c;
-
-            a = (number) / 100 ;
-            b = (number) % 100 / 10;
-            c = (number) % 10 ;
-
+    public static int reverseDigits(int number) {
+        int a;
+        int b;
+        int c;
+        a = (number) / 100 ;
+        b = (number) % 100 / 10;
+        c = (number) % 10 ;
 //            System.out.println("a = " +a);
 //            System.out.println("b = " +b);
 //            System.out.println("c = " +c);
-            System.out.println(c+""+b+""+a);
-            return 0;
-        }
-
+        System.out.println(c+""+b+""+a);
+        return 0;
+    }
     public static void main(String[] args) {
-        reverseDigits(123);
-        }
+        reverseDigits(number);
+    }
 }
-
