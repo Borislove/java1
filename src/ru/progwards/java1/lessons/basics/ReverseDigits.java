@@ -22,6 +22,6 @@ public class ReverseDigits {
     public static void main(String[] args) {
           reverseDigits(number);
 
-    //reverseDigits(213);
+    reverseDigits(212);
     }
 }
