@@ -31,7 +31,9 @@ public class AccuracyDoubleFloat {
 
         public static double calculateAccuracy(double radius){   //должно: -163798.93103027344
 
-        double difference = volumeBallDouble(R) - volumeBallFloat(Rf) ;
+        //double difference = volumeBallDouble(R) - volumeBallFloat(Rf) ;
+
+        double difference = volumeBallDouble(radius) -volumeBallFloat( (float)radius);
             System.out.println(difference);
             return difference;
         }
