@@ -1,6 +1,10 @@
 package ru.progwards.java1.lessons.basics;
 
 //что то намудрил...валидатор проверяй!
+//будет время из дабл во флоат и немного сократить программку
+// решаешь задачу, потом понимаешь что задача не решается ибо нужно не делить, а вычитать))
+
+
 public class AccuracyDoubleFloat {
 
     // формула объема шара  V = 4/3 pi * R* R* R
@@ -8,6 +12,8 @@ public class AccuracyDoubleFloat {
      final static Double R = 6371.2;
      final static Float Rf = 6371.2f;
      final static Float pif = 3.14f;
+
+     final static Double RRf =  R / Rf ;
 
           public static double volumeBallDouble(double radius){  // должно:  1.082759741481069E12
           double V = (double) 4/3 * pi * R * R *R ;
@@ -17,18 +23,22 @@ public class AccuracyDoubleFloat {
 
         public static float volumeBallFloat(float radius){   // должно: 1.08275990528E12
 
-                float vbf = (float) 4/3 * pif * Rf * Rf *Rf;
-                double vbf1 = (double)vbf;
+                float V = (float) 4/3 * pif * Rf * Rf *Rf;
+              double vbf1 = (double)V;
                 System.out.println(vbf1);
-                return vbf;
+                return V;
         }
-        
 
-     /*   public static double calculateAccuracy(double radius){   //должно: -163798.93103027344
-                } */
+        public static double calculateAccuracy(double radius){   //должно: -163798.93103027344
+
+        double difference = volumeBallDouble(R) - volumeBallFloat(Rf) ;
+            System.out.println(difference);
+            return difference;
+        }
         public static void main(String[] args) {
 
          volumeBallDouble(R);
          volumeBallFloat(Rf);
+         calculateAccuracy(volumeBallDouble(R) - volumeBallFloat(Rf));
     }
 }
