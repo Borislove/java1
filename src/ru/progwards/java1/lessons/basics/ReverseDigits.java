@@ -50,16 +50,13 @@ public class ReverseDigits {
         // System.out.println("sum " + sum);
         System.out.println(sum);
         //  System.out.println("после умножения" + c+""+b+""+a);
-        return number;
+        return sum;
     }
     public static void main(String[] args) {
-//         reverseDigits1(253);
-        //         reverseDigits1(739);
+        //reverseDigits(253);
+
         reverseDigits(number);
-        //   reverseDigits1(130);
-        //   reverseDigits1(123);
-        //reverseDigits1(230);
-        //reverseDigits1(679);
+
     }
 }
 
