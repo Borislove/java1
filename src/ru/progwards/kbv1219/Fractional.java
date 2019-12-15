@@ -8,7 +8,14 @@ package ru.progwards.kbv1219;
 public class Fractional {
 
     static double fractional(double num) {
-        return num - num %(100) ;
+    //    return num - num %(100) ;
+        //System.out.println(num);
+        num = num %100
+        ;
+        System.out.println(num);
+        return num;
+        //return num % 1;   //самое простое решение Оо
+
             }
 
      public static void main(String[] args) {
@@ -17,6 +24,7 @@ public class Fractional {
         fractional(1.0);
         fractional(1.53);
         fractional(98.45);
+        fractional(18.5);
 
-    }
+     }
 }

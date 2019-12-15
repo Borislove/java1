@@ -24,6 +24,7 @@ public class HelloWorld {
     }
     public static void main(String[] args) {
         helloWorld();
+        helloWorld();
         helloProgwards();
 
         HelloWorld.helloWorld();  //вызов из класса
@@ -34,6 +35,24 @@ public class HelloWorld {
         println("Приветствую!");
         int z = addition(2,3);
         System.out.println(z);
+
         System.out.println(addition2(3,3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
