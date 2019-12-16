@@ -26,5 +26,7 @@ public class Fractional {
         fractional(98.45);
         fractional(18.5);
 
+
+
      }
 }
