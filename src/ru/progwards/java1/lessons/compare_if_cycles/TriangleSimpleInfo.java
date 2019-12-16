@@ -22,14 +22,16 @@ public class TriangleSimpleInfo {
 //вроде работает
         if (a > b & a > c) {
             System.out.println(a);
-            return a;
+            //return a;
         } else if (b > a & b > c) {
             System.out.println(b);
-            return b;
+            //return b;
         } else {
             System.out.println(c);
-            return c;
+            //return c;
         }
+
+        return 0;
     }
 
     public static int minSide(int a, int b, int c) {  //вернуть наименьшую сторону треугольника
@@ -37,15 +39,16 @@ public class TriangleSimpleInfo {
 
         if (a < b & a < c) {
             System.out.println(a);
-            return a;
+          //  return a;
         } else if (b < a & b < c) {
             System.out.println(b);
-            return b;
+          //  return b;
         } else {
             System.out.println(c);
-            return c;
+          //  return c;
         }
 
+        return 0;
     }
 
     public static boolean isEquilateralTriangle(int a, int b, int c) {
@@ -56,8 +59,6 @@ public class TriangleSimpleInfo {
         //  return isEquilateralTriangle(a,b,c); //? вроде закрылось , с ошибкой походу....
         //return 0;  -
         //return null;
-
-
 
     }
 
@@ -75,6 +76,7 @@ public class TriangleSimpleInfo {
         maxSide(2,3,1);
         maxSide(3,1,2);
         maxSide(3,2,1);
+
 
         minSide(1, 2, 3);
         minSide(1, 3, 2);
