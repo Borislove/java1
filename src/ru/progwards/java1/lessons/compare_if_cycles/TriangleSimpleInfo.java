@@ -34,9 +34,12 @@ public class TriangleSimpleInfo {
         return 0;
     }
 
-    //public static boolean isEquilateralTriangle(int a, int b ,int c){
+    public static boolean isEquilateralTriangle(int a, int b ,int c){
 
-    //}
+        // TODO: 16.12.2019  да как же закрывать функции пустые...
+        return isEquilateralTriangle(a,b,c); //? вроде закрылось
+
+    }
 
     public static void main(String[] args) {
 
