@@ -19,10 +19,10 @@ public class TriangleSimpleInfo {
     public static int maxSide(int a, int b, int c) {  //вернуть наибольшую сторону треугольника
 
 //вроде работает
-        if (a > b & a > c) {
+        if (a >= b & a >= c) {
             System.out.println(a);
             return a;
-        } else if (b > a & b > c) {
+        } else if (b >= a & b >= c) {
             System.out.println(b);
             return b;
         } else {
