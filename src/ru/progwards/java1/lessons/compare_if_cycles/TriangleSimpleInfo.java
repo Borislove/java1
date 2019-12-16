@@ -52,21 +52,13 @@ public class TriangleSimpleInfo {
 
     public static boolean isEquilateralTriangle(int a, int b, int c) {
 
-        //которая получает параметрами длины сторон треугольника, а вернуть должна true, если треугольник равносторонний и false в противном случае.
-
-        if(a==b) {
-        System.out.println("a==b");
-    return true;}
-        if (b==c) {
-        System.out.println("b==c");
-           return true;}
-        if(a==c) {
-        System.out.println("a==c");
-            return true;}
-
-
-        return true;
-
+        if (a == b || a == c || c == b) {
+            System.out.println("стороны равны " + a + " " + b + " " + c);
+            return true;
+        }else {
+            System.out.println("false "+ a + " " + b + " " + c);
+            return false;
+        }
     }
 
 
@@ -93,5 +85,9 @@ public class TriangleSimpleInfo {
         minSide(2,3,2);
 
         isEquilateralTriangle(a,b,c);
+
+        isEquilateralTriangle(1,2,3);
+        isEquilateralTriangle(2,2,3);
+        isEquilateralTriangle(3,2,3);
     }
 }
