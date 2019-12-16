@@ -52,12 +52,15 @@ public class TriangleSimpleInfo {
 
     public static boolean isEquilateralTriangle(int a, int b, int c) {
 
-        if (a == b || a == c || c == b) {
-            System.out.println("стороны равны " + a + " " + b + " " + c);
+        //если 3 стороны равны, равностороний
+        if (a == b & a == c & c == b) {
+            System.out.println("равностороний " + a + " " + b + " " + c);
             return true;
         }else {
             System.out.println("false "+ a + " " + b + " " + c);
             return false;
+
+            //если 2 стороны равны, равнобедренный...
         }
     }
 
@@ -89,5 +92,7 @@ public class TriangleSimpleInfo {
         isEquilateralTriangle(1,2,3);
         isEquilateralTriangle(2,2,3);
         isEquilateralTriangle(3,2,3);
+
+        isEquilateralTriangle(3,3,3);
     }
 }
