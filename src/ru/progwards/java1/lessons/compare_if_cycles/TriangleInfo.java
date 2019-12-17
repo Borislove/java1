@@ -32,7 +32,7 @@ public class TriangleInfo {
 
     }
 
-    public static boolean isRighTriangle(int a, int b, int c) {
+    public static boolean isRightTriangle(int a, int b, int c) {
 
         //int e = 2; //квадрат
         //c = Math.pow(c,2);
@@ -76,9 +76,9 @@ if (a==b || b==c || a==c) {
     public static void main(String[] args) {
 
         isTriangle(1,2,3);
-        isRighTriangle(1,2,3);
-        isRighTriangle(3,4,5); // сработало Оо
-        isRighTriangle(6,8,10);
+        isRightTriangle(1,2,3);
+        isRightTriangle(3,4,5); // сработало Оо
+        isRightTriangle(6,8,10);
 
         isIsoscelesTriangle(2,2,3);
         isIsoscelesTriangle(2,3,2);
