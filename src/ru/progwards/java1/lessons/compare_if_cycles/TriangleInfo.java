@@ -22,17 +22,10 @@ public class TriangleInfo {
 
         // TODO: 17.12.2019 С ЭТИМ методом что то не так
 
-        if (a+b<c){
-             //|| a+c>=b & a>0 &b>0 &c>0|| b+c>=a & a>0 &b>0 &c>0) {
-
-            System.out.println("ТрЭугольника нельзя построить!!!а какой?" + a +""+b+""+c);
-
-            return false;
-
-        } else {
-            System.out.println("Стройся уже!");
-            return true;
+      if (a+b>c &a>0 & b>0 & c>0) {
+           return true;
         }
+        return false;
 
     }
 
