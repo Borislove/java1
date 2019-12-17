@@ -21,7 +21,8 @@ public class TriangleInfo {
     public static boolean isTriangle(int a, int b, int c) {
 
 
-        if (a+b>=c & a+c>=b) {
+        // TODO: 17.12.2019 С ЭТИМ методом что то не так
+        if (a+b>=c || a+c>=b || b+c>=a) {
             System.out.println("Можно построить треугольник " +"длина A = "+ a +" длина B =  "+b+" длина C = "+c);
             return true;
 
@@ -76,6 +77,7 @@ if (a==b || b==c || a==c) {
     public static void main(String[] args) {
 
         isTriangle(1,2,3);
+        isTriangle(-3,2,-2);
         isRightTriangle(1,2,3);
         isRightTriangle(3,4,5); // сработало Оо
         isRightTriangle(6,8,10);
