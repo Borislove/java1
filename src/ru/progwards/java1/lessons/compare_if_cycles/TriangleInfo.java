@@ -22,7 +22,7 @@ public class TriangleInfo {
 
         // TODO: 17.12.2019 С ЭТИМ методом что то не так
 
-        if (a+b<=c & a>0 &b>0 &c>0){
+        if (a+b<c & a>0 &b>0 &c>0){
              //|| a+c>=b & a>0 &b>0 &c>0|| b+c>=a & a>0 &b>0 &c>0) {
 
                         System.out.println("Можно построить треугольник " +"длина A = "+ a +" длина B =  "+b+" длина C = "+c);
