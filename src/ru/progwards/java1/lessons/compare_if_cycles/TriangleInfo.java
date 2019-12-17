@@ -1,4 +1,6 @@
 package ru.progwards.java1.lessons.compare_if_cycles;
+// TODO: 17.12.2019 начато
+// TODO: 17.12.2019 закончено
 
 public class TriangleInfo {
 
@@ -6,19 +8,9 @@ public class TriangleInfo {
 
     public static boolean isTriangle(int a, int b, int c) {
 
-        // TODO: 17.12.2019
-
-        //все ок
-        //if (a + b >= c & a > 0 & b > 0 & c > 0 || a + c >= b & a > 0 & b > 0 & c > 0 || b + c >= a & a > 0 & b > 0 & c > 0) {
-        // System.out.println("Можно построить треугольник! congratulation! " + "длина A = " + a + " длина B =  " + b + " длина C = " + c);
-        //return true;
-
-        //if (a+b>c || a+c>b || a+c>b & a>0 & b>0 &c>0) {
-
         int ab = a+b;
         int ac = a+c;
         int cb = b+c;
-
 
         if (ab>c & c>0 & ac>b & b>0 & cb>a & c>0) {
             System.out.println("Op treugolni4ka");
@@ -32,10 +24,11 @@ public class TriangleInfo {
 
     public static boolean isRightTriangle(int a, int b, int c) {
 
+
         //int e = 2; //квадрат
         //c = Math.pow(c,2);
        // System.out.println("c^2 = a^2 + b^2  " + (Math.pow(c,2))  == (Math.pow(a,2)+ (Math.pow(b,2))));
-        // TODO: 17.12.2019 тест квадратов  , незнаю
+        // TODO: 17.12.2019 тест квадратов не актуально
 //        System.out.println(" a^2 = " + Math.pow(a,e));
 //        System.out.println(" b^2 = " + Math.pow(b,e));
 //        System.out.println(" c^2 = " + Math.pow(c,e));
