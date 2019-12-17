@@ -21,9 +21,9 @@ public class TriangleInfo {
     public static boolean isTriangle(int a, int b, int c) {
 
 
-        a = a+b;
-        b = b+c;
-        c = a+b;
+//        a = a+b;
+//        b = b+c;
+//        c = a+b;
         // TODO: 17.12.2019 С ЭТИМ методом что то не так
         if (a+b>c || a+c>b || b+c>a) {
             System.out.println("Можно построить треугольник " +"длина A = "+ a +" длина B =  "+b+" длина C = "+c);
