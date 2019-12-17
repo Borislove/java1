@@ -23,11 +23,10 @@ public class AccuracyDoubleFloat {
 
         public static float volumeBallFloat(float radius){   // должно: 1.08275990528E12
 
-                float V = (float) 4/3 * pif * Rf * Rf *Rf;
-              //double vbf1 = (double)V;
-            System.out.println(V);                      //1.08275991E12
-         //     System.out.println("vbf1" + vbf1);
-                return V;
+                float v = (float) 4/3 * pif * radius *radius*radius ;
+
+            System.out.println(v);                      //1.08275991E12
+                return v;
         }
 
         public static double calculateAccuracy(double radius){   //должно: -163798.93103027344

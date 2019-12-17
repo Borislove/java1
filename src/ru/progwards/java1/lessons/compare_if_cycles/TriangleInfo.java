@@ -9,17 +9,22 @@ public class TriangleInfo {
         // TODO: 17.12.2019
 
         //все ок
-         //if (a + b >= c & a > 0 & b > 0 & c > 0 || a + c >= b & a > 0 & b > 0 & c > 0 || b + c >= a & a > 0 & b > 0 & c > 0) {
-           // System.out.println("Можно построить треугольник! congratulation! " + "длина A = " + a + " длина B =  " + b + " длина C = " + c);
-            //return true;
+        //if (a + b >= c & a > 0 & b > 0 & c > 0 || a + c >= b & a > 0 & b > 0 & c > 0 || b + c >= a & a > 0 & b > 0 & c > 0) {
+        // System.out.println("Можно построить треугольник! congratulation! " + "длина A = " + a + " длина B =  " + b + " длина C = " + c);
+        //return true;
 
-        if (a+b>c || a+c>b || a+c>b & a>0 & b>0 &c>0) {
+        //if (a+b>c || a+c>b || a+c>b & a>0 & b>0 &c>0) {
 
-            System.out.println("stroim");
-        return true;
+        int ab = a+b;
+        int ac = a+c;
+        int cb = b+c;
 
 
-    } else {
+        if (ab>c & c>0 & ac>b & b>0 & cb>a & c>0) {
+            System.out.println("Op treugolni4ka");
+            return  true; }
+
+          else {
             System.out.println("Треугольник построить нельзя!" +"А = " +a  + " B = " + b + " С  = "  + c );
             return false;
         }
@@ -64,13 +69,24 @@ public class TriangleInfo {
     }
     public static void main(String[] args) {
 
-        isTriangle(1,1,2);
+        isTriangle(13,2,10);
+        isTriangle(3,4,5);
+        isTriangle(5,5,5);
+        isTriangle(2,3,3);
         isTriangle(1,2,3);
+        isTriangle(1,1,2);
+        isTriangle(0,2,2);
+        isTriangle(1000,2,2);
+        isTriangle(5,7,13);  //тоже нельзя
+        isTriangle(2,1,7);  //такой нельзя строить
+        isTriangle(1,2,7);
+        isTriangle(7,1,2);
+       /* isTriangle(1,2,3);
         isTriangle(-3,2,-2);
         isTriangle(2,-1,2);
         isTriangle(-2,-2,-2);
         isTriangle(0,0,0);
-        isTriangle(0,2,-3);
+        isTriangle(0,2,-3);*/
      //   isRightTriangle(1,2,3);
      //   isRightTriangle(3,4,5); // сработало Оо
      //   isRightTriangle(6,8,10);
