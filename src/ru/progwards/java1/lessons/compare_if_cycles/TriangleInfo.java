@@ -21,13 +21,16 @@ public class TriangleInfo {
     public static boolean isTriangle(int a, int b, int c) {
 
 
+        a = a+b;
+        b = b+c;
+        c = a+b;
         // TODO: 17.12.2019 С ЭТИМ методом что то не так
-        if (a+b>=c || a+c>=b || b+c>=a) {
+        if (a+b>c || a+c>b || b+c>a) {
             System.out.println("Можно построить треугольник " +"длина A = "+ a +" длина B =  "+b+" длина C = "+c);
             return true;
 
         } else {
-            System.out.println("ТрЭугольника нельзя построить!!!" + a +""+b+""+c);
+            System.out.println("ТрЭугольника нельзя построить!!!а какой?" + a +""+b+""+c);
             return false;
         }
 
