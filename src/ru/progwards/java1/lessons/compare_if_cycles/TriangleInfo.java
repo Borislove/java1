@@ -22,10 +22,13 @@ public class TriangleInfo {
 
         // TODO: 17.12.2019 С ЭТИМ методом что то не так
 
-      if (a+b>c &a>0 & b>0 & c>0) {
-           return true;
+
+        //бред какойто!
+      if (a+b>=c &a>0 & b>0 & c>0) {
+          System.out.println("Строим!");
+           return false;
         }
-        return false;
+        return true;
 
     }
 
