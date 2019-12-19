@@ -16,6 +16,9 @@ public class TriangleInfo {
             System.out.println("Op treugolni4ka");
             return  true; }
 
+        //if( (ab&ac&cb)>0)  {}
+
+
           else {
             System.out.println("Треугольник построить нельзя!" +"А = " +a  + " B = " + b + " С  = "  + c );
             return false;
@@ -38,6 +41,7 @@ public class TriangleInfo {
         b = b * b;
         c = c * c;
 
+
         if (a == b+c  || b ==a+c || c ==a+b )  {
             System.out.println("опа истина! треугольник прямоугольный! А какой? = "   );
         return true;
@@ -59,6 +63,7 @@ public class TriangleInfo {
     System.out.println("Ошибко!");
         return false;
 }
+
     }
     public static void main(String[] args) {
 

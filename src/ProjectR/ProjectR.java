@@ -3,6 +3,8 @@ package ProjectR;
     //Интересно енам добавить...но пока и так хорошо идет!
     //по классам тоже бы распределить все...в одной куче
     //хм идея сделать меню консольное , т.е меню, что попить поесть...подсказки в проекте Хелпер
+//чутка плаваю, ооп надо разбирать
+
 
     public class ProjectR {
 
@@ -39,6 +41,9 @@ package ProjectR;
             System.out.println("Кофе стоит " +  aEuro + " " + sEuro);
 
             System.out.println(napitok + " "+ price +" " + aEuro + " " + sEuro);   //куча пробелов!!!
+
+            System.out.println();
+            System.out.println(Drinks.k);
 
         }
     }
