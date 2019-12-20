@@ -1,4 +1,4 @@
-package ru.progwards.T4;
+package ru.progwards;
 
 public class LogicalOperators {
 
