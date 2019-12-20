@@ -49,8 +49,9 @@ public class Sleep {
             System.out.print(ANSI_RED+"!");
             i++;
 
-            if(i==10) {
+            if(i==11) {
                 System.out.println(ANSI_RED + "ERROR");
+                break;
             }
         
 
