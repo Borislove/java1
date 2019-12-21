@@ -22,13 +22,25 @@ public class Double {
     static double d2 = 5.6789E2;
     static double d3 = 56789E-2;
     static double d4 = 5678.9D;  // D || d
-    //static double MAX_VALUE ;
     //static double MIN_VALUE;
     static double d5 =1.7E+308;  //max
     static double d6 =-1.7E+308; //min
+    //static double SIZE = 1;
+    //static double BYTES = 1;
 
-    //max min
+//    static double MIN_VALUE;
+//  static double MAX_VALUE ;
+//max min
 
+    // TODO: 22.12.2019 Дедовский метод вычисляющий точность
+    static double precition(double d) {
+        double p = d;
+        while (Math.abs(d)>0){
+            p = d;
+            d /=2;
+        }
+        return p;
+    }
 
     public static void main(String[] args) {
         System.out.println("Немного double");
@@ -38,13 +50,16 @@ public class Double {
         System.out.println(d3);
         System.out.println(d4);
 
+  //      System.out.println(MIN_VALUE);
+//        System.out.println(MAX_VALUE);
 
-      //  System.out.println(MAX_VALUE);
-
-
+        //System.out.println(SIZE);
+        //System.out.println(BYTES);
 
 
         //  customFormat("###,###.###", d1);   //
+
+        System.out.println(precition(5.0));
 
 
 
