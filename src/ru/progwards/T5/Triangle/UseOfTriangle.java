@@ -1,5 +1,7 @@
 package ru.progwards.T5.Triangle;
 
+import ru.progwards.T5.Triangle.Triangle;
+
 public class UseOfTriangle {
     public static void main(String[] args) {
         Triangle triangle1 = new Triangle(3,4,5);
