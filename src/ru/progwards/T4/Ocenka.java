@@ -1,4 +1,4 @@
-package ru.progwards.kbv1219;
+package ru.progwards.T4;
 //2 часа не мог вернуть функцию...и делал сравнение чтоб понять ...ох
 public class Ocenka {
 

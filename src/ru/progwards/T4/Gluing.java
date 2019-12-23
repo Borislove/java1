@@ -1,6 +1,7 @@
 package ru.progwards.T4;
 
-public class Summa {
+//склеивание двух чисел
+public class Gluing {
 
     static int a;
     static int b;
@@ -17,7 +18,7 @@ addAsStrings(2,3);
 }
 
 
-// TODO: 23.12.2019  Первое решение... 
+// TODO: 23.12.2019  Первое решение...
 /*
 static int addAsStrings(int n1, int n2) {
         
