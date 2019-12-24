@@ -23,9 +23,12 @@ public class Duck extends Animal {
     public FoodKind getFoodKind(){
         return CORN;
     }
+    public double getFoodCoeff(){
+        return 0.04;
+    }
 
-   public String toString() {
+  /* public String toString() {
        return ("I am " + getKind() + ", eat " + getFoodKind());
     // return "Кря кря!";
-   }
+   }*/
 }

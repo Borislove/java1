@@ -25,10 +25,15 @@ public class Cow extends Animal {
         return HAY;
     }
 
-    public String toString(){
+    @Override
+    public double getFoodCoeff(){
+        return 0.05;
+    }
+
+  /*  public String toString(){
         return ("I am " + getKind()+ ", eat "+ getFoodKind());
       //  return "Му-му...";
-    }
+    }*/
 }
 
 
