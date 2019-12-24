@@ -18,18 +18,45 @@ public static boolean isGoldenTriangle(int a, int b, int c), которая бу
 public class CyclesGoldenFibo {
 
 
+    public static  int n;
+    public static int a;
+    public static int b;
+
     public static boolean containsDigit(int number, int digit) {
 
         if(number==digit) {
             return true;}
-
         return false;
-
-
     }
 
+//возвращать n-ое число Фибоначчи (нумерация начинается с 1, то есть при n = 3 должно вернуться число Фибоначчи 2, а при n = 10 число 55).
+    public static int fiboNumber(int n) {
+// Числа Фибоначчи это ряд чисел 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
+
+        int fibo;
+        int a = 1;
+        int b = 0;
+
+        for (int i = 0; i < n; i++) {
+            fibo = a + b;
+            a = b;
+            b = fibo;
+            System.out.println("Fibo = " + fibo);
+            continue;
+
+        }
+
+        return n;
+    }
+
+//которая будет возвращать true, если треугольник со сторонами a, b, c является Золотым.
+// Определим критерии. Он должен быть равнобедренным и отношение ребра к основанию должно лежать между значениями 1.61703 и 1.61903.
+    public static boolean isGoldenTriangle(int a, int b, int c){
+return false;
+    }
+
+
     public static void main(String[] args) {
-
-
+        fiboNumber(10);
     }
 }
