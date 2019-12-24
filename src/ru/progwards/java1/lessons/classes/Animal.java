@@ -22,7 +22,7 @@ public class Animal {
     //AnimalKind type;  // вид/тип животного
    // FoodKind eatType;   //тип еды
     public static double weight;
-    public static double weightEat;
+    public static double weightEat;  //вес еды
     //сохраняет вес животно
     public Animal(double weight){
     this.weight = weight;
@@ -35,6 +35,8 @@ public class Animal {
 
     //возвращает коэффициент веса еды к весу тела животного. Для класса Animal это 0.02
     public double getFoodCoeff(){
+
+      //  return calculateFoodWeight();
         return 0.02;
     }
 
@@ -43,7 +45,7 @@ public class Animal {
     public double calculateFoodWeight(){
         weightEat = weight*getFoodCoeff();
         //return weightEat;
-        return weight*getFoodCoeff();
+        return weightEat;
     }
 
 
@@ -56,8 +58,8 @@ public class Animal {
     }
 
     public static void main(String[] args) {
-     /* Animal animal = new Animal(23);
-        System.out.println(animal);*/
+     Animal animal = new Animal(23);
+        System.out.println(animal);
 
         //new Cow(120);
         Animal animal1 = new Cow(150);
@@ -75,13 +77,11 @@ public class Animal {
     }*/
 
   //убрать фул будет показывать /должно быть toStringFull
-  public String toString(){
+  public String toStringFull(){
       return ("I am "+getKind()+",eat "+getFoodKind()+" "+calculateFoodWeight());
   }
 
+  public String toString(){
+      return toStringFull();
+  }
 }
-
-   /* Для класса Animal, создать метод
-public String toStringFull(), что бы он возвращал информацию о животном в формате:
-        I am <AnimalKind>, eat <FoodKind> <CalculateFoodWeight>
-*/
