@@ -6,7 +6,7 @@ import static ru.progwards.java1.lessons.classes.FoodKind.CORN;
 //хомяк
 public class Hamster extends Animal {
 
-    double weight;
+  //  double weight;
 
     public Hamster(double weight) {
         super(weight);
@@ -24,13 +24,8 @@ public class Hamster extends Animal {
         return CORN;
     }
 
-  /*  public String toString() {
-    return "я хомяк!";
-
-    }*/
-
     public String toString(){
-        //  System.out.println("I am" + getKing()+ " , eat"+ getFoodKind());
         return ("I am " + getKind()+ " , eat "+ getFoodKind());
+        //return "я хомяк!";
     }
 }

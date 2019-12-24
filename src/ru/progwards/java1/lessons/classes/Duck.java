@@ -7,7 +7,7 @@ import static ru.progwards.java1.lessons.classes.FoodKind.CORN;
 //утка
 public class Duck extends Animal {
 
-    double weight;
+  //  double weight;
 
     public Duck(double weight) {
         super(weight);
@@ -24,11 +24,8 @@ public class Duck extends Animal {
         return CORN;
     }
 
-   /* public String toString(){
-        return "Кря кря!";
-    }*/
-
-  /* public String toString() {
-       return ("I am " + getKing() + " , eat " + getFoodKind());
-   }*/
+   public String toString() {
+       return ("I am " + getKind() + " , eat " + getFoodKind());
+    // return "Кря кря!";
+   }
 }
