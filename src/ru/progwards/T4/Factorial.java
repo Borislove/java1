@@ -1,31 +1,30 @@
-package ru.progwards.kbv1219;
+package ru.progwards.T4;
 
 
 //дописать надо!!!
-public class Factorial2 {
+// факториал n это произведение всех чисел от 1 до n и факториал 0 == 1
+public class Factorial {
 
     static Long n;
 
     static long factorial(long n) {
 
 
+        // TODO: 16.12.2019  решение
 //        //чужое решение
 //        if (n <= 1)
 //            return 1;
 //        else
 //            return n * factorial(n - 1);
 
-        // TODO: 16.12.2019 выше решено
-
-
-//не понимаю!
+        //чужое решение
         if (n == 0)
             return 0;
         if (n > 1) {
           n = n * factorial(--n);
        }
         System.out.println(n);
-       return n;
+           return n;
 
 
     }

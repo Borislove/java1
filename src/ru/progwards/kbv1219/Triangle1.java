@@ -1,6 +1,5 @@
 package ru.progwards.kbv1219;
 
-import ru.progwards.kbv1219.Triangle.Triangle;
 
 public class Triangle1 {
     //свойства

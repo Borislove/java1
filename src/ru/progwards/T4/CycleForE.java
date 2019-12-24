@@ -7,7 +7,9 @@ public class CycleForE {
 
     public static void main(String[] args) {
         double startSum = 1;
-        int intervalsInYear = DAYS_IN_YEAR;
+        //int intervalsInYear = DAYS_IN_YEAR;
+      //  int intervalsInYear = HOURS_IN_YEAR;
+        int intervalsInYear = SECONDS_IN_YEAR;
         double sumIncreaseInInterval = 1d / intervalsInYear;
 
         double sumIncrease = 0;
