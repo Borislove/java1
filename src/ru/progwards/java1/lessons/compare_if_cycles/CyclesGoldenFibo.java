@@ -3,9 +3,10 @@ public class CyclesGoldenFibo {
 
    public static boolean containsDigit(int number, int digit) {
 
-        if (number == digit)
+        if (number == digit) {
             System.out.println("true");
-            return true;
+            return true;}
+       return false;
    }
 
     public static int fiboNumber(int n) {
