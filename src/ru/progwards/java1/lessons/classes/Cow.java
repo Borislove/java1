@@ -26,7 +26,7 @@ public class Cow extends Animal {
     }
 
     public String toString(){
-        return ("I am " + getKind()+ " , eat "+ getFoodKind());
+        return ("I am " + getKind()+ ", eat "+ getFoodKind());
       //  return "Му-му...";
     }
 }

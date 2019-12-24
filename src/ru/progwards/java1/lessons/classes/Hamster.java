@@ -25,7 +25,7 @@ public class Hamster extends Animal {
     }
 
     public String toString(){
-        return ("I am " + getKind()+ " , eat "+ getFoodKind());
+        return ("I am " + getKind()+ ", eat "+ getFoodKind());
         //return "я хомяк!";
     }
 }
