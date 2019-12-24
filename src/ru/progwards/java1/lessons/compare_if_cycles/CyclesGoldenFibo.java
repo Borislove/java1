@@ -22,10 +22,15 @@ public class CyclesGoldenFibo {
     public static int a;
     public static int b;
 
+    public static int number;
+    public static int digit;
+
     public static boolean containsDigit(int number, int digit) {
 
         if(number==digit) {
+            System.out.println("true");
             return true;}
+        System.out.println("false");
         return false;
     }
 
@@ -57,6 +62,8 @@ return false;
 
 
     public static void main(String[] args) {
-        fiboNumber(10);
+        //fiboNumber(10);
+        containsDigit(32,32);
+        containsDigit(32,31);
     }
 }
