@@ -27,11 +27,14 @@ public class CyclesGoldenFibo {
 
     public static boolean containsDigit(int number, int digit) {
 
-        if(number==digit) {
+        if (number == digit) {
+            System.out.println("false");
+            return false;
+        } else {
+
             System.out.println("true");
-            return true;}
-        System.out.println("false");
-        return false;
+            return true;
+        }
     }
 
 //возвращать n-ое число Фибоначчи (нумерация начинается с 1, то есть при n = 3 должно вернуться число Фибоначчи 2, а при n = 10 число 55).
