@@ -1,10 +1,7 @@
 package ru.progwards.java1.lessons.basics;
 
-//почти...
-
+//через реверс
  /* public class ReverseDigits {
-
-
     static int number ;
         public static int reverseDigits (int number){
 
@@ -18,16 +15,14 @@ package ru.progwards.java1.lessons.basics;
          System.out.println(reva);
             return reva;
         }
-
-
     public static void main(String[] args) {
           reverseDigits(number);
 
     reverseDigits(21312562);
-
     }
 }
   */
+ //------------------------------------------------------------------------
 
  //ver2  через деление / умножение
 public class ReverseDigits {
@@ -54,7 +49,6 @@ public class ReverseDigits {
     }
     public static void main(String[] args) {
         //reverseDigits(253);
-
         reverseDigits(number);
 
     }
