@@ -30,10 +30,10 @@ public class Cow extends Animal {
         return 0.05;
     }
 
-  /*  public String toString(){
+   /*public String toString(){
         return ("I am " + getKind()+ ", eat "+ getFoodKind());
       //  return "Му-му...";
-    }*/
+    } */
 }
 
 

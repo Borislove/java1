@@ -7,58 +7,61 @@ import static ru.progwards.java1.lessons.classes.FoodKind.UNKNOWN;
 //животные
 public class Animal {
 
-   // TODO: 24.12.2019 добавить вес  //конструктор
-    Animal(AnimalKind animalKind,FoodKind foodKind,double FoodCoeff){
-         getKind();
-         getFoodKind();
-         getFoodCoeff();
+    // TODO: 24.12.2019 добавить вес  //конструктор
+    Animal(AnimalKind animalKind, FoodKind foodKind, double FoodCoeff) {
+        getKind();
+        getFoodKind();
+        getFoodCoeff();
     }
-/*
-    Animal Cow;
-    Animal Duck;
-    Animal Hamster;
 
-*/
+    /*
+        Animal Cow;
+        Animal Duck;
+        Animal Hamster;
+
+    */
     //AnimalKind type;  // вид/тип животного
-   // FoodKind eatType;   //тип еды
+    // FoodKind eatType;   //тип еды
     public static double weight;
     public static double weightEat;  //вес еды
+
     //сохраняет вес животно
-    public Animal(double weight){
-    this.weight = weight;
+    public Animal(double weight) {
+        this.weight = weight;
     }
 
     //возвращает вес животного
-    public double getWeight(){
-      return weight;
+    public double getWeight() {
+        return weight;
     }
 
     //возвращает коэффициент веса еды к весу тела животного. Для класса Animal это 0.02
-    public double getFoodCoeff(){
+    public double getFoodCoeff() {
 
-      //  return calculateFoodWeight();
+        //  return calculateFoodWeight();
         return 0.02;
     }
 
     //рассчитывает необходимый вес еды,
     // по формуле - вес-еды = вес-животного * коэффициент веса тела.
-    public double calculateFoodWeight(){
-        weightEat = weight*getFoodCoeff();
+    public double calculateFoodWeight() {
+        weightEat = weight * getFoodCoeff();
         //return weightEat;
         return weightEat;
     }
 
 
-    public  AnimalKind getKind() {
-     return ANIMAL;
+    public AnimalKind getKind() {
+        return ANIMAL;
     }
 
-    public  FoodKind getFoodKind(){
-    return UNKNOWN;
+    public FoodKind getFoodKind() {
+        return UNKNOWN;
     }
+
 
     public static void main(String[] args) {
-     Animal animal = new Animal(23);
+        Animal animal = new Animal(23);
         System.out.println(animal);
 
         //new Cow(120);
@@ -71,17 +74,35 @@ public class Animal {
         Animal animal3 = new Hamster(1);
         System.out.println(animal3);
 
+
+
+
+
+
     }
-  /*  public String toString(){
-       return ("I am " + getKind()+ ", eat "+ getFoodKind());
+
+    // TODO: 25.12.2019 подсказка с переопределинем
+/*
+//--------------------------------------------------------------------------
+@Override
+    public String toString() {
+        return ("I am " + getKind() + ", eat " + getFoodKind());
+    }
+
+//--------------------------------------------------------------------------
+
+    public String toStringFull  () {
+        return toString() + " " + calculateFoodWeight();
     }*/
 
-  //убрать фул будет показывать /должно быть toStringFull
-  public String toStringFull(){
-      return ("I am "+getKind()+", eat "+getFoodKind()+" "+calculateFoodWeight());
-  }
-
-  public String toString(){
-      return toStringFull();
-  }
+    public String toString () {
+        return ("I am " + getKind() + ", eat " + getFoodKind());
+    }
 }
+
+
+
+
+
+
+
