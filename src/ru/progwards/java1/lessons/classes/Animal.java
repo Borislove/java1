@@ -74,29 +74,15 @@ public class Animal {
         Animal animal3 = new Hamster(1);
         System.out.println(animal3);
 
-
-
-
-
-
     }
 
-    // TODO: 25.12.2019 подсказка с переопределинем
-/*
-//--------------------------------------------------------------------------
-@Override
-    public String toString() {
-        return ("I am " + getKind() + ", eat " + getFoodKind());
-    }
-
-//--------------------------------------------------------------------------
-
-    public String toStringFull  () {
-        return toString() + " " + calculateFoodWeight();
-    }*/
-
+    @Override
     public String toString () {
         return ("I am " + getKind() + ", eat " + getFoodKind());
+    }
+
+    public String toStringFull  () {
+       return toString()+ " "+calculateFoodWeight();
     }
 }
 
