@@ -2,7 +2,6 @@ package ru.progwards.T6;
 
 public class ArrayEnumeration {
 
-
     private static void printArray(int[] intArray) {
         for (int i = 0; i < intArray.length; i++) {
             System.out.println("Элемент номер " + i + " = " + intArray[i]);

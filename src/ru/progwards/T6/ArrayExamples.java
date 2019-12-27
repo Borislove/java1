@@ -1,7 +1,9 @@
 package ru.progwards.T6;
 
 public class ArrayExamples {
+
     private static void printArray(int[] intArray){
+
         for(int value: intArray){
             System.out.println("Элемент "+ value);
         }
