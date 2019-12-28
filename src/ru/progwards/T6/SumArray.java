@@ -4,6 +4,9 @@ package ru.progwards.T6;
 //
 //public int sumArrayItems(int[] a)
 
+// TODO: 28.12.2019  пока не забыл , int[] array  - java
+                                  //   int array []  - взято с СИ
+
 
 
 //ура решена!
