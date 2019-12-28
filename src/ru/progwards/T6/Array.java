@@ -20,5 +20,14 @@ public class Array {
         System.out.println("simpleArray2[2] = "+stringArray2[2]);
 
 
+
+        // int a1[],a2[],a3[];
+
+        //int a[] = {11, 22, 33};
+        //int item = a[1];
+
+                // int []a = {10, 26, 12, 35};
+                //int a[][][];
+
     }
 }
