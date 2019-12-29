@@ -17,6 +17,6 @@ public class Frame extends JFrame {
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         //.setLocation(900,500);   //расположение фрейма
         f.setLocationRelativeTo(null);  //centre
-        
+
     }
 }
