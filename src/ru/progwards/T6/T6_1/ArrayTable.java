@@ -1,4 +1,4 @@
-package ru.progwards.T6;
+package ru.progwards.T6.T6_1;
 
 //и что с этим делать? таблица 8*8
 public class ArrayTable {

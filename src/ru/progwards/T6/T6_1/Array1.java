@@ -1,4 +1,4 @@
-package ru.progwards.T6;
+package ru.progwards.T6.T6_1;
 
 //размер одного массива
 public class Array1 {

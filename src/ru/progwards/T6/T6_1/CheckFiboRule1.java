@@ -1,4 +1,4 @@
-package ru.progwards.T6;
+package ru.progwards.T6.T6_1;
 
 public class CheckFiboRule1 {
     private static boolean checkFibo(int[] intArray) {

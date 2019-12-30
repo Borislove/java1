@@ -1,6 +1,6 @@
 //https://www.youtube.com/watch?v=qiUfLIbbedw
 
-package ru.progwards.T6;
+package ru.progwards.T6.T6_1;
 
 import java.util.Scanner;
 

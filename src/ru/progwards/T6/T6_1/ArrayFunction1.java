@@ -1,4 +1,4 @@
-package ru.progwards.T6;
+package ru.progwards.T6.T6_1;
 
 //возврат массива функцией
 public class ArrayFunction1 {

@@ -1,4 +1,4 @@
-package ru.progwards.T6;
+package ru.progwards.T6.T6_1;
 
 // TODO: 28.12.2019  изучаю массивы
 
