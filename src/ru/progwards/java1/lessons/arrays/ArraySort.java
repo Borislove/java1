@@ -23,13 +23,16 @@ public class ArraySort {
     int[] b = {n};*/
 
     //public static int[]a = {1,2,3,4,5,6,7,8,9};
-    public static int[]a = {9,8,7,6,5,4,3,2,1};
+    //public static int[]a = {9,8,7,6,5,4,3,2,1};
 
-
+    public static int[]a = {50,-35,-12,45,-45,-94,-76};
 
     public static void sort (int[]a) {
 
-        if(a[0] > a[1]) {
+        Arrays.sort(a);
+        System.out.println(Arrays.toString(a));
+
+       /* if(a[0] > a[1]) {
           a[0] = a[1];
             System.out.println(Arrays.toString(a));
         }
@@ -58,7 +61,7 @@ public class ArraySort {
                 System.out.println(Arrays.toString(a));
             }
 
-        }
+        }*/
 
     }
 
