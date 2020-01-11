@@ -1,14 +1,41 @@
 package lessons.HelloJava.test;
 
+    // TODO: 11.01.2020  надо умудрится разбить слово на символы, потом эти символы в хеш, хотя целиком работает тоже
+
 public class HelloJava_9 {
-
-
 
     public static void main(String[] args) {
 
-     //   Character a = 'V';
+//----------получаем хеш код
+    //   Character a = 'V';
+   //  System.out.println("HashCode " +  a.hashCode());
+//----------------------
 
-        String code = "72"; //
+        //test , сработал...
+        String str = "Hello Java!";
+        System.out.println(str.hashCode());
+        System.out.println(str.length());
+        //System.out.println(str.toUpperCase());
+        System.out.println(str.toUpperCase().hashCode());
+        System.out.println(str.toLowerCase().hashCode());
+
+        System.out.println(Integer.valueOf( str.hashCode() ) );  //по идеи это число...в интежер
+        System.out.println(str);
+           
+        //
+
+        //пробую через массив
+        String [] code = {"72","101","108","108","111","74", "65", "86","65"};
+
+        //System.out.println( (char)Integer.parseInt(Arrays.toString(code)));
+
+        for (int i = 0; i < code.length; i++) {
+            //пару букв потерял
+            System.out.println( (char)Integer.parseInt(code[i]));
+        }
+
+        //--------------------------ok----------------
+       /* String code = "72"; //
         String code101 = "101"; //101
 
         String code108 = "108";//108 x2
@@ -18,7 +45,7 @@ public class HelloJava_9 {
         String code65 = "65";//65
         String code86 = "86";//86
 
-       // System.out.println("HashCode " +  a.hashCode());
+
 
         System.out.println( (char)Integer.parseInt(code));
         System.out.println( (char)Integer.parseInt(code101));
@@ -28,6 +55,6 @@ public class HelloJava_9 {
         System.out.println( (char)Integer.parseInt(code74));
         System.out.println( (char)Integer.parseInt(code65));
         System.out.println( (char)Integer.parseInt(code86));
-        System.out.println( (char)Integer.parseInt(code65));
+        System.out.println( (char)Integer.parseInt(code65));*/
     }
 }
