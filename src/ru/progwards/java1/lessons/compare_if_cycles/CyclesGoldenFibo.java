@@ -18,21 +18,23 @@ public class CyclesGoldenFibo {
 
    //ERROR: Тест "Тест fiboNumber" не пройден. Проверка fiboNumber() expected:1 but was:0
     public static int fiboNumber(int n) {
-        if (n == 1 || n == 2) {
+
+       if (n == 1 || n == 2)
             return 1;
-        }
+
         int a = 1;
         int b = 0;
-        int fibo ;
+        int fibo = 0 ;
 
-        for (int i = 0; i < n ; i++) {
+        for (int i = 0; i < n ; i++){
             fibo = a+b;
             a = b;
             b = fibo;
             System.out.println("Iteration #"+(iter)+" "+"#a = "+ a+" #b = "+b +"#FIBO = "+ fibo);   //
             iter++;
-        }
-        return 0;
+
+         }
+        return fibo;
     }
 
     public static boolean isGoldenTriangle(int a, int b, int c){
