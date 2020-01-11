@@ -16,8 +16,11 @@ public class CyclesGoldenFibo {
        return false;
    }
 
+   //ERROR: Тест "Тест fiboNumber" не пройден. Проверка fiboNumber() expected:1 but was:0
     public static int fiboNumber(int n) {
-
+        if (n == 1 || n == 2) {
+            return 1;
+        }
         int a = 1;
         int b = 0;
         int fibo ;
