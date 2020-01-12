@@ -13,11 +13,18 @@ public class CyclesGoldenFibo {
 
 
     //OK: Тест "Тест containsDigit с нулями" пройден успешно.
-   public static boolean containsDigit(int number, int digit) {
+   public static boolean containsDigit(int number, int digit) {  //число и цифра
+
+       if(  (digit >= 0 && digit <=9) || number == digit) {
+           System.out.println("Число = "+ number + " Цифра = "+digit);
+           return true;
+       }
+        /*
         if (number == digit) {
             System.out.println("true");
-            return true;
-        }else
+            return true;*/
+    //        }else
+
             return false;
 
    }
@@ -89,6 +96,9 @@ public class CyclesGoldenFibo {
 
     public static void main(String[] args) {
        containsDigit(2,0);
+       containsDigit(3,-2);
+       containsDigit(-3,10);
+       containsDigit(23123,9);
       //  containsDigit(32,32);
       //  containsDigit(32,31);
         fiboNumber(15);
