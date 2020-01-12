@@ -8,6 +8,8 @@ package ru.progwards.java1.lessons.classes;
 
 // комплексное число записывается как z = a + bi,
 
+
+
 public class ComplexNum {
 
     public static int a;
@@ -17,23 +19,18 @@ public class ComplexNum {
     public static int c;
 
     public static int z;
-    public static int i = -1 ;
+    public static int i ;
 
 
 //который инициализирует комплексное число
     public ComplexNum(int a, int b) {
+
     }
 
     // приведение к строке, выдать в формате a+bi, например, при a=1 и b=56 должно быть выдано 1+56i
     public String toString(){
-    this.a = a;
-    this.b = b;
-    this.c = c;
-    this.d = d;
-    this.i = i;
-
-    return (a+"+"+b*i+"i");
-    }
+            return a+"+"+b+"i";
+        }
 
 // сложение комплексных чисел по формуле:
   //          (a + bi) + (c + di) = (a + c) + (b + d)i
