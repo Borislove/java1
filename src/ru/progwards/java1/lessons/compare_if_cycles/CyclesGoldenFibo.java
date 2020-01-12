@@ -42,7 +42,7 @@ public class CyclesGoldenFibo {
 
     public static boolean isGoldenTriangle(int a, int b, int c){
 
-    boolean gold = true ; //default false;
+    boolean gold = false ; //default false;
 
     double value1 = 1.61703;
     double value2 = 1.61903;
