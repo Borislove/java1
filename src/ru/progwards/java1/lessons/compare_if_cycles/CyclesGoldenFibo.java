@@ -1,9 +1,13 @@
 package ru.progwards.java1.lessons.compare_if_cycles;
 
 
-public class CyclesGoldenFibo {
-    public static  Integer iter= 1;
+import static ru.progwards.java1.lessons.compare_if_cycles.TriangleInfo.a;
+import static ru.progwards.java1.lessons.compare_if_cycles.TriangleInfo.b;
+import static ru.progwards.java1.lessons.compare_if_cycles.TriangleInfo.c;
 
+public class CyclesGoldenFibo {
+
+    public static  Integer iter= 1;
 
     public static double gold = 1.61803;  // основание золотого треугольника
 
@@ -16,7 +20,7 @@ public class CyclesGoldenFibo {
        return false;
    }
 
-   //ERROR: Тест "Тест fiboNumber" не пройден. Проверка fiboNumber() expected:1 but was:0
+//    OK: Тест "Тест fiboNumber" пройден успешно.
     public static int fiboNumber(int n) {
 
        if (n == 1 || n == 2)
@@ -30,32 +34,64 @@ public class CyclesGoldenFibo {
             fibo = a+b;
             a = b;
             b = fibo;
-            System.out.println("Iteration #"+(iter)+" "+"#a = "+ a+" #b = "+b +"#FIBO = "+ fibo);   //
+         //   System.out.println("Iteration #"+(iter)+" "+"#a = "+ a+" #b = "+b +"#FIBO = "+ fibo);   //
             iter++;
-
          }
         return fibo;
     }
 
     public static boolean isGoldenTriangle(int a, int b, int c){
 
-    double a1 = 1.61703d;
-    double a2 = 1.61903d;
-    boolean gold;
+    boolean gold; //default false;
 
-       //if(a,b,c == gold) {
-       //    return true;
-        //}
+    double value1 = 1.61703;
+    double value2 = 1.61903;
+
+        double ab  = a / b;
+        double ac = a / c;
+        double bc = b / c;
+
+        if(a==b ) {
+            if (ab > value1 && ab < value2) {
+                System.out.println("Золотой треугольник!" + a + " "+b+" "+c);
+                gold = true;
+                }
+        }
+
+            if(a==c ) {
+                if (ac > value1 && ac < value2) {
+                    System.out.println("Золотой треугольник!" + a + " "+b+" "+c);
+                    gold = true;
+                }
+        }
+
+        if(b==c ) {
+            if (bc > value1 && bc < value2) {
+                System.out.println("Золотой треугольник!" + a + " "+b+" "+c);
+                gold = true;
+            }
+        }
 
        return false;
     }
 
-
     public static void main(String[] args) {
-        containsDigit(32,32);
-        containsDigit(32,31);
+      //  containsDigit(32,32);
+      //  containsDigit(32,31);
         fiboNumber(15);
       //  fiboNumber(10);
 
+        isGoldenTriangle(23,23,59);
+
+
+
+        //-------------------------------------
+       /* for (int i = 0; i <= 100 ; i++) {
+           if (TriangleInfo.isTriangle(a,b,c) && TriangleInfo.isIsoscelesTriangle(a,b,c)){
+               //System.out.println(150+" "+150+" "+300);
+               System.out.println(a+" "+b+" "+c);
+           }*/
+        }
+
     }
-}
+
