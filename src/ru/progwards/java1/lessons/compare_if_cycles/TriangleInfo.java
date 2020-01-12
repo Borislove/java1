@@ -12,7 +12,7 @@ public class TriangleInfo {
         int ac = a+c;
         int cb = b+c;
 
-        if (ab>c & c>0 & ac>b & b>0 & cb>a & c>0) {
+        if (ab>c && c>0 && ac>b && b>0 && cb>a && c>0) {
             System.out.println("Op treugolni4ka");
             return  true; }
 

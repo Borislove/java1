@@ -7,34 +7,32 @@ import static ru.progwards.java1.lessons.compare_if_cycles.TriangleInfo.c;
 
 public class CyclesGoldenFibo {
 
-    public static  Integer iter= 1;
+    public static Integer iter = 1;
 
     public static double gold = 1.61803;  // основание золотого треугольника
 
 
     //OK: Тест "Тест containsDigit с нулями" пройден успешно.
-   public static boolean containsDigit(int number, int digit) {  //число и цифра
+    public static boolean containsDigit(int number, int digit) {  //число и цифра
 
-       if (number>0) {
+        if (number < 0) {
+            number *= -1;
+        }
 
-           if (digit >= 0 && digit <= 9) {
-               System.out.println("Число = " + number + " Цифра = " + digit);
-               return true;
-           }
+        do {
+            int n = number % 10;
+            if (n == digit) {
+                return true;
+            }
+            number = number / 10;
+        }
+        while (number > 0);
 
-           if (number == digit) {
-               return true;
-           }
-        /*
-        if (number == digit) {
-            System.out.println("true");
-            return true;*/
-           //        }else
+        return false;
+    }
 
-
-       }
-       return false;
-   }
+    //if (digit >= 0 && digit <= 9) {
+    // System.out.println("Число = " + number + " Цифра = " + digit);
 
 //    OK: Тест "Тест fiboNumber" пройден успешно.
     public static int fiboNumber(int n) {
@@ -77,13 +75,13 @@ public class CyclesGoldenFibo {
         double ac = a / c;
         double bc = b / c;*/
 
-        if(a==b || a==c || b==c) {
-            if (ab > value1 && ab < value2 ||ac > value1 && ac < value2 || bc > value1 && bc < value2) {
+        if(a==b ) {
+            if (ab > value1 && ab < value2) {
                 System.out.println("Золотой треугольник!" + a + " "+b+" "+c);
                 gold = true;
                 }
         }
-/*
+
             if(a==c ) {
                 if (ac > value1 && ac < value2) {
                     System.out.println("Золотой треугольник!" + a + " "+b+" "+c);
@@ -96,7 +94,8 @@ public class CyclesGoldenFibo {
                 System.out.println("Золотой треугольник!" + a + " "+b+" "+c);
                 gold = true;
             }
-        }*/
+        }
+
 
        return gold;
    }
@@ -123,7 +122,15 @@ public class CyclesGoldenFibo {
                //System.out.println(150+" "+150+" "+300);
                System.out.println(a+" "+b+" "+c);
            }*/
-        }
 
-    }
+        for (int i = 1; i <= 100; i++) {
+            for (int j = 1; j <= 100 ; j++) {
+                for (int k = 1; k <= 100 ; k++) {
+                    if (TriangleInfo.isTriangle(i, j, k) && TriangleInfo.isIsoscelesTriangle(i, j, k) && isGoldenTriangle(i, j, k)) {
+                        System.out.println(i + " " + j + " " + k);
+                    }
+
+        }
+ }}
+ }}
 
