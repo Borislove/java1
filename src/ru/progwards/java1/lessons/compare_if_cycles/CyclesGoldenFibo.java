@@ -16,8 +16,10 @@ public class CyclesGoldenFibo {
    public static boolean containsDigit(int number, int digit) {
         if (number == digit) {
             System.out.println("true");
-            return true;}
-       return false;
+            return true;
+        }else
+            return false;
+
    }
 
 //    OK: Тест "Тест fiboNumber" пройден успешно.
@@ -86,6 +88,7 @@ public class CyclesGoldenFibo {
    }
 
     public static void main(String[] args) {
+       containsDigit(2,0);
       //  containsDigit(32,32);
       //  containsDigit(32,31);
         fiboNumber(15);
