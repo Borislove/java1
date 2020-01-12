@@ -42,22 +42,32 @@ public class CyclesGoldenFibo {
 
     public static boolean isGoldenTriangle(int a, int b, int c){
 
-    boolean gold; //default false;
+    boolean gold = true ; //default false;
 
     double value1 = 1.61703;
     double value2 = 1.61903;
 
+        double a1 = (double)a;
+        double b1 = (double)b;
+        double c1 = (double)c;
+
+        double ab = a1 / c1;
+        double ac = a1 / b1;
+        double bc = b1 / a1;
+
+        //--------
+/*
         double ab  = a / b;
         double ac = a / c;
-        double bc = b / c;
+        double bc = b / c;*/
 
-        if(a==b ) {
-            if (ab > value1 && ab < value2) {
+        if(a==b || a==c || b==c) {
+            if (ab > value1 && ab < value2 ||ac > value1 && ac < value2 || bc > value1 && bc < value2) {
                 System.out.println("Золотой треугольник!" + a + " "+b+" "+c);
                 gold = true;
                 }
         }
-
+/*
             if(a==c ) {
                 if (ac > value1 && ac < value2) {
                     System.out.println("Золотой треугольник!" + a + " "+b+" "+c);
@@ -70,10 +80,10 @@ public class CyclesGoldenFibo {
                 System.out.println("Золотой треугольник!" + a + " "+b+" "+c);
                 gold = true;
             }
-        }
+        }*/
 
-       return false;
-    }
+       return gold;
+   }
 
     public static void main(String[] args) {
       //  containsDigit(32,32);
@@ -81,7 +91,9 @@ public class CyclesGoldenFibo {
         fiboNumber(15);
       //  fiboNumber(10);
 
-        isGoldenTriangle(23,23,59);
+
+        System.out.println(isGoldenTriangle(23,23,59));
+        System.out.println(isGoldenTriangle(89, 55, 89)); // золотой
 
 
 
