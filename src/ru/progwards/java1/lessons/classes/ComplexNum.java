@@ -15,22 +15,20 @@ public class ComplexNum {
     public static int a;
     public static int b;
 
-    public static int c;
-    public static int d;
+    //public static int c;
+    //public static int d;
 
-    public static int z;
+//    public static int z;
+
     public static int i ;
 
     int num1;
     int num2;
 
-
-//который инициализирует комплексное число
+    //Инициализация комплексных чисел
     public ComplexNum(int a, int b) {
-
         this.a = a;
         this.b = b;
-
     }
 
     // приведение к строке, выдать в формате a+bi, например, при a=1 и b=56 должно быть выдано 1+56i
@@ -41,6 +39,8 @@ public class ComplexNum {
 // сложение комплексных чисел по формуле:
   //          (a + bi) + (c + di) = (a + c) + (b + d)i
     public ComplexNum add(ComplexNum num) {
+
+        return num.add(num);
      /*   num1 = num;
         num2 = num;
         */
@@ -48,30 +48,29 @@ public class ComplexNum {
 
       //        System.out.println(z);
 
-    return num;
+
     }
 
-    //, вычитание комплексных чисел по формуле:
+    // вычитание комплексных чисел по формуле:
     //            (a + bi) - (c + di) = (a - c) + (b - d)i
     public ComplexNum sub(ComplexNum num){
-        return num;
+        return num.sub(num);
     }
 
 // умножение комплексных чисел по формуле:
 //            (a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i
-
     public ComplexNum mul(ComplexNum num){
-        return num;
+        return num.mul(num);
     }
 
 // деление комплексных чисел по формуле:
 //            (a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i
-
     public ComplexNum div(ComplexNum num){
-        return num;
+        return num.div(num);
     }
 
     public static void main(String[] args) {
+
 
 
 
