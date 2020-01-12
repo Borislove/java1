@@ -15,8 +15,12 @@ public class CyclesGoldenFibo {
     //OK: Тест "Тест containsDigit с нулями" пройден успешно.
    public static boolean containsDigit(int number, int digit) {  //число и цифра
 
-       if(  (digit >= 0 && digit <=9) || number == digit) {
+       if(  (digit >= 0 && digit <=9) ) {
            System.out.println("Число = "+ number + " Цифра = "+digit);
+           return true;
+       }
+
+       if ( number == digit) {
            return true;
        }
         /*
