@@ -4,7 +4,7 @@ package ru.progwards.T5.Inheritance;
 public class Circle extends Figure {
     double radius;
 
-    Circle(double radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
     @Override
