@@ -15,6 +15,7 @@ package Warehouse.Practick;
 
 
 //7801678586\780101001  разделить значения
+// подсказочка получить правильные данные можно и без цикла
 
 
 import java.sql.SQLOutput;
@@ -46,22 +47,53 @@ public class Practic {
 
 
         String original = "7801678586\\780101001" ;
-        String[] konvert = original.split("\\\\");
-        for(String subStr:konvert) {
-            System.out.println(subStr);
+        System.out.println("text original = " + original);
 
+
+        String[] konvert = original.split("\\\\");
+        //Arrays.fill(konvert,0);
+        //System.out.println(Arrays.toString(konvert));
+
+
+       for(String subStr:konvert) {
+        //    System.out.println(subStr);
 //1 Инн , 2 Кпп
-            String str[] = {"inn","kpp"};
           //  System.out.println(str[0]);
 //            System.out.println(str[1]);
-            Arrays.fill(str,subStr);
-            System.out.println(Arrays.toString(str));  //показать значения
-            System.out.println("ИНН "+str[0] + " КПП "+str[1]);
+
+              String str[] = {"inn","kpp"};
+
+
+           /*Arrays.fill(str,subStr);
+              String str1[] = {" "};
+           Arrays.fill(str1,subStr);
+*/
+             Arrays.fill(str,subStr);  //заполняю значениями
+                System.out.println("ИНН "+str[0] + " КПП "+str[0]);   //не те значения дает..странно
+            //str[0] = subStr;
+            //str[1] = subStr;
+          //  System.out.println(Arrays.toString(str));  //показать значения
+
+//            String[] strTest = new String[ "",""];
+       //    System.out.println("ИНН "+str[0]);
+         //   System.out.println("КПП "+str[0]);
             //System.out.println("КПП "+str[1]);
+
+          /*  Arrays.fill(str,subStr);
+            System.out.println("ИНН "+str[1]);
+            Arrays.fill(str,subStr);
+            System.out.println("КПП "+str[0]);*/
+
+
+          //---------не вышло
+        /*    String str1[] = {};
+            Arrays.fill(str,subStr);
+            System.out.println("ИНН "+str[0] + " КПП "+str[1]);*/
         }
 
-     //   System.out.println("text original = " + original);
-        System.out.println("text konverter "  );
+
+
+     //   System.out.println("text konverter "  );
 
     }
 }
