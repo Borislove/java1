@@ -8,7 +8,7 @@ public class HappyJava {
 
     public static void main(String[] args) throws InterruptedException, IOException {
         long start = System.currentTimeMillis();
-        for (int i = 5; i > 1; i--) {
+        for (int i = 0; i <= 100; i++) {
             Thread.sleep(1);
             Runtime.getRuntime().exec("cmd /C start cls");
             System.out.println("nyam"+i);
