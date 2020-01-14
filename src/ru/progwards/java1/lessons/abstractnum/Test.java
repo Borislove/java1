@@ -1,5 +1,6 @@
 package ru.progwards.java1.lessons.abstractnum;
 
+//Реализовать классы Cube, Pyramid, вычисляющие объем фигуры в абстрактных числах класса Number, реализованный в целых числах, и в числах с плавающей точкой.
 
 public class Test {
 
@@ -33,6 +34,8 @@ public class Test {
 
 
 // TODO: 14.01.2020
+
+
 /*В Вашем репозитории GitHub, в package ru/progwards/java1/lessons/abstractnum, обнаружены следующие проблемы с файлами задания:
 
 Задача 1. Классы Figure3D, Cube, Pyramid:

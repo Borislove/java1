@@ -5,11 +5,7 @@ package ru.progwards.java1.lessons.classes;
 
 // i = -1 //если в квадрате
 // ~
-
 // комплексное число записывается как z = a + bi,
-
-
-
 public class ComplexNum {
 
     public static int a;
