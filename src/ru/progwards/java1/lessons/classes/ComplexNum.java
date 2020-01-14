@@ -6,6 +6,7 @@ package ru.progwards.java1.lessons.classes;
 // i = -1 //если в квадрате
 // ~
 // комплексное число записывается как z = a + bi,
+// TODO: 14.01.2020  Скобки это хорошо... 
 public class ComplexNum {
 
     public  int a;  //сделать статичными и резальт не тот..
@@ -37,9 +38,10 @@ public class ComplexNum {
         //return null;
     }
 
+    //(a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i*/
     public ComplexNum div(ComplexNum num){
-    return new ComplexNum   (     ( (a*num.a)+ (b*num.b)) / (num.a * num.a)+(num.b*num.b),
-            ( (b*num.a)-a*num.b) / ((num.a*num.a) + (num.b *num.b) )) ;
+    return new ComplexNum   (     (a*num.a+ b*num.b) / (num.a * num.a+num.b*num.b),
+            ( b*num.a-a*num.b) / (num.a*num.a + num.b *num.b )) ;
                 //    return null;
     }
 
@@ -53,20 +55,17 @@ public class ComplexNum {
         System.out.println(c1+" "+c2);
         System.out.println(c1.add(c2));
 
+        ComplexNum num1 = new ComplexNum(1000,1000);
+        ComplexNum num2 = new ComplexNum(100,100);
+        System.out.println(num1.div(num2));
 
-       /*
-Задача 3. Класс ComplexNum: не пройдено, оценка: 4.0
-Комментарий:
-OK: Тест "Конструктор ComplexNum(int a, int b)" пройден успешно.
-OK: Тест "Метод toString()" пройден успешно.
-ERROR: Тест "Метод add(ComplexNum num1, ComplexNum num2)" не пройден. Не удалось создать новый экземпляр класса ComplexNum
-ERROR: Тест "Метод sub(ComplexNum num1, ComplexNum num2)" не пройден. Не удалось создать новый экземпляр класса ComlexNum
-ERROR: Тест "Метод mul(ComplexNum num1, ComplexNum num2)" не пройден. Не удалось создать новый экземпляр класса ComplexNum
-ERROR: Тест "Метод div(ComplexNum num1, ComplexNum num2)" не пройден. Не удалось создать новый экземпляр класса ComplexNum
-По данной задаче в целом не зачет, решение возвращено на доработку. Задача выполнена на 18.18%
-*/
+
+  /*ERROR: Тест "Метод div(ComplexNum num1, ComplexNum num2)" не пройден. Метод div(ComplexNum num) возвращает экземпляр класса с неверным значением toString().
+  Переданы параметры: num1 = new ComplexNum(1000, 1000), num2 = new ComplexNum(100, 100). Возвращено: 10020+0i. Ожидалось: 10+0i
+   */
     }
 }
+
 
 
 /*Задача 3. Класс ComplexNum
