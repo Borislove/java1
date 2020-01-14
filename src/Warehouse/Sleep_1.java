@@ -18,21 +18,11 @@ class Sleep_1 {
     public static int i= 0;
 
     public static void main(String[] args) throws InterruptedException {
-        // запоминаем текущее время в миллисекундах
-        long start = System.currentTimeMillis();
-        // останавливаем основной поток программы на 2000 миллисекунд (2 секунды)
-    //    Thread.sleep(1000);
-      //  System.out.println("Выполнение программы приостановлено на = " + (System.currentTimeMillis() - start));
 
-
-
-        while (true) {
-
-
+     //   long start = System.currentTimeMillis();
+             while (true) {
          Thread.sleep(100); ;
-
         System.out.println(ANSI_RESET +"Tick Tock " + ANSI_RED+ i) ;
-
             Thread.sleep(300);
             System.out.print( ANSI_BLUE+"П");
             Thread.sleep(300);
