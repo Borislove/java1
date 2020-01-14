@@ -8,20 +8,8 @@ package ru.progwards.java1.lessons.classes;
 // комплексное число записывается как z = a + bi,
 public class ComplexNum {
 
-    public static int a;
-    public static int b;
-
-    //public static int c;
-    //public static int d;
-
-//    public static int z;
-
-    public static int i ;
-
-    public static int num;
-    public static int num1 ;
-    public static int num2;
-
+    public  int a;  //сделать статичными и резальт не тот..
+    public  int b;
 
         public ComplexNum(int a, int b) {
         this.a = a;
@@ -34,35 +22,48 @@ public class ComplexNum {
 
     public ComplexNum add(ComplexNum num) {
 
-      //  return num.add(num).add(num.add(num));
-        return null;
+        return new ComplexNum(a+num.a , b +num.b);
+        //return null;
     }
 
 
     public ComplexNum sub(ComplexNum num){
-        return null;
+            return new ComplexNum(a-num.a,b-num.b);
+        //return null;
     }
 
     public ComplexNum mul(ComplexNum num){
-        return null;
+            return new ComplexNum ( (a*num.a) - (b*num.b) , (b*num.a) + (a*num.b));
+        //return null;
     }
 
     public ComplexNum div(ComplexNum num){
-        return null;
+    return new ComplexNum((a * num.a + b * num.b)/(a * num.a + num.b * num.b), (b*num.a - a*num.b)/(num.a*num.a+num.b*num.b));
+    //    return null;
     }
 
     public static void main(String[] args) {
         //Ожидалось: 100+100i
-        ComplexNum num1 = new ComplexNum(1,1);
-        ComplexNum num2 = new ComplexNum(99,99);
+   /*     ComplexNum num1 = new ComplexNum(1,1);
+        ComplexNum num2 = new ComplexNum(99,99);*/
 
-         // add(ComplexNum num1 , ComplexNum num2)
-        ////  ERROR: Тест "Метод add(ComplexNum num1, ComplexNum num2)" не пройден.
-        //  Метод add(ComplexNum num) возвращает экземпляр класса с неверным значением toString(). Переданы параметры: num1 = new ComplexNum(1, 1), num2 = new ComplexNum(99, 99). Возвращено: 0+0i. Ожидалось: 100+100i
-       // ERROR: Тест "Метод sub(ComplexNum num1, ComplexNum num2)" не пройден. Метод sub(ComplexNum num) возвращает экземпляр класса с неверным значением toString(). Переданы параметры: num1 = new ComplexNum(99, 99), num2 = new ComplexNum(1, 1). Возвращено: 0+0i. Ожидалось: 98+98i
-        //ERROR: Тест "Метод mul(ComplexNum num1, ComplexNum num2)" не пройден. Метод mul(ComplexNum num) возвращает экземпляр класса с неверным значением toString(). Переданы параметры: num1 = new ComplexNum(1, 1), num2 = new ComplexNum(99, 99). Возвращено: 0+0i. Ожидалось: 0+198i
-        //ERROR: Тест "Метод div(ComplexNum num1, ComplexNum num2)" не пройден. Метод div(ComplexNum num) возвращает экземпляр класса с неверным значением toString(). Переданы параметры: num1 = new ComplexNum(1000, 1000), num2 = new ComplexNum(100, 100). Возвращено: 0+0i. Ожидалось: 10+0i
+        ComplexNum c1 = new ComplexNum(1,2);
+        ComplexNum c2 = new ComplexNum(3,4);
+        System.out.println(c1+" "+c2);
+        System.out.println(c1.add(c2));
 
+
+       /*
+Задача 3. Класс ComplexNum: не пройдено, оценка: 4.0
+Комментарий:
+OK: Тест "Конструктор ComplexNum(int a, int b)" пройден успешно.
+OK: Тест "Метод toString()" пройден успешно.
+ERROR: Тест "Метод add(ComplexNum num1, ComplexNum num2)" не пройден. Не удалось создать новый экземпляр класса ComplexNum
+ERROR: Тест "Метод sub(ComplexNum num1, ComplexNum num2)" не пройден. Не удалось создать новый экземпляр класса ComlexNum
+ERROR: Тест "Метод mul(ComplexNum num1, ComplexNum num2)" не пройден. Не удалось создать новый экземпляр класса ComplexNum
+ERROR: Тест "Метод div(ComplexNum num1, ComplexNum num2)" не пройден. Не удалось создать новый экземпляр класса ComplexNum
+По данной задаче в целом не зачет, решение возвращено на доработку. Задача выполнена на 18.18%
+*/
     }
 }
 
