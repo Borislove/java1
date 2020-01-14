@@ -1,20 +1,33 @@
 package ru.progwards.java1.lessons.abstractnum;
 
-public class DoubleNumber {
+public class DoubleNumber extends Number {
+    private double value;
+
     public DoubleNumber(double num){
+        value = num;
+
     }
 
-//    @Override
+    @Override
     public Number mul(Number num){
-        return null;
+        return new DoubleNumber (value*((DoubleNumber)num).value );
+        //return null;
     }
+
     //@Override
     public Number div(Number num){
         return null;
     }
-    //@Override
+
+   // @Override
     public Number newNumber(String strNum){
+
         return null;
+    }
+
+    @Override
+    public String toString(){
+        return String.valueOf(value);
     }
 
 }
