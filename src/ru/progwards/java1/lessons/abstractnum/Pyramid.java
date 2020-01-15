@@ -2,16 +2,27 @@ package ru.progwards.java1.lessons.abstractnum;
 
 public class Pyramid extends Figure3D{
 
+
+
     public Pyramid(Number segment) {
         super(segment);
     }
 
     @Override
     public Number volume(){
-
+//формуле Segment*Segment*Segment/3
         //это высота
-        return segment.mul(segment.mul(segment));
-        //return null;
+
+        //как поделить на 3?
+       return (segment.mul(segment.mul(segment)))  ;
+
+//Integer a = segment.mul(segment.mul(segment)) ; //не выходит
+
+
+
+
+
+      //  return null;
     }
 }
 

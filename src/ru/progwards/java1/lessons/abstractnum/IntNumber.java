@@ -9,6 +9,7 @@ public class IntNumber extends Number{
     @Override
     public Number mul(Number num){
         return new IntNumber (value*((IntNumber)num).value );
+
 //      return null;
 
     }

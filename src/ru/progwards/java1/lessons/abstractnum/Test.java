@@ -11,8 +11,12 @@ public class Test {
         fig = new Cube(new DoubleNumber(3));
         System.out.println(fig.volume());
 
-     //   fig = new Pyramid(new DoubleNumber(3));
-     //   System.out.println(fig.volume());
+
+       Figure3D pyr = new Pyramid(new IntNumber(11));
+        System.out.println(pyr.volume());
+
+        fig = new Pyramid(new DoubleNumber(3));
+        System.out.println(fig.volume());
 
 /*        Number in = new IntNumber(3);
         Number in2 = new IntNumber(3);
@@ -35,17 +39,10 @@ public class Test {
 
 // TODO: 14.01.2020
 
+/*
+ERROR: Тест "Класс Pyramid, метод volume()" не пройден. Метод volume(
+) возвращает неверное значение после создания экземпляра объекта с входным параметром new IntNumber(11). Возвращен результат: 1331, ожидался: 443
+        По данной задаче в целом не зачет, решение возвращено на доработку. Задача выполнена на 88.71%работу над ошибками.
+         Исправьте все, что считаете нужным, обновите репозитарий, и отправьте Ваш ответ на проверку снова.*/
 
-/*В Вашем репозитории GitHub, в package ru/progwards/java1/lessons/abstractnum, обнаружены следующие проблемы с файлами задания:
 
-Задача 1. Классы Figure3D, Cube, Pyramid:
-Ошибка 1: incompatible types: ru.progwards.java1.lessons.abstractnum.DoubleNumber cannot be converted to ru.progwards.java1.lessons.abstractnum.Number
-Ошибка 2: constructor Pyramid in class ru.progwards.java1.lessons.abstractnum.Pyramid cannot be applied to given types;
- required: no arguments
- found: ru.progwards.java1.lessons.abstractnum.IntNumber
- reason: actual and formal argument lists differ in length
-Ошибка 3: constructor Pyramid in class ru.progwards.java1.lessons.abstractnum.Pyramid cannot be applied to given types;
- required: no arguments
- found: ru.progwards.java1.lessons.abstractnum.DoubleNumber
- reason: actual and formal argument lists differ in length
-У Вас есть возможность сделать работу над ошибками. Исправьте все, что считаете нужным, обновите репозитарий, и отправьте Ваш ответ на проверку снова.*/

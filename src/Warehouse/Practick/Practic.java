@@ -9,6 +9,7 @@ package Warehouse.Practick;
 
 
 // TODO: 14.01.2020 разложить строку на массив строк
+// TODO: 15.01.2020 переделать... 
 //сделать новый массив и внести туда значения
 
 //задачу разбить на маленькие задачи
@@ -26,10 +27,10 @@ public class Practic {
 
     public static void main(String[] args) {
 
-      /* String original = "7801678586\\780101001  ООО \"Рога и Копыта\"" ;
+   // String original = "7801678586\\780101001  ООО \"Рога и Копыта\"" ;
 
 
-        String[] konvert = original.split("\\s");
+     /*   String[] konvert = original.split("\\s");
         for(String subStr:konvert) {
 
             System.out.println(subStr);
@@ -45,31 +46,40 @@ public class Practic {
 
 
 
+        String original = "7801678586\\780101001"  ;
 
-        String original = "7801678586\\780101001" ;
+
+
+
+
+
+      /*  String original = "7801678586\\780101001" ;
         System.out.println("text original = " + original);
 
+        original.split("\\\\");
+        System.out.println(original.split("\\\\"));
 
         String[] konvert = original.split("\\\\");
+        System.out.println(konvert.toString());*/
         //Arrays.fill(konvert,0);
         //System.out.println(Arrays.toString(konvert));
 
 
-       for(String subStr:konvert) {
+     //  for(String subStr:konvert) {
         //    System.out.println(subStr);
 //1 Инн , 2 Кпп
           //  System.out.println(str[0]);
 //            System.out.println(str[1]);
 
-              String str[] = {"inn","kpp"};
+       //       String str[] = {"inn","kpp"};
 
 
            /*Arrays.fill(str,subStr);
               String str1[] = {" "};
            Arrays.fill(str1,subStr);
 */
-             Arrays.fill(str,subStr);  //заполняю значениями
-                System.out.println("ИНН "+str[0] + " КПП "+str[0]);   //не те значения дает..странно
+         //    Arrays.fill(str,subStr);  //заполняю значениями
+            //    System.out.println("ИНН "+str[0] + " КПП "+str[0]);   //не те значения дает..странно
             //str[0] = subStr;
             //str[1] = subStr;
           //  System.out.println(Arrays.toString(str));  //показать значения
@@ -96,5 +106,5 @@ public class Practic {
      //   System.out.println("text konverter "  );
 
     }
-}
+
 

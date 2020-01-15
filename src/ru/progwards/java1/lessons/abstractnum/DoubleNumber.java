@@ -4,14 +4,28 @@ public class DoubleNumber extends Number {
     private double value;
 
     public DoubleNumber(double num){
+        //value = (double)num;
         value = num;
 
     }
 
     @Override
     public Number mul(Number num){
-        return new DoubleNumber (value*((DoubleNumber)num).value );
-        //return null;
+
+         // return new DoubleNumber (value*((DoubleNumber)num).value );
+
+        //return new DoubleNumber ( (double)num).value);   //не работает
+
+        //return new DoubleNumber (( (double) num).value );  //не работает
+
+    //    return new DoubleNumber (double)num.value;
+
+
+        /*Можно вместо ((DoubleNumber)num).value написать (double)num.value.
+        Тогда мы сможем в качестве параметра num принимать объект типа IntNumber,
+        а вычисления проводить в действительных числах.*/
+
+       return null;
     }
 
     @Override
@@ -20,7 +34,7 @@ public class DoubleNumber extends Number {
         //return null;
     }
 
-   // @Override
+    @Override
     public Number newNumber(String strNum){
     return new DoubleNumber(Double.parseDouble(strNum));
         //return null;
