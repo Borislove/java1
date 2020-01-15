@@ -14,15 +14,16 @@ public class DoubleNumber extends Number {
         //return null;
     }
 
-    //@Override
+    @Override
     public Number div(Number num){
-        return null;
+        return new DoubleNumber(value/((DoubleNumber)num).value);
+        //return null;
     }
 
    // @Override
     public Number newNumber(String strNum){
-
-        return null;
+    return new DoubleNumber(Double.parseDouble(strNum));
+        //return null;
     }
 
     @Override
@@ -38,8 +39,14 @@ public class DoubleNumber extends Number {
 public DoubleNumber(double num), который будет сохранять в классе значение числа double.
 3.2 переопределение метода
 public Number mul(Number num), который будет возвращать произведение содержимого класса на num.
+
+
 3.3 переопределение метода
 public Number div(Number num), который будет возвращать частное от деления содержимого класса на num.
+
 3.4 переопределение метода
-public Number newNumber(String strNum), который будет возвращать новый экземпляр класса DoubleNumber со значением параметра strNum, содержащим число типа double, например 3.14. Надо будет правильно распарсить строку и привести значение к числу с плавающей точкой.
+
+
+public Number newNumber(String strNum), который будет возвращать новый экземпляр класса DoubleNumber со значением параметра strNum,
+ содержащим число типа double, например 3.14. Надо будет правильно распарсить строку и привести значение к числу с плавающей точкой.
 3.5 public String toString() - привести значение числа к строке*/

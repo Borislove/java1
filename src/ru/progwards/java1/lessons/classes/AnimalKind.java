@@ -7,3 +7,5 @@ enum  AnimalKind {
     HAMSTER,
     DUCK
 }
+
+

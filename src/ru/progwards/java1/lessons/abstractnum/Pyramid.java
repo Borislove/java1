@@ -1,9 +1,17 @@
 package ru.progwards.java1.lessons.abstractnum;
 
-public class Pyramid {
-    //@Override
+public class Pyramid extends Figure3D{
+
+    public Pyramid(Number segment) {
+        super(segment);
+    }
+
+    @Override
     public Number volume(){
-        return null;
+
+        //это высота
+        return segment.mul(segment.mul(segment));
+        //return null;
     }
 }
 
