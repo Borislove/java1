@@ -8,19 +8,23 @@ public class Pyramid extends Figure3D{
         super(segment);
     }
 
+
+    //-------------------------------------------------------------
+    //формуле Segment*Segment*Segment/3
+    //-------------------------------------------------------------
+
+
     @Override
     public Number volume(){
-//формуле Segment*Segment*Segment/3
-        //это высота
 
+        Integer number = 3;
+
+// TODO: 16.01.2020 Очень просто...осталось тут решить
         //как поделить на 3?
-       return (segment.mul(segment.mul(segment)))  ;
 
-//Integer a = segment.mul(segment.mul(segment)) ; //не выходит
+        //return (segment.mul(segment.mul(segment)) \ number)  ; //не работает
 
-
-
-
+        return (segment.mul(segment.mul(segment)) )  ;
 
       //  return null;
     }
