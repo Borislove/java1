@@ -2,8 +2,8 @@ package ru.progwards.java1.lessons.abstractnum;
 
 public class Figure3D {
 
-//    protected Number segment; //original
-    public static Number segment; //test
+  protected Number segment; //original
+//    public static Number segment; //test
 
     public Figure3D(Number segment){
         this.segment = segment;

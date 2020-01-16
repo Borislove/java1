@@ -1,8 +1,8 @@
 package ru.progwards.java1.lessons.abstractnum;
 
 public class DoubleNumber extends Number {
-    //private double value;
-    public static double value;
+   // public static double value;
+    private double value; // orig
 
     public DoubleNumber(double num){
         //value = (double)num;
