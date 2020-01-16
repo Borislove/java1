@@ -8,7 +8,7 @@ public class Geometric {
         int a =1;
 
         for (int i=1; i<15;i++ ){
-            a= a+a;
+            a +=a;
             System.out.println(a);
         }
 
