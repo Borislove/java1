@@ -1,4 +1,4 @@
-package ru.progwards;
+package ru.progwards.java1.lessons;
 
 public class Verse {
 

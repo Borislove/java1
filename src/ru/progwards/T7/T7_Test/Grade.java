@@ -1,4 +1,4 @@
-package ru.progwards.T7;
+package ru.progwards.T7.T7_Test;
 
 public class Grade {
 
