@@ -24,9 +24,14 @@ public class Pyramid extends Figure3D{
 
         //return (segment.mul(segment.mul(segment)) \ number)  ; //не работает
 
-        return (segment.mul(segment.mul(segment)) )  ;
+        //return (segment.mul(segment.mul(segment)) /(Integer(number)) )  ;
+        //return (segment.mul(segment.mul(segment)) / ( (int)number )   ;
 
-      //  return null;
+      //  number = segment*segment*segment / number;
+
+        return (segment.mul(segment.mul(segment)) ) ;
+
+        //return null;
     }
 }
 

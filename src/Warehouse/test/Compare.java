@@ -2,8 +2,8 @@ package Warehouse.test;
 
 public class Compare {
 
-    public static Integer  ab = 2;
-    public static Integer  ba = 2;
+    public static Integer ab = 2;
+    public static Integer ba = 2;
 
     public static Character a = 'a';
     public static Character b = 'a';
@@ -16,7 +16,7 @@ public class Compare {
 
     public static void main(String[] args) {
 
-        System.out.println(a==b);
+        System.out.println(a == b);
         System.out.println(aa == bb);
 
         System.out.print("Вызван compareTo a b ");

@@ -1,7 +1,9 @@
 package ru.progwards.java1.lessons.abstractnum;
 
 public class IntNumber extends Number{
-    private int value;
+    //private int value; //orig
+
+    public static int value;
 
     public IntNumber(int num){
     value = num;

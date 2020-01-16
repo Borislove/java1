@@ -56,5 +56,11 @@ public class HelloJava_9 {
         System.out.println( (char)Integer.parseInt(code65));
         System.out.println( (char)Integer.parseInt(code86));
         System.out.println( (char)Integer.parseInt(code65));*/
+
+
+        String strJav = "V";
+        System.out.println(strJav.hashCode());
     }
 }
+
+
