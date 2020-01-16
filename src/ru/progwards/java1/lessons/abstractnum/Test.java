@@ -14,7 +14,10 @@ public class Test {
         System.out.println(fig.volume());
 
 
-       Figure3D pyr = new Pyramid(new IntNumber(11));
+       Figure3D pyr = new Pyramid(new IntNumber(11)  );  //orig
+
+        //Figure3D pyr = new Pyramid(new IntNumber(11) /(new  IntNumber(3) ));   //
+
         System.out.println(pyr.volume());
 
         fig = new Pyramid(new DoubleNumber(3));

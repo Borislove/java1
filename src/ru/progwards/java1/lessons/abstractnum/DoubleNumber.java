@@ -7,7 +7,6 @@ public class DoubleNumber extends Number {
     public DoubleNumber(double num){
         //value = (double)num;
         value = num;
-
     }
 
     @Override
