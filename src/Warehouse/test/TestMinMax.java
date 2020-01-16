@@ -23,7 +23,9 @@ public class TestMinMax {
 
     public static void Long(){
         System.out.println("Long min "+Long.MIN_VALUE);
+        System.out.println(Long.toBinaryString(Long.MIN_VALUE));
         System.out.println("Long max "+Long.MAX_VALUE);
+        System.out.println(Long.toBinaryString(Long.MAX_VALUE));
     }
 
     public static void Short(){
@@ -38,11 +40,22 @@ public class TestMinMax {
         //System.out.println(aMin+aMax); // -1
     }
 
+
+
+
     public static void main(String[] args) {
 
         //Integer();
         //Short();
         //Float();
         //Double();
+
+       // Long();
+/*
+        Integer xm = Integer.MAX_VALUE ;
+        Integer xmin = Integer.MIN_VALUE;
+        System.out.println(Integer.toBinaryString(xm));
+        System.out.println(Integer.toBinaryString(xmin));
+        System.out.println(String.format("%32s", Integer.toBinaryString(xm)).replace(' ', '0'));*/
     }
 }
