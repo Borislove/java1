@@ -9,8 +9,17 @@ public class NumberSystem {
 
 
     //преобразование числа val к виду в системе счисления с основанием base
-    public static String show(int val, int base) {
-        return null;
+    public static String show(int val, int base) {   //функция show - показать
+        String result = "";
+        while (val>0) {
+            int remainder = val % base;
+            result = val2Digit(remainder) + result;
+        }
+        if(result.isEmpty())
+            return "0";
+        //return null;
+        return result;
+
     }
 
     public static void main(String[] args) {
