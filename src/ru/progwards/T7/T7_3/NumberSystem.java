@@ -5,7 +5,7 @@ public class NumberSystem {
     //получение цифры в строков представлении по числу от 0 до 15
     public static String val2Digit(int val) {
         //return null;
-        if (val == 10) {
+     /*   if (val == 10) {
             return "A";
         } else if (val == 11) {
             return "B";
@@ -18,6 +18,22 @@ public class NumberSystem {
         } else if (val == 15) {
             return "F";
         }
+        */
+        //---------------------------------------
+        switch (val) {
+            case 10:
+                return "A";
+            case 11:
+                return "B";
+            case 12:
+                return "C";
+            case 13:
+                return "D";
+            case 14:
+                return "E";
+            case 15:
+                return "F";
+        }
         return Integer.toString(val);
     }
 
@@ -27,7 +43,7 @@ public class NumberSystem {
         while (val > 0) {
             int remainder = val % base;
             result = val2Digit(remainder) + result;
-            val /=base;
+            val /= base;
         }
         if (result.isEmpty())
             return "0";
@@ -36,7 +52,7 @@ public class NumberSystem {
     }
 
     public static void main(String[] args) {
-        int value = 25;
+        int value = 255;
         System.out.println("Десятичная система: " + value);
         System.out.println("Двоичная система: " + NumberSystem.show(value, 2));
         System.out.println("Шестнадцатиричная система: " + NumberSystem.show(value, 16));
