@@ -67,4 +67,3 @@ public class Grade2 {
 все остальное NOTDEFINED
 Например, intToGrade(4) должно вернуть GOOD
 */
-

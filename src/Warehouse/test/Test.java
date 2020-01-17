@@ -4,7 +4,7 @@ public class Test {
 
     static int addAsStrings(int n1, int n2){
 
-        System.out.println((n1)+(0)+(n2));
+//        System.out.println((n1)+(0)+(n2));
 
      //  return (n1) + + (n2);  // так можно
     //  return (n1)+ +(n2);  // так можно
@@ -16,7 +16,7 @@ public class Test {
 
                 //return (String.valueOf(n1)+String.valueOf(n2));
 
-     return 0;
+     //return 0;
 
      //   Character a = ' ';
         //hash для пробела 32
@@ -28,6 +28,26 @@ public class Test {
 
       // return (n1+a.hashCode()+n2);
 //return ((n1)+(%20)+(n2));
+
+
+        //-----------------------
+      /*  Integer n1n = Integer.valueOf(n1);
+        n1n.toString();
+        Integer n2n = Integer.valueOf(n2);
+        n2n.toString();
+        String str = n1n.toString()+""+n2n.toString();
+        String str2 = n1n+""+n2n;
+        System.out.println(str2);
+        System.out.println(n1n+""+n2n);*/
+        //return 0;
+        //---------------------------
+
+     //   System.out.println(Integer.valueOf(n1)+String.valueOf("")+Integer.valueOf(n2)); //
+
+        return (Integer.valueOf(n1))+Integer.valueOf(n2);  //надо бы пробел добавить
+
+      //  return Integer.valueOf(n1).toString(); //
+
     }
 
 
