@@ -13,7 +13,7 @@ public class DIntArray {
     //метод
     public void add(int num) {
 
-        int[] numbersCopy = Arrays.copyOf(numbers,num+1);
+        int[] numbersCopy = Arrays.copyOf(numbers,numbers.length+1);
         //Arrays.fill(numbers,n);
 
     }
@@ -24,7 +24,7 @@ public class DIntArray {
 
     //метод
     public void atDelete(int pos) {
-        int[] numbersCopy = Arrays.copyOf(numbers,num-1);
+        int[] numbersCopy = Arrays.copyOf(numbers,numbers.length-1);
     }
 
     //метод
