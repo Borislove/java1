@@ -48,5 +48,15 @@ public class ArraysPractic {
         Arrays.sort(aCopy2);
         System.out.println(Arrays.toString(aCopy2));
 
+       // Arrays.sort(aCopy2);
+        System.out.println("Поиск "+ Arrays.binarySearch(aCopy2, 213));
+        System.out.println("Поиск "+ Arrays.binarySearch(aCopy, 213));
+        aCopy[5]  = 214;
+        System.out.println("Поиск "+ Arrays.binarySearch(aCopy, 213));
+        System.out.println(Arrays.toString(aCopy));
+        System.out.println("Поиск "+ Arrays.binarySearch(aCopy, 0)); // показывает на одно месторасположение
+
+        System.out.println("Поиск "+ Arrays.binarySearch(aCopy, 213212321));  //Поиск -10 , если нет такого значения вообще, где он ищет то
+
     }
 }
