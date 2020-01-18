@@ -1,7 +1,6 @@
 package ru.progwards.java1.lessons.arrays;
 
 public class DIntArray {
-
     private int n;
     private int[] numbers = new int[n];
 
@@ -9,7 +8,6 @@ public class DIntArray {
         this.n = n;
         this.numbers = numbers;
     }
-
     //метод
     public void add(int num) {
     }
@@ -32,7 +30,6 @@ public class DIntArray {
 
     }
 }
-
 
 /*Задача 3. Класс DIntArray
 Реализовать динамический, саморастущий массив целых чисел, по следующей спецификации:
