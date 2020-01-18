@@ -6,10 +6,8 @@ public class DIntArray {
     private int num;
     private int[] numbers = new int[num];
 
-    public DIntArray(int n, int[] numbers) {
-        this.num = num;
-        this.numbers = numbers;
-    }
+
+
     //метод
     public void add(int num) {
 
@@ -42,10 +40,10 @@ public class DIntArray {
 Реализовать динамический, саморастущий массив целых чисел, по следующей спецификации:
 3.1 в классе разместить private переменную - массив целых чисел.
 3.2 конструктор - по умолчанию.
+
 3.2 метод
 public void add(int num) - добавляет элемент num в конец массива, при этом размер массива должен увеличиться на 1.
  Для этого нужно будет разместить новый массив нужного размера, скопировать в него старый, и добавить в хвост элемент num.
-
 
 3.3 метод
 public void atInsert(int pos, int num) - добавляет элемент num в позицию pos массива, при этом размер массива должен увеличиться на 1.
