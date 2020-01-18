@@ -12,8 +12,8 @@ public class Eratosthenes {
     // конструктор
     public Eratosthenes(int N) {
         // Arrays.fill(sieve, sieve[N]);
-        this.sieve = new boolean[N+1];
-        Arrays.fill(sieve,true);
+        this.sieve = new boolean[N + 1];
+        Arrays.fill(sieve, true);
         sift();
     }
 
@@ -22,6 +22,13 @@ public class Eratosthenes {
 //Подсказка - нужно реализовать 2 вложенных цикла, внешний, например по i от 2 до N-1,
 // и внутренний, например по j который будет просеивать числа, кратные переменной внешнего цикла i*j.
     private void sift() {
+        for (int i = 2; i < sieve.length; i++) {
+            for (int j = i + 1; j < sieve.length; j++) {
+                if (j % i == 0) {
+                    sieve[j] = false;
+                }
+            }
+        }
     }
 
     //Реализовать метод
