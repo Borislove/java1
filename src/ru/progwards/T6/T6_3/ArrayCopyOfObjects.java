@@ -1,5 +1,7 @@
 package ru.progwards.T6.T6_3;
 
+import ru.progwards.T6.T6_1.Array;
+
 import java.util.Arrays;
 //Копирование массивов объектов Arrays.copyOf
 //используем классы обертки
@@ -15,5 +17,19 @@ public class ArrayCopyOfObjects {
 
         System.out.println(Arrays.toString(arrayInt));
         System.out.println(Arrays.toString(arrayIntCopy));
+
+        int[] arrayInt1 = {57,55,10,538,-132};
+        int[] arrayIntCopy1 = Arrays.copyOf(arrayInt1,arrayInt1.length);
+        System.out.println(Arrays.toString(arrayInt1));
+        System.out.println(Arrays.toString(arrayIntCopy1));
+        arrayInt1[0] = 7777;
+        arrayInt1[1] = 2222;
+        System.out.println(Arrays.toString(arrayInt1));
+        System.out.println(Arrays.toString(arrayIntCopy1));
+     //   Arrays.fill(arrayInt1,arrayInt1[0]);
+        Arrays.fill(arrayInt1,arrayInt1[1]);
+        System.out.println(Arrays.toString(arrayInt1));
+
+
     }
 }

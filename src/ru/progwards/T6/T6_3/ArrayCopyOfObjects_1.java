@@ -15,7 +15,7 @@ public class ArrayCopyOfObjects_1 {
                 new AtomicInteger(0),
                 new AtomicInteger(58),
                 new AtomicInteger(-1)
-        };              //зачем тут точка с запятой?
+        };
 
         AtomicInteger[]arrayIntCopy = Arrays.copyOf(arrayInt, arrayInt.length);
         System.out.println(Arrays.toString(arrayInt));

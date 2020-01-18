@@ -17,6 +17,8 @@ public class CompareToInteger {
         a = 1;
         b = 5;
 
+
+
         System.out.println(a.compareTo(b));
     }
 }
