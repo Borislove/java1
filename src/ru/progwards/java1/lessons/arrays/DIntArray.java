@@ -11,8 +11,8 @@ public class DIntArray {
     //метод
     public void add(int num) {
 
-        int[] numbersCopy = Arrays.copyOf(numbers,numbers.length);
-        numbersCopy[numbersCopy.length] = numbersCopy[numbersCopy.length+1];
+        int[] numbersCopy = Arrays.copyOf(numbers,numbers.length+1);
+        numbersCopy[numbers.length] = num;
 
 
         //Arrays.fill(numbers,n);
@@ -26,12 +26,12 @@ public class DIntArray {
     //метод
     public void atDelete(int pos) {
         int[] numbersCopy = Arrays.copyOf(numbers,numbers.length);
-        numbersCopy[numbersCopy.length] = numbersCopy[numbersCopy.length-1];
+
     }
 
     //метод
     public int at(int pos) {
-        return 0;
+        return numbers[pos];
     }
 
 
