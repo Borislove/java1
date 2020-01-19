@@ -1,42 +1,55 @@
 package ru.progwards.java1.lessons.arrays;
 
-import java.util.Arrays;
-
 public class DIntArray {
-    private int num;
-    private int[] numbers = new int[num];
 
+    private int[] arrayInt;
 
+    public DIntArray() {
+        this.arrayInt = new int[0];
+    }
 
-    //метод
     public void add(int num) {
-
-        int[] numbersCopy = Arrays.copyOf(numbers,numbers.length+1);
-        numbersCopy[numbers.length] = num;
-
-
-        //Arrays.fill(numbers,n);
-
+        int[] addArrayInt = arrayInt;
+        arrayInt = new int[arrayInt.length + 1];
+        for (int i = 0; i < arrayInt.length - 1; i++) {
+            arrayInt[i] = addArrayInt[i];
+        }
+        arrayInt[arrayInt.length - 1] = num;
     }
 
-    //метод
     public void atInsert(int pos, int num) {
+        int[] atInsertArrayInt = arrayInt;
+        arrayInt = new int[arrayInt.length + 1];
+
+        for (int i = 0; i < pos; i++) {
+            arrayInt[i] = atInsertArrayInt[i];
+        }
+
+        for (int i = pos + 1; i < arrayInt.length; i++) {
+            arrayInt[i] = atInsertArrayInt[i - 1];
+        }
+        arrayInt[pos] = num;
     }
 
-    //метод
     public void atDelete(int pos) {
-        int[] numbersCopy = Arrays.copyOf(numbers,numbers.length);
+        int[] atDeleteArrayInt = arrayInt;
+        arrayInt = new int[arrayInt.length - 1];
+
+        for (int i = 0; i < pos; i++) {
+            arrayInt[i] = atDeleteArrayInt[i];
+        }
+
+        for (int i = pos + 1; i < atDeleteArrayInt.length; i++) {
+            arrayInt[i - 1] = atDeleteArrayInt[i];
+        }
 
     }
 
-    //метод
     public int at(int pos) {
-        return numbers[pos];
+        return arrayInt[pos];
     }
-
 
     public static void main(String[] args) {
-
     }
 }
 
@@ -61,12 +74,3 @@ public void atDelete(int pos) - удаляет элемент в позиции 
 
 public int at(int pos) - возвращает элемент по индексу pos.
 */
-
-
-// TODO: 18.01.2020 Задача 3. Класс DIntArray: не пройдено, оценка: 2.0
-//Комментарий:
-//OK: Тест "Конструктор по умолчанию" пройден успешно.
-//ERROR: Тест "Метод add(int num)" не пройден. Метод add(int num) работает неверно, либо метод at(int pos) возвращает неверное значение. При помощи метода add(int num) последовательно добавлены значения: -95,-89,-88,45,74,-63,24,16,40. Вызов метода at(0) возвратил значение: 0. Ожидалось: -95
-//ERROR: Тест "Метод atInsert(int pos, int num)" не пройден. Метод atInsert(int pos, int num) работает неверно, либо метод at(int pos) возвращает неверное значение. При помощи метода add(int num) последовательно добавлены значения: -27,-94,-99,-91,46,36,-67,-75,98,45,26,21,-24,-42. Вызван метод atInsert(2, -78). Вызов метода at(2) возвратил значение: 0. Ожидалось: -78
-//ERROR: Тест "Метод atDelete(int pos)" не пройден. Во время выполнения возникло исключение java.lang.NegativeArraySizeException: -1
-//По данной задаче в целом не зачет, решение возвращено на доработку. Задача выполнена на 6.25%
