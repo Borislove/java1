@@ -1,5 +1,6 @@
 package ru.progwards.java1.SeaBattle.abirme;
 
+
 import ru.progwards.java1.SeaBattle.SeaBattle;
 import ru.progwards.java1.SeaBattle.SeaBattle.FireResult;
 
@@ -65,15 +66,14 @@ public class SeaBattleAlg {
         }
     }*/
 
-    //-----------------------------------------------------------------------------
+    //------------------------------------------Рабочий с текстом-----------------------------------
 
-    public void battleAlgorithm(SeaBattle seaBattle) {
+ /*   public void battleAlgorithm(SeaBattle seaBattle) {
         int hits = 20;
         //for (int x=0,y=0 ;  y < seaBattle.getSizeX() || x < seaBattle.getSizeY() ; y++ , x++) { // по диагонали
         for (int y = 0; y < seaBattle.getSizeX(); y++) {
             for (int x = 0; x < seaBattle.getSizeY(); x++) {
                 SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
-
                 if (fireResult == FireResult.HIT) {
                     //seaBattle.fire(x,y);
                     //  seaBattle.getSizeY();
@@ -82,11 +82,15 @@ public class SeaBattleAlg {
                     System.out.println("\u001B[31m" + "Попадание! " + "\u001B[0m" + "Победа близка");
                     System.out.println("Координаты x = " + x + " Координаты y = " + y);
                     System.out.println("-----------------------------------");
+                    //seaBattle.fire(seaBattle.getSizeX(),seaBattle.getSizeY());
+//                    seaBattle.fire( ((x+1 &x)|(x-1&x)),y+1&y|y-1&y);
+                    fireResult = FireResult.HIT;
+                    //  fireResult = FireResult.MISS;
                 }
-
                 if (fireResult == FireResult.DESTROYED) {
-                }
 
+                    fireResult = FireResult.DESTROYED;
+                }
                 if (fireResult != FireResult.MISS)
                     hits--;
                 System.out.print("Промах  ");
@@ -96,9 +100,24 @@ public class SeaBattleAlg {
                     //  System.out.println("Кораблей больше нет! Остались утки");
                     return;
             }
-
         }
+    }*/
 
+    //------------------------------------------ тест-----------------------------------
+    public void battleAlgorithm(SeaBattle seaBattle) {
+        int hits = 20;
+
+
+
+        for (int y = 0; y < seaBattle.getSizeX(); y++) {
+            for (int x = 0; x < seaBattle.getSizeY(); x++) {
+                SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
+                if (fireResult != FireResult.MISS)
+                    hits--;
+                if (hits == 0)
+                    return;
+            }
+        }
     }
 
 
