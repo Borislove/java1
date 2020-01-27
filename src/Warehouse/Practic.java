@@ -12,7 +12,7 @@ public class Practic {
 
        // String original = "7801678586\\780101001 ООО \"Рога и Копыта\""  ;
 
-        String original = "7801678586\\780101001 ООО \"Рога и Копыта\""  ;
+       // String original = "7801678586\\780101001 ООО \"Рога и Копыта\""  ;
 
         //original.split("[[ ]*|[,]*|[\\.]*|[:]*|[/]*|[!]*|[?]*|[+]*]+");
         //original.split( " [ ]" ) ;
@@ -28,6 +28,7 @@ public class Practic {
         strOrig = original.split(razdelitel);
         System.out.println(Arrays.toString(strOrig));*/
 
+/*
 
         String[] strSlash;
         String razdelitelSlash = "\\\\";
@@ -40,12 +41,13 @@ public class Practic {
         System.out.println(Arrays.toString(strSlash));
         strSlash = newtext.split("ООО");
         System.out.println(Arrays.toString(strSlash));
+*/
 
 
 
+//------------------------------------------------------------
 
-
-        /*String texttext = "текст";
+        String texttext = "7801678586\\780101001 ООО \"Рога и Копыта\"";
         String[] arraytext = texttext.split(" ");
         StringBuilder builder = new StringBuilder();
         for (String current : arraytext) {
@@ -53,7 +55,7 @@ public class Practic {
         }
         String newtext12 = builder.toString();
         System.out.println(newtext12);
-        */
+
 
 
        /* String array = strSlash[strSlash.length];
