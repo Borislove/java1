@@ -40,12 +40,29 @@ import ru.progwards.java1.SeaBattle.SeaBattle.FireResult;
             }
         }
 
-        // функция для отладки
-        public static void main(String[] args) {
+        static void testFull(){
             System.out.println("Sea battle");
-            SeaBattle seaBattle = new SeaBattle(true);
+            double result = 0 ;
+            for (int i = 0; i < 1000 ; i++) {
+         //   SeaBattle seaBattle = new SeaBattle(true); //игровое поле, создается тестовое поле, false или пустое новая раскладка кораблей
+                SeaBattle seaBattle = new SeaBattle();
+            new SeaBattleAlg().battleAlgorithm(seaBattle);
+            result +=seaBattle.getResult();
+            }
+            System.out.println(result/1000);
+        }
+
+        static void testOne(){
+            System.out.println("Sea battle");
+            SeaBattle seaBattle = new SeaBattle(true); //игровое поле, создается тестовое поле, false или пустое новая раскладка кораблей
             new SeaBattleAlg().battleAlgorithm(seaBattle);
             System.out.println(seaBattle.getResult());
+        }
+
+        // функция для отладки
+        public static void main(String[] args) {
+            testFull();
+
         }
     }
 
