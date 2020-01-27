@@ -33,9 +33,14 @@ import ru.progwards.java1.SeaBattle.SeaBattle.FireResult;
         public void battleAlgorithm(SeaBattle seaBattle) {
             // пример алгоритма:
             // стрельба по всем квадратам поля полным перебором
+            int hits = 0;
             for (int y = 0; y < seaBattle.getSizeX(); y++) {
                 for (int x = 0; x < seaBattle.getSizeY(); x++) {
                     SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
+                    if(fireResult != FireResult.MISS)
+                        hits++;
+                    if(hits>= 20)   //20 кораблей?
+                        return;
                 }
             }
         }
@@ -68,3 +73,23 @@ import ru.progwards.java1.SeaBattle.SeaBattle.FireResult;
 
 
 
+/*Реализовать алгоритм стрельбы для Морского боя. Для этого:
+
+1. Реализовать класс SeaBattleAlg
+2. В классе реализовать метод  public void battleAlgorithm(SeaBattle seaBattle)
+В методе реализовать максимально оптимальный алгоритм стрельбы для уничтожения кораблей.
+
+Для выстрела использовать SeaBattle.FireResult seaBattle.fire(int x, int y)
+
+Тестовое поле создаётся конструктором
+SeaBattle seaBattle = new SeaBattle(true);
+
+
+Обычное (случайное) поле создаётся конструктором по умолчанию:
+SeaBattle seaBattle = new SeaBattle();
+или
+SeaBattle seaBattle = new SeaBattle(false);
+
+Посмотреть результаты стрельбы можно в любой момент,
+выведя объект класса SeaBattle на консоль. Например так:
+System.out.println(seaBattle);*/
