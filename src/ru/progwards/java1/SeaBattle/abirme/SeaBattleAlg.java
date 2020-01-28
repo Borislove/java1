@@ -4,6 +4,8 @@ package ru.progwards.java1.SeaBattle.abirme;
 import ru.progwards.java1.SeaBattle.SeaBattle;
 import ru.progwards.java1.SeaBattle.SeaBattle.FireResult;
 
+import java.util.Arrays;
+
 
 public class SeaBattleAlg {
     // Тестовое поле создаётся конструктором
@@ -33,7 +35,40 @@ public class SeaBattleAlg {
     //         9|X|.|.|.|X|.|.|.|.|.|
 
 
-    public static int number = 1;
+    public static int number = 1; //счетчик попыток
+
+    private static final int MINUS = 0b01; //стреляем в уменьшение координаты
+    private static final int PLUS = 0b10; //стреляем в увеличение координаты
+
+    public static boolean printField = false; //печатать поле на каждом шаге
+    char[][] field; //поле боя. ' ' - пустая ячейка, '*' - выстрел, 'X' - попали в корабль, '.' - отметили , что нет смысла стрелять
+    SeaBattle seaBattle; // seaBattle, что бы не таскать его везде параметром
+    int hits; //общее количество попаданий
+    int direction; //направление стрельбы - PLUS | MINUS
+
+    //процедура инициализации, используется вместо конструктора
+    void init(SeaBattle seaBattle) {
+        hits = 0;
+        this.seaBattle = seaBattle;
+        field = new char[seaBattle.getSizeY()][seaBattle.getSizeY()];
+        for (int x = 0; x < seaBattle.getSizeX(); x++) {
+            Arrays.fill(field[x], ' ');
+        }
+    }
+
+
+      void otrisovka(int x,int y) {
+
+          for ( ; x < seaBattle.getSizeX(); x++) {
+              Arrays.fill(field[x], '.');
+              for (  ; y < seaBattle.getSizeY(); y++) {
+                  Arrays.fill(field[y], '.');
+              }
+          }
+
+
+
+    }
 
     //--------------------------------------Рабочий---------------------------------------- //104.678
      /*   public void battleAlgorithm(SeaBattle seaBattle) {
@@ -68,7 +103,7 @@ public class SeaBattleAlg {
 
     //------------------------------------------Рабочий с текстом-----------------------------------
 
- /*   public void battleAlgorithm(SeaBattle seaBattle) {
+    public void battleAlgorithm(SeaBattle seaBattle) {
         int hits = 20;
         //for (int x=0,y=0 ;  y < seaBattle.getSizeX() || x < seaBattle.getSizeY() ; y++ , x++) { // по диагонали
         for (int y = 0; y < seaBattle.getSizeX(); y++) {
@@ -101,24 +136,29 @@ public class SeaBattleAlg {
                     return;
             }
         }
-    }*/
+    }
 
     //------------------------------------------ тест-----------------------------------
+/*
     public void battleAlgorithm(SeaBattle seaBattle) {
         int hits = 20;
+int x = 7;
+int y = 0;
 
+        SeaBattle.FireResult fireResult = seaBattle.fire(x,y);
+        if(fireResult == FireResult.HIT);
 
+            seaBattle.fire(x+1,0);
+            if(fireResult == FireResult.MISS);
+            seaBattle.fire(x-1,y);
+            seaBattle.fire(x,y+1);
 
-        for (int y = 0; y < seaBattle.getSizeX(); y++) {
-            for (int x = 0; x < seaBattle.getSizeY(); x++) {
-                SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
-                if (fireResult != FireResult.MISS)
-                    hits--;
-                if (hits == 0)
-                    return;
-            }
-        }
+       // seaBattle.fire(7,0);
+
+        //seaBattle.fire(6,0);
+        //seaBattle.fire(8,0);
     }
+*/
 
 
     static void testFull() {
@@ -150,12 +190,19 @@ public class SeaBattleAlg {
         SeaBattle seaBattle = new SeaBattle(true); //игровое поле, создается тестовое поле, false или пустое новая раскладка кораблей
         new SeaBattleAlg().battleAlgorithm(seaBattle);
         System.out.println(seaBattle.getResult());
+        System.out.println("тестовое поле");
+        System.out.println("----------------------------");
+        System.out.println(seaBattle);
     }
 
     // функция для отладки
     public static void main(String[] args) {
         testFull();
+//testOne();
 
+        //что то интересное
+        //long startTime = System.currentTimeMillis();
+        //System.out.println(System.currentTimeMillis() - startTime );
 
     }
 }
