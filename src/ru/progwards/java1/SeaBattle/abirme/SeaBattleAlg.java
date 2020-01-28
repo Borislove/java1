@@ -158,11 +158,11 @@ int y = 0;
         //seaBattle.fire(8,0);
     }*/
 
+    // TODO: 28.01.2020 попроще нужно, отдельные методы для поиска
     //------------------------------------------ тест-----------------------------------
         public void battleAlgorithm(SeaBattle seaBattle) {
             int x = 3;
             int y = 0;
-
 
             SeaBattle.FireResult fireResult = seaBattle.fire(x,y);
             //-------------------4--------------------------------
@@ -192,15 +192,102 @@ int y = 0;
             fireResult = seaBattle.fire(2,5);
             fireResult = seaBattle.fire(1,6);
             fireResult = seaBattle.fire(0,7);
+            //-------------------3----------- низ----------------
+            fireResult = seaBattle.fire(9,4);
+            fireResult = seaBattle.fire(8,5);
+            fireResult = seaBattle.fire(7,6);
+            fireResult = seaBattle.fire(6,7);
+            fireResult = seaBattle.fire(5,8);
+            fireResult = seaBattle.fire(4,9);
+            //-------------------3----------- верх----------------
+            fireResult = seaBattle.fire(5,0);
+            fireResult = seaBattle.fire(4,1);
+            fireResult = seaBattle.fire(3,2);
+            fireResult = seaBattle.fire(2,3);
+            fireResult = seaBattle.fire(1,4);
+            fireResult = seaBattle.fire(0,5);
+            //---------углы
+            fireResult = seaBattle.fire(9,9);
+            fireResult = seaBattle.fire(0,0);
+            //-------------------3-----------centre----------------
+            //fireResult = seaBattle.fire(0,9);   //+2
+            fireResult = seaBattle.fire(1,8);
+            fireResult = seaBattle.fire(2,7);
+            fireResult = seaBattle.fire(3,6);
+            fireResult = seaBattle.fire(4,5);
+            fireResult = seaBattle.fire(5,4);
+            fireResult = seaBattle.fire(6,3);
+            fireResult = seaBattle.fire(7,2);
+            fireResult = seaBattle.fire(8,1);
+            //fireResult = seaBattle.fire(9,0);   //+2
 
+            //-------------------2---------------------------
+            fireResult = seaBattle.fire(0,9);   //+2
+            fireResult = seaBattle.fire(9,0);   //+2
 
+            fireResult = seaBattle.fire(0,1);
+            fireResult = seaBattle.fire(1,0);
 
+            fireResult = seaBattle.fire(8,9);
+            fireResult = seaBattle.fire(9,8);
+
+            //------------------1---------------------------
+            fireResult = seaBattle.fire(2,0);
+            fireResult = seaBattle.fire(1,1);
+            fireResult = seaBattle.fire(0,2);
+            //--------------
+            fireResult = seaBattle.fire(9,7);
+            fireResult = seaBattle.fire(8,8);
+            fireResult = seaBattle.fire(7,9);
+            //--------------
+            fireResult = seaBattle.fire(9,3);
+            fireResult = seaBattle.fire(9,5);
+            fireResult = seaBattle.fire(8,4);
+            fireResult = seaBattle.fire(8,6);
+            fireResult = seaBattle.fire(7,5);
+            fireResult = seaBattle.fire(7,7);
+            fireResult = seaBattle.fire(6,6);
+            fireResult = seaBattle.fire(6,8);
+            fireResult = seaBattle.fire(5,7);
+            fireResult = seaBattle.fire(5,9);
+            fireResult = seaBattle.fire(4,8);
+            fireResult = seaBattle.fire(3,9);
+            //--------------
+            fireResult = seaBattle.fire(4,0);
+            fireResult = seaBattle.fire(6,0);
+            fireResult = seaBattle.fire(3,1);
+            fireResult = seaBattle.fire(5,1);
+            fireResult = seaBattle.fire(2,2);
+            fireResult = seaBattle.fire(4,2);
+            fireResult = seaBattle.fire(3,3);
+            fireResult = seaBattle.fire(1,3);
+            fireResult = seaBattle.fire(2,4);
+            fireResult = seaBattle.fire(0,4);
+            fireResult = seaBattle.fire(1,5);
+            fireResult = seaBattle.fire(0,6);
+
+            //--------------остатки в центре
+            fireResult = seaBattle.fire(0,8);
+            fireResult = seaBattle.fire(1,7);
+            fireResult = seaBattle.fire(2,6);
+            fireResult = seaBattle.fire(3,5);
+            fireResult = seaBattle.fire(4,4);
+            fireResult = seaBattle.fire(5,3);
+            fireResult = seaBattle.fire(6,2);
+            fireResult = seaBattle.fire(7,1);
+            fireResult = seaBattle.fire(8,0);
+
+            fireResult = seaBattle.fire(9,1);
+            fireResult = seaBattle.fire(8,2);
+            fireResult = seaBattle.fire(7,3);
+            fireResult = seaBattle.fire(6,4);
+            fireResult = seaBattle.fire(5,5);
+            fireResult = seaBattle.fire(4,6);
+            fireResult = seaBattle.fire(3,7);
+            fireResult = seaBattle.fire(2,8);
+            fireResult = seaBattle.fire(1,9);
 
         }
-
-
-
-
 
 
 
