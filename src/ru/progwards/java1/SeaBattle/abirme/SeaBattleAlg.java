@@ -103,7 +103,7 @@ public class SeaBattleAlg {
 
     //------------------------------------------Рабочий с текстом-----------------------------------
 
-    public void battleAlgorithm(SeaBattle seaBattle) {
+   /* public void battleAlgorithm(SeaBattle seaBattle) {
         int hits = 20;
         //for (int x=0,y=0 ;  y < seaBattle.getSizeX() || x < seaBattle.getSizeY() ; y++ , x++) { // по диагонали
         for (int y = 0; y < seaBattle.getSizeX(); y++) {
@@ -136,11 +136,10 @@ public class SeaBattleAlg {
                     return;
             }
         }
-    }
+    }*/
 
     //------------------------------------------ тест-----------------------------------
-/*
-    public void battleAlgorithm(SeaBattle seaBattle) {
+/*    public void battleAlgorithm(SeaBattle seaBattle) {
         int hits = 20;
 int x = 7;
 int y = 0;
@@ -157,8 +156,52 @@ int y = 0;
 
         //seaBattle.fire(6,0);
         //seaBattle.fire(8,0);
-    }
-*/
+    }*/
+
+    //------------------------------------------ тест-----------------------------------
+        public void battleAlgorithm(SeaBattle seaBattle) {
+            int x = 3;
+            int y = 0;
+
+
+            SeaBattle.FireResult fireResult = seaBattle.fire(x,y);
+            //-------------------4--------------------------------
+            fireResult = seaBattle.fire(2,1);
+            fireResult = seaBattle.fire(1,2);
+            fireResult = seaBattle.fire(0,3);
+
+            fireResult = seaBattle.fire(6,9);
+            fireResult = seaBattle.fire(7,8);
+            fireResult = seaBattle.fire(8,7);
+            fireResult = seaBattle.fire(9,6);
+
+            fireResult = seaBattle.fire(9,2);
+            fireResult = seaBattle.fire(8,3);
+            fireResult = seaBattle.fire(7,4);
+            fireResult = seaBattle.fire(6,5);
+            fireResult = seaBattle.fire(5,6);
+            fireResult = seaBattle.fire(4,7);
+            fireResult = seaBattle.fire(3,8);
+            fireResult = seaBattle.fire(2,9);
+
+            fireResult = seaBattle.fire(7,0);
+            fireResult = seaBattle.fire(6,1);
+            fireResult = seaBattle.fire(5,2);
+            fireResult = seaBattle.fire(4,3);
+            fireResult = seaBattle.fire(3,4);
+            fireResult = seaBattle.fire(2,5);
+            fireResult = seaBattle.fire(1,6);
+            fireResult = seaBattle.fire(0,7);
+
+
+
+
+        }
+
+
+
+
+
 
 
     static void testFull() {
@@ -197,8 +240,8 @@ int y = 0;
 
     // функция для отладки
     public static void main(String[] args) {
-        testFull();
-//testOne();
+//        testFull();
+testOne();
 
         //что то интересное
         //long startTime = System.currentTimeMillis();
