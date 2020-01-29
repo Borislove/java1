@@ -1,4 +1,4 @@
-package Warehouse.test;
+package Warehouse.Hello;
 
 public class HelloJava_8 {
 
@@ -15,6 +15,7 @@ public class HelloJava_8 {
 
 
     public static void main(String[] args) {
+        // TODO: 29.01.2020 хеш проверить  
         // System.out.println(a+b+c+c1+d);  // что то не то складывает, резальт в цифрах
         System.out.print(a+ ""+ b + ""+ "" + c + ""+ ""+c1+ ""+d);
         System.out.print(" ");

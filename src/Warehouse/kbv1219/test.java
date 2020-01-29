@@ -14,6 +14,7 @@ public class test {
 
             System.out.println("Быть может что-то в этом условии верно, но что-то точно нет");
     }
+
     public static void main(String[] args) {
 
         testTest();

@@ -139,7 +139,7 @@ public class SeaBattleAlg {
     }*/
 
     //------------------------------------------ тест-----------------------------------
-/*    public void battleAlgorithm(SeaBattle seaBattle) {
+    public void battleAlgorithm(SeaBattle seaBattle) {
         int hits = 20;
 int x = 7;
 int y = 0;
@@ -147,20 +147,23 @@ int y = 0;
         SeaBattle.FireResult fireResult = seaBattle.fire(x,y);
         if(fireResult == FireResult.HIT);
 
-            seaBattle.fire(x+1,0);
+
+            System.out.println("x "+x+ " y "+y );
+
+            //seaBattle.fire(x+1,0);
             if(fireResult == FireResult.MISS);
-            seaBattle.fire(x-1,y);
-            seaBattle.fire(x,y+1);
+           // seaBattle.fire( x-1 ,y);
+            //seaBattle.fire(x,y+1);
 
        // seaBattle.fire(7,0);
 
         //seaBattle.fire(6,0);
         //seaBattle.fire(8,0);
-    }*/
+    }
 
     // TODO: 28.01.2020 попроще нужно, отдельные методы для поиска
     //------------------------------------------ тест-----------------------------------
-        public void battleAlgorithm(SeaBattle seaBattle) {
+       /* public void battleAlgorithm(SeaBattle seaBattle) {
             int x = 3;
             int y = 0;
 
@@ -286,8 +289,7 @@ int y = 0;
             fireResult = seaBattle.fire(3,7);
             fireResult = seaBattle.fire(2,8);
             fireResult = seaBattle.fire(1,9);
-
-        }
+        }*/
 
 
 
@@ -327,8 +329,8 @@ int y = 0;
 
     // функция для отладки
     public static void main(String[] args) {
-//        testFull();
-testOne();
+    //  testFull();
+        testOne();
 
         //что то интересное
         //long startTime = System.currentTimeMillis();

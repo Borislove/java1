@@ -1,7 +1,6 @@
 package Warehouse;
 //добавить цвет, + рандомность
 
-
 class Sleep_1 {
 
 
@@ -14,6 +13,7 @@ class Sleep_1 {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
+
 
     public static int i = 0;
 

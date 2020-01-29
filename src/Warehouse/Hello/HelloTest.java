@@ -1,5 +1,6 @@
-package Warehouse.test;
+package Warehouse.Hello;
 
+//не удалять, в 6 hello используется
 public class HelloTest {
 
     public static void hello () {

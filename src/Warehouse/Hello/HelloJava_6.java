@@ -1,6 +1,4 @@
-package Warehouse;
-
-import Warehouse.test.HelloTest;
+package Warehouse.Hello;
 
 //вызов из пакета
 public class HelloJava_6 {

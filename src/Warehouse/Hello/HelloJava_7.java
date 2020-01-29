@@ -1,4 +1,4 @@
-package Warehouse.test;
+package Warehouse.Hello;
 
 import java.util.Arrays;
 

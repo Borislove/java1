@@ -1,6 +1,7 @@
 package Warehouse.Timer;
 
 
+
 //таймер, не идеален но сойдет
 public class Timer_1 {
 
@@ -15,22 +16,25 @@ public class Timer_1 {
         while (true) {
             for (int i = 0; i <= 60; i++) {
                 Thread.sleep(1000);  //В каждой секунде насчитывается 1000 миллисекунд
-                System.out.print("Days:"+day+" Hour: "+h+" Minute: "+m+ " Second: " + i + "\r");
+                System.out.print("Days:" + day + " Hour: " + h + " Minute: " + m + " Second: " + i + "\r");
             }
             m++;
 
-            if(m==60){
+            if (m == 60) {
                 h++;
-                m=0;  //обнуление делать а то получится не то
+                m = 0;  //обнуление делать а то получится не то
 
             }
-            if(h==24){
+            if (h == 24) {
                 day++;
                 h = 0;
 
             }
         }
+
     }
+
+
 }
 
 //   System.out.println("\b") ; //пропуск строки

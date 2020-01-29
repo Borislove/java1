@@ -1,4 +1,6 @@
-package Warehouse;
+package Warehouse.Hello;
+
+import Warehouse.Hello.HelloJava_3;
 
 public class HelloJava_5 {
 

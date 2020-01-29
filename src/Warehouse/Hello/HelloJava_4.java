@@ -1,4 +1,4 @@
-package Warehouse;
+package Warehouse.Hello;
 
 import static java.lang.System.out;
 
