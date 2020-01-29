@@ -3,7 +3,7 @@ package Warehouse.Utils;
 import static java.lang.Integer.MAX_VALUE;
 import static java.lang.Integer.MIN_VALUE;
 
-// TODO: 29.01.2020 в отдельный пакет, подклассы 
+// TODO: 29.01.2020 в отдельный пакет, подклассы
 //минимальные и максимальные значения
 public class TestMinMax {
 

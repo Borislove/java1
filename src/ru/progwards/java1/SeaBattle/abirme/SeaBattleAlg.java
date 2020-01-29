@@ -6,34 +6,13 @@ import ru.progwards.java1.SeaBattle.SeaBattle.FireResult;
 
 import java.util.Arrays;
 
+// проверить координаты
+/*
+* обводить корабли по диагонали
+* когда попал добивать корабль
+* */
 
 public class SeaBattleAlg {
-    // Тестовое поле создаётся конструктором
-    //     SeaBattle seaBattle = new SeaBattle(true);
-    //
-    // Обычное поле создаётся конструктором по умолчанию:
-    //     SeaBattle seaBattle = new SeaBattle();
-    //     SeaBattle seaBattle = new SeaBattle(false);
-    //
-    // Посмотреть результаты стрельбы можно в любой момент,
-    // выведя объект класса SeaBattle на консоль. Например так:
-    //     System.out.println(seaBattle);
-    //
-    //
-    // Вид тестового поля:
-    //
-    //           0 1 2 3 4 5 6 7 8 9    координата x
-    //         0|.|.|.|.|.|.|.|X|.|.|
-    //         1|.|.|.|.|.|X|.|.|.|.|
-    //         2|X|X|.|.|.|.|.|.|.|.|
-    //         3|.|.|.|.|.|.|.|X|X|X|
-    //         4|.|.|.|.|X|.|.|.|.|.|
-    //         5|.|.|.|.|X|.|.|Х|.|.|
-    //         6|.|.|.|.|.|.|.|Х|.|X|
-    //         7|X|.|X|.|.|.|.|Х|.|X|
-    //         8|X|.|.|.|.|.|.|X|.|.|
-    //         9|X|.|.|.|X|.|.|.|.|.|
-
 
     public static int number = 1; //счетчик попыток
 
@@ -57,15 +36,14 @@ public class SeaBattleAlg {
     }
 
 
-      void otrisovka(int x,int y) {
+    void otrisovka(int x, int y) {
 
-          for ( ; x < seaBattle.getSizeX(); x++) {
-              Arrays.fill(field[x], '.');
-              for (  ; y < seaBattle.getSizeY(); y++) {
-                  Arrays.fill(field[y], '.');
-              }
-          }
-
+        for (; x < seaBattle.getSizeX(); x++) {
+            Arrays.fill(field[x], '.');
+            for (; y < seaBattle.getSizeY(); y++) {
+                Arrays.fill(field[y], '.');
+            }
+        }
 
 
     }
@@ -139,7 +117,7 @@ public class SeaBattleAlg {
     }*/
 
     //------------------------------------------ тест-----------------------------------
-    public void battleAlgorithm(SeaBattle seaBattle) {
+  /*  public void battleAlgorithm(SeaBattle seaBattle) {
         int hits = 20;
 int x = 7;
 int y = 0;
@@ -159,10 +137,10 @@ int y = 0;
 
         //seaBattle.fire(6,0);
         //seaBattle.fire(8,0);
-    }
+    }*/
 
     // TODO: 28.01.2020 попроще нужно, отдельные методы для поиска
-    //------------------------------------------ тест-----------------------------------
+    //------------------------------------------ тест рабочий-----------------------------------
        /* public void battleAlgorithm(SeaBattle seaBattle) {
             int x = 3;
             int y = 0;
@@ -292,6 +270,50 @@ int y = 0;
         }*/
 
 
+    //---------------------------------------------
+    public void battleAlgorithm(SeaBattle seaBattle) {
+        searchShip4(seaBattle);
+        //searchShip3(seaBattle);
+        //searchShip2(seaBattle);
+        //searchShip1(seaBattle);
+
+    }
+
+
+    public void searchShip4(SeaBattle seaBattle) {    //поиск 4 палубного корабля
+
+        int x = 3;
+        int y = 0;
+
+        SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
+        fireResult = seaBattle.fire(2, 1);
+        fireResult = seaBattle.fire(1, 2);
+        fireResult = seaBattle.fire(0, 3);
+//-------------------------------------------------------
+        fireResult = seaBattle.fire(6, 9);
+        fireResult = seaBattle.fire(7, 8);
+        fireResult = seaBattle.fire(8, 7);
+        fireResult = seaBattle.fire(9, 6);
+//-------------------------------------------------------
+        fireResult = seaBattle.fire(9, 2);
+        fireResult = seaBattle.fire(8, 3);
+        fireResult = seaBattle.fire(7, 4);
+        fireResult = seaBattle.fire(6, 5);
+        fireResult = seaBattle.fire(5, 6);
+        fireResult = seaBattle.fire(4, 7);
+        fireResult = seaBattle.fire(3, 8);
+        fireResult = seaBattle.fire(2, 9);
+//-------------------------------------------------------
+        fireResult = seaBattle.fire(7, 0);
+        fireResult = seaBattle.fire(6, 1);
+        fireResult = seaBattle.fire(5, 2);
+        fireResult = seaBattle.fire(4, 3);
+        fireResult = seaBattle.fire(3, 4);
+        fireResult = seaBattle.fire(2, 5);
+        fireResult = seaBattle.fire(1, 6);
+        fireResult = seaBattle.fire(0, 7);
+    }
+
 
     static void testFull() {
         System.out.println("Sea battle");
@@ -329,7 +351,7 @@ int y = 0;
 
     // функция для отладки
     public static void main(String[] args) {
-    //  testFull();
+        //  testFull();
         testOne();
 
         //что то интересное
@@ -360,3 +382,33 @@ SeaBattle seaBattle = new SeaBattle(false);
 Посмотреть результаты стрельбы можно в любой момент,
 выведя объект класса SeaBattle на консоль. Например так:
 System.out.println(seaBattle);*/
+
+
+
+/* // Тестовое поле создаётся конструктором
+    //     SeaBattle seaBattle = new SeaBattle(true);
+    //
+    // Обычное поле создаётся конструктором по умолчанию:
+    //     SeaBattle seaBattle = new SeaBattle();
+    //     SeaBattle seaBattle = new SeaBattle(false);
+    //
+    // Посмотреть результаты стрельбы можно в любой момент,
+    // выведя объект класса SeaBattle на консоль. Например так:
+    //     System.out.println(seaBattle);
+    //
+    //
+    // Вид тестового поля:
+    //
+    //           0 1 2 3 4 5 6 7 8 9    координата x
+    //         0|.|.|.|.|.|.|.|X|.|.|
+    //         1|.|.|.|.|.|X|.|.|.|.|
+    //         2|X|X|.|.|.|.|.|.|.|.|
+    //         3|.|.|.|.|.|.|.|X|X|X|
+    //         4|.|.|.|.|X|.|.|.|.|.|
+    //         5|.|.|.|.|X|.|.|Х|.|.|
+    //         6|.|.|.|.|.|.|.|Х|.|X|
+    //         7|X|.|X|.|.|.|.|Х|.|X|
+    //         8|X|.|.|.|.|.|.|X|.|.|
+    //         9|X|.|.|.|X|.|.|.|.|.|
+
+*/
