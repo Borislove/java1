@@ -5,7 +5,7 @@ public class Main {
 
         //Float.Float();
         //Long.Long();
-       // Double.Double();
+     Double.Double();
        // Integer.Integer();
        // Short.Short();
     }

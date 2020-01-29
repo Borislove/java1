@@ -1,4 +1,4 @@
-package JavaRush.com.javarush.task.task01.task0101;
+package com.javarush.task.task01.task0101;
 
 /*/*Напиши программу, которая выводит на экран надпись:
 
