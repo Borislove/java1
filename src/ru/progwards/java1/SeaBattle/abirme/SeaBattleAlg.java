@@ -145,9 +145,9 @@ int y = 0;
     public void battleAlgorithm(SeaBattle seaBattle) {
 
         searchShip4(seaBattle);
-        searchShip3(seaBattle);
-        searchShip2(seaBattle);
-        searchShip1(seaBattle);
+       // searchShip3(seaBattle);
+      //  searchShip2(seaBattle);
+      //  searchShip1(seaBattle);
 
     }
 
@@ -158,6 +158,7 @@ int y = 0;
         int y = 0;
 
         SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
+
         fireResult = seaBattle.fire(2, 1);
         fireResult = seaBattle.fire(1, 2);
         fireResult = seaBattle.fire(0, 3);
@@ -334,8 +335,8 @@ int y = 0;
 
     // функция для отладки
     public static void main(String[] args) {
-          testFull();
-       // testOne();  //тестовое поле тест
+       //   testFull();
+        testOne();  //тестовое поле тест
 
         //что то интересное
         //long startTime = System.currentTimeMillis();

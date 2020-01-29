@@ -1,4 +1,4 @@
-package Warehouse;
+package Warehouse.Utils;
 
 import java.util.Random;
 
