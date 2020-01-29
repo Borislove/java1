@@ -335,7 +335,7 @@ int y = 0;
 
     // функция для отладки
     public static void main(String[] args) {
-       //   testFull();
+       //   testFull();  //полный тест в 1000 итераций
         testOne();  //тестовое поле тест
 
         //что то интересное
