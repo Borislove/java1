@@ -5,6 +5,9 @@ import java.util.Random;
 //без комментариев
 public class HelloJava_10 {
 
+    static int x = (int) (2*Math.PI); // классная эта Math
+
+
     static Random rnumb = new Random();
 
     public static int number = 0;
@@ -80,6 +83,7 @@ public class HelloJava_10 {
 
             }
            number++;
+
         }
     }
 }
