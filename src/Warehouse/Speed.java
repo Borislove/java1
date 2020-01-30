@@ -1,8 +1,6 @@
 package Warehouse;
 
 /*
-
-
 * расстояние S = V * T
 * скорость V = S / T
 * время T = S / V
@@ -12,6 +10,7 @@ package Warehouse;
 * T - время
 * */
 
+// TODO: 30.01.2020 добавил дабл 
 
 // TODO: 30.01.2020 нужен остаток..
 public class Speed {
@@ -31,27 +30,27 @@ public static final int SAINT_PETERSBURG = 710 ;  //
         System.out.println("Расстояние от Москвы до Санкт-Петербурга составляет: "+ SAINT_PETERSBURG + " километров");
         System.out.println("Сколько потребуется времени преодолеть расстояние?");
 
-        System.out.println("Примерное время в пути: " +SAINT_PETERSBURG / speed  +" часов" );
+        System.out.println("Примерное время в пути: " + (double) (SAINT_PETERSBURG / (double) speed ) +" часов" );
 
         speed +=10;
         System.out.println("Водитель прибавил скорость на 10 ");
         System.out.println("Автомобиль движется со скоростью: "+speed + " km/h");
-        System.out.println("Примерное время в пути: " +SAINT_PETERSBURG / speed  +" часов" );
+        System.out.println("Примерное время в пути: " +SAINT_PETERSBURG / (double) speed  +" часов" );
 
         speed +=10;
         System.out.println("Водитель прибавил скорость на 10 ");
         System.out.println("Автомобиль движется со скоростью: "+speed + " km/h");
-        System.out.println("Примерное время в пути: " +SAINT_PETERSBURG / speed  +" часов" );
+        System.out.println("Примерное время в пути: " +SAINT_PETERSBURG / (double)speed  +" часов" );
 
         speed +=40;
         System.out.println("Водитель прибавил скорость на 40 ");
         System.out.println("Автомобиль движется со скоростью: "+speed + " km/h");
-        System.out.println("Примерное время в пути: " +SAINT_PETERSBURG / speed  +" часов" );
+        System.out.println("Примерное время в пути: " +SAINT_PETERSBURG /(double) speed  +" часов" );
 
         speed +=15;
         System.out.println("Водитель прибавил скорость на 15 ");
         System.out.println("Автомобиль движется со скоростью: "+speed + " km/h");
-        System.out.println("Примерное время в пути: " +SAINT_PETERSBURG / speed  +" часов" );
+        System.out.println("Примерное время в пути: " +SAINT_PETERSBURG /(double) speed  +" часов" );
 
         System.out.println("В итоге водитель не смог преодолеть расстояние в 710 км попал под лишение прав..." +
                 "через какое время он получит права? и сколько ему топать назад если он проехал только 50км?");
