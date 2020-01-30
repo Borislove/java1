@@ -1,10 +1,10 @@
 package Warehouse.ProjectR;
 
+//че тут..
     //Интересно енам добавить...но пока и так хорошо идет!
     //по классам тоже бы распределить все...в одной куче
     //хм идея сделать меню консольное , т.е меню, что попить поесть...подсказки в проекте Хелпер
 //чутка плаваю, ооп надо разбирать
-
 
     public class ProjectR {
 
@@ -15,7 +15,7 @@ package Warehouse.ProjectR;
 
             int a = 100;
 
-            int aBacks = a / 2;
+            int aBacks = a / 2; //это типа курс валют?
             int aEuro = a / 3;
 
             String s = " \u20BD";   //спецсимвол рубля!
@@ -24,9 +24,9 @@ package Warehouse.ProjectR;
 
             String napitok = "Kofee";
             String price = "price: " ;  //цена
+            String quantity = "quantity "; //количество
 
-
-            System.out.println("Hello, world)");
+            //System.out.println("Hello, world)"); //wtf?
             System.out.println(99);
             System.out.println("7+1");
             System.out.println(7+1);
@@ -43,7 +43,7 @@ package Warehouse.ProjectR;
             System.out.println(napitok + " "+ price +" " + aEuro + " " + sEuro);   //куча пробелов!!!
 
             System.out.println();
-            System.out.println(Drinks.k);
+            System.out.println(Drinks.kofee);
 
         }
     }
