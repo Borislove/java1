@@ -7,5 +7,19 @@ https://javarush.ru/groups/posts/614-----ehkranirovanie-simvolov-v-java
 
 
 shortcut use:
+
 ctr +shift+10 - run
+
+ctr+k - commit
+ctr + shitf+k  - push
+
+alt+shift+ стрелка вверх или низ, строку переносит
+
+ctr+d - копирует последню строку
+
+выделенный текст
+shift+tab - сдвигает влево
+tab  - сдвигает вправо
+
+ctrl + alt L - выравнивает текст  (форматирование кода)
 
