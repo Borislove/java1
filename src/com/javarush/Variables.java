@@ -1,4 +1,4 @@
-package JavaRush;
+package com.javarush;
 
 //переменные
 // TODO: 29.01.2020 восполняю пробелы )  

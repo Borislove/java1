@@ -1,4 +1,4 @@
-package JavaRush;
+package com.javarush;
 
 //— «int a» и «int b» — это переменные, а «main» и «pi» – это методы?
     public class Home

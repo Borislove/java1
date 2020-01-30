@@ -1,4 +1,4 @@
-package JavaRush;
+package com.javarush;
 
 // TODO: 29.01.2020 Вернулся на JavaRush!
 public class First {

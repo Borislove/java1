@@ -1,5 +1,5 @@
 //-----------------ИМЯ ПАКЕТА---------------------
-package JavaRush;
+package com.javarush;
 
 //import java.io.IOExсeption;
 

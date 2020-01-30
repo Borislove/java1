@@ -1,4 +1,4 @@
-package JavaRush;
+package com.javarush;
 
 public class Coments {
     public static void main(String[] args) {

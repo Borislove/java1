@@ -1,4 +1,4 @@
-package JavaRush;
+package com.javarush;
 //— Минимальная программа не содержит ни одной команды. На то она и минимальная.
 public class MinimumProgram {
     public static void main(String[] args) {
