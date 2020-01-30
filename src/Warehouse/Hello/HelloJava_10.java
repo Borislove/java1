@@ -5,15 +5,37 @@ import java.util.Random;
 //без комментариев
 public class HelloJava_10 {
 
-    public static int number = 1;
+    static Random rnumb = new Random();
+
+    public static int number = 0;
 
     static void hmm() {
 
     }
 
-    public static void main(String[] args) {
+    static void hmm20() {
+        System.out.println("HELLO HELLO");
+    }
 
-        Random rnumb = new Random();
+    static void hmm30() {
+        System.out.println("WORLD WORLD");
+    }
+
+    static void hmm40() {
+        System.out.println("JAVA JAVA JAVA");
+    }
+
+    static void hmm50() {
+        System.out.println("РЕКЛАМНОЕ МЕСТО СДАЕТСЯ");
+    }
+
+    static void hmm60() {
+        System.out.println("Random number " + rnumb.nextInt(5));
+    }
+
+
+    public static void main(String[] args) throws InterruptedException {
+
 
         System.out.println("Hello world");
         System.out.println("hello world");
@@ -25,31 +47,42 @@ public class HelloJava_10 {
         for (int i = 0; i < 100; i++) {
             //сделаю 100 хеловов
             System.out.println("HELLO WORLD! HELLO JAVA!" + number);
-            number++;
+          //  number++;
 
-            if (number == 20) {
-                System.out.println("HELLO HELLO");
-            }
-            if (number == 30) {
-                System.out.println("WORLD WORLD");
-            }
-            if (number == 40) {
-                System.out.println("JAVA JAVA JAVA");
-            }
-            if (number == 50) {
-                for (int j = 0; j < 10; j++) {
-                    System.out.println("РЕКЛАМНОЕ МЕСТО СДАЕТСЯ");
-                    number--; //тут поставил и дальше не ползет цикл в 49 упирается и сброс
-                }
-            }
+            switch (i) {
+                case 20:
+                    hmm20();
+                    break;
+                case 30:
+                    hmm30();
+                    break;
+                case 40:
+                    hmm40();
+                    break;
+                case 50: //рекламное место
+                    for (int j = 0; j < 10; j++) {
+                        hmm50();
+                    }
+                    break;
+                case 60: // рандомное число
+                    for (int j = 0; j < 5 ; j++) {
+                        System.out.println("Сейчас выпадет рандомное число, ждите... ");
+                        if(rnumb.equals(3)) { //походу не работает тут
+                            System.out.println("ERROR");
+                            continue;
+                        }
+                        Thread.sleep(1500);
+                    hmm60(); }
+                    break;
+//                default:
+                //                  System.out.println("Default");
 
-            if (number == 60) {
-                for (int j = 0; j < 10; j++) {
-                    System.out.println("Random number " + rnumb.nextInt(1000));
-                }
+
             }
+           number++;
         }
     }
 }
+
 
 
