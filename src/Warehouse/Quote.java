@@ -1,6 +1,7 @@
 package Warehouse;
 
-
+//текст взят отсюда
+//https://zen.yandex.ru/media/umapalata/10-citat-na-latyni-kotorye-doljen-znat-kajdyi-5d062a9a4077f40d648bc4f9
 //10 цитат на латыни, которые должен знать каждый
 // TODO: 30.01.2020 просто текст, форматировать нужно 
 public class Quote {
