@@ -1,4 +1,4 @@
-package Warehouse.Utils;
+package Warehouse.utils;
 
 import java.util.Random;
 
@@ -36,5 +36,8 @@ public class RandomNumbers {
         System.out.println("random" +rand);
         int rand1 = Integer.MAX_VALUE - (int)Math.random()*Integer.MIN_VALUE; //вот намудрил сам не пойму и не работает зараза
         System.out.println("random " +rand1);
+
+
+        //new Random().nextInt( 100 );
     }
 }

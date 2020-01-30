@@ -1,4 +1,4 @@
-package Warehouse.ProjectR;
+package Warehouse.projectr;
 
 public class Currency {
 

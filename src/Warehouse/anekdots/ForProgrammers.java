@@ -1,4 +1,4 @@
-package Warehouse.Anekdots;
+package Warehouse.anekdots;
 
 public class ForProgrammers {
 

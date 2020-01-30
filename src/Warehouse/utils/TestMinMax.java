@@ -1,4 +1,4 @@
-package Warehouse.Utils;
+package Warehouse.utils;
 
 
 public class TestMinMax {

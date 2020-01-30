@@ -1,4 +1,4 @@
-package Warehouse.ProjectR;
+package Warehouse.projectr;
 
 //че тут..
     //Интересно енам добавить...но пока и так хорошо идет!

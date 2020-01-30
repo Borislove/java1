@@ -1,4 +1,4 @@
-package Warehouse.Sleep;
+package Warehouse.sleep;
 
 
 // TODO: 30.12.2019    вот такая вот задумка...

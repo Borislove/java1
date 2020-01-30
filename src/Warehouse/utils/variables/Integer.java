@@ -1,4 +1,4 @@
-package Warehouse.Utils.Variables;
+package Warehouse.utils.variables;
 
 public class Integer {
     public static void Integer() {

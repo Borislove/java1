@@ -1,4 +1,4 @@
-package Warehouse.Utils.Variables;
+package Warehouse.utils.variables;
 
 public class Short {
     public static void Short(){

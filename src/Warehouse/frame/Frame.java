@@ -1,4 +1,4 @@
-package Warehouse.Frame;
+package Warehouse.frame;
 
 import javax.swing.*;
 

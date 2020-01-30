@@ -1,4 +1,4 @@
-package Warehouse.ProjectR;
+package Warehouse.projectr;
 
 //у нас забегаловка скромная, только кофе
 

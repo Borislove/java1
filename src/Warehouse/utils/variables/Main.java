@@ -1,4 +1,4 @@
-package Warehouse.Utils.Variables;
+package Warehouse.utils.variables;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Warehouse.Sleep;
+package Warehouse.sleep;
 
 public class Happy {
 
