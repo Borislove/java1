@@ -12,6 +12,7 @@ import java.util.Arrays;
  * когда попал добивать корабль верх, вниз, влево , вправо
  * рандом стрельбы
  *
+ * пошагово бы видеть..
  * */
 
 public class SeaBattleAlg {
@@ -142,7 +143,7 @@ int y = 0;
     }*/
 
     //---------------------------------------------
-    public void battleAlgorithm(SeaBattle seaBattle) {
+    public void battleAlgorithm(SeaBattle seaBattle) throws InterruptedException {
 
         searchShip4(seaBattle);
        // searchShip3(seaBattle);
@@ -152,16 +153,20 @@ int y = 0;
     }
 
 
-    public void searchShip4(SeaBattle seaBattle) {    //поиск 4 палубного корабля
+    public void searchShip4(SeaBattle seaBattle) throws InterruptedException {    //поиск 4 палубного корабля
 
         int x = 3;
         int y = 0;
 
         SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
-
+        //Thread.sleep(300);
+        //sleepFire();
         fireResult = seaBattle.fire(2, 1);
+        //Thread.sleep(300);
         fireResult = seaBattle.fire(1, 2);
+        //Thread.sleep(300);
         fireResult = seaBattle.fire(0, 3);
+        //Thread.sleep(300);
 //-------------------------------------------------------
         fireResult = seaBattle.fire(6, 9);
         fireResult = seaBattle.fire(7, 8);
@@ -298,8 +303,12 @@ int y = 0;
         fireResult = seaBattle.fire(1, 9);
     }
 
+    static void sleepFire() throws InterruptedException { //спать после выстрела
+        Thread.sleep(300);
+    }
 
-    static void testFull() {
+
+    static void testFull() throws InterruptedException {  //полный тест
         System.out.println("Sea battle");
         double result = 0;
 
@@ -323,7 +332,7 @@ int y = 0;
 
     }
 
-    static void testOne() {
+    static void testOne() throws InterruptedException {   //тестовое поле
         System.out.println("Sea battle");
         SeaBattle seaBattle = new SeaBattle(true); //игровое поле, создается тестовое поле, false или пустое новая раскладка кораблей
         new SeaBattleAlg().battleAlgorithm(seaBattle);
@@ -334,7 +343,7 @@ int y = 0;
     }
 
     // функция для отладки
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
        //   testFull();  //полный тест в 1000 итераций
         testOne();  //тестовое поле тест
 
