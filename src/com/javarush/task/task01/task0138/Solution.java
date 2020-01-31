@@ -14,7 +14,7 @@ package com.javarush.task.task01.task0138;
 /* 
 Любимое стихотворение
 */
-// TODO: 31.01.2020 фантазии не хватило  
+// TODO: 31.01.2020 фантазии не хватило
 public class Solution {
     public static void main(String[] args) {
         System.out.println("Мое любимое стихотворение:");

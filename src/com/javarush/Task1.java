@@ -30,7 +30,7 @@ public class Task1 {
         printTextMoreTimes(s, 3);
     }
 
-    //АРГУМЕНТЫ МЕТОДА
+                                            //АРГУМЕНТЫ МЕТОДА
     public static void printTextMoreTimes(String s, int count) {
 
             //  ЦИКЛ

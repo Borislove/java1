@@ -1,4 +1,4 @@
-package Warehouse;
+package Warehouse.speed_racing_2020;
 
 /*
 * расстояние S = V * T
