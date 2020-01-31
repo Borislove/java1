@@ -1,6 +1,6 @@
 package Warehouse;
 
-// TODO: 16.01.2020 Alt+Insert - вызывает конструктор
+// TODO: 16.01.2020
 public class TestConstructor {
     public TestConstructor(int a) {
         this.a = a;
