@@ -1,5 +1,6 @@
 package ru.progwards.t3.n3_2;
 
+//Распаковка (явная)
 public class WrapperUnboxing {
     public static void main(String[] args) {
         Integer intObj1 = 5;
