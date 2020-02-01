@@ -33,7 +33,7 @@ public static final int SAINT_PETERSBURG = 710 ;  //
         System.out.println("Расстояние от Москвы до Санкт-Петербурга составляет: "+ SAINT_PETERSBURG + " километров");
         System.out.println("Сколько потребуется времени преодолеть расстояние?");
 
-        System.out.println("Примерное время в пути: " + (double) (SAINT_PETERSBURG / (double) speed ) +" часов" );
+        System.out.println("Примерное время в пути: " + ((double) (SAINT_PETERSBURG / (double) speed )  ) +" часов" );
 
         speed +=10;
         System.out.println("Водитель прибавил скорость на 10 ");

@@ -1,6 +1,6 @@
 package ru.progwards.t3.n3_2;
 
-////статический метод для создания объектов
+//статический метод для создания объектов
 public class WrapperValueOf {
     public static void main(String[] args) {
         Integer int1 = Integer.valueOf(5);

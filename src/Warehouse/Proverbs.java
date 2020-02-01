@@ -60,6 +60,10 @@ public class Proverbs {
                 str = "Быстро только кошки родятся.";
                 text();
                 break;
+            case 8:
+                str = "Маленькими шагами к большой цели.";
+                text();
+                break;
 
             default:
                 System.out.println("error");
