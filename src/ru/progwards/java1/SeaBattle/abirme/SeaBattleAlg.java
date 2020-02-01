@@ -84,7 +84,7 @@ public class SeaBattleAlg {
 
     //------------------------------------------Рабочий с текстом-----------------------------------
 
-   /* public void battleAlgorithm(SeaBattle seaBattle) {
+    public void battleAlgorithm123(SeaBattle seaBattle) {
         int hits = 20;
         //for (int x=0,y=0 ;  y < seaBattle.getSizeX() || x < seaBattle.getSizeY() ; y++ , x++) { // по диагонали
         for (int y = 0; y < seaBattle.getSizeX(); y++) {
@@ -117,7 +117,7 @@ public class SeaBattleAlg {
                     return;
             }
         }
-    }*/
+    }
 
     //------------------------------------------ тест-----------------------------------
   /*  public void battleAlgorithm(SeaBattle seaBattle) {
@@ -321,7 +321,9 @@ int y = 0;
             SeaBattle seaBattle = new SeaBattle();
             //   SeaBattle seaBattle = new SeaBattle(true); //игровое поле, создается тестовое поле, false или пустое новая раскладка кораблей
 
-            new SeaBattleAlg().battleAlgorithm(seaBattle);
+            //new SeaBattleAlg().battleAlgorithm(seaBattle);
+
+
 
             System.out.println(seaBattle); //раскладка кораблей
             result += seaBattle.getResult();
@@ -335,7 +337,8 @@ int y = 0;
     static void testOne() throws InterruptedException {   //тестовое поле
         System.out.println("Sea battle");
         SeaBattle seaBattle = new SeaBattle(true); //игровое поле, создается тестовое поле, false или пустое новая раскладка кораблей
-        new SeaBattleAlg().battleAlgorithm(seaBattle);
+        //new SeaBattleAlg().battleAlgorithm(seaBattle);
+        new SeaBattleAlg().battleAlgorithm123(seaBattle);
         System.out.println(seaBattle.getResult());
         System.out.println("тестовое поле");
         System.out.println("----------------------------");
