@@ -13,17 +13,7 @@ public class WrappersExt {
         double d1 = Double.valueOf(str3);
         double d2 = Double.parseDouble(str3);
 
-//      int i3 = Integer.valueOf(str3);  //Exception in thread "main" java.lang.NumberFormatException: For input string: "999.555"
-//        System.out.println("i3 "+i3);
-
-        //int i3 = Integer.parseInt(str3);  //тоже ошибка...думал откинутся после точки
-        //System.out.println("i3 "+i3);
-
-        // Integer i3 = Integer.parseInt(str3); //ошибка
-
-        //int i3 = (double)d1;
-
-        int value = (int) d1;    //все просто!
+        int value = (int) d1;    //все просто! // конвертация из дабл в инт
         System.out.println("value "+value);
 
         System.out.println("s1 = " + s1);
