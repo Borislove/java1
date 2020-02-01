@@ -3,8 +3,8 @@ package Warehouse.utils;
 import java.util.Random;
 
 
+// TODO: 01.02.2020 Борис подогнал генератор пароля
 
-// TODO: 16.01.2020 число в хеш из этого хеша символ...
 public class RandomTest {
 
     public static String[] data = {"Q", "q", "W", "w", "E", "e", "R", "r", "T", "t", "A", "a", "S", "s", "F", "f",

@@ -1,4 +1,4 @@
-package ru.progwards.T3;
+package ru.progwards.t3;
 
 public class Fract {
     static double fractional(double num) {

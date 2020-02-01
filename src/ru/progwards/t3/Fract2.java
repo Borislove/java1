@@ -1,4 +1,4 @@
-package ru.progwards.T3;
+package ru.progwards.t3;
 
 //что я делал и зачем...
 public class Fract2 {
