@@ -1,5 +1,9 @@
-package ru.progwards.t4;
+package ru.progwards.t4.n4_2;
 
+//Приоритет логических операторов
+//Наивысший приоритет ! -отрицание
+//&& - и
+//||  - или
 public class LogicalOperatorsPriority {
     public static void main(String[] args) {
         boolean result1 = false || false && true || true;

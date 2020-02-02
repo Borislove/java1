@@ -1,13 +1,15 @@
-package ru.progwards.t4;
+package ru.progwards.t4.n4_3;
 
-public class CycleWhile {
+//Пример цикла do while
+public class CycleDoWhile {
 
     public static void main(String[] args) {
 
         int i = 0;
-        while (i<5) {
+        do {
             i++;
             System.out.println("Строка " + i);
-        }
+        } while (i < 5);
     }
 }
+

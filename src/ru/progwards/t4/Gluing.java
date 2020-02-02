@@ -3,51 +3,61 @@ package ru.progwards.t4;
 //склеивание двух чисел
 public class Gluing {
 
-    static int a;
-    static int b;
-
+    //--------------------Решение-----1---------------------------  //Passed all tests!
     static int addAsStrings(int n1, int n2) {
-        String str = ((n1) + "" +(n2));
+        String str = ((n1) + "" + (n2));
         Integer ci = Integer.valueOf(str);
-return ci;
-     }
+        return ci;
+    }
+
+    //--------------------Решение------2-------------------------- //Passed all tests!
+    static int addAsStrings1(int n1, int n2) {
+
+        String str2 = Integer.toString(n1);
+        String str3 = Integer.toString(n2);
+
+        //System.out.println(Integer.parseInt(str2 + "" + str3));
+        return Integer.parseInt(str2 + "" + str3);
+    }
+
+    //--------------------Решение-------2сокр---------------------- //Passed all tests!
+    static int addAsStrings2(int n1, int n2) {
+
+        return Integer.parseInt(Integer.toString(n1) + "" + Integer.toString(n2));
+    }
+
+    //--------------------Решение------3-------------------------- //Passed all tests!
+    static int addAsStrings3(int n1, int n2) {
+
+        //упаковал в класс обёртку
+        Integer num1 = Integer.valueOf(n1);
+        Integer num2 = Integer.valueOf(n2);
+
+        //завел переменные и привел к строке
+        String a = num1.toString();
+        String b = num2.toString();
+
+        String c = a + "" + b;
+
+        Integer result = Integer.valueOf(c);
+        return result;
+    }
+
+    //от 1 отличается тут parse
+    //------------------Решение----4-------------------------------  //Passed all tests!
+    static int addAsStrings4(int n1, int n2) {
+        String str = (n1) + "" + (n2);
+        Integer test = Integer.parseInt(str);
+        //System.out.println(test);
+        return test;
+    }
+
     public static void main(String[] args) {
-addAsStrings(2,3);
-        System.out.println(addAsStrings(2,3));
+        addAsStrings(2, 3);
+        System.out.println(addAsStrings(2, 3));
+        addAsStrings1(5, 5);
+        System.out.println(addAsStrings2(4, 4));
+        System.out.println(addAsStrings4(99, 100));
     }
 }
 
-
-// TODO: 23.12.2019  Первое решение...
-/*
-static int addAsStrings(int n1, int n2) {
-        
-        
-         Integer numb = Integer.valueOf(n1);
-         Integer numb2 = Integer.valueOf(n2);
-
-    String a = numb.toString();
-    String b = numb2.toString();
-    //String c = numb +""+ numb2;
-    
-    String c = numb.toString() + numb2.toString();
-    //System.out.println(c);
-    
-    
-    Integer ci = Integer.valueOf(c);
-    
-    String str = (n1) + "" +(n2);    //простой вариант!!! да уж
-        System.out.println("str=" + str);
-        System.out.println((n1+"" +n2));
-                return ci;
-                
-                //return (n1+""+n2);
-    }
-    public static void main(String[] args) {
-         
-        addAsStrings(123, 4567);
-        addAsStrings(9283,6574);
-    }
-}
-
-* */
