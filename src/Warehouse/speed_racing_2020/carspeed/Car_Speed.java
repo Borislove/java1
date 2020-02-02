@@ -1,11 +1,10 @@
-package Warehouse.speed_racing_2020;
+package Warehouse.speed_racing_2020.carspeed;
 
 
 import Warehouse.timer.Timer_2;
 
 // TODO: 01.02.2020 Эксперименты и развлечение...
 public class Car_Speed {
-
 
 
     private static int speed = 0;
@@ -34,9 +33,8 @@ public class Car_Speed {
 //------------------пока не работает , перетирает все 
         // Timer_2 t2 = new Timer_2();
         //Timer_2.timerPrint();
-       //  Timer_2.timerStart();
+        //  Timer_2.timerStart();
         //---------------------------------------
-
 
 
         if (speed <= MAX_SPEED) {
@@ -87,7 +85,7 @@ public class Car_Speed {
                 }
 
                 //вышел из цикла
-                if(a==5) {
+                if (a == 5) {
                     System.out.println("exit");
                     break;
                 }

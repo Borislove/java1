@@ -2,6 +2,7 @@ package Warehouse;
 
 import java.util.Arrays;
 
+// TODO: 02.02.2020 попытался...
 public class Practic {
 
 

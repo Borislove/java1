@@ -1,11 +1,11 @@
-package ru.progwards.java1.SeaBattle.seabattlealg_default;
+package ru.progwards.java1.SeaBattle.seabattle_999;
 
 import ru.progwards.java1.SeaBattle.SeaBattle;
 import ru.progwards.java1.SeaBattle.SeaBattle.FireResult;
 
-// TODO: 01.02.2020 Так выглядит оригинал
+public class SeaBattle_999 {
 
-class SeaBattleAlg_Default {
+
 
     public void battleAlgorithm(SeaBattle seaBattle) {  //~104.526
         // пример алгоритма:
@@ -27,7 +27,7 @@ class SeaBattleAlg_Default {
         double result = 0;
         for (int i = 0; i < 1000; i++) { //для создании 1000 новых полей
             SeaBattle seaBattle = new SeaBattle();
-            new SeaBattleAlg_Default().battleAlgorithm(seaBattle);
+            new SeaBattle_999().battleAlgorithm(seaBattle);
             result += seaBattle.getResult();
             // System.out.println(seaBattle); //вывод поля
         }
@@ -37,7 +37,7 @@ class SeaBattleAlg_Default {
     static void testOne() {
         System.out.println("Sea battle");
         SeaBattle seaBattle = new SeaBattle(true); //false или пустое(поле) будет создаваться новое поле, со случайной раскладкой кораблей
-        new SeaBattleAlg_Default().battleAlgorithm(seaBattle);
+        new SeaBattle_999().battleAlgorithm(seaBattle);
         System.out.println(seaBattle.getResult());
         System.out.println(seaBattle); //вывод поля
 

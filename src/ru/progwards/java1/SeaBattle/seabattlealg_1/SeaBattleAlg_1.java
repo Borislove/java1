@@ -20,7 +20,7 @@ public class SeaBattleAlg_1 {
 
     //------------------------------------------Рабочий с текстом-----------------------------------
 
-    public void battleAlgorithm123(SeaBattle seaBattle) {
+   /* public void battleAlgorithm123(SeaBattle seaBattle) {
         int hits = 20;
         //for (int x=0,y=0 ;  y < seaBattle.getSizeX() || x < seaBattle.getSizeY() ; y++ , x++) { // по диагонали
         for (int y = 0; y < seaBattle.getSizeX(); y++) {
@@ -53,7 +53,7 @@ public class SeaBattleAlg_1 {
                     return;
             }
         }
-    }
+    }*/
 
     //------------------------------------------ тест-----------------------------------
   /*  public void battleAlgorithm(SeaBattle seaBattle) {
@@ -81,10 +81,10 @@ int y = 0;
     //---------------------------------------------
     public void battleAlgorithm(SeaBattle seaBattle) throws InterruptedException {
 
-      // searchShip4(seaBattle);
-       //  searchShip3(seaBattle);
-       //   searchShip2(seaBattle);
-         searchShip1(seaBattle);
+        // searchShip4(seaBattle);
+        //  searchShip3(seaBattle);
+        //   searchShip2(seaBattle);
+        searchShip1(seaBattle);
 
     }
 
@@ -95,14 +95,10 @@ int y = 0;
         int y = 0;
 
         SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
-        //Thread.sleep(300);
-        //sleepFire();
+
         fireResult = seaBattle.fire(2, 1);
-        //Thread.sleep(300);
         fireResult = seaBattle.fire(1, 2);
-        //Thread.sleep(300);
         fireResult = seaBattle.fire(0, 3);
-        //Thread.sleep(300);
 //-------------------------------------------------------
         fireResult = seaBattle.fire(6, 9);
         fireResult = seaBattle.fire(7, 8);
@@ -249,7 +245,6 @@ int y = 0;
         double result = 0;
 
         //---------------------Test-------------------------
-        // TODO: 27.01.2020  будет 999 итераций?
         for (int i = 0; i < 1000; i++) {  //1000
 
             System.out.println("ORIGINAL Количество попыток: " + number);
@@ -284,11 +279,6 @@ int y = 0;
     public static void main(String[] args) throws InterruptedException {
         //   testFull();  //полный тест в 1000 итераций
         testOne();  //тестовое поле тест
-
-        //что то интересное
-        //long startTime = System.currentTimeMillis();
-        //System.out.println(System.currentTimeMillis() - startTime );
-
     }
 }
 

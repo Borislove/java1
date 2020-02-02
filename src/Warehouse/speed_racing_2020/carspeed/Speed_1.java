@@ -1,4 +1,4 @@
-package Warehouse.speed_racing_2020;
+package Warehouse.speed_racing_2020.carspeed;
 
 //что то опять мудрить буду
 public class Speed_1 {

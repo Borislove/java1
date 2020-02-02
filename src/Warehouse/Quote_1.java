@@ -1,6 +1,5 @@
 package Warehouse;
 
-// TODO: 31.01.2020 с текстом пока беда
 //  + "\n"+  пригодился  - перенос строки
 public class Quote_1 {
 

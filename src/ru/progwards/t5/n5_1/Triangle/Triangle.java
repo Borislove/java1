@@ -1,4 +1,4 @@
-package ru.progwards.t5.Triangle;
+package ru.progwards.t5.n5_1.Triangle;
 
 public class Triangle {
     //свойства

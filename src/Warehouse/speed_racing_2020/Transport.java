@@ -5,14 +5,16 @@ public class  Transport {
     public static String name = "";
     public static String color = "default white";
 
-    public static int MAX_SPEED = 120;
+    // public static final int MAX_SPEED = 120;  //
+     public static int max_speed = 120;  //
+    public static int  weight = 1500;
 
-    //наименование машины или имя
-    public void nameCar(String name) {
-        name = "no name";
+    //конструктор
+    public Transport(String name, String color,  int weight, int max_speed) {
+        this.name = "babycar";
+        this.color = "white";
+        this.max_speed = 120;
+        this.weight = 500;
     }
-
-
-    public static String getName = "Hoho202";
-
 }
+

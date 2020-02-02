@@ -1,9 +1,7 @@
 package Warehouse;
+
 // TODO: 01.02.2020 сразу срабатывает сканнер, переместил в мейн
-
 //пока с числами только
-
-
 //пословицы )
 public class Proverbs {
 
@@ -12,14 +10,12 @@ public class Proverbs {
 
     // static int ver = new java.util.Scanner(System.in).nextInt();
     // static int a = Integer.valueOf(ver);
-
-
     static void text() {
         System.out.println(str);
     }
 
     static void hello() {
-        System.out.println("Пословицы: ");
+        System.out.println("Пословицы: 1-8 ");
     }
 
     public static void main(String[] args) {
