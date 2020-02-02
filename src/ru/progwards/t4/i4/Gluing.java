@@ -1,4 +1,4 @@
-package ru.progwards.t4;
+package ru.progwards.t4.i4;
 
 //склеивание двух чисел
 public class Gluing {
