@@ -3,19 +3,44 @@ package ru.progwards.java1.SeaBattle.seabattle_999;
 import ru.progwards.java1.SeaBattle.SeaBattle;
 import ru.progwards.java1.SeaBattle.SeaBattle.FireResult;
 
+import java.util.Arrays;
+
 public class SeaBattle_999 {
 
+    private static char field[][] = new char[' '][' '];  //поле пустое
+
+    //static Character empty = '?';
 
 
-    public void battleAlgorithm(SeaBattle seaBattle) {  //~104.526
-        // пример алгоритма:
-        // стрельба по всем квадратам поля полным перебором
+    private SeaBattle seaBattle;  // seaBattle, что бы не таскать его везде параметром
+
+    enum State {  //состояние поля
+        EMPTY,    // пустое
+        OBJECT,      //ship или объект /SHIP
+        MARK,      //метка или заметка
+    }
+
+
+    public void battleAlgorithm(SeaBattle seaBattle) {
         int hits = 0;
         for (int y = 0; y < seaBattle.getSizeX(); y++) {
             for (int x = 0; x < seaBattle.getSizeY(); x++) {
                 SeaBattle.FireResult fireResult = seaBattle.fire(x, y);
-                if (fireResult != FireResult.MISS)
-                    hits++;
+
+                if (fireResult != FireResult.MISS) {
+                hits++;
+                }
+
+
+                if(fireResult == FireResult.DESTROYED) {
+
+                      if(fireResult != FireResult.MISS){
+
+
+                      }
+                }
+
+
                 if (hits >= 20)
                     return;
             }
@@ -45,6 +70,7 @@ public class SeaBattle_999 {
 
     // функция для отладки
     public static void main(String[] args) {
-        testFull();
+        //testFull();
+        testOne();
     }
 }

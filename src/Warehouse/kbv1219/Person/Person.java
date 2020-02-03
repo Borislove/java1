@@ -10,7 +10,7 @@ package Warehouse.kbv1219.Person;
 конструктор с параметрами String name, int age, вызывающий конструктор по умолчанию, и устанавливающий значения переменным name и age из соответствующих параметров;
 публичные функции String getName(), int getAge(), String getCountry(), возвращающие значения соответствующих переменных*/
 
-public class Person {
+class Person {
 
 /*    Person person = new Person() {
 
@@ -21,9 +21,9 @@ public class Person {
     private String country;
 
 
-    public  Person getTest() {
+    public Person getTest() {
 
-       getAge(age);
+        getAge(age);
         getName(name);
 
         return this;

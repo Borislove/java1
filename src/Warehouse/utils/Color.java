@@ -12,4 +12,21 @@ public class Color {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
+
+    public static void main(String[] args) {
+
+        Character a = '?';
+        a.hashCode();
+        System.out.println(a.hashCode());
+
+        String ac = "\u001B[32m"+a;
+        System.out.println(ac);
+
+        System.out.println(ac.hashCode());
+
+         // Character test = (Character)ac ;  а может и нельзя? чар есть чар...и занимает другие байты поэтому не ложится с цветом
+    }
 }
+
+
+//а как char сделать цветным?
