@@ -1,5 +1,6 @@
 package ru.progwards.t5.n5_3;
 
+//квадрат
 public class Square extends Segment {
 
     public Square(double a) {
@@ -14,5 +15,10 @@ public class Square extends Segment {
     @Override
     double perimeter() {
         return 4 * a;
+    }
+
+    @Override
+    public String toString() {
+        return "Квадрат " + a + " x " + a;
     }
 }

@@ -36,3 +36,5 @@ Ctr + влево/вправо	Перемещение между словами  
  Ctrl + Enter - Smart line split
 
 ctr + /  //заккоментировать строчку
+
+sout () / souf ("")  / soutv ("" + name) !!!

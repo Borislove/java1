@@ -18,4 +18,9 @@ public class Rectangle extends Square {
     double perimeter() {
         return 2 * (a + b);
     }
+
+    @Override
+    public String toString() {
+        return "Прямоугольник " + a + " x " + b;
+    }
 }

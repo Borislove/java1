@@ -12,4 +12,9 @@ public class Segment extends Figure {
     double perimeter() {
         return a;
     }
+
+    @Override
+    public String toString() {
+        return "Отрезок, длина " + a;
+    }
 }

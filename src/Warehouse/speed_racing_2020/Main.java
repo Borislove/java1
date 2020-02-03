@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-       Transport babycar = new Transport();
+        Transport babycar = new Transport();
         babycar.parametr();
     }
 }

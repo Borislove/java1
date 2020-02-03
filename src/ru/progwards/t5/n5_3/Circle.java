@@ -8,13 +8,18 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    //@Override
+    @Override
     double area() {
         return Math.PI * radius * radius;
     }
 
-    //@Override
+    @Override
     double perimeter() {
         return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public String toString() {
+        return "Окружность с радиусом " + radius;
     }
 }
