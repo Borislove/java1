@@ -1,4 +1,4 @@
-package Warehouse.Calc;
+package ru.progwards.t5.i5.Calc;
 
 
 /*Создайте класс Calculator, содержащий
@@ -10,36 +10,30 @@ package Warehouse.Calc;
 публичную функцию sub(int num), уменьшающую result на num
 публичную функцию int getResult()*/
 
-
-
-public class Calculator {
+class Calculator {       //Passed all tests!   public class - не проходил
 
     private int result;
 
-
-    Calculator calculator = new Calculator();
-
     Calculator() {
-    result=0;
+        this.result = 0;  //тоже работает, что и result = 0;
     }
 
     public void set(int num) {
-    result = num;
+        result = num;
     }
 
     public void add(int num) {
-    result = result + num;
-        }
-
-    public void sub (int num) {
-    result = result - num;
-        }
-
-    public int getResult(){
-
-        return result;
+        result += num;
     }
 
+    public void sub(int num) {
+        result -= num;
+    }
 
+    public int getResult() {
+        return result;
+    }
 }
+
+
 
