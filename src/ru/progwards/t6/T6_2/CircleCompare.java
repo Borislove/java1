@@ -1,6 +1,6 @@
 package ru.progwards.t6.T6_2;
 
-import ru.progwards.t5.Inheritance.Circle;
+import ru.progwards.t5.n5_3.Inheritance.Circle;
 
 public class CircleCompare {
     public static void main(String[] args) {
