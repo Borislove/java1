@@ -24,7 +24,7 @@ public class Assessment {
     static String textGrade(int grade) {
         String str = "";
         switch (grade) {
-            case 1:
+            case 1 - 20:
                 System.out.println(Kinds.BAD.getStri());
                 //  System.out.println(Kinds.values());
                 //  System.out.println(Kinds.BAD.toString());
