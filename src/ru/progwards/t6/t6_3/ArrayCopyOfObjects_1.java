@@ -17,7 +17,7 @@ public class ArrayCopyOfObjects_1 {
                 new AtomicInteger(-1)
         };
 
-        AtomicInteger[]arrayIntCopy = Arrays.copyOf(arrayInt, arrayInt.length);
+        AtomicInteger[] arrayIntCopy = Arrays.copyOf(arrayInt, arrayInt.length);
         System.out.println(Arrays.toString(arrayInt));
         System.out.println(Arrays.toString(arrayIntCopy));
 
@@ -25,7 +25,6 @@ public class ArrayCopyOfObjects_1 {
 
         System.out.println(Arrays.toString(arrayInt));
         System.out.println(Arrays.toString(arrayIntCopy));
-
     }
 }
 

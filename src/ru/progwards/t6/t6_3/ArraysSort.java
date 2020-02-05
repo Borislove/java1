@@ -2,7 +2,7 @@ package ru.progwards.t6.t6_3;
 
 import java.util.Arrays;
 
-//сортировка через Arrays.sort()
+//Сортировка через Arrays.sort()
 public class ArraysSort {
 
     public static void main(String[] args) {

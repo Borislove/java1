@@ -11,5 +11,7 @@ public class ArraysToString {
         System.out.println(Arrays.toString(arrayByte));
         System.out.println(Arrays.toString(arrayDouble));
         System.out.println(Arrays.toString(arrayString));
+
+        System.out.println(java.util.Arrays.toString(arrayString)); //можно так
     }
 }

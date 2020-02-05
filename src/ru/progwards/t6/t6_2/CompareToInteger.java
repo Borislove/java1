@@ -1,6 +1,6 @@
 package ru.progwards.t6.t6_2;
 
-//сравнение Integer через compareTo()
+//Сравнение Integer через compareTo()
 public class CompareToInteger {
     public static void main(String[] args) {
 
@@ -16,8 +16,6 @@ public class CompareToInteger {
 
         a = 1;
         b = 5;
-
-
 
         System.out.println(a.compareTo(b));
     }

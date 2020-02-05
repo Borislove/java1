@@ -15,7 +15,7 @@ public int arrayMax(int[] a)
 // TODO: 01.01.2020 Arrays.binarySearch() нужно бы применить...быстрый поиск в массиве
 public class ArrayMax {
 
-    static int[] a = {1,3,-4,0,100,-231,3523,312312};
+    static int[] a = {1, 3, -4, 0, 100, -231, 3523, 312312};
     //static int[] a= {};
 
     public static int arrayMax(int[] a) {
@@ -29,7 +29,7 @@ public class ArrayMax {
         }*/
 
         //-------------решение--------------------
-        if(a.length == 0) {   //если длина массива 0 , вернуть 0
+        if (a.length == 0) {   //если длина массива 0 , вернуть 0
             return 0;
         }
         Arrays.sort(a);  //сортировали
@@ -40,15 +40,15 @@ public class ArrayMax {
 
 
 //        a.equals() ;
-        //Arrays.equals(0);
+    //Arrays.equals(0);
 
 
-        //int min = a[0];
-        //int max = a[-1];
-        //max = [0];
-        //a[-1] = a[-1];
+    //int min = a[0];
+    //int max = a[-1];
+    //max = [0];
+    //a[-1] = a[-1];
 
-        //------------------------интересно
+    //------------------------интересно
        /* if( a[0] < 0) {
             System.out.println("min " + a[0]) ;
           //  return min;
@@ -57,7 +57,7 @@ public class ArrayMax {
             System.out.println("max "+ (a[a.length-1]));
             return max;
         }*/
-        //-------------------------
+    //-------------------------
 
 
 
@@ -68,22 +68,22 @@ public class ArrayMax {
             }
         }*/
 
-       // System.out.println(Arrays.toString(a));
+    // System.out.println(Arrays.toString(a));
 
-        //return max;
-        //return 0;
+    //return max;
+    //return 0;
 
 
     public static void main(String[] args) {
 
-     //   int[] b = {1,0};
-      System.out.println("orig = "+ Arrays.toString(a));
+        //   int[] b = {1,0};
+        System.out.println("orig = " + Arrays.toString(a));
 
-     //   Arrays.sort(a);
-       System.out.println("sort = "+Arrays.toString(a));
+        //   Arrays.sort(a);
+        System.out.println("sort = " + Arrays.toString(a));
 
         arrayMax(a);
-      //  arrayMax(b);
+        //  arrayMax(b);
     }
 
 }

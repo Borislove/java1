@@ -7,10 +7,9 @@ public class ArraysFill {
     public static void main(String[] args) {
 
         int[] arrayInt = new int[5];
-        System.out.println(Arrays.toString(arrayInt));
+        System.out.println(Arrays.toString(arrayInt)); //вывод пустого массив
 
-        Arrays.fill(arrayInt,-1);
+        Arrays.fill(arrayInt, -1); //заполнили значениями
         System.out.println(Arrays.toString(arrayInt));
-
     }
 }
