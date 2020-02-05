@@ -1,8 +1,11 @@
-package ru.progwards.t7.T7_2;
+package ru.progwards.t7.t7_2;
 
+//Битовые операции на практике: & (AND)
 public class Speed {
+
     public static void main(String[] args) {
-        byte unsignedSpeed = (byte)0b10000111; //135
+        
+        byte unsignedSpeed = (byte) 0b10000111; //135
         System.out.println(unsignedSpeed);
 
         int speed1 = unsignedSpeed;

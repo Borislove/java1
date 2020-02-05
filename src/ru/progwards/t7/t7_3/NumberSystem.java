@@ -1,4 +1,4 @@
-package ru.progwards.t7.T7_3;
+package ru.progwards.t7.t7_3;
 
 //представление числа в произвольной системе счисления с базой от 2 до 16включительно
 public class NumberSystem {

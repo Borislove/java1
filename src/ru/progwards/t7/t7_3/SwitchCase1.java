@@ -1,4 +1,4 @@
-package ru.progwards.t7.T7_3;
+package ru.progwards.t7.t7_3;
 
 //Примеры со Switch Case
 public class SwitchCase1 {
