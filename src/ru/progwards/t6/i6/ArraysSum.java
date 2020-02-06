@@ -1,37 +1,26 @@
 package ru.progwards.t6.i6;
 
 /*Напишите функцию, суммирующие значения элементов одномерного массива, содержащего целые числа. Сигнатура:
-
 public int sumArrayItems(int[] a)*/
+
 public class ArraysSum {
 
-    public static  int sumArrayItems(int[] a) {
+    private static int[] a = {2, 3, 4, 5, 6, 7};  // sum 27
 
+    public static int sumArrayItems(int[] a) {   // Passed all tests!
 
-       /* int sum = a.length;
+        int test = 0;
 
-        java.util.Arrays.sort(a);
-
-        for (int i = 0; i < a.length; i++) {
-
-            //sum = i;
-            sum += a.length+i + a.length-1;
-
-            sum += i;
-        }*/
-
-       int sum = a[a.length-1];
-
-        for (int i = 0; i < a.length; i++) {
-
-            a[0] = a.length-1 +i;
-            i++;
-        }
-
-        return sum;
+        for (int value : a)
+            //  System.out.println(value);
+            test += value;
+        //    System.out.println(test);
+        return test;
     }
 
     public static void main(String[] args) {
 
+        sumArrayItems(a);
+        System.out.println(java.util.Arrays.toString(a));
     }
 }

@@ -5,7 +5,9 @@ import java.util.Arrays;
 //Копирование массивов объектов Arrays.copyOf
 //Используем классы обёртки
 public class ArrayCopyOfObjects {
+
     public static void main(String[] args) {
+
         Integer[] arrayInt = {-7, 5, 0, 58, -1};
         Integer[] arrayIntCopy = Arrays.copyOf(arrayInt, arrayInt.length);
 

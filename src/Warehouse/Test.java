@@ -5,7 +5,6 @@ public class Test {
     void test() {  //?
     }
 
-
     public static int x = 2;
 
     public static void main(String[] args) {
@@ -29,6 +28,5 @@ public class Test {
         x /= Math.E;
         System.out.println(x);  //11
         //return;
-
     }
 }

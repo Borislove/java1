@@ -7,7 +7,9 @@ import java.util.Arrays;
 //работает только после сортировки
 //ищем элемент в массиве и выводим его значение
 public class ArraysBinarySearch {
+
     public static void main(String[] args) {
+
         int[] arrayInt = {-7,5,0,58,-1};
 
         System.out.println(Arrays.toString(arrayInt));

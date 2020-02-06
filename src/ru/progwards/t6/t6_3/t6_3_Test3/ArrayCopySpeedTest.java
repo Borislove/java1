@@ -5,7 +5,9 @@ import java.util.Date;
 
 //Тест быстродействия методов копирования
 public class ArrayCopySpeedTest {
+
     public static void main(String[] args) {
+
         Integer[] intArray = new Integer[1000000];
         Integer[] newArray = new Integer[1000000];
 

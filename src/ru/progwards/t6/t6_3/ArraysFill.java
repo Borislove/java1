@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 //Arrays.fill  заполнить массив значениями
 public class ArraysFill {
+
     public static void main(String[] args) {
 
         int[] arrayInt = new int[5];
