@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class HorseArray {
 
-    private static String horse[] = {"'Снежинка'", "'Молния'", "'Буря'", "'Шторм'", "'Вихрь'", "'Счастливчик'","'Ари", "Розовый единорожек"};
+    private static String horse[] = {"'Снежинка'", "'Молния'", "'Буря'", "'Шторм'", "'Вихрь'", "'Счастливчик'","'Ари", "Розовый единорожек","Радуга"};
 
     public static void main(String[] args) {
       //  System.out.println(horse.toString());
