@@ -1,9 +1,11 @@
-package ru.progwards.T8;
+package ru.progwards.t8.t8_1;
 
-public class HelloHash {
+//Примеры хеш_кодов одинаковых объектов
+public class HashCode {
+
     public static void main(String[] args) {
-        System.out.println(new Object().hashCode());
 
+        System.out.println(new Object().hashCode());
         System.out.println("Хешкоды от new Object():");
         System.out.println(new Object().hashCode());
         System.out.println(new Object().hashCode());

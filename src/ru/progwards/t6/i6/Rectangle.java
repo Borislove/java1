@@ -1,7 +1,5 @@
 package ru.progwards.t6.i6;
 
-
-// TODO: 05.02.2020 страдай ) 
 /*Описан класс
 
 	class Rectangle {
@@ -32,13 +30,16 @@ a   < b : -1
 прямоугольник 2x3 == прямоугольнику 3x2 - результат 0
 прямоугольник 2x2  <  прямоугольника 3x3 - результат -1*/
 
+import java.sql.SQLOutput;
+
 public class Rectangle {
     private double a;
     private double b;
 
     public Rectangle(double a, double b) {
-        this.a = a;
-        this.b = b;
+this.a = a;
+this.b = b;
+
     }
 
     public double area() {
@@ -210,7 +211,7 @@ public class Rectangle {
 
         //-----------------------почти....
 
-        if (a > b && a > 0) {
+    /*    if (a > b && a > 0) {
             return -1;
         }
 
@@ -221,6 +222,75 @@ public class Rectangle {
             return 0;
         } else
             return -1;
+    }*/
+
+ /*       Double ab = Double.valueOf(a);
+        Double ba = Double.valueOf(b);
+
+        if ((ab.compareTo(ba) > 0)) {
+            System.out.println("1");
+            return 1;
+
+        }
+        if ((ab.compareTo(ba) < 0)) {
+            System.out.println("-1");
+            return -1;
+        }
+        if ((ab.compareTo(ba)) == 0) {
+            System.out.println("0");
+            return 0;
+        }
+        return 0;
+    }*/
+
+/*
+        Rectangle ab = new Rectangle(a, b);
+        ab.area();
+        Double abc = ab.area();
+        Rectangle ba = new Rectangle(a, b);
+        ba.area();
+        Double abcd = ba.area();
+
+        System.out.println(abc);
+        System.out.println(abcd);
+        */
+        this.a = a;
+        this.b = b;
+
+        //  new Rectangle(a,b).compareTo(new Rectangle(a,b));
+      /* if(new Rectangle(a,b).compareTo(new Rectangle(a,b)) == 0) {
+           return 0;
+       }*/
+     /*   if(new Rectangle(a,b).compareTo(new Rectangle(a,b)) > 0) {  //куча экспепшинов
+            return 1;
+        }
+        if(new Rectangle(a,b).compareTo(new Rectangle(a,b)) < 0) {
+            return -1;
+        }
+
+        return 0;
+
+
+    }*/
+        if(a>b) {
+            return -1;
+        }
+        if(a<b) {
+
+            return 0;}else
+
+
+
+          //      new Rectangle(a,b);
+        if( area()>area()) {
+            return 1;
+        }
+        if(area()<area()){
+            return -1;
+        }
+
+
+        return 0;
     }
 }
 
@@ -234,7 +304,7 @@ class Main {
 
 
         //new Rectangle(2, 3).compareTo(new Rectangle(30, 20));
-        new Rectangle(200, 3).compareTo(new Rectangle(30, 20));
+        new Rectangle(200, 3).compareTo(new Rectangle(20, 20));
         // System.out.println(new Rectangle(2, 3).compareTo(new Rectangle(3, 2)));
         // System.out.println(new Rectangle(3, 3).compareTo(new Rectangle(3, 3)));
         //System.out.println(new Rectangle(3, 3).compareTo(new Rectangle(3, 90)));

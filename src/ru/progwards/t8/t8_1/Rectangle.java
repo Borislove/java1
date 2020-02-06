@@ -1,4 +1,4 @@
-package ru.progwards.T8.T8_1;
+package ru.progwards.t8.t8_1;
 
 import java.util.Objects;
 
@@ -29,14 +29,13 @@ public class Rectangle {
         //if (area() == area()) return true;
 
         // if (new Rectangle(a, b) == null) return false;
-      //  if (new Rectangle(a, b) != new Rectangle(a, b))  {return false;}
+        //  if (new Rectangle(a, b) != new Rectangle(a, b))  {return false;}
         //if (new Rectangle(a, b) == new Rectangle(a, b)) { return true;}
-      //  if(area()==area()) return true;
+        //  if(area()==area()) return true;
         //   if (area() > 0) return true;
         // if (area() < 0) return false;
 
-      //  if(area() == area()) return true;
-
+        //  if(area() == area()) return true;
 
 
         return true;
@@ -51,7 +50,6 @@ public class Rectangle {
         );
         System.out.println(new Rectangle(2, 2).equals(new Rectangle(2, 0)));
     }
-
 }
 
 

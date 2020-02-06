@@ -1,4 +1,4 @@
-package Warehouse;
+package Warehouse.horse;
 
 
 import java.util.Random;

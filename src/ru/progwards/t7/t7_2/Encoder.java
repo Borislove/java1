@@ -2,7 +2,7 @@ package ru.progwards.t7.t7_2;
 
 //Битовые операции на практике: ^(XOR)
 //RESULT  ->>> 供侑侗
-public class Shifrator {
+public class Encoder {
 
     public static void main(String[] args) {
 

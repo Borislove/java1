@@ -2,9 +2,10 @@ package ru.progwards.t7.t7_3;
 
 //Примеры со Switch Case
 public class SwitchCase1 {
-    public static void main(String[] args) {
-        int value = 3;
 
+    public static void main(String[] args) {
+
+        int value = 3;
         //-----------------------------------------------------
         //Пример с оператором break
         //-----------------------------------------------------

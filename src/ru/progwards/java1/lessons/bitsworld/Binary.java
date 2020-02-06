@@ -2,18 +2,17 @@ package ru.progwards.java1.lessons.bitsworld;
 
 public class Binary {
 
-    public Binary(byte num){
+    public Binary(byte num) {
 
     }
 
-    public String toString(){
+    public String toString() {
         return null;
+
     }
 
     public static void main(String[] args) {
-
     }
-
 }
 
 /*Задача 3. Класс Binary
@@ -21,7 +20,8 @@ public class Binary {
 3.1 Реализовать конструктор
 public Binary(byte num).
 3.2 Реализовать метод
-public String toString(), который возвращает двоичное представление числа типа byte, используя только битовые операции. В выводимом значении всегда должно быть 8 символов
+public String toString(), который возвращает двоичное представление числа типа byte, используя только битовые операции.
+ В выводимом значении всегда должно быть 8 символов
 Например:
 0: "00000000"
 1: "00000001"

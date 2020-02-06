@@ -52,6 +52,13 @@ public class Gluing {
         return test;
     }
 
+    //От Бориса
+    //---------------Решение---5-------------
+    public static int addAsStrings5(int n1, int n2) {
+        String s = "" + n1 + n2;
+        return Integer.parseInt(s);
+    }
+
     public static void main(String[] args) {
         addAsStrings(2, 3);
         System.out.println(addAsStrings(2, 3));
