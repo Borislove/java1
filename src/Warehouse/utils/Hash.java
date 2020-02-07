@@ -14,6 +14,9 @@ public class Hash {
         //получаем хеш код из строки
         String str = "Hello World!";
         System.out.println("HashCode is string  [ " + str.hashCode() + " ]");
+
+        String strJava = "JAVA";
+        System.out.println("strJava.hashCode() = " + strJava.hashCode()); //совсем другой код чем посимвольно
     }
 }
 

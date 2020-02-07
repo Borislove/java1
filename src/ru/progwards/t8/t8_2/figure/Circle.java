@@ -1,4 +1,4 @@
-package ru.progwards.t5.n5_3;
+package ru.progwards.t8.t8_2.figure;
 
 import java.util.Objects;
 
@@ -37,5 +37,10 @@ public class Circle extends Figure {
     @Override
     public int hashCode() {
         return Objects.hash(radius);
+    }
+
+    @Override
+    public int compareTo(Figure o) {
+        return 0;
     }
 }
