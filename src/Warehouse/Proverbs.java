@@ -20,14 +20,14 @@ public class Proverbs {
     }
 
     static void hello() {
-        System.out.println("Пословицы: 1-12 ");  // Пословицы + a + " b "  - т.е будет менятся значение b и показывать потом
+        System.out.println("Пословицы: 1-13 ");  // Пословицы + a + " b "  - т.е будет менятся значение b и показывать потом
     }
 
     public static void main(String[] args) throws InterruptedException {
 
 
         int a = 1; // Начальное значение диапазона - "от"
-        int b = 12; // Конечное значение диапазона - "до"
+        int b = 13; // Конечное значение диапазона - "до"
 
         int random_number1 = a + (int) (Math.random() * b); // Генерация 1-го числа
         //   System.out.println("1-ое случайное число: " + random_number1);
@@ -98,6 +98,12 @@ public class Proverbs {
                 str = "Бесплатный сыр бывает только в мышеловке";
                 text();
                 break;
+                case 13:
+                str = "Главное – не победа, а участие";
+                text();
+                break;
+
+
 
 
 
