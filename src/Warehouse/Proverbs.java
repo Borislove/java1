@@ -6,47 +6,30 @@ package Warehouse;
 // TODO: 08.02.2020 менять значение в hello(), менять знчение в b, добавлять новый кейс
 
 /*
-* вынести в класс переменные, сделать статичными, начну мудрить все слетит
-* */
+ * вынести в класс переменные, сделать статичными, начну мудрить все слетит
+ * */
 public class Proverbs {
 
-    private static int verse = 7;
+    private static int verse;
     private static String str = "";
 
-    // static int ver = new java.util.Scanner(System.in).nextInt();
-    // static int a = Integer.valueOf(ver);
+    private static int a = 1; // Начальное значение диапазона - "от"
+    private static int b = 14; // Конечное значение диапазона - "до"
+
     static void text() {
         System.out.println(str);
     }
 
     static void hello() {
-        System.out.println("Пословицы: 1-13 ");  // Пословицы + a + " b "  - т.е будет менятся значение b и показывать потом
+        System.out.println("Пословицы: " + a + " - " + b);  // Пословицы + a + " b "  - т.е будет менятся значение b и показывать потом
     }
 
     public static void main(String[] args) throws InterruptedException {
-
-
-        int a = 1; // Начальное значение диапазона - "от"
-        int b = 13; // Конечное значение диапазона - "до"
-
-        int random_number1 = a + (int) (Math.random() * b); // Генерация 1-го числа
-        //   System.out.println("1-ое случайное число: " + random_number1);
-
-
+        int random_number1 = a + (int) (Math.random() * b); // Генерация
         hello();
-        // TODO: 07.02.2020 пока еррорки если текст ввел
-
-        //  int ver = new java.util.Scanner(System.in).nextInt();
         verse = random_number1;
-      /*  System.out.println("Следующая начнется через пару секунд");
+      /*  System.out.println("Следующая начнется через пару секунд");  //может быть, когда нибудь
         Thread.sleep(500);*/
-        //int verse = Integer.valueOf(ver);
-
-
-        // if ( verse >= Integer.valueOf(ver)) {  //
-
-        // if( a !=new String) //фантазия )
-
         switch (verse) {
             case 1:
                 str = "Хочешь сделать работу - сначала наточи инструменты.";
@@ -98,18 +81,16 @@ public class Proverbs {
                 str = "Бесплатный сыр бывает только в мышеловке";
                 text();
                 break;
-                case 13:
+            case 13:
                 str = "Главное – не победа, а участие";
                 text();
                 break;
-
-
-
-
-
+            case 14:
+                str = "тяжело в учении, легко в бою\n";
+                text();
+                break;
             default:
                 System.out.println("error");
-
         }
     }
 }
