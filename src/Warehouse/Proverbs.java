@@ -13,19 +13,23 @@ public class Proverbs {
     private static int verse;
     private static String str = "";
 
-    private static int a = 1; // Начальное значение диапазона - "от"
-    private static int b = 14; // Конечное значение диапазона - "до"
+    private static int a = 1; // Начальное значение диапазона - "от" 
+    private static int b = 14; // Конечное значение диапазона - "до"   //14
+    private static int random_number1 = a + (int) (Math.random() * b); // Генерация
 
     static void text() {
-        System.out.println(str);
+        System.out.println(str);   // TODO: 09.02.2020 сюда воткнуть сетРандом?для вывода информации об кэйсе 
     }
 
     static void hello() {
         System.out.println("Пословицы: " + a + " - " + b);  // Пословицы + a + " b "  - т.е будет менятся значение b и показывать потом
     }
 
+    static void setRandom_number1() {
+        System.out.println(random_number1);
+    }
+
     public static void main(String[] args) throws InterruptedException {
-        int random_number1 = a + (int) (Math.random() * b); // Генерация
         hello();
         verse = random_number1;
       /*  System.out.println("Следующая начнется через пару секунд");  //может быть, когда нибудь
@@ -36,10 +40,12 @@ public class Proverbs {
                 System.out.println(str);
                 str = "Прежде чем начать работу – наточи инструмент.";
                 System.out.println(str);
+                setRandom_number1();
                 break;
             case 2:
                 str = "Дорогу осилит идущий.";
                 System.out.println(str);
+                setRandom_number1();
                 break;
             case 3:
                 str = "Подальше положишь, поближе возьмешь.";
@@ -86,7 +92,7 @@ public class Proverbs {
                 text();
                 break;
             case 14:
-                str = "тяжело в учении, легко в бою\n";
+                str = "Тяжело в учении, легко в бою\n";
                 text();
                 break;
             default:
