@@ -16,7 +16,7 @@ public class Proverbs {
     private static String str = "";
 
     private static int a = 1; // Начальное значение диапазона - "от" 
-    private static int b = 17; // Конечное значение диапазона - "до"   //14
+    private static int b = 18; // Конечное значение диапазона - "до"   //14
     private static int random_number1 = a + (int) (Math.random() * b); // Генерация
 
     static void text() {
@@ -111,6 +111,10 @@ public class Proverbs {
                     break;
                 case 17:
                     str = "Собирай по ягодке – наберешь кузовок.";
+                    text();
+                    break;
+                case 18:
+                    str = "Повторение - мать учения.";
                     text();
                     break;
                 default:

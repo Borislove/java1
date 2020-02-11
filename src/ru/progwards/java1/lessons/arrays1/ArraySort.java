@@ -1,4 +1,4 @@
-package ru.progwards.java1.lessons.arrays;
+package ru.progwards.java1.lessons.arrays1;
 
 import java.util.Arrays;
 
