@@ -9,7 +9,7 @@ package ru.progwards.java1.lessons.bitsworld;
 */
 public class SumBits {
 
-    //-------------------------------------------
+    //------------------------------------------- ok
    /* public static int sumBits(byte value) {
 
         int result = 0;
@@ -22,8 +22,7 @@ public class SumBits {
 
         return result;
     }*/
-    //---------------------------------------------
-
+    //--------------------------------------------- ok
     public static int sumBits(byte value) {
         int sum = 0;
         for (int i = 0; i < 8; i++) {
@@ -31,12 +30,14 @@ public class SumBits {
         }
         return sum;
     }
+    //----------------------------------------------
+
 
     public static void main(String[] args) {
 
-        System.out.println(sumBits((byte) 0100101));
-        System.out.println(sumBits((byte) 10100101)); //3
-        //  System.out.println(sumBits((byte) 0111100)); //4
+        System.out.println(sumBits((byte) 0100101)); //2
+        //System.out.println(sumBits((byte) 10100101)); //3
+        //System.out.println(sumBits((byte) 0111100)); //1
     }
 }
 
