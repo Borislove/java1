@@ -9,7 +9,6 @@ package Warehouse;
 
 //System.out.println(str); заместо этого вызывать метод где и будет очищать строчку
 /*
- * вынести в класс переменные, сделать статичными, начну мудрить все слетит
  * */
 public class Proverbs {
 
@@ -17,11 +16,11 @@ public class Proverbs {
     private static String str = "";
 
     private static int a = 1; // Начальное значение диапазона - "от" 
-    private static int b = 14; // Конечное значение диапазона - "до"   //14
+    private static int b = 17; // Конечное значение диапазона - "до"   //14
     private static int random_number1 = a + (int) (Math.random() * b); // Генерация
 
     static void text() {
-        System.out.println("\r"+str+"\r");   // TODO: 09.02.2020 сюда воткнуть сетРандом?для вывода информации об кэйсе, r не очищает...
+        System.out.println("\r" + str + "\r");   // TODO: 09.02.2020 сюда воткнуть сетРандом?для вывода информации об кэйсе, r не очищает...
     }
 
     static void hello() {
@@ -34,8 +33,8 @@ public class Proverbs {
 
     public static void main(String[] args) throws InterruptedException {
 
-            hello();
-            verse = random_number1;
+        hello();
+        verse = random_number1;
       /*  System.out.println("Следующая начнется через пару секунд");  //может быть, когда нибудь
         Thread.sleep(500);*/
         for (int i = 0; i < 10; i++, verse++) {  //воткнул цикл //версия прибавляется //по длине кейсеов надо бы
@@ -79,15 +78,15 @@ public class Proverbs {
                     text();
                     break;
                 case 9:
-                    str = "Путь в тысячу миль начинается с одного шага\n";
+                    str = "Путь в тысячу миль начинается с одного шага.";
                     text();
                     break;
                 case 10:
-                    str = "На своих ошибках учатся, на чужих — делают карьеру";
+                    str = "На своих ошибках учатся, на чужих — делают карьеру.";
                     text();
                     break;
                 case 11:
-                    str = "Терпение и труд всё перетрут";
+                    str = "Терпение и труд всё перетрут.";
                     text();
                     break;
                 case 12:
@@ -95,16 +94,28 @@ public class Proverbs {
                     text();
                     break;
                 case 13:
-                    str = "Главное – не победа, а участие";
+                    str = "Главное – не победа, а участие.";
                     text();
                     break;
                 case 14:
-                    str = "Тяжело в учении, легко в бою\n";
+                    str = "Тяжело в учении, легко в бою.";
+                    text();
+                    break;
+                case 15:
+                    str = "Тише едешь, дальше будешь.";
+                    text();
+                    break;
+                case 16:
+                    str = "Не все то золото, что блестит.";
+                    text();
+                    break;
+                case 17:
+                    str = "Собирай по ягодке – наберешь кузовок.";
                     text();
                     break;
                 default:
                     System.out.println("error");
-                    break;  //добавил а то в цикле одно и тоже
+                    break;  //добавил а то в цикле одно и тоже //все равно одно и тоже
             }
         }
     }
