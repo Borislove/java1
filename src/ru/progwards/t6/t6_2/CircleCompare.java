@@ -6,6 +6,7 @@ public class CircleCompare {
 
     //MAIN
     public static void main(String[] args) {
+
         Circle circle1 = new Circle(5);
         Circle circle2 = new Circle(5);
 

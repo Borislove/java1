@@ -2,7 +2,9 @@ package ru.progwards.t6.t6_1;
 
 //Пример двумерного массива
 public class CheckFiboRule1 {
+
     private static boolean checkFibo(int[] intArray) {
+
         for (int i = 2; i < intArray.length; i++) {
             if (intArray[i - 2] + intArray[i - 1] != intArray[i])
                 return false;
@@ -11,6 +13,7 @@ public class CheckFiboRule1 {
     }
 
     public static void main(String[] args) {
+
         int[] simpleArray1 = {21, 34, 55, 89, 144};
         int simpleArray2[] = {144, 34, 55, 89, 21};
         int[] simpleArray3 = new int[5];

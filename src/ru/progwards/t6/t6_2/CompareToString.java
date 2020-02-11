@@ -2,6 +2,8 @@ package ru.progwards.t6.t6_2;
 
 //сравнение String через compareTo()
 //в сравнении строк, регистрозависима
+//в строках  числа либо положительные, либо отрицальные, либо равны
+//чей код больше, та строка и будет больше
 public class CompareToString {
     public static void main(String[] args) {
         String str1 = "ABCDE12345";
@@ -48,6 +50,5 @@ public class CompareToString {
         str1 = "ABCDE12345";
         str2 = "BCDE12345A";
         System.out.println(str1.compareTo(str2)); //-1
-
     }
 }

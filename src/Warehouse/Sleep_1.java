@@ -3,7 +3,6 @@ package Warehouse;
 
 class Sleep_1 {
 
-
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -13,7 +12,6 @@ class Sleep_1 {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
-
 
     public static int i = 0;
 
@@ -44,10 +42,6 @@ class Sleep_1 {
                 System.out.println(ANSI_RED + "ERROR");
                 break;
             }
-
-
         }
-
     }
-
 }

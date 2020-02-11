@@ -4,6 +4,7 @@ package ru.progwards.t6.t6_2;
 public class ObjectsCompare {
 
     public static void main(String[] args) {
+
         Object obj1 = new Object(); //создали объект и пустой конструктор
         Object obj2 = new Object();
 

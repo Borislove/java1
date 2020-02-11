@@ -1,6 +1,7 @@
 package ru.progwards.t6.t6_1;
 
 //Размер одномерного массива
+//  <имя переменной массива>.length
 public class Array1 {
     public static void main(String[] args) {
 

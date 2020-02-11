@@ -2,7 +2,9 @@ package ru.progwards.t6.t6_2;
 
 //Сравнение String
 public class StringCompare {
+
     public static void main(String[] args) {
+
         String str1 = "12345";
         String str2 = "12345";
 
