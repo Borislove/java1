@@ -1,6 +1,5 @@
 package ru.progwards.java1.lessons.bitsworld;
 
-
 /*Задача 1. Класс SumBits
 1.1 Реализовать функцию public static int sumBits(byte value), которая суммирует все биты параметра value.
  Например, для двоичного числа 0100101 функция должна вернуть 3.
@@ -12,17 +11,21 @@ public class SumBits {
 
     public static int sumBits(byte value) {
 
-        return 0;
+        int result = 0;
+        for (int i = 0; i < 8; i++) {
+            if ((value & 1) == 1) {
+                result++;
+            }
+            value >>= 1;
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {
 
         System.out.println(sumBits((byte) 0100101));
-
-       /* System.out.println(Byte.MAX_VALUE);
-        System.out.println(Byte.BYTES);
-        System.out.println(Byte.SIZE);*/
-        // System.out.println(Byte.hashCode((byte) 0100101)); //65
+        //  System.out.println(sumBits((byte) 0111100)); //4
     }
 }
 
