@@ -43,7 +43,6 @@ public class Eratosthenes {
         sift();
     }
 
-
     private void sift() {
         for (int i = 2; i < sieve.length; i++) {
             for (int j = i + 1; j < sieve.length; j++) {
