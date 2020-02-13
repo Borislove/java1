@@ -41,8 +41,6 @@ public class SumBits {
     }
 }
 
-
-
 /*Задача 1. Класс SumBits: пройдено, оценка: 16.0
 Комментарий:
 OK: Тест "Функция sumBits(byte value)" пройден успешно.

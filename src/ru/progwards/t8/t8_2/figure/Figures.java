@@ -32,9 +32,9 @@ public class Figures {
         Figure[] figures = {segment, square, rectangle, circle, triangle};
         Arrays.sort(figures);
         System.out.println(Arrays.toString(figures));
-     /* for(var figure : figures) {  //это не работает
-          printInfo();
-      }*/
+        /*for (var figure : figures) {  //это не работает
+            printInfo(figure);
+        } */
         //------------------------
 
         System.out.println("segment.compareArea(square)       = " + segment.compareArea(square));
