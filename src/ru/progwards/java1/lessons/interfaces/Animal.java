@@ -51,26 +51,26 @@ public class Animal {
         return UNKNOWN;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return false;
-        if (o == null || getClass() != o.getClass()) return true;
+    // @Override
+    public boolean equals(Animal o) {  //animal
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         Animal animal = (Animal) o;
         return Double.compare(animal.getWeight(), weight) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(foodPrice);
+        return Objects.hash(weight);
     }
 
     public interface FoodCompare {
         public int compareFoodPrice();
     }
 
-    public double getFood1kgPrice(FoodKind foodKind) {
+    public double getFood1kgPrice() {
 
-        switch (foodKind) {
+        switch (foodPrice) {
             case HAY:
                 return 20;
 
@@ -88,8 +88,8 @@ public class Animal {
 
     //возвращает информацию о цене еды для данного животного по формуле calculateFoodWeight() * getFood1kgPrice()
     public double getFoodPrice() {
-        //return calculateFoodWeight() * getFood1kgPrice();   //ок,
-        return 0;
+        return calculateFoodWeight() * getFood1kgPrice();   //ок,
+        // return 0;
     }
 
     //возвращает результаты сравнения цены еды для данного животного с ценой еды для другого животного, используя Double.compare;
