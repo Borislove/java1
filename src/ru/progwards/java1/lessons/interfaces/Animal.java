@@ -1,25 +1,17 @@
 package ru.progwards.java1.lessons.interfaces;
 
-
 import static ru.progwards.java1.lessons.interfaces.AnimalKind.ANIMAL;
 import static ru.progwards.java1.lessons.interfaces.FoodKind.UNKNOWN;
 
 //животные
 public class Animal {
 
-    // TODO: 24.12.2019 добавить вес  //конструктор
     Animal(AnimalKind animalKind, FoodKind foodKind, double FoodCoeff) {
         getKind();
         getFoodKind();
         getFoodCoeff();
     }
 
-    /*
-        Animal Cow;
-        Animal Duck;
-        Animal Hamster;
-
-    */
     //AnimalKind type;  // вид/тип животного
     // FoodKind eatType;   //тип еды
     public static double weight;
@@ -46,10 +38,8 @@ public class Animal {
     // по формуле - вес-еды = вес-животного * коэффициент веса тела.
     public double calculateFoodWeight() {
         weightEat = weight * getFoodCoeff();
-        //return weightEat;
         return weightEat;
     }
-
 
     public AnimalKind getKind() {
         return ANIMAL;
@@ -59,32 +49,50 @@ public class Animal {
         return UNKNOWN;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return Double.compare(animal.getWeight(), weight) == 0;
+    }
+
+    public interface FoodCompare {
+        public int compareFoodPrice();
+    }
+
+    public double getFood1kgPrice() {
+        return 0;
+        /*  HAY : 20
+            CORN: 50
+            UNKNOWN: 0*/
+    }
+
+    //возвращает информацию о цене еды для данного животного по формуле calculateFoodWeight() * getFood1kgPrice()
+    public double getFoodPrice() {
+        return 0;
+    }
+
+    //возвращает результаты сравнения цены еды для данного животного с ценой еды для другого животного, используя Double.compare;
+    public int compareFoodPrice(Animal aminal) {
+        return 0;
+    }
 
     public static void main(String[] args) {
         Animal animal = new Animal(23);
         System.out.println(animal);
 
-        //new Cow(120);
         Animal animal1 = new Cow(150);
         System.out.println(animal1);
-        //new Duck(30);
+
         Animal animal2 = new Duck(30);
         System.out.println(animal2);
-        //new Hamster(1);
+
         Animal animal3 = new Hamster(1);
         System.out.println(animal3);
-
-    }
-
-    @Override
-    public String toString() {
-        return ("I am " + getKind() + ", eat " + getFoodKind());
-    }
-
-    public String toStringFull() {
-        return toString() + " " + calculateFoodWeight();
     }
 }
+
 
 
 

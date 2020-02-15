@@ -28,9 +28,4 @@ public class Hamster extends Animal {
     public double getFoodCoeff() {
         return 0.03;
     }
-
-   /* public String toString(){
-        return ("I am " + getKind()+ ", eat "+ getFoodKind());
-        //return "я хомяк!";
-    }*/
 }
