@@ -17,6 +17,8 @@ public class Animal {
     public static double weight;
     public static double weightEat;  //вес еды
 
+    FoodPrice foodPrice = FoodPrice.UNKNOWN;
+
     //сохраняет вес животно
     public Animal(double weight) {
         this.weight = weight;
@@ -62,21 +64,33 @@ public class Animal {
     }
 
     public double getFood1kgPrice() {
-        return 0;
-        /*  HAY : 20
-            CORN: 50
-            UNKNOWN: 0*/
+
+        switch (foodPrice) {
+            case HAY:
+                return 20;
+
+            case CORN:
+                return 50;
+
+            case UNKNOWN:
+                return 0;
+
+            default:
+                return 0;
+        }
     }
+
 
     //возвращает информацию о цене еды для данного животного по формуле calculateFoodWeight() * getFood1kgPrice()
     public double getFoodPrice() {
-        return 0;
+        return calculateFoodWeight() * getFood1kgPrice();
     }
 
     //возвращает результаты сравнения цены еды для данного животного с ценой еды для другого животного, используя Double.compare;
     public int compareFoodPrice(Animal aminal) {
         return 0;
     }
+
 
     public static void main(String[] args) {
         Animal animal = new Animal(23);
@@ -96,7 +110,13 @@ public class Animal {
 
 
 
-
+/*Задача 1. Классы Animal, Cow, Hamster, Duck: не пройдено, оценка: 3.0
+Комментарий:
+ERROR: Тест "Метод equals(Object anObject)" не пройден. Метод возвращает неверное значение. Результат вызова new Hamster(1D).equals(new Hamster(2D)): true. Ожидалось: false.
+ERROR: Тест "Метод getFood1kgPrice()" не пройден. Метод возвращает неверное значение. Результат вызова new Cow(1D).getFood1kgPrice(): 0.0, ожидалось: 20.0
+OK: Тест "Метод getFoodPrice()" пройден успешно.
+ERROR: Тест "Интерфейс FoodCompare, метод compareFoodPrice(Animal o)" не пройден. Метод возвращает неверные результаты сравнения для new Animal(1D).сompareFoodPrice(new Cow(1D)): 0, ожидалось значение меньше 0.
+По данной задаче в целом не зачет, решение возвращено на доработку. Задача выполнена на 15.00%*/
 
 
 
