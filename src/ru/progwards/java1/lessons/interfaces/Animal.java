@@ -53,8 +53,8 @@ public class Animal {
 
     @Override
     public boolean equals(Object anObject) {  //  Тест "Метод equals(Object anObject)" не пройден
-        if (this == anObject) return true;
-        if (anObject == null || getClass() != anObject.getClass()) return false;
+        if (this == anObject) return false;
+        if (anObject == null || getClass() != anObject.getClass()) return true;
         Animal animal = (Animal) anObject;
         return Double.compare(animal.getWeight(), weight) == 0;
     }
