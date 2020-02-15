@@ -51,11 +51,11 @@ public class Animal {
         return UNKNOWN;
     }
 
-    // @Override
-    public boolean equals(Animal o) {  //animal
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Animal animal = (Animal) o;
+    @Override
+    public boolean equals(Object anObject) {  //  Тест "Метод equals(Object anObject)" не пройден
+        if (this == anObject) return true;
+        if (anObject == null || getClass() != anObject.getClass()) return false;
+        Animal animal = (Animal) anObject;
         return Double.compare(animal.getWeight(), weight) == 0;
     }
 
@@ -72,10 +72,12 @@ public class Animal {
 
         switch (foodPrice) {
             case HAY:
-                return 20;
+                //return foodPrice =20;
+                return (double) 20;
 
             case CORN:
-                return 50;
+                return (double) 50;
+            //return 50;
 
             case UNKNOWN:
                 return 0;
