@@ -1,5 +1,7 @@
 package ru.progwards.java1.lessons.interfaces;
 
+import java.util.Objects;
+
 import static ru.progwards.java1.lessons.interfaces.AnimalKind.ANIMAL;
 import static ru.progwards.java1.lessons.interfaces.FoodKind.UNKNOWN;
 
@@ -31,8 +33,6 @@ public class Animal {
 
     //возвращает коэффициент веса еды к весу тела животного. Для класса Animal это 0.02
     public double getFoodCoeff() {
-
-        //  return calculateFoodWeight();
         return 0.02;
     }
 
@@ -53,10 +53,15 @@ public class Animal {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) return false;
+        if (o == null || getClass() != o.getClass()) return true;
         Animal animal = (Animal) o;
         return Double.compare(animal.getWeight(), weight) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(foodPrice);
     }
 
     public interface FoodCompare {
@@ -88,6 +93,8 @@ public class Animal {
 
     //возвращает результаты сравнения цены еды для данного животного с ценой еды для другого животного, используя Double.compare;
     public int compareFoodPrice(Animal aminal) {
+
+
         return 0;
     }
 
@@ -108,14 +115,12 @@ public class Animal {
 }
 
 
-
-
 /*Задача 1. Классы Animal, Cow, Hamster, Duck: не пройдено, оценка: 3.0
 Комментарий:
 ERROR: Тест "Метод equals(Object anObject)" не пройден. Метод возвращает неверное значение. Результат вызова new Hamster(1D).equals(new Hamster(2D)): true. Ожидалось: false.
 ERROR: Тест "Метод getFood1kgPrice()" не пройден. Метод возвращает неверное значение. Результат вызова new Cow(1D).getFood1kgPrice(): 0.0, ожидалось: 20.0
-OK: Тест "Метод getFoodPrice()" пройден успешно.
-ERROR: Тест "Интерфейс FoodCompare, метод compareFoodPrice(Animal o)" не пройден. Метод возвращает неверные результаты сравнения для new Animal(1D).сompareFoodPrice(new Cow(1D)): 0, ожидалось значение меньше 0.
+ERROR: Тест "Интерфейс FoodCompare, метод compareFoodPrice(Animal o)" не пройден. Метод возвращает неверные результаты сравнения для new Animal(1D).сompareFoodPrice(new Cow(1D)): 0
+, ожидалось значение меньше 0.
 По данной задаче в целом не зачет, решение возвращено на доработку. Задача выполнена на 15.00%*/
 
 
