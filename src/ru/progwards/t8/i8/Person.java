@@ -10,16 +10,7 @@ package ru.progwards.t8.i8;
 У Child2 String hello() должен вернуть "servus"*/
 
 public class Person {
-    public void setChild1(Person child1) {
-        Child1 = child1;
-    }
 
-    public void setChild2(Person child2) {
-        Child2 = child2;
-    }
-
-    Person Child1;
-    Person Child2;
 
     class Child1 {
 
@@ -29,7 +20,7 @@ public class Person {
         }
     }
 
-    class Child2 {
+    static class Child2 {
 
         public String hello() {
             getClass();

@@ -23,7 +23,6 @@ public class Astronomy {
 
     public static Double jupiterSquare() {
         return sphereSquare(jupiter);
-
     }
 
     public static Double earthVsMercury() {
