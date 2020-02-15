@@ -68,9 +68,9 @@ public class Animal {
         public int compareFoodPrice();
     }
 
-    public double getFood1kgPrice() {
+    public double getFood1kgPrice(FoodKind foodKind) {
 
-        switch (foodPrice) {
+        switch (foodKind) {
             case HAY:
                 return 20;
 
@@ -88,7 +88,8 @@ public class Animal {
 
     //возвращает информацию о цене еды для данного животного по формуле calculateFoodWeight() * getFood1kgPrice()
     public double getFoodPrice() {
-        return calculateFoodWeight() * getFood1kgPrice();
+        //return calculateFoodWeight() * getFood1kgPrice();   //ок,
+        return 0;
     }
 
     //возвращает результаты сравнения цены еды для данного животного с ценой еды для другого животного, используя Double.compare;
