@@ -53,10 +53,8 @@ public class Animal {
 
     @Override
     public boolean equals(Object anObject) {  //  Тест "Метод equals(Object anObject)" не пройден
-        if (this == anObject) return false;
-        if (anObject == null || getClass() != anObject.getClass()) return true;
-        Animal animal = (Animal) anObject;
-        return Double.compare(animal.getWeight(), weight) == 0;
+        if (this == anObject) return true;
+        return false;
     }
 
     @Override
@@ -96,8 +94,6 @@ public class Animal {
 
     //возвращает результаты сравнения цены еды для данного животного с ценой еды для другого животного, используя Double.compare;
     public int compareFoodPrice(Animal aminal) {
-
-
         return 0;
     }
 
@@ -114,7 +110,6 @@ public class Animal {
 
         Animal animal3 = new Hamster(10);
         System.out.println(animal3);
-
 
         System.out.println(animal3.getFood1kgPrice());
     }
