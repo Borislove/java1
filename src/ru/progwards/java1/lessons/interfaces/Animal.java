@@ -52,15 +52,18 @@ public class Animal {
     }
 
     @Override
-    public boolean equals(Object anObject) {  //  Тест "Метод equals(Object anObject)" не пройден
-        if (this == anObject) return true;
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return weight == animal.getWeight();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(weight);
+        return Objects.hash(foodPrice);
     }
+
 
     public interface FoodCompare {
         public int compareFoodPrice();
