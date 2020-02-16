@@ -80,10 +80,10 @@ public class Animal {
             //return 50;
 
             case UNKNOWN:
-                return 0;
+                return 10;
 
             default:
-                return 0;
+                return 10;
         }
     }
 
@@ -112,8 +112,11 @@ public class Animal {
         Animal animal2 = new Duck(30);
         System.out.println(animal2);
 
-        Animal animal3 = new Hamster(1);
+        Animal animal3 = new Hamster(10);
         System.out.println(animal3);
+
+
+        System.out.println(animal3.getFood1kgPrice());
     }
 }
 
