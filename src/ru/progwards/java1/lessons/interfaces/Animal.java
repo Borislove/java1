@@ -6,7 +6,7 @@ import static ru.progwards.java1.lessons.interfaces.AnimalKind.ANIMAL;
 import static ru.progwards.java1.lessons.interfaces.FoodKind.UNKNOWN;
 
 //животные
-public class Animal {
+public class Animal implements FoodCompare {
 
     Animal(AnimalKind animalKind, FoodKind foodKind, double FoodCoeff) {
         getKind();
@@ -61,7 +61,7 @@ public class Animal {
 
     @Override
     public int hashCode() {
-        return Objects.hash(foodPrice);
+        return Objects.hash(weight);
     }
 
 
@@ -87,7 +87,6 @@ public class Animal {
                 return 10;
         }
     }
-
 
     //возвращает информацию о цене еды для данного животного по формуле calculateFoodWeight() * getFood1kgPrice()
     public double getFoodPrice() {
