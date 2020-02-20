@@ -30,6 +30,10 @@ public class Words extends JFrame {
 /*
          if (drop_top > game_window.getHeight())   //если вылетает за границы вывести конец игры
             g.drawImage(game_over, 280, 120, null);*/
+
+//if (drop_top > game_window.getHeight())
+        // return  onRepaint(,drop);  g.drawImage(drop, (int) drop_left, (int) drop_top, null);
+
     }
 
     private static class GameField extends JPanel {
@@ -40,6 +44,7 @@ public class Words extends JFrame {
             repaint();
         }
     }
+
 
     public static void main(String[] args) throws IOException {
 
@@ -72,6 +77,5 @@ public class Words extends JFrame {
         });
         game_window.add(game_field);
         game_window.setVisible(true);
-
     }
 }

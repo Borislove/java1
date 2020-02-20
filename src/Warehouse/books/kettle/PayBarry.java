@@ -1,6 +1,6 @@
 package Warehouse.books.kettle;
 
-//25
+//стр.25
 public class PayBarry {
     public static void main(String[] args) {
         double checkAmount = 1257.63;

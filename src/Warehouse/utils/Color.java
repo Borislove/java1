@@ -19,12 +19,22 @@ public class Color {
         a.hashCode();
         System.out.println(a.hashCode());
 
-        String ac = "\u001B[32m"+a;
+        String ac = "\u001B[32m" + a;
         System.out.println(ac);
 
         System.out.println(ac.hashCode());
 
-         // Character test = (Character)ac ;  а может и нельзя? чар есть чар...и занимает другие байты поэтому не ложится с цветом
+        // Character test = (Character)ac ;  а может и нельзя? чар есть чар...и занимает другие байты поэтому не ложится с цветом
+
+        //--------------------------------------
+        System.out.println(ANSI_BLACK + "ANSI_BLACK");
+        System.out.println(ANSI_RED + "ANSI_RED");
+        System.out.println(ANSI_GREEN + "ANSI_GREEN");
+        System.out.println(ANSI_YELLOW + "ANSI_YELLOW");
+        System.out.println(ANSI_BLUE + "ANSI_BLUE");
+        System.out.println(ANSI_PURPLE + "ANSI_PURPLE");
+        System.out.println(ANSI_CYAN + "ANSI_CYAN");
+        System.out.println(ANSI_WHITE + "ANSI_WHITE");
     }
 }
 
