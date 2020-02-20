@@ -1,4 +1,4 @@
-package headfirstpattern.duck;
+package Warehouse.books.headfirstpattern.duck;
 
 //Определяем новое поведение - реактивный полет
 public class FlyRocketPowered implements FlyBehavior {

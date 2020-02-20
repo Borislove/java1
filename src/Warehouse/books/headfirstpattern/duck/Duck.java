@@ -1,4 +1,4 @@
-package headfirstpattern.duck;
+package Warehouse.books.headfirstpattern.duck;
 
 public abstract class Duck {
     //Объявляем две ссылочные переменные с типами интерфейсов поведения.

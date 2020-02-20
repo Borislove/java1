@@ -1,4 +1,4 @@
-package headfirstpattern.duck;
+package Warehouse.books.headfirstpattern.duck;
 
 public class Squeak implements QuackBehavior {
     public void quack(){

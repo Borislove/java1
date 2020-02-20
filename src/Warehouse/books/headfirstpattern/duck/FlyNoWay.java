@@ -1,4 +1,4 @@
-package headfirstpattern.duck;
+package Warehouse.books.headfirstpattern.duck;
 
 //Реализация поведения для уток, которые не летают(например резиновых).
 public class FlyNoWay implements FlyBehavior {
