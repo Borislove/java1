@@ -3,19 +3,19 @@ package Warehouse.lost;
 import java.util.Arrays;
 import java.util.Date;
 
-//сколько прошло времени?
+//4 8 15 16 23 42
 
-public class Lost1 {
+//через бинарный поиск попробовать?
 
-    private static int a = 5;
-    private static int b = 11;
-    private static int c = 22;
+public class Lost2 {
 
-    private static int[] array = {a, b, c};
-    private static int[] arrayFill = new int[3];
+    private static int[] array = {4, 8, 15, 16, 23, 42};
+    //private static int[] array = {4, 8, 15};
+    private static int[] arrayFill = new int[6];
+    //private static int[] arrayFill = Arrays.copyOf(array, array.length);
 
     private static int aa = 1; // Начальное значение диапазона - "от"
-    private static int bb = 26; // Конечное значение диапазона - "до"
+    private static int bb = 42; // Конечное значение диапазона - "до"
 
     private static Date dateOpen = new Date();
 
@@ -25,6 +25,9 @@ public class Lost1 {
         boolean b1 = true;
         boolean b2 = true;
         boolean b3 = true;
+        boolean b4 = true;
+        boolean b5 = true;
+        boolean b6 = true;
 
         boolean t = true;
 
@@ -41,40 +44,53 @@ public class Lost1 {
             System.out.println("Рандомное число " + random_number);
 
             if (b1 == true) {
-                if (random_number == a) {
-                    arrayFill[0] = a;
+                if (random_number == array[0]) {   //4
+                    arrayFill[0] = array[0];
                     System.out.println(Arrays.toString(arrayFill));
                     b1 = false;
                 }
             }
 
             if (b2 == true) {
-                if (random_number == b) {
-                    arrayFill[1] = b;
+                if (random_number == array[1]) {  //8
+                    arrayFill[1] = array[1];
                     System.out.println(Arrays.toString(arrayFill));
                     b2 = false;
                 }
             }
 
             if (b3 == true) {
-                if (random_number == c) {
-                    arrayFill[2] = c;
+                if (random_number == array[2]) { //15
+                    arrayFill[2] = array[2];
                     System.out.println(Arrays.toString(arrayFill));
                     b3 = false;
                 }
             }
 
-            System.out.println(array.equals(arrayFill));
-
-         /*   if (array == arrayFill) {
-                System.out.println("TEST");
-                break;
+            if (b4 == true) {
+                if (random_number == array[3]) {   //16
+                    arrayFill[3] = array[3];
+                    System.out.println(Arrays.toString(arrayFill));
+                    b4 = false;
+                }
             }
 
-            if (array.equals(arrayFill) == true) {
-                System.out.println("TEST TEST TEST");
-                break;
-            }*/
+            if (b5 == true) {
+                if (random_number == array[4]) {  //23
+                    arrayFill[4] = array[4];
+                    System.out.println(Arrays.toString(arrayFill));
+                    b5 = false;
+                }
+            }
+
+            if (b6 == true) {
+                if (random_number == array[5]) { //42
+                    arrayFill[5] = array[5];
+                    System.out.println(Arrays.toString(arrayFill));
+                    b6 = false;
+                }
+            }
+            //   System.out.println(array.equals(arrayFill));
 
             if (Arrays.equals(array, arrayFill) == true) {     // true
                 System.out.print("Выполнено:");
