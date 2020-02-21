@@ -1,4 +1,4 @@
-package Warehouse;
+package Warehouse.lost;
 
 //вроде получилось...
 /*

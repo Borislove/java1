@@ -7,7 +7,7 @@ public int arrayMax(int[] a)
 
 public class Arrays {
 
-    static int[] a = {1, 2, 3, 0, -10, -99999, -3123, 4424};
+    private static int[] a = {1, 2, 3, 0, -10, -99999, -3123, 4424};
 
     public int arrayMax(int[] a) {  //Passed all tests!
 

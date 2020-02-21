@@ -1,8 +1,6 @@
 package ru.progwards.t5.i5.Calc;
 
-
 /*Создайте класс Calculator, содержащий
-
 приватную переменную int result;
 конструктор по умолчанию, устанавливающий result = 0;
 публичную функцию set(int num), устанавливающую значение result равный num
@@ -32,6 +30,15 @@ class Calculator {       //Passed all tests!   public class - не проход�
 
     public int getResult() {
         return result;
+    }
+
+    public static void main(String[] args) {
+        Calculator a = new Calculator();
+        Calculator b = new Calculator();
+        Calculator result = new Calculator();
+
+        a.set(35);
+        b.set(45);
     }
 }
 

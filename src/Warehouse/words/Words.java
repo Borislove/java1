@@ -16,7 +16,7 @@ public class Words extends JFrame {
     private static Image drop;
     private static float drop_left = 200;
     private static float drop_top = -100;
-    private static float drop_v = 2000; //скорость
+    private static float drop_v = 200; //скорость
     private static int score;
 
     private static void onRepaint(Graphics g) {
@@ -33,7 +33,6 @@ public class Words extends JFrame {
 
 //if (drop_top > game_window.getHeight())
         // return  onRepaint(,drop);  g.drawImage(drop, (int) drop_left, (int) drop_top, null);
-
     }
 
     private static class GameField extends JPanel {
@@ -44,7 +43,6 @@ public class Words extends JFrame {
             repaint();
         }
     }
-
 
     public static void main(String[] args) throws IOException {
 
@@ -77,5 +75,8 @@ public class Words extends JFrame {
         });
         game_window.add(game_field);
         game_window.setVisible(true);
+
+        //game_window.update(drop.getGraphics());  //прикольный квадратик
+        game_field.repaint();
     }
 }

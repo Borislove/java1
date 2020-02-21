@@ -2,7 +2,8 @@ package Warehouse;
 
 import java.util.Arrays;
 
-// TODO: 02.02.2020 попытался...
+// TODO: 02.02.2020 попытался...сам пусть сделает на своем VBA
+
 public class Practic {
 
 
