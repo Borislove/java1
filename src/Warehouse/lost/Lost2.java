@@ -7,6 +7,17 @@ import java.util.Date;
 
 //через бинарный поиск попробовать?
 
+/*Программа которая делает не пойми что.
+даны определенные числа, генерируются случайные числа и когда попадают все числа в этот диапозон, завершается
+
+* */
+
+/**
+ * @author Free Coder
+ * @version 3.0 Fri Feb 21 23:21:36 MSK 2020
+ *
+ * */
+
 public class Lost2 {
 
     private static int[] array = {4, 8, 15, 16, 23, 42};
@@ -22,6 +33,7 @@ public class Lost2 {
     public static void main(String[] args) throws InterruptedException {
         //System.out.println(Arrays.toString(array));
         int value = 0;
+
         boolean b1 = true;
         boolean b2 = true;
         boolean b3 = true;
