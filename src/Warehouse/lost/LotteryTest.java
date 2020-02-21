@@ -1,30 +1,23 @@
 package Warehouse.lost;
 
+import java.util.Arrays;
+
 /*
  * Программа генерирует случайные числа из них составляет выигрышную комбинацию.
  *
  * */
-
-import java.util.Arrays;
 
 /**
  * @author Free Coder
  * @version 1.0 Fri Feb 21 23:31:37 MSK 2020
  */
 
-
-//хотел через коллекцию, запутался
-
-
-public class Lottery {
+public class LotteryTest {
 
     private static int aa = 1; // Начальное значение диапазона - "от"
     private static int bb = 99; // Конечное значение диапазона - "до"  //999 при таком значении 10 минут 2 числа впоймал..
 
-    // private static int[] array = new int[10];   //  тут не заполняется
-
-    public static void main(String[] args) throws InterruptedException {
-
+    public static void testTest() {
         int value = 0;
 
         boolean b1 = true;
@@ -42,21 +35,9 @@ public class Lottery {
 
         while (true) {
             //  Thread.sleep(1);
-            System.out.print("-------------------------");
-            System.out.print("<<<Итерация>>>" + value);
-            System.out.print("-------------------------");
+
             int random_number1 = aa + (int) (Math.random() * bb); // Генерация
             int random_number2 = aa + (int) (Math.random() * bb); // Генерация
-
-            System.out.print("  random_number1 " + random_number1);
-            System.out.println("  random_number2 " + random_number2);
-
-         /*   if (random_number1 == random_number2) {
-                System.out.println("совпали");
-                break;
-            }*/
-
-            System.out.println(Arrays.toString(array));
 
             if (b1 == true) {
                 int random_number3 = aa + (int) (Math.random() * bb); // Генерация
@@ -72,12 +53,9 @@ public class Lottery {
                         && array[0] != array[7]
                         && array[0] != array[8]
                         && array[0] != array[9]) {
-                    System.out.println("Числа совпали");
+
                     array[0] = ((random_number1 + random_number2) / 2);   //делить на 2...(11+2) / 2 сколько будет? что откинется, хотя тут складываются одни и теже числа и просто делятся, вообще зачем делить на 2...и не должно равнятся рандому 3..
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("0");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
                     b1 = false;
                     //  break;
                 }
@@ -97,12 +75,9 @@ public class Lottery {
                         && array[1] != array[7]
                         && array[1] != array[8]
                         && array[1] != array[9]) {
-                    System.out.println("Числа совпали");
+
                     array[1] = (random_number1 + random_number2) / 2;
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("1");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
                     b2 = false;
                 }
             }
@@ -121,12 +96,9 @@ public class Lottery {
                         && array[2] != array[7]
                         && array[2] != array[8]
                         && array[2] != array[9]) {
-                    System.out.println("Числа совпали");
+
                     array[2] = (random_number1 + random_number2) / 2;
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("2");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
                     b3 = false;
                 }
             }
@@ -145,12 +117,9 @@ public class Lottery {
                         && array[3] != array[7]
                         && array[3] != array[8]
                         && array[3] != array[9]) {
-                    System.out.println("Числа совпали");
+
                     array[3] = (random_number1 + random_number2) / 2;
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("3");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
                     b4 = false;
                 }
             }
@@ -169,12 +138,9 @@ public class Lottery {
                         && array[4] != array[7]
                         && array[4] != array[8]
                         && array[4] != array[9]) {
-                    System.out.println("Числа совпали");
+
                     array[4] = (random_number1 + random_number2) / 2;
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("4");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
                     b5 = false;
                 }
             }
@@ -193,12 +159,9 @@ public class Lottery {
                         && array[5] != array[7]
                         && array[5] != array[8]
                         && array[5] != array[9]) {
-                    System.out.println("Числа совпали");
+
                     array[5] = (random_number1 + random_number2) / 2;
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("5");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
                     b6 = false;
                 }
             }
@@ -217,12 +180,9 @@ public class Lottery {
                         && array[6] != array[7]
                         && array[6] != array[8]
                         && array[6] != array[9]) {
-                    System.out.println("Числа совпали");
+
                     array[6] = (random_number1 + random_number2) / 2;
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("6");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
                     b7 = false;
                 }
             }
@@ -241,12 +201,10 @@ public class Lottery {
                         && array[7] != array[6]
                         && array[7] != array[8]
                         && array[7] != array[9]) {
-                    System.out.println("Числа совпали");
+
                     array[7] = (random_number1 + random_number2) / 2;
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("7");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
+
                     b8 = false;
                 }
             }
@@ -265,12 +223,9 @@ public class Lottery {
                         && array[8] != array[6]
                         && array[8] != array[7]
                         && array[8] != array[9]) {
-                    System.out.println("Числа совпали");
+
                     array[8] = (random_number1 + random_number2) / 2;
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("8");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
                     b9 = false;
                 }
             }
@@ -289,12 +244,9 @@ public class Lottery {
                         && array[9] != array[6]
                         && array[9] != array[7]
                         && array[9] != array[8]) {
-                    System.out.println("Числа совпали");
+
                     array[9] = (random_number1 + random_number2) / 2;
-                    System.out.println(Arrays.toString(array));
-                    //System.out.println(array.length);
-                    System.out.println("9");
-                    System.out.println("random 3 ----===--->>>> " + random_number3);
+
                     b10 = false;
                 }
             }
@@ -311,19 +263,22 @@ public class Lottery {
                     && array[8] != 0
                     && array[9] != 0
             ) {
-                System.out.println("The end XD");
+                System.out.println(Arrays.toString(array));
+                System.out.println("<<<Итерация>>>" + value);
                 break;
                 //continue;
             }
             value++;
         }
+    }
 
+    public static void main(String[] args) throws InterruptedException {
+
+        for (int i = 0; i < 100; i++) {
+            testTest();
+        }
     }
 }
 
-
-//совпадение <<<Итерация>>>13650
-//<<<Итерация>>>28975
-//<<<Итерация>>>18903
 
 
