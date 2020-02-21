@@ -17,7 +17,7 @@ public class Proverbs {
     private static String str = "";
 
     private static int a = 1; // Начальное значение диапазона - "от" 
-    private static int b = 20; // Конечное значение диапазона - "до"
+    private static int b = 22; // Конечное значение диапазона - "до"
     private static int random_number1 = a + (int) (Math.random() * b); // Генерация
 
     static void text() {
@@ -98,7 +98,7 @@ public class Proverbs {
                 text();
                 break;
             case 12:
-                str = "Бесплатный сыр бывает только в мышеловке";
+                str = "Бесплатный сыр бывает только в мышеловке.";
                 text();
                 break;
             case 13:
@@ -131,6 +131,14 @@ public class Proverbs {
                 break;
             case 20:
                 str = "Делу время, потехи час.";
+                text();
+                break;
+            case 21:
+                str = "Человек, ни разу в своей жизни не достигнувший малых побед, никогда не добьется большой победы.";
+                text();
+                break;
+            case 22:
+                str = "Выполняя задание, каждый раз старайся превзойти свой предыдущий результат, и вскоре ты превзойдешь всех окружающих.";
                 text();
                 break;
             default:
