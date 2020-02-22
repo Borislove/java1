@@ -3,7 +3,8 @@ package Warehouse.lost;
 import java.util.Arrays;
 
 /*
- * Программа генерирует случайные числа из них составляет выигрышную комбинацию.
+ * Программа генерирует случайные числа из них составляет комбинацию.
+ *вытяни свой счастливый билет XD
  *
  * */
 
@@ -264,7 +265,15 @@ public class LotteryTest {
                     && array[9] != 0
             ) {
                 System.out.println(Arrays.toString(array));
-                System.out.println("<<<Итерация>>>" + value);
+                //  System.out.println("<<<Итерация>>>" + value);
+
+                System.out.println("----------------------------------");
+                System.out.println("***********Ticket:" + value + "**********");
+
+                System.out.println("***** " + array[0] + " | " + array[1] + " | " + array[2] + " |" + array[3] + " | " + array[4] + " *****");
+                System.out.println("***** " + array[5] + " | " + array[6] + " | " + array[7] + " |" + array[8] + " | " + array[9] + " *****");
+                System.out.println("*********************************");
+                System.out.println("----------------------------------");
                 break;
                 //continue;
             }
@@ -274,9 +283,21 @@ public class LotteryTest {
 
     public static void main(String[] args) throws InterruptedException {
 
+        /*
+         * 100 тикетов*/
+/*
         for (int i = 0; i < 100; i++) {
             testTest();
+        }*/
+
+        //testTest();
+
+        /*
+         * 10*/
+        for (int i = 0; i < 10; i++) {
+            testTest();
         }
+
     }
 }
 
