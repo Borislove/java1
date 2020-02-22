@@ -1,6 +1,6 @@
 package Warehouse;
 
-public class Test {
+class Test {
 
     void test() {  //?
     }

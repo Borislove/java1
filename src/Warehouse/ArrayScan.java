@@ -16,7 +16,6 @@ public class ArrayScan {
         for (int i = 0; i < n ; i++) {
             System.out.println("Enter a [" + i + "] = ");
             a[i] = in.nextInt();
-
         }
     }
 }
