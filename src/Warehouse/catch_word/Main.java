@@ -6,11 +6,18 @@ import javax.swing.*;
 
 двигаюсь по шаблону, переделывая и внося изменения...
 *Доделать движок
-*Кружку рисуют // TODO: 22.02.2020
+*Кружку рисуют // TODO: 22.02.2020 // уже есть жук...
 *Просто делать...
+*
+вертиально заставить двигаться объект +
+удалять из коллекции объект + не не удаляет)
 *
 
 картинки грузятся только с абсолютного пути...это напрягает
+
+
+попробовать
+Image img = new ImageIcon(getClass().getResource("/res/road.png")).getImage();
 
  */
 
@@ -19,12 +26,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        JFrame frame = new JFrame("Имя фрейма");
+        JFrame frame = new JFrame("Bug");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(815, 620);
         frame.add(new Field()); //поле
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
-        frame.setResizable(false);
+        frame.setResizable(true);  //развертка
     }
 }

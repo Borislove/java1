@@ -6,6 +6,7 @@ import java.util.Arrays;
  * Программа генерирует случайные числа из них составляет комбинацию.
  *вытяни свой счастливый билет XD
  *
+ * выдать один билет, затем запустить мега тираж и если совпали числа победа?
  * */
 
 /**
@@ -18,7 +19,20 @@ public class LotteryTest {
     private static int aa = 1; // Начальное значение диапазона - "от"
     private static int bb = 99; // Конечное значение диапазона - "до"  //999 при таком значении 10 минут 2 числа впоймал..
 
+    //private static int[] arrayS = new int[10]; //тут поставишь он не хранит значения..
+
+    private static int[] arrayOver = {19, 23, 24, 24, 55, 56, 83, 86, 88, 97};
+
     public static void testTest() {
+
+        int[] array = new int[10];
+
+        //int[] arrayOver = {20, 37, 61, 61, 62, 65, 75, 75, 85, 87};
+        //int[] arrayOver = {1, 2, 3, 4, 4, 7, 7, 8, 8, 9};
+        //int[] arrayOver = {1, 1, 1, 1, 1, 1, 2, 3, 3, 3};
+
+        Arrays.sort(arrayOver);
+
         int value = 0;
 
         boolean b1 = true;
@@ -31,8 +45,6 @@ public class LotteryTest {
         boolean b8 = true;
         boolean b9 = true;
         boolean b10 = true;
-
-        int[] array = new int[10];
 
         while (true) {
             //  Thread.sleep(1);
@@ -274,6 +286,10 @@ public class LotteryTest {
                 System.out.println("***** " + array[5] + " | " + array[6] + " | " + array[7] + " |" + array[8] + " | " + array[9] + " *****");
                 System.out.println("*********************************");
                 System.out.println("----------------------------------");
+
+                System.out.println("отсортированный");
+                Arrays.sort(array);
+                System.out.println(Arrays.toString(array));
                 break;
                 //continue;
             }
@@ -290,14 +306,34 @@ public class LotteryTest {
             testTest();
         }*/
 
-        //testTest();
 
         /*
-         * 10*/
-        for (int i = 0; i < 10; i++) {
-            testTest();
-        }
+         * 10 тикетов*/
 
+        /*for (int i = 0; i < 10; i++) {
+            testTest();
+        }*/
+
+        /* 1 тикет*/
+        System.out.println("тест тест тест тест");
+        testTest();
+        System.out.println("тест тест тест тест");
+
+
+      /*  for (int i = 0; i < 100; i++) {
+            testTest();
+        }*/
+
+        /*while (true) {   //не работает...
+
+            testTest();
+            if (Arrays.equals(arrayS, arrayOver)) {
+                System.out.println("\u001B[31m" + "STOP!!!" + "\u001B[0m");
+                System.out.println(Arrays.toString(arrayS));
+                System.out.println(Arrays.toString(arrayOver));
+                break;
+            }
+        }*/
     }
 }
 
