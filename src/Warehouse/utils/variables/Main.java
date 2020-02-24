@@ -9,11 +9,14 @@ public class Main {
 
     public static void variables() {
         System.out.println("----------------------------");
-        System.out.println("Float -  1");
-        System.out.println("Long  - 2");
-        System.out.println("Double  - 3");
+        System.out.println("Long  - 3");
         System.out.println("Integer - 4");
         System.out.println("Short - 5");
+        System.out.println("----------------------------");
+
+        System.out.println("Типы с плавающей точкой");
+        System.out.println("Float -  1");
+        System.out.println("Double  - 2");
         System.out.println("----------------------------");
     }
 
@@ -34,10 +37,10 @@ public class Main {
                     Float.Float();
                     break;
                 case 2:
-                    Long.Long();
+                    Double.Double();
                     break;
                 case 3:
-                    Double.Double();
+                    Long.Long();
                     break;
                 case 4:
                     Integer.Integer();
@@ -71,6 +74,15 @@ float f = 123F  или f
 char bigZ = 'Z';  //всегда одинарные кавычки для символов
 String = "это строка" ; //всегда двойные кавычки для строк
 
+
+
+/*Примитивные типы Java не являются объектами. К ним относятся:
+
+boolean - булев тип, может иметь значения true или false
+byte - 8-разрядное целое число
+
+
+char - 16-разрядное беззнаковое целое, представляющее собой символ UTF-16 (буквы и цифры)
 
 
 

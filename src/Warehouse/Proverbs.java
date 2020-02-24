@@ -9,7 +9,6 @@ package Warehouse;
 /*
 При добавление case  изменять значение b
 
-
  * */
 public class Proverbs {
 

@@ -1,5 +1,7 @@
 package Warehouse.catch_word;
 
+import Warehouse.lost.LostBit;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,6 +15,9 @@ import java.util.Random;
 
 public class Field extends JPanel implements ActionListener, Runnable {
 
+
+    LostBit lostBit = new LostBit();
+
     Timer mainTimer = new Timer(20, (ActionListener) this);
 
     Image img = new ImageIcon("C:\\Users\\User\\IdeaProjects\\java1\\src\\Warehouse\\catch_word\\res\\background.jpg").getImage(); //абсолютный путь
@@ -22,6 +27,7 @@ public class Field extends JPanel implements ActionListener, Runnable {
     Thread wordsFactory = new Thread(this);
 
     List<Words> words = new ArrayList<Words>();
+
 
     public Field() {
         mainTimer.start();
@@ -87,10 +93,20 @@ public class Field extends JPanel implements ActionListener, Runnable {
         g.setFont(font1);
         g.drawString("Thank you!", 300, 800);
 
-
         //прикольно
        /* g.drawString("X", cup.x, 20);
         g.drawString("Y", 20, cup.y);*/
+
+        //g.drawString("" + Integer.toBinaryString(value), 200, 200);
+
+        // g.drawString("" + new LostBit(), 200, 200);
+
+        g.setColor(Color.green);
+        Font font3 = new Font("Arial", Font.ITALIC, 15);
+        g.setFont(font3);
+        //   g.drawString("" + new Timer_4(), -188, 10); //оно не пашет как надо!
+
+        // g.drawString("" +new Timer_4().toString(), 250, 250); //почти...теперь он не считает...
 
         Iterator<Words> i = words.iterator();
         while (i.hasNext()) {

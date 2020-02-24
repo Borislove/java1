@@ -24,7 +24,7 @@ Image img = new ImageIcon(getClass().getResource("/res/road.png")).getImage();
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         JFrame frame = new JFrame("Bug");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

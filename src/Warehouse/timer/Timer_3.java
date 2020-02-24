@@ -1,10 +1,12 @@
 package Warehouse.timer;
 
-// TODO: 01.02.2020 надо будет переписать 
+// TODO: 01.02.2020 надо будет переписать
+
+//не правильно тут надо все пересчитывать...
 public class Timer_3 {
     //таймер в -
 
-    public static int m = 0; //minute
+    public static int m = 60; //minute
     public static int h = 1; //hour   //1 час
 
     public static void main(String[] args) throws InterruptedException {
@@ -16,9 +18,9 @@ public class Timer_3 {
                 System.out.print(" Hour: " + h + " Minute: " + m + " Second: " + i + "\r");
             }
             m++;
-            if (m == 60) {
-                h++;
-                m = 0;  //обнуление делать а то получится не то
+            if (m == 00) {
+                h--;
+                //обнуление делать а то получится не то
             }
         }
     }
