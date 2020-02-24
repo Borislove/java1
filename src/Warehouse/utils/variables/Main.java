@@ -1,5 +1,6 @@
 package Warehouse.utils.variables;
 
+//мальца коряво . но работает
 
 import java.util.Scanner;
 
@@ -9,50 +10,66 @@ public class Main {
 
     public static void variables() {
         System.out.println("----------------------------");
+        System.out.println("Целочисленные типы:");
         System.out.println("Long  - 3");
         System.out.println("Integer - 4");
         System.out.println("Short - 5");
+        System.out.println("byte - 6");
         System.out.println("----------------------------");
 
-        System.out.println("Типы с плавающей точкой");
+        System.out.println("Типы с плавающей точкой:");
         System.out.println("Float -  1");
         System.out.println("Double  - 2");
         System.out.println("----------------------------");
+
+        System.out.println("Символьный тип:");
+        System.out.println("char - 7");
+        System.out.println("----------------------------");
+
+        System.out.println("Булев тип:");
+        System.out.println("boolean - 8");
     }
 
     public static void main(String[] args) {
-
         variables();
         while (true) {
             Scanner key = new Scanner(System.in);
             int verse = key.nextInt();
 
-            //Float.Float();
-            //Long.Long();
-            //Double.Double();
-            // Integer.Integer();
-            // Short.Short();
             switch (verse) {
                 case 1:
-                    Float.Float();
+                    Float.giveFloat();
                     break;
                 case 2:
-                    Double.Double();
+                    Double.giveDouble();
                     break;
                 case 3:
-                    Long.Long();
+                    Long.giveLong();
                     break;
                 case 4:
-                    Integer.Integer();
+                    Integer.giveInteger();
                     break;
                 case 5:
-                    Short.Short();
+                    Short.giveShort();
+                    break;
+                case 6:
+                    Byte.giveByte();
+                    break;
+                case 7:
+                    Char.giveChar();
+                    break;
+                case 8:
+                    Boolean.giveBoolean();
                     break;
                 default:
                     System.out.println("error");
                     break;
             }
-            variables();
+
+            System.out.println("назад в меню: 0");
+            if (key.nextInt() == 0) {
+                variables();
+            }
         }
     }
 }
