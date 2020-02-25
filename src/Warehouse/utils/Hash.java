@@ -17,6 +17,10 @@ public class Hash {
 
         String strJava = "JAVA";
         System.out.println("strJava.hashCode() = " + strJava.hashCode()); //совсем другой код чем посимвольно
+
+        String password = "Password123";
+        System.out.println("password = " + password.hashCode());
+
     }
 }
 

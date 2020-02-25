@@ -3,7 +3,7 @@ package Warehouse.utils;
 import java.io.InputStream;
 
 //
-public class Scanner {
+abstract class Scanner {
     public Scanner(InputStream in) {
     }
 
@@ -27,16 +27,18 @@ public class Scanner {
         /*int ver = new java.util.Scanner(System.in).nextInt();
         int a = Integer.valueOf(ver);*/
 
-
-        // TODO: 01.02.2020 надо вспомнить
         //----------через строку----------------------------------
         while (true) {
             System.out.println("Введи текст");
             String ver = new java.util.Scanner(System.in).nextLine();
             String str = String.valueOf(ver);
 
-            if (str == "Help") {
+            if (str.equals("Help")) {
                 System.out.println("Раздел помощь");
+            }
+            if(str.equals("Exit")) {
+                System.out.println("Вы вышли");
+                break;
             }
         }
     }
