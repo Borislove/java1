@@ -55,7 +55,4 @@ edu.cmu.cs.bovik.cheese
 Хеш-код - удобен для оптимизации
 System.arraycopy - ускоряет копирование массива
 SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-
-
-
-Double.compare(this.area(), figure.area());  - в какойто задаче было, воткнуть проверить
+import static java.lang.System.out  //
