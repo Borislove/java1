@@ -22,6 +22,7 @@ public class Field extends JPanel implements ActionListener, Runnable {
 
     Image img = new ImageIcon("C:\\Users\\User\\IdeaProjects\\java1\\src\\Warehouse\\catch_word\\res\\background.jpg").getImage(); //абсолютный путь
 
+
     Cup cup = new Cup();
 
     Thread wordsFactory = new Thread(this);
@@ -125,7 +126,7 @@ public class Field extends JPanel implements ActionListener, Runnable {
     public void actionPerformed(ActionEvent e) {
         cup.move();
         repaint();
-        System.out.println(words.size());  //вывод слов
+        //    System.out.println(words.size());  //вывод слов
         testCollisionWithWords();
     }
 
