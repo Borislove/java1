@@ -2,6 +2,10 @@ package Warehouse.catch_word;
 
 import javax.swing.*;
 
+//----------------------------------------------------
+
+//----------------------------------------------------
+
 /*Программа которая будет ловить ключевые слова java в кружку...или не будет, как пойдет
 
 двигаюсь по шаблону, переделывая и внося изменения...
@@ -12,38 +16,21 @@ import javax.swing.*;
 вертиально заставить двигаться объект +
 удалять из коллекции объект + не не удаляет)
 *
-
 картинки грузятся только с абсолютного пути...это напрягает
-
-
 
 попробовать
 Image img = new ImageIcon(getClass().getResource("/res/road.png")).getImage();
 
 *Добавлено
 Tue Feb 25 07:18:22 MSK 2020
-Логин и пароль...в игру не пустит просто так! - не включено , сделал через метод
+Логин и пароль...в игру не пустит просто так! - не включено , сделал через метод, сделал через другой пакет...
  */
 
-public class Main {
-
-    //----------Идентификация--------------------------------------------
-    public static void login() {
-
-        String username = JOptionPane.showInputDialog("Username: ");
-        String password = JOptionPane.showInputDialog("Password: ");
-
-        if (username != null && password != null &&
-                ((username.equals("Admin") &&
-                        password.equals("Admin")))) {
-
-        } else {
-            System.exit(1);
-        }
-    }
+public class Main extends JFrame {
 
     public static void main(String[] args) throws InterruptedException {
-        login();
+        //   Login.login();
+
         JFrame frame = new JFrame("Bug");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(815, 620);
@@ -51,5 +38,8 @@ public class Main {
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
         frame.setResizable(true);  //развертка
+
+
     }
 }
+

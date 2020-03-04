@@ -1,5 +1,6 @@
 package Warehouse.utils;
 
+//в обратную сторону бы еще
 public class Hash {
     public static void main(String[] args) {
 
@@ -20,6 +21,9 @@ public class Hash {
 
         String password = "Password123";
         System.out.println("password = " + password.hashCode());
+
+        Character myLostLetter = 'Ё';
+        System.out.println(myLostLetter.hashCode());
 
     }
 }

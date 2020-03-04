@@ -2,7 +2,8 @@ package Warehouse.lost;
 
 import java.util.Arrays;
 
-//
+   //  b2 = !b2; поменять
+
 
 public class LotteryTestCopy {
 
