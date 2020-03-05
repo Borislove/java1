@@ -1,7 +1,8 @@
-package Warehouse;
+package Warehouse.mycharacter;
 
 //можно аперкейс сделать  Character, через оболочку
 //пропала буква Ё
+// 2,46 КБ (2 523 байт)
 public class CharTest {
 
     private static char myCharMiniEng = 'a';
@@ -71,6 +72,15 @@ public class CharTest {
                 System.out.println("value: " + value + " char:" + e + "<<<<-------------Наше ВСЁ------");
                 value = 8;
             }
+        }
+
+
+        //test test test  no test no test....//вроде получилось!
+        for (int i = 1; i < 33; i++) {
+            //Character.toUpperCase(myCharMiniRu);
+            Character.toLowerCase(myCharMiniRu);
+            myCharMiniRu--;
+            System.out.println(myCharMiniRu);
         }
     }
 }
