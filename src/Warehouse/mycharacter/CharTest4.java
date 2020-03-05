@@ -1,7 +1,7 @@
 package Warehouse.mycharacter;
 
-//объединить в цикле мелкую и заглавную букву
-public class CharTest3 {
+//в одной строчке то удобно , но не понятно
+public class CharTest4 {
 
     private static Character ch;
     private static int value = 1;
@@ -13,12 +13,12 @@ public class CharTest3 {
         System.out.println("letters");
         System.out.println("----------------------");
         for (int i = 1; i < 27; i++) {
-            System.out.println("value: " + value + " char:" + ch);
-            //Character.toLowerCase(ch);
-            System.out.println("value: " + value + " char:" + Character.toUpperCase(ch));
-
+            System.out.print("value: " + value + " charMini: " + ch + " charBig: " + Character.toUpperCase(ch) + " hashCharMini: " + ch.hashCode() + " hachCharBig: "); //?
+            System.out.println(" ");
             value++;
             ch++;
         }
     }
 }
+
+

@@ -12,10 +12,12 @@ public class Frame extends JFrame {
 
         JFrame f = new JFrame();
         f.setVisible(true);
-        f.setSize(200, 200);
+        f.setSize(2000, 2000);
         f.setResizable(false); //запрет на развертку окна
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         //.setLocation(900,500);   //расположение фрейма
         f.setLocationRelativeTo(null);  //centre
+
+        // f.pack(); //для упаковки объектов в окне
     }
 }

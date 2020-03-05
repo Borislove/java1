@@ -32,9 +32,43 @@ public class TileMap {
             }
         } catch (Exception e) {
         }
-
     }
 
+    public int getx() {
+        return x;
+    }
+
+    public int gety() {
+        return y;
+    }
+
+    public int getColTile(int x) {
+        return x / tileSize;
+    }
+
+    public int getRowTile(int y) {
+        return y / tileSize;
+    }
+
+    public int getTile(int row, int col) {
+        return map[row][col];
+    }
+
+
+    public int getTileSize(){
+        return tileSize;
+    }
+
+
+    public void setx(int i) {
+        x = i;
+    }
+
+    public void sety(int i) {
+        y = i;
+    }
+
+    //////////////////////////////////////////////////
     public void update() {
 
     }
