@@ -1,4 +1,4 @@
-package ru.progwards.t2;
+package ru.progwards.t2.n2_2;
 
 //Функция с параметрами и результатом, int
 public class HelloWorld_2 {

@@ -19,7 +19,7 @@ public class Proverbs {
     private static String str = "";
 
     private static int a = 1; // Начальное значение диапазона - "от" 
-    private static int b = 23; // Конечное значение диапазона - "до"
+    private static int b = 24; // Конечное значение диапазона - "до"
     private static int random_number1 = a + (int) (Math.random() * b); // Генерация
 
     static void text() {
@@ -145,6 +145,10 @@ public class Proverbs {
                 break;
             case 23:
                 str = "Вода камень точит.";
+                text();
+                break;
+                case 24:
+                str = "Без труда не вытянешь и рыбку из пруда.";
                 text();
                 break;
             default:

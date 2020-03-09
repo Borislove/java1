@@ -1,27 +1,35 @@
 package ru.progwards.t2.n2_4;
 
-// TODO: 03.02.2020 точно в этой теме? 
-//N2.4 БНФ, константы, операторы, приоритеты
-//Примеры объявления констант
+public class Main {
 
-public class Main{
+//
+    public static void ostOtDeleniya() {
+        int DAYS_IN_YEAR = 365;
+        int DAYS_IN_WEEK = 7;
+        int daysRemainder = DAYS_IN_YEAR % DAYS_IN_WEEK;
+        System.out.print("В году 52 недели и ");
+        System.out.print(daysRemainder);
+        System.out.println(" день");
+    }
 
-    public static final int DAYS_IN_WEEK = 7;
-    private static final int HOURS_IN_DAY = 24;
-    static final int MINUTES_IN_HOUR = 60;
 
-    //final int SECONDS_IN_MINUTE = 60;  //без статик ошибка будет
     public static void main(String[] args) {
-        final int SECONDS_IN_MIN = 60;
+        final short DAYS_IN_YEAR = 365;
+        final byte DAYS_IN_WEEK = 7;
 
-        System.out.print("Секунд в сутках: ");
-        System.out.println(MINUTES_IN_HOUR*HOURS_IN_DAY*SECONDS_IN_MIN);
+        //вернулось точное число, а не результат деления
+        double weekInYear = DAYS_IN_YEAR / DAYS_IN_WEEK;
 
-        System.out.print("Секунд в неделе: ");
-        System.out.println(MINUTES_IN_HOUR * HOURS_IN_DAY*DAYS_IN_WEEK*SECONDS_IN_MIN);
+        final double DAYS_IN_YEARDOUBLE = 365;
+        double weekInYearDOUBLE = DAYS_IN_YEARDOUBLE / DAYS_IN_WEEK;
 
-        System.out.print("Секунд в часе: ");
-        System.out.println(SECONDS_IN_MIN* MINUTES_IN_HOUR);
+        System.out.print("Недель в году: ");
+        System.out.println(weekInYear);
 
+
+        System.out.print("Недель в году: ");
+        System.out.println(weekInYearDOUBLE);
+
+        ostOtDeleniya();
     }
 }
