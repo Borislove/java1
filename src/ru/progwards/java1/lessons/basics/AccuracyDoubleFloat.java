@@ -20,6 +20,7 @@ package ru.progwards.java1.lessons.basics;
 public class AccuracyDoubleFloat {
 
     private static final double PI = 3.14;
+    private static final float PIF = 3.14f;
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                         /*3.1 Реализовать функцию
@@ -27,7 +28,7 @@ public class AccuracyDoubleFloat {
                                     которая будет возвращать объём шара с радиусом radius и основана на типе double.*/
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public static double volumeBallDouble(double radius) {
-        return 4 / 3 * PI * radius * radius * radius;
+        return (double) 4 / 3 * PI * radius * radius * radius;   //  (double) 1.082759741481069E12
     }
 
 
@@ -37,7 +38,7 @@ public class AccuracyDoubleFloat {
                                     которая будет возвращать объём шара с радиусом radius и основана на типе float.*/
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public static float volumeBallFloat(float radius) {
-        return (float) (4 / 3 * PI * radius * radius * radius);
+        return (float)4 / 3 * PIF * radius * radius * radius; //  1.08275990528E12
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -47,7 +48,7 @@ public class AccuracyDoubleFloat {
                             */
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public static double calculateAccuracy(double radius) {
-        return volumeBallDouble(radius) - volumeBallFloat((float) radius);
+        return volumeBallDouble(radius) - volumeBallFloat((float) radius);  //-163798.93103027344
     }
 }
 
