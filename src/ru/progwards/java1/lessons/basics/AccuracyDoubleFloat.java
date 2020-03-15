@@ -19,7 +19,7 @@ package ru.progwards.java1.lessons.basics;
 
 public class AccuracyDoubleFloat {
 
-    private static final double PI = 3.14d;
+    private static final double PI = 3.14;
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                         /*3.1 Реализовать функцию
@@ -46,7 +46,7 @@ public class AccuracyDoubleFloat {
                             volumeBallDouble и volumeBallFloat (они должны быть вызваны из неё с параметром radius).
                             */
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public static double calculateAccurace(double radius) {
+    public static double calculateAccuracy(double radius) {
         return volumeBallDouble(radius) - volumeBallFloat((float) radius);
     }
 }
@@ -57,6 +57,6 @@ class Main {
 
         System.out.println(AccuracyDoubleFloat.volumeBallDouble(6371.2));
         System.out.println(AccuracyDoubleFloat.volumeBallFloat(6371.2f));
-        System.out.println(AccuracyDoubleFloat.calculateAccurace(6371.2));
+        System.out.println(AccuracyDoubleFloat.calculateAccuracy(6371.2));
     }
 }
