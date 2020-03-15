@@ -2,7 +2,9 @@ package ru.progwards.t3.n3_2;
 
 //Конвертация строк в числа
 public class WrappersExt {
+
     public static void main(String[] args) {
+
         String str1 = "999";
         String str2 = "000555";
         String str3 = "999.555";

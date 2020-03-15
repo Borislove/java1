@@ -2,9 +2,11 @@ package ru.progwards.t3.n3_2;
 
 //Распаковка (явная)
 public class WrapperUnboxing {
+
     public static void main(String[] args) {
+
         Integer intObj1 = 5;
-        int in1 = intObj1.intValue();
+        int int1 = intObj1.intValue();
 
         byte byte1 = intObj1.byteValue();
         short short1 = intObj1.shortValue();
@@ -12,7 +14,7 @@ public class WrapperUnboxing {
         double double1 = intObj1.doubleValue();
         float float1 = intObj1.floatValue();
 
-        System.out.println(in1);
+        System.out.println(int1);
         System.out.println(byte1);
         System.out.println(short1);
         System.out.println(long1);

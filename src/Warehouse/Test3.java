@@ -12,7 +12,7 @@ public class Test3 {
         for (int i = 0; i < 100; i++) {
 
             int result = (a * x + b) * d;
-            System.out.println(result);
+       //     System.out.println(result);
             a++;
             b++;
             x++;
