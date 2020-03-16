@@ -19,27 +19,23 @@ class TriangleSimpleInfo {
             System.out.println("Одна из сторон не может быть 0");
             System.out.println("A = " + a + " B = " + b + " C =" + c);
             System.exit(1);
-        }
-        //-----------------------------------------------
-        if (a > b && a > c) {
+
+            //-----------------------------------------------
+        } else if (a > b && a > c) {
             System.out.print(str);
             System.out.println("А = " + a);
             return a;
-        }
-        //-----------------------------------------------
-        if (b > a && b > c) {
+            //-----------------------------------------------
+        } else if (b > a && b > c) {
             System.out.print(str);
             System.out.println("B = " + b);
             return b;
-        }
-        //------------------------------------------------
-        if (c > a && c > b) {
+
+            //------------------------------------------------
+        } else if (c > a && c > b)
             System.out.print(str);
-            System.out.println("C = " + c);
-            return c;
-        } else {
-            return 0;
-        }
+        System.out.println("C = " + c);
+        return c;
     }
 
     /*
@@ -58,29 +54,22 @@ class TriangleSimpleInfo {
             System.out.println("Одна из сторон не может быть 0");
             System.out.println("A = " + a + " B = " + b + " C =" + c);
             System.exit(1);
-        }
-        //-----------------------------------------------
-        if (a < b && a < c) {
+            //-----------------------------------------------
+        } else if (a < b && a < c) {
             System.out.print(str);
             System.out.println("А = " + a);
             return a;
-        }
-        //-----------------------------------------------
-        if (b < a && b < c) {
+            //-----------------------------------------------
+        } else if (b < a && b < c) {
             System.out.print(str);
             System.out.println("B = " + b);
             return b;
-        }
-        //------------------------------------------------
-        if (c < a && c < b) {
+            //------------------------------------------------
+        } else if (c < a && c < b)
             System.out.print(str);
-            System.out.println("C = " + c);
-            return c;
-        } else {
-            return 0;
-        }
+        System.out.println("C = " + c);
+        return c;
     }
-
 
     /*
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
