@@ -57,13 +57,9 @@ public class CyclesGoldenFibo {
         double value1 = 1.61703;
         double value2 = 1.61903;
 
-        double a1 = (double) a;
-        double b1 = (double) b;
-        double c1 = (double) c;
-
-        double ab = a1 / c1;
-        double ac = a1 / b1;
-        double bc = b1 / a1;
+        double ab = (double) (a / c);
+        double ac = (double) (a / b);
+        double bc = (double) (b / a);
 
         if (a == b) {
             if (ab > value1 && ab < value2) {
