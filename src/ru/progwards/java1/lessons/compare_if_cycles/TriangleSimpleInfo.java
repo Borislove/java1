@@ -21,18 +21,18 @@ class TriangleSimpleInfo {
             System.exit(1);
 
             //-----------------------------------------------
-        } else if (a > b && a > c) {
+        } else if (a >= b && a >= c) {
             System.out.print(str);
             System.out.println("А = " + a);
             return a;
             //-----------------------------------------------
-        } else if (b > a && b > c) {
+        } else if (b >= a && b >= c) {
             System.out.print(str);
             System.out.println("B = " + b);
             return b;
 
             //------------------------------------------------
-        } else if (c > a && c > b)
+        } else if (c >= a && c >= b)
             System.out.print(str);
         System.out.println("C = " + c);
         return c;
@@ -55,17 +55,17 @@ class TriangleSimpleInfo {
             System.out.println("A = " + a + " B = " + b + " C =" + c);
             System.exit(1);
             //-----------------------------------------------
-        } else if (a < b && a < c) {
+        } else if (a <= b && a <= c) {
             System.out.print(str);
             System.out.println("А = " + a);
             return a;
             //-----------------------------------------------
-        } else if (b < a && b < c) {
+        } else if (b <= a && b <= c) {
             System.out.print(str);
             System.out.println("B = " + b);
             return b;
             //------------------------------------------------
-        } else if (c < a && c < b)
+        } else if (c <= a && c <= b)
             System.out.print(str);
         System.out.println("C = " + c);
         return c;
