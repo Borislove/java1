@@ -114,7 +114,7 @@ public class CyclesGoldenFibo {
 
         //-------------------------------------
        /* for (int i = 0; i <= 100 ; i++) {
-           if (TriangleInfo.isTriangle(a,b,c) && TriangleInfo.isIsoscelesTriangle(a,b,c)){
+           if (TriangleSimpleInfo.isTriangle(a,b,c) && TriangleSimpleInfo.isIsoscelesTriangle(a,b,c)){
                //System.out.println(150+" "+150+" "+300);
                System.out.println(a+" "+b+" "+c);
            }*/
