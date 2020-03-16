@@ -9,7 +9,7 @@ public class CyclesGoldenFibo {
         если число number содержит цифру digit.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
         */
-    public static boolean containsDigit(int number, int digit) {  //OK:
+    public static boolean containsDigit(int number, int digit) {
         if (number <= 9 && number >= 0 && number == digit) {
             return true;
         } else
@@ -55,18 +55,18 @@ public class CyclesGoldenFibo {
         double value1 = 1.61703;
         double value2 = 1.61903;
 
-        if (a == b) {
-            if (a / b > value1 && a / b > value2) {
+        if (a + b == b + c) {
+            if (a + b / b + c > value1 && a + b / b + c > value2) {
                 return true;
             }
         }
-        if (a == b) {
-            if (a / c > value1 && a / c > value2) {
+        if (a + b == a + c) {
+            if (a + b / a + c > value1 && a + b / a + c > value2) {
                 return true;
             }
         }
-        if (a == c) {
-            if (a / b > value1 && a / b > value2) {
+        if (a + c == b + c) {
+            if (a + c / b + c > value1 && a + c / b + c > value2) {
                 return true;
             }
         }
