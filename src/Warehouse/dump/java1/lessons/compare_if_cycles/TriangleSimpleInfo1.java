@@ -13,7 +13,7 @@ public static boolean isEquilateralTriangle(int a, int b, int c), которая
 // TODO: 16.12.2019
 
 
-public class TriangleSimpleInfo {
+public class TriangleSimpleInfo1 {
 
     public static int a, b, c;
 

@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.compare_if_cycles;
 
 // 16.03.2020
 
-public class TriangleSimpleInfo {
+class TriangleSimpleInfo {
     /*
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     1.1 Реализовать функцию
@@ -37,8 +37,9 @@ public class TriangleSimpleInfo {
             System.out.print(str);
             System.out.println("C = " + c);
             return c;
+        } else {
+            return 0;
         }
-        return 0;
     }
 
     /*
@@ -75,9 +76,11 @@ public class TriangleSimpleInfo {
             System.out.print(str);
             System.out.println("C = " + c);
             return c;
+        } else {
+            return 0;
         }
-        return 0;
     }
+
 
     /*
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,7 +102,6 @@ public class TriangleSimpleInfo {
         }
         return false;
     }
-
 
     public static void main(String[] args) {
         //    maxSide(2,3,4);
