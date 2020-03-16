@@ -39,6 +39,7 @@ public class ReverseDigits {
         System.out.println(ReverseDigitsTest.reverseDigits(891));*/
 
         System.out.println(ReverseDigitsTest1.reverseDigits(567));
+        System.out.println(ReverseDigitsTest.reverseDigits(560));
     }
 }
 
@@ -49,7 +50,8 @@ class ReverseDigitsTest {
         String str1 = Integer.toString(number % 10);
         String str2 = Integer.toString(number % 100 / 10);
         String str3 = Integer.toString(number / 100);
-        //String str = str1+str2+str3;
+        String str = str1 + str2 + str3;
+        System.out.println(str);
         return Integer.parseInt(str1 + "" + str2 + str3);
     }
 }
