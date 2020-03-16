@@ -23,7 +23,7 @@ public class Gluing {
     //--------------------Решение-------2сокр---------------------- //Passed all tests!
     static int addAsStrings2(int n1, int n2) {
 
-        return Integer.parseInt(Integer.toString(n1) + "" + Integer.toString(n2));
+        return Integer.parseInt((n1) + "" + (n2));
     }
 
     //--------------------Решение------3-------------------------- //Passed all tests!
@@ -65,6 +65,8 @@ public class Gluing {
         addAsStrings1(5, 5);
         System.out.println(addAsStrings2(4, 4));
         System.out.println(addAsStrings4(99, 100));
+
+        System.out.println(addAsStrings2(2,3));
     }
 }
 

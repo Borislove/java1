@@ -2,6 +2,7 @@ package ru.progwards.t4.n4_3;
 
 //Оператор continue
 public class CycleWhileContinue {
+
     public static void main(String[] args) {
 
         int i = 0;

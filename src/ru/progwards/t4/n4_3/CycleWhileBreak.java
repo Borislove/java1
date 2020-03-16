@@ -2,6 +2,7 @@ package ru.progwards.t4.n4_3;
 
 //Оператор break;
 public class CycleWhileBreak {
+
     public static void main(String[] args) {
 
         int i = 0;

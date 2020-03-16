@@ -5,7 +5,9 @@ package ru.progwards.t4.n4_2;
 //&& - и
 //||  - или
 public class LogicalOperatorsPriority {
+
     public static void main(String[] args) {
+
         boolean result1 = false || false && true || true;
         boolean result2 = false || (false && true) || true;
         boolean result3 = (false || false) && (true || true);
@@ -21,5 +23,14 @@ public class LogicalOperatorsPriority {
         System.out.println(result4);
         System.out.println(result5);
         System.out.println(result6);
+
+        boolean result7 = false && false;
+        boolean result8 = false && true;
+        boolean result9 = true && true;
+
+        System.out.println();
+        System.out.println(result7);
+        System.out.println(result8);
+        System.out.println(result9);
     }
 }

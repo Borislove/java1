@@ -74,8 +74,5 @@ public class Ocenka {
 //        textGrade(81);
 //        textGrade(-32);
 //        textGrade(101);
-
-
     }
-
 }

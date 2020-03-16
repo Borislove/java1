@@ -21,7 +21,6 @@ public class AccuracyDoubleFloat {
 
     private static final double PI = 3.14;
     private static final float PIF = 3.14f;
-
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                         /*3.1 Реализовать функцию
                                     public static double volumeBallDouble(double radius),
@@ -30,8 +29,6 @@ public class AccuracyDoubleFloat {
     public static double volumeBallDouble(double radius) {
         return (double) 4 / 3 * PI * radius * radius * radius;   //  (double) 1.082759741481069E12
     }
-
-
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
                                     /*3.2 Реализовать функцию
                                     public static float volumeBallFloat(float radius),

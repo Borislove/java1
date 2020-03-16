@@ -1,7 +1,9 @@
 package ru.progwards.t4.n4_2;
 
 public class IfElse1 {
+
     public static void main(String[] args) {
+
         if (2 * 2 == 5)
             System.out.println("Оказывается 2*2 = 5");
 

@@ -2,7 +2,9 @@ package ru.progwards.t4.n4_2;
 
 //Оператор сравнения на примере
 public class LogicalOperators {
+
     public static void main(String[] args) {
+
         int x = 555;
         int y = 999;
 

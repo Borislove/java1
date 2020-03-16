@@ -2,7 +2,9 @@ package ru.progwards.t4.n4_1;
 
 //Пример 3.2: явное приведение double к float
 public class CastTypes4_1 {
+
     public static void main(String[] args) {
+
         double doubleValue = 1E308;
         float floatValue = (float) doubleValue;
 

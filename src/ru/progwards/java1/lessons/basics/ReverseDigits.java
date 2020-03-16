@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.basics;
 
 
 //Sun Mar 15 05:01:53 MSK 2020
-
+//ноль исчезает...плохой реверс!
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*1.1 Реализовать функцию
@@ -33,5 +33,32 @@ public class ReverseDigits {
         System.out.println(reverseDigits(123));
         System.out.println(reverseDigits(987));
         System.out.println(reverseDigits(567));
+        System.out.println(reverseDigits(560));
+
+       /* System.out.println(ReverseDigitsTest.reverseDigits(890));
+        System.out.println(ReverseDigitsTest.reverseDigits(891));*/
+
+        System.out.println(ReverseDigitsTest1.reverseDigits(567));
+    }
+}
+
+
+class ReverseDigitsTest {
+
+    public static int reverseDigits(int number) {
+        String str1 = Integer.toString(number % 10);
+        String str2 = Integer.toString(number % 100 / 10);
+        String str3 = Integer.toString(number / 100);
+        //String str = str1+str2+str3;
+        return Integer.parseInt(str1 + "" + str2 + str3);
+    }
+}
+
+
+class ReverseDigitsTest1 {
+
+    public static int reverseDigits(int number) {
+        String str1 = Integer.toString(number % 10 + number % 100 / 10 + number / 100);   //все не то
+        return Integer.parseInt(str1);
     }
 }

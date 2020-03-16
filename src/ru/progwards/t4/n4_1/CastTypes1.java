@@ -2,7 +2,9 @@ package ru.progwards.t4.n4_1;
 
 //Пример 1: приведение к старшим типам
 public class CastTypes1 {
+
     public static void main(String[] args) {
+
         byte byteValue = 127;
 
         short shortValue = byteValue;

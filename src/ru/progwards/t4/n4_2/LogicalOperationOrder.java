@@ -2,7 +2,9 @@ package ru.progwards.t4.n4_2;
 
 
 public class LogicalOperationOrder {
+
     public static void main(String[] args) {
+
         int a = 1;
         int b = 2;
         int c = 3;

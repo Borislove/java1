@@ -1,6 +1,7 @@
 package ru.progwards.t4.n4_2;
 
 public class IfElse {
+
     public static void main(String[] args) {
 
         int x = 125;

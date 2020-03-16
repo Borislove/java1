@@ -2,7 +2,9 @@ package ru.progwards.t4.n4_2;
 
 //Битовые операторы вместо логических
 public class LogicalOperationOrder1 {
+
     public static void main(String[] args) {
+
         int a = 1;
         int b = 2;
         int c = 3;
