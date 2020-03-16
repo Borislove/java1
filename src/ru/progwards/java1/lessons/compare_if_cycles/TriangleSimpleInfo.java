@@ -88,8 +88,9 @@ class TriangleSimpleInfo {
         String str = "Равносторонний";
         if (a == b && a == c && c == b) {
             System.out.println(str);
-        }
-        return false;
+            return true;
+        } else
+            return false;
     }
 
     public static void main(String[] args) {
