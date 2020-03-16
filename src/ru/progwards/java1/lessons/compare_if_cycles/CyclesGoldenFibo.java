@@ -10,10 +10,19 @@ public class CyclesGoldenFibo {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
         */
     public static boolean containsDigit(int number, int digit) {
+
         if (number <= 9 && number >= 0 && number == digit) {
             return true;
         } else
-            return false;
+            do {
+                int n = number % 10;
+                if (n == digit) {
+                    return true;
+                }
+                number /= 10;
+            } while (number > 0);
+
+        return false;
     }
 
     /*Теперь проведём исследование. Есть ли у Золотого треугольника связь с числами Фибоначчи.
