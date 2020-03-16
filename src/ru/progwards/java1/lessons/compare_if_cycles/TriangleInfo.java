@@ -16,6 +16,7 @@ public class TriangleInfo {
         }
         return false;
     }
+
     /*
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     2.2 Реализовать функцию
@@ -25,7 +26,8 @@ public class TriangleInfo {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      */
     public static boolean isRightTriangle(int a, int b, int c) {
-        if (a * a == b + c || b * b == a + c || c * c == b + c) {
+        
+        if (a * a == b + c || b * b == a + c || c * c == b + a) {  // TODO: 16.03.2020 наоборот! 
             return true;
         }
         return false;
