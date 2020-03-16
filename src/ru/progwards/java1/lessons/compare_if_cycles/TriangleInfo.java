@@ -26,11 +26,11 @@ public class TriangleInfo {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      */
     public static boolean isRightTriangle(int a, int b, int c) {
-        
-        if (a * a == b + c || b * b == a + c || c * c == b + a) {  // TODO: 16.03.2020 наоборот! 
+
+        if (a + b == c * c || a + c == b * b || b + c == a * a) {
             return true;
-        }
-        return false;
+        } else
+            return false;
     }
 
     /*
