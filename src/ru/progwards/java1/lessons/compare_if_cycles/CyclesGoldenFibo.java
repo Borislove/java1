@@ -52,30 +52,40 @@ public class CyclesGoldenFibo {
   */
     public static boolean isGoldenTriangle(int a, int b, int c) {
 
+        boolean gold = false; //default false;
+
         double value1 = 1.61703;
         double value2 = 1.61903;
 
-        double ab = (double) (a / c);
-        double ac = (double) (a / b);
-        double bc = (double) (b / a);
+        double a1 = (double) a;
+        double b1 = (double) b;
+        double c1 = (double) c;
+
+        double ab = a1 / c1;
+        double ac = a1 / b1;
+        double bc = b1 / a1;
 
         if (a == b) {
             if (ab > value1 && ab < value2) {
-                return true;
+                System.out.println("Золотой треугольник!" + a + " " + b + " " + c);
+                gold = true;
             }
         }
+
         if (a == c) {
             if (ac > value1 && ac < value2) {
-
-                return true;
+                System.out.println("Золотой треугольник!" + a + " " + b + " " + c);
+                gold = true;
             }
         }
+
         if (b == c) {
             if (bc > value1 && bc < value2) {
-                return true;
+                System.out.println("Золотой треугольник!" + a + " " + b + " " + c);
+                gold = true;
             }
         }
-        return false;
+        return gold;
     }
 
     /*
