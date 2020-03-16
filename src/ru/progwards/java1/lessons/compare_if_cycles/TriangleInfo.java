@@ -11,7 +11,7 @@ public class TriangleInfo {
     */
     public static boolean isTriangle(int a, int b, int c) {
 
-        if (a < b + c || b < a + c || c < a + b && a > 0 && b > 0 && c > 0) {
+        if (a < (b + c) || b < (a + c) || c < (a + b) && a > 0 && b > 0 && c > 0) {
             return true;
         }
         return false;
