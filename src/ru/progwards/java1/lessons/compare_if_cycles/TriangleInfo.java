@@ -27,7 +27,7 @@ public class TriangleInfo {
      */
     public static boolean isRightTriangle(int a, int b, int c) {
 
-        if (a + b == c * c || a + c == b * b || b + c == a * a) {
+        if (a + b == c * c && a + c == b * b && b + c == a * a) {
             return true;
         } else
             return false;
