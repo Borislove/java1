@@ -42,7 +42,12 @@ public class TriangleInfo {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      */
     public static boolean isIsoscelesTriangle(int a, int b, int c) {
-        return false;
+
+        if (a + b == b + c || a + b == a + c || a + c == b + c && a > 0 && b > 0 && c > 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
