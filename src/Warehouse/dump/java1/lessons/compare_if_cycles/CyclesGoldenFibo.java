@@ -46,6 +46,7 @@ public class CyclesGoldenFibo {
             b = fibo;
             //   System.out.println("Iteration #"+(iter)+" "+"#a = "+ a+" #b = "+b +"#FIBO = "+ fibo);   //
             iter++;
+            System.out.println(fibo);
         }
         return fibo;
     }
@@ -118,7 +119,7 @@ public class CyclesGoldenFibo {
                System.out.println(a+" "+b+" "+c);
            }*/
 
-        for (int i = 1; i <= 100; i++) {
+      /*  for (int i = 1; i <= 100; i++) {
             for (int j = 1; j <= 100; j++) {
                 for (int k = 1; k <= 100; k++) {
                     if (TriangleInfo.isTriangle(i, j, k) && TriangleInfo.isIsoscelesTriangle(i, j, k) && isGoldenTriangle(i, j, k)) {
@@ -127,7 +128,7 @@ public class CyclesGoldenFibo {
 
                 }
             }
-        }
+        }*/
     }
 }
 

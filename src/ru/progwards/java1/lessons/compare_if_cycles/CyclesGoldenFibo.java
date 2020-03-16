@@ -40,7 +40,11 @@ public class CyclesGoldenFibo {
         то есть при n = 3 должно вернуться число Фибоначчи 2, а при n = 10 число 55).
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
      */
-    public static int fiboNumber(int n) { //OK:
+
+    // TODO: 16.03.2020 выводить фибо ведь надо...не прокатило
+    /*
+    //-----------------------------------------------------------------------------------------
+    public static int fiboNumber(int n) { //OK: //
 
         if (n == 1) {
             return 1;
@@ -49,6 +53,25 @@ public class CyclesGoldenFibo {
         } else {
             return fiboNumber(n - 1) + fiboNumber(n - 2);
         }
+    }
+    //----------------------------------------------------------------------------------------- */
+
+    public static int fiboNumber(int n) {
+
+        if (n == 1 || n == 2)
+            return 1;
+
+        int a = 1;
+        int b = 0;
+        int fibo = 0;
+
+        for (int i = 0; i < n; i++) {
+            fibo = a + b;
+            a = b;
+            b = fibo;
+             System.out.println(fibo);
+        }
+        return fibo;
     }
 
     /*
@@ -104,7 +127,29 @@ public class CyclesGoldenFibo {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 */
     public static void main(String[] args) {
+
         System.out.println(fiboNumber(15));
+
+        /*Золотой треугольник!55 34 55
+          Золотой треугольник!89 55 89*/
+
+        for (int i = 0; i < 100; i++) {
+            for (int j = 0; j < 100; j++) {
+                if (TriangleInfo.isTriangle(i, j, i) && TriangleInfo.isIsoscelesTriangle(i, j, i) && isGoldenTriangle(i, j, i)) {
+                }
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------------------------
+      /*  for (int i = 1; i <= 100; i++) {
+            for (int j = 1; j <= 100; j++) {
+                for (int k = 1; k <= 100; k++) {
+                    if (TriangleInfo.isTriangle(i, j, k) && TriangleInfo.isIsoscelesTriangle(i, j, k) && isGoldenTriangle(i, j, k)) {
+                        System.out.println(i + " " + j + " " + k);
+                    }
+                }
+            }
+        }*/
     }
 }
 
