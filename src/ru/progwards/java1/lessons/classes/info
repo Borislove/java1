@@ -1,0 +1,73 @@
+Задача 1. Классы Animal, Cow, Hamster, Duck
+Реализовать класс Animal, содержащий:
+1.0 Реализовать конструктор
+public Animal(double weight), который сохраняет вес животного.
+1.1 Метод:
+public AnimalKind getKind(), который возвращает вид животного (enum AnimalKind - ANIMAL, COW, HAMSTER, DUCK). В данном классе вернуть ANIMAL
+1.2 Метод
+public FoodKind getFoodKind(), который возвращает вид еды, (enum FoodKind - UNKNOWN, HAY, CORN). В данном классе вернуть UNKNOWN
+1.3 Метод
+public String toString(), который возвращает информацию о животном в формате:
+I am <AnimalKind>, eat <FoodKind>
+
+Реализовать класс Cow, потомок класса Animal, переопределяющий методы:
+1.4 public AnimalKind getKind(), который возвращает COW.
+1.5 public FoodKind getFoodKind(), который возвращает HAY
+
+Реализовать класс Hamster, потомок класса Animal, переопределяющий методы:
+1.6  public AnimalKind getKind(), который возвращает HAMSTER.
+1.7 public FoodKind getFoodKind(), который возвращает CORN
+
+Реализовать класс Duck, потомок класса Animal, переопределяющий методы:
+1.8 public AnimalKind getKind(), который возвращает DUCK.
+1.9 public FoodKind getFoodKind(), который возвращает CORN
+
+Задача 2. метод calculateFoodWeight
+
+2.1 В классе Animal реализовать метод:
+public double getWeight(), который возвращает вес животного
+2.2 Реализовать метод
+public double getFoodCoeff(), который возвращает коэффициент веса еды к весу тела животного. Для класса Animal это 0.02
+
+2.3 Для класса Cow, переопределить метод:
+public double getFoodCoeff(), который должен возвращать 0.05
+
+2.4 Для класса Hamster, переопределить метод:
+public double getFoodCoeff(), который должен возвращать 0.03
+
+2.5 Для класса Duck, переопределить метод:
+public double getFoodCoeff(), который должен возвращать 0.04
+
+2.6 Для класса Animal, реализовать метод:
+public double calculateFoodWeight(), который рассчитывает необходимый вес еды, по формуле - вес-еды = вес-животного * коэффициент веса тела.
+
+2.7 Для класса Animal, создать метод
+public String toStringFull(), что бы он возвращал информацию о животном в формате:
+I am <AnimalKind>, eat <FoodKind> <CalculateFoodWeight>
+
+
+Задача 3. Класс ComplexNum
+Реализовать класс ComplexNum, реализующий операции в комплексных числах. Напоминаем, что комплексное число записывается как z = a + bi, где z это комплексное число, a действительная часть, b мнимая часть, i обозначение мнимой части.
+a и b реализуем целыми числами
+
+3.1 конструктор
+public ComplexNum(int a, int b), который инициализирует комплексное число
+
+3.2 метод
+public String toString(), приведение к строке, выдать в формате a+bi, например, при a=1 и b=56 должно быть выдано 1+56i
+
+3.3 метод
+public ComplexNum add(ComplexNum num), сложение комплексных чисел по формуле:
+(a + bi) + (c + di) = (a + c) + (b + d)i
+
+3.4 метод
+public ComplexNum sub(ComplexNum num), вычитание комплексных чисел по формуле:
+(a + bi) - (c + di) = (a - c) + (b - d)i
+
+3.5 метод
+public ComplexNum mul(ComplexNum num), умножение комплексных чисел по формуле:
+(a + bi) * (c + di) = (a*c - b*d) + (b*c + a*d)i
+
+3.5 метод
+public ComplexNum div(ComplexNum num), деление комплексных чисел по формуле:
+(a + bi) / (c + di) = (a*c + b*d)/(c*c+d*d) + ((b*c - a*d)/(c*c+d*d))i

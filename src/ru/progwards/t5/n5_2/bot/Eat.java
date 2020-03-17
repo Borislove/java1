@@ -32,6 +32,10 @@ public class Eat {
 
     // TODO: 03.02.2020 тут неизвестно что передается
     static Eat selectEatByType(EatType eatType, Eat eat1, Eat eat2, Eat eat3) {
-        return null;
+        if (eat1.type == eatType)
+            return eat1;
+        if (eat2.type == eatType)
+            return eat2;
+        return eat3;
     }
 }
