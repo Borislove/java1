@@ -18,8 +18,8 @@ public class Cow extends Animal {
         return FoodKind.HAY;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return super.toString();
-    }
+    }*/
 }

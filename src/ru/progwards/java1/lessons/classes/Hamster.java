@@ -18,8 +18,8 @@ public class Hamster extends Animal {
         return FoodKind.CORN;
     }
 
-    @Override
+    /*@Override
     public String toString() {
         return super.toString();
-    }
+    }*/
 }
