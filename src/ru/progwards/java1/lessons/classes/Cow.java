@@ -18,6 +18,13 @@ public class Cow extends Animal {
         return FoodKind.HAY;
     }
 
+    /*2.3 Для класса Cow, переопределить метод:
+    public double getFoodCoeff(), который должен возвращать 0.05*/
+    @Override
+    public double getFoodCoeff() {
+        return 0.05;
+    }
+
     /*@Override
     public String toString() {
         return super.toString();

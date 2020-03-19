@@ -18,6 +18,13 @@ public class Hamster extends Animal {
         return FoodKind.CORN;
     }
 
+    /*2.4 Для класса Hamster, переопределить метод:
+    public double getFoodCoeff(), который должен возвращать 0.03*/
+    @Override
+    public double getFoodCoeff() {
+        return 0.03;
+    }
+
     /*@Override
     public String toString() {
         return super.toString();

@@ -27,11 +27,42 @@ public class Animal {
         return FoodKind.UNKNOWN;
     }
 
+    /*2.1 В классе Animal реализовать метод:
+    public double getWeight(), который возвращает вес животного*/
+
+    public double getWeight() {
+        return weight;
+    }
+
+    /*2.2 Реализовать метод
+    public double getFoodCoeff(), который возвращает коэффициент веса еды к весу тела животного.
+    Для класса Animal это 0.02*/
+
+    public double getFoodCoeff() {
+        return 0.02;
+    }
+
+    /*2.6 Для класса Animal, реализовать метод:
+    public double calculateFoodWeight(), который
+    рассчитывает необходимый вес еды, по формуле - вес-еды = вес-животного * коэффициент веса тела.*/
+    public double calculateFoodWight() {
+        return getWeight() * getFoodCoeff();
+    }
+
     /*1.3 Метод
     public String toString(), который возвращает информацию о животном в формате:
-    I am <AnimalKind>, eat <FoodKind>*/
+    I am <AnimalKind>, eat <FoodKind>*//*
 
+    @Override
     public String toString() {
         return "I am " + getKind() + ", eat " + getFoodKind();
+    }*/
+
+    /*2.7 Для класса Animal, создать метод
+    public String toStringFull(), что бы он возвращал информацию о животном в формате:
+    I am <AnimalKind>, eat <FoodKind> <CalculateFoodWeight>*/
+    public String toStringFull() {
+        return "I am " + getKind() + " , eat +" + getFoodKind() + calculateFoodWight();
     }
 }
+

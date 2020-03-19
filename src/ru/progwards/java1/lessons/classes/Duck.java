@@ -18,6 +18,13 @@ public class Duck extends Animal {
         return FoodKind.CORN;
     }
 
+    /*2.5 Для класса Duck, переопределить метод:
+    public double getFoodCoeff(), который должен возвращать 0.04*/
+    @Override
+    public double getFoodCoeff() {
+        return 0.04;
+    }
+
     /*@Override
     public String toString() {
         return super.toString();
