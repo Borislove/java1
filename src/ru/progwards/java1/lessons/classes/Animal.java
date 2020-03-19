@@ -51,18 +51,19 @@ public class Animal {
 
     /*1.3 Метод
     public String toString(), который возвращает информацию о животном в формате:
-    I am <AnimalKind>, eat <FoodKind>*//*
+    I am <AnimalKind>, eat <FoodKind>*/
 
     @Override
     public String toString() {
         return "I am " + getKind() + ", eat " + getFoodKind();
-    }*/
+    }
 
     /*2.7 Для класса Animal, создать метод
     public String toStringFull(), что бы он возвращал информацию о животном в формате:
     I am <AnimalKind>, eat <FoodKind> <CalculateFoodWeight>*/
+
     public String toStringFull() {
-        return "I am " + getKind() + " , eat +" + getFoodKind() + calculateFoodWight();
+        return toString() + calculateFoodWight();
     }
 }
 

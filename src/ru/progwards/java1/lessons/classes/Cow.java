@@ -24,9 +24,4 @@ public class Cow extends Animal {
     public double getFoodCoeff() {
         return 0.05;
     }
-
-    /*@Override
-    public String toString() {
-        return super.toString();
-    }*/
 }
