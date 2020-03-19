@@ -63,7 +63,7 @@ public class Animal {
     I am <AnimalKind>, eat <FoodKind> <CalculateFoodWeight>*/
 
     public String toStringFull() {
-        return toString() + calculateFoodWeight();
+        return toString() + " " + calculateFoodWeight();
     }
 }
 
