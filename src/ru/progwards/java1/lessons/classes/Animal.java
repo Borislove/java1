@@ -45,7 +45,7 @@ public class Animal {
     /*2.6 Для класса Animal, реализовать метод:
     public double calculateFoodWeight(), который
     рассчитывает необходимый вес еды, по формуле - вес-еды = вес-животного * коэффициент веса тела.*/
-    public double calculateFoodWight() {
+    public double calculateFoodWeight() {
         return getWeight() * getFoodCoeff();
     }
 
@@ -63,7 +63,7 @@ public class Animal {
     I am <AnimalKind>, eat <FoodKind> <CalculateFoodWeight>*/
 
     public String toStringFull() {
-        return toString() + calculateFoodWight();
+        return toString() + calculateFoodWeight();
     }
 }
 
