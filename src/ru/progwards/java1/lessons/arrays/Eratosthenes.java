@@ -50,8 +50,10 @@ public class Eratosthenes {
 
     private void sift() {
         for (int p = 2; p < sieve.length; p++) {
-            for (int j = 0; j < p * j; j++) {
-            }
+            if (sieve[p])
+                for (int j = 0; p * j < sieve.length; j++) {
+                    sieve[p * j] = false;
+                }
         }
     }
 
