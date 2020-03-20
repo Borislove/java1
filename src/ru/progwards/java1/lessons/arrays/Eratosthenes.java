@@ -31,7 +31,6 @@ public class Eratosthenes {
     sieve[n]. Значение true, означает простое число, false - составное.*/
 
     private boolean[] sieve;
-    
     /*
     1.2 Реализовать конструктор
     public Eratosthenes(int N), который должен разместить массив sieve с размером в N и заполнить его значениями true,
@@ -63,12 +62,5 @@ public class Eratosthenes {
     public boolean isSimple(int n), который возвращает sieve[n], что бы можно было узнать, простое число n или составное */
     public boolean isSimple(int n) {
         return sieve[n];
-    }
-
-    public static void main(String[] args) {
-
-        Eratosthenes eratosthenes = new Eratosthenes(100);
-        System.out.println(Arrays.toString(eratosthenes.sieve));
-        System.out.println(eratosthenes.isSimple(7));
     }
 }
