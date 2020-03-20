@@ -49,10 +49,13 @@ public class Eratosthenes {
     который будет просеивать числа, кратные переменной внешнего цикла i*j.*/
 
     private void sift() {
+        sieve[0] = false;
+        sieve[1] = false;
         for (int p = 2; p < sieve.length; p++) {
             if (sieve[p])
                 for (int j = 0; p * j < sieve.length; j++) {
                     sieve[p * j] = false;
+                    p += j;
                 }
         }
     }
@@ -66,8 +69,8 @@ public class Eratosthenes {
 
     public static void main(String[] args) {
 
-        Eratosthenes eratosthenes = new Eratosthenes(30);
+        Eratosthenes eratosthenes = new Eratosthenes(100);
         System.out.println(Arrays.toString(eratosthenes.sieve));
-        System.out.println(eratosthenes.isSimple(30));
+        System.out.println(eratosthenes.isSimple(7));
     }
 }
