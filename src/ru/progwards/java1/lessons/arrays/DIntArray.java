@@ -1,13 +1,13 @@
 package ru.progwards.java1.lessons.arrays;
 
 //Реализовать динамический, саморастущий массив целых чисел.
-public class DintArray {
+public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
     private int[] array;
 
     //3.2 конструктор - по умолчанию.
-    public DintArray(int[] array) {
+    public DIntArray(int[] array) {
         this.array = array;
     }
 
