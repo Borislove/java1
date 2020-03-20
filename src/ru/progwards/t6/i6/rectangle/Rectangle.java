@@ -316,3 +316,17 @@ class Main {
 
     }
 }
+
+
+//-------------------решение-----------------------------------
+/*
+ public int compareTo(Rectangle anRectangle) {
+        if (area() > (anRectangle.a * anRectangle.b)) {
+            return 1;
+        } else if ((area()) == (anRectangle.a * anRectangle.b)) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
+ */
