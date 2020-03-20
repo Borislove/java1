@@ -38,7 +38,7 @@ public class Eratosthenes {
      после чего вызвать метод sift()*/
 
     public Eratosthenes(int N) {
-        this.sieve = new boolean[N + 1];
+        this.sieve = new boolean[N];
         Arrays.fill(sieve, true);
         sift();
     }
@@ -49,14 +49,12 @@ public class Eratosthenes {
     который будет просеивать числа, кратные переменной внешнего цикла i*j.*/
 
     private void sift() {
-        sieve[0] = false;
-        sieve[1] = false;
-        for (int p = 2; p < sieve.length; p++) {
-            if (sieve[p])
-                for (int j = 0; p * j < sieve.length; j++) {
-                    sieve[p * j] = false;
-                    p += j;
-                }
+
+        for (int p = 2; p * p <= sieve.length - 1; p++) {
+            if (sieve[p] == true) {
+                for (int i = p * 2; i <= sieve.length - 1; i += p)
+                    sieve[i] = false;
+            }
         }
     }
 
