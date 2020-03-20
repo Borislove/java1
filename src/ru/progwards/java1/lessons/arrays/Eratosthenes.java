@@ -38,7 +38,7 @@ public class Eratosthenes {
      после чего вызвать метод sift()*/
 
     public Eratosthenes(int N) {
-        this.sieve = new boolean[N];
+        this.sieve = new boolean[N + 1];
         Arrays.fill(sieve, true);
         sift();
     }
@@ -66,7 +66,6 @@ public class Eratosthenes {
 
         Eratosthenes eratosthenes = new Eratosthenes(30);
         System.out.println(Arrays.toString(eratosthenes.sieve));
-        System.out.println(eratosthenes.isSimple(20));
-
+        System.out.println(eratosthenes.isSimple(30));
     }
 }
