@@ -60,6 +60,7 @@ public class Eratosthenes {
     /*
     1.4 Реализовать метод
     public boolean isSimple(int n), который возвращает sieve[n], что бы можно было узнать, простое число n или составное */
+
     public boolean isSimple(int n) {
         return sieve[n];
     }
