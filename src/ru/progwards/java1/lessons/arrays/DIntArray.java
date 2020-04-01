@@ -40,7 +40,7 @@ public class DIntArray {
 
         int[] arrayCopy = new int[array.length - 1];
         System.arraycopy(array, 0, arrayCopy, 0, pos);
-        System.arraycopy(array, pos + 1, arrayCopy, pos, arrayCopy.length - pos - 1);
+        System.arraycopy(array, pos + 1, arrayCopy, pos, array.length - pos - 1);
         array = arrayCopy;
     }
 
