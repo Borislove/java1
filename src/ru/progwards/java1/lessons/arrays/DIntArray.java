@@ -60,7 +60,7 @@ public class DIntArray {
     /*3.5 метод
     public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
-        return array[pos];
+        return pos;
     }
 
     public static void main(String[] args) {
