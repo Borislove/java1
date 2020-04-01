@@ -47,7 +47,7 @@ public class DIntArray {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void atDelete(int pos) {
 
-        int[] arrayCopy = new int[array.length - 1];
+        int[] arrayCopy = new int[array.length - pos];
       //  System.arraycopy(array, 0, arrayCopy, 0, pos);
         System.arraycopy(array, pos+1, arrayCopy, pos, array.length - pos - 1);
         array = arrayCopy;
