@@ -17,6 +17,6 @@ public class Binary {
     @Override
     public String toString() {
         //return String.format("%8s", num);
-        return Integer.toBinaryString(num).replace(' ', '0');
+        return String.format("8s", Integer.toBinaryString(num).replace(' ', '0'));
     }
 }
