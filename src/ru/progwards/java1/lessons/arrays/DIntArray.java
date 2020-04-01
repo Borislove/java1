@@ -1,11 +1,10 @@
-
 package ru.progwards.java1.lessons.arrays;
 
 //Реализовать динамический, саморастущий массив целых чисел.
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
-    private int[] array = {77, -83, -77, -93, 36, -46, -65, 13, -84, -51, -7, -71, -31, 11, 19};
+    private int[] array = {};
 
     //3.2 конструктор - по умолчанию.
 
@@ -58,12 +57,6 @@ public class DIntArray {
     public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
         return array[pos];
-    }
-
-    public static void main(String[] args) {
-        DIntArray dIntArray = new DIntArray();
-        dIntArray.add(13);
-        dIntArray.atDelete(12);
     }
 }
 
