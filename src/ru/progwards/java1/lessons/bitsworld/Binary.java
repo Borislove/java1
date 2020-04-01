@@ -20,7 +20,12 @@ public class Binary {
 
     @Override
     public String toString() {
-        //return String.format("%8s", num);
-        return String.format("%8s", Integer.toBinaryString(num).replace(' ', '0'));
+        return String.format("%08d", num);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Binary((byte) 0).toString());
+        System.out.println(new Binary((byte) 1).toString());
+        System.out.println(new Binary((byte) 125).toString());
     }
 }
