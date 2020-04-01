@@ -32,8 +32,8 @@ public class DIntArray {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void atInsert(int pos, int num) {
 
-        int[] arrayCopy = new int[array.length];
-        System.arraycopy(array, 0, arrayCopy, 0, pos);
+        int[] arrayCopy = new int[array.length + 1];
+      //  System.arraycopy(array, 0, arrayCopy, 0, pos);
         System.arraycopy(array, pos, arrayCopy, pos + 1, array.length - pos);
         arrayCopy[pos] = num;
         array = arrayCopy;
@@ -48,8 +48,8 @@ public class DIntArray {
     public void atDelete(int pos) {
 
         int[] arrayCopy = new int[array.length - 1];
-        System.arraycopy(array, 0, arrayCopy, 0, pos);
-        System.arraycopy(array, pos, arrayCopy, pos, array.length - pos - 1);
+      //  System.arraycopy(array, 0, arrayCopy, 0, pos);
+        System.arraycopy(array, pos+1, arrayCopy, pos, array.length - pos - 1);
         array = arrayCopy;
     }
 
