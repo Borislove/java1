@@ -28,7 +28,7 @@ public class DIntArray {
 
         int[] arrayCopy = new int[array.length + 1];
         System.arraycopy(array, 0, arrayCopy, 0, pos);
-        System.arraycopy(array, pos, arrayCopy, pos + 1, arrayCopy.length - pos);
+        System.arraycopy(array, pos, arrayCopy, pos + 1, array.length - pos);
         arrayCopy[pos] = num;
         array = arrayCopy;
     }
