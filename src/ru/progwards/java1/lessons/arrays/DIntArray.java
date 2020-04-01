@@ -1,10 +1,12 @@
 package ru.progwards.java1.lessons.arrays;
 
+import java.util.Arrays;
+
 //Реализовать динамический, саморастущий массив целых чисел.
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
-    private static int[] array = {};
+    private static int[] array = {1, 2, 3, 4, 5};
 
     //3.2 конструктор - по умолчанию.
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -20,6 +22,7 @@ public class DIntArray {
         System.arraycopy(array, 0, arrayCopy, 0, array.length);
         arrayCopy[array.length] = num;
         array = arrayCopy;
+        System.out.println(Arrays.toString(array));
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,7 +36,6 @@ public class DIntArray {
     public void atInsert(int pos, int num) {
 
         int[] arrayCopy = new int[array.length + 1];
-        //  System.arraycopy(array, 0, arrayCopy, 0, pos);
         System.arraycopy(array, pos, arrayCopy, pos + 1, array.length - pos);
         arrayCopy[pos] = num;
         array = arrayCopy;
@@ -47,10 +49,10 @@ public class DIntArray {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void atDelete(int pos) {
 
-        int[] arrayCopy = new int[array.length - 1 - pos];
-        //  System.arraycopy(array, 0, arrayCopy, 0, pos);
-        System.arraycopy(array, pos + 1, arrayCopy, pos, array.length - pos - 1);
+        int[] arrayCopy = new int[array.length-1];
+        System.arraycopy(array, pos, arrayCopy, pos, array.length - pos - 1);
         array = arrayCopy;
+        System.out.println(Arrays.toString(arrayCopy));
     }
 
     /////////////////////////////////////////////////////////////////////////
@@ -58,5 +60,11 @@ public class DIntArray {
     public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
         return array[pos];
+    }
+
+    public static void main(String[] args) {
+        DIntArray dIntArray = new DIntArray();
+        dIntArray.add(33);
+        dIntArray.atDelete(1);
     }
 }
