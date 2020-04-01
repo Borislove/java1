@@ -6,9 +6,10 @@ import java.util.Arrays;
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
-    private static int[] array = {77, -83, -77, -93, 36, -46, -65, 13, -84, -51, -7, -71, -31, 11, 19};
+    private int[] array = {77, -83, -77, -93, 36, -46, -65, 13, -84, -51, -7, -71, -31, 11, 19};
 
     //3.2 конструктор - по умолчанию.
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*3.2 метод
     public void add(int num) - добавляет элемент num в конец массива,
@@ -50,7 +51,7 @@ public class DIntArray {
     public void atDelete(int pos) {
 
         int[] arrayCopy = new int[array.length - 1];
-        System.arraycopy(array, pos, arrayCopy, pos - 1, array.length - pos - 1);
+        System.arraycopy(array, pos + 1, arrayCopy, pos, array.length - pos - 1);
         array = arrayCopy;
         System.out.println(Arrays.toString(array));
     }
@@ -64,7 +65,7 @@ public class DIntArray {
 
     public static void main(String[] args) {
         DIntArray dIntArray = new DIntArray();
-        dIntArray.add(12);
+        dIntArray.add(13);
         dIntArray.atDelete(12);
     }
 }
