@@ -18,9 +18,7 @@ public class Binary {
     используя только битовые операции. В выводимом значении всегда должно быть 8 символов*/
     ////////////////////////////////////////////////////////////////////////////////////////
 
-    @Override
     public String toString() {
-        //return String.format("%08d", num);
         return String.format("%8s", Integer.toBinaryString(num)).replace(' ', '0');
     }
 

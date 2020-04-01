@@ -46,14 +46,11 @@ public class DIntArray {
      старый, уже без элемента, который был в позиции pos.*/
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void atDelete(int pos) {
-        int[] atDeleteArrayInt = array;
-        array = new int[array.length - 1];
-        for (int i = 0; i < pos; i++) {
-            array[i] = atDeleteArrayInt[i];
-        }
-        for (int i = pos + 1; i < atDeleteArrayInt.length; i++) {
-            array[i - 1] = atDeleteArrayInt[i];
-        }
+
+        int[] arrayCopy = new int[array.length - 1];
+        System.arraycopy(array, 0, arrayCopy, 0, pos);
+        System.arraycopy(array, pos, arrayCopy, pos + 1, array.length - pos - 1);
+        array = arrayCopy;
     }
 
     /////////////////////////////////////////////////////////////////////////
