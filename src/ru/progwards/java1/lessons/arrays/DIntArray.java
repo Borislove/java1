@@ -32,7 +32,7 @@ public class DIntArray {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void atInsert(int pos, int num) {
 
-        int[] arrayCopy = new int[array.length + 1];
+        int[] arrayCopy = new int[array.length];
         System.arraycopy(array, 0, arrayCopy, 0, pos);
         System.arraycopy(array, pos, arrayCopy, pos + 1, array.length - pos);
         arrayCopy[pos] = num;
