@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.bitsworld;
 
 public class Binary {
 
-    private static byte num;
+    private byte num;
 
     ///////////////////////////////////
     /*3.1 Реализовать конструктор
@@ -19,7 +19,8 @@ public class Binary {
     ////////////////////////////////////////////////////////////////////////////////////////
 
     public String toString() {
-        return String.format("%8s", Integer.toBinaryString(num)).replace(' ', '0');
+        int value = num & 0b0000000_0000000_0000000_11111111;
+        return String.format("%8s", Integer.toBinaryString(value)).replace(' ', '0');
     }
 
     public static void main(String[] args) {
