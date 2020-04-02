@@ -15,8 +15,7 @@ enum FoodKind {
     CORN
 }
 
-public class Animal {
-
+public class Animal implements FoodCompare {
 
     double weight;
 
@@ -103,6 +102,29 @@ public class Animal {
     @Override
     public int hashCode() {
         return Objects.hash(weight);
+    }
+
+    @Override
+    public int compareFoodPrice(Animal animal) {
+        return 0;
+    }
+
+    ////////////////////-------------------8----------------------------------------------
+            /*1.2 В класс Animal добавить метод
+        public double getFood1kgPrice(), который возвращает информацию о цене 1 кг еды.
+        метод реализовать в виде switch по FoodKind со следующими значениями
+        HAY : 20
+        CORN: 50
+        UNKNOWN: 0*/
+
+    public double getFood1kgPrice() {
+        switch (getFoodKind()) {
+            case HAY:
+                return 20;
+            case CORN:
+                return 50;
+        }
+        return 0;
     }
 }
 
