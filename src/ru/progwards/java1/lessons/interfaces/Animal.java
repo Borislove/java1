@@ -116,6 +116,7 @@ public class Animal implements FoodCompare {
         HAY : 20
         CORN: 50
         UNKNOWN: 0*/
+    ////////////////////-------------------8----------------------------------------------
 
     public double getFood1kgPrice() {
         switch (getFoodKind()) {
