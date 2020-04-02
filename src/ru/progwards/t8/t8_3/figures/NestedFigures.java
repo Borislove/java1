@@ -1,5 +1,7 @@
 package ru.progwards.t8.t8_3.figures;
 
+import java.util.Arrays;
+
 public class NestedFigures {
     //вложенные классы-фигуры
 
@@ -188,5 +190,11 @@ public class NestedFigures {
         System.out.println("square.compareArea(rectangle)     = " + square.compareArea(rectangle));
         System.out.println("circle.compareArea(triangle)      = " + circle.compareArea(triangle));
         System.out.println("rectangle.compareArea(triangle)   = " + rectangle.compareArea(triangle));
+
+        Figure[] figures = {segment, square, rectangle, circle, triangle};
+        Arrays.sort(figures);
+        for (Figure figure : figures) {
+            printInfo(figure);
+        }
     }
 }

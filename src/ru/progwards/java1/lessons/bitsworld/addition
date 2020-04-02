@@ -1,0 +1,9 @@
+----------Binary-------------
+Оригинально...
+
+  public String toString(){
+        String str = Integer.toBinaryString(num);
+        int strLength = str.length();
+        str = "00000000" + str;
+        return gf.substring(gfLength);
+    }

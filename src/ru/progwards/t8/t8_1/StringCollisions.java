@@ -15,5 +15,17 @@ public class StringCollisions {
         for (String s : collisionStrings) {
             System.out.println(s.hashCode());
         }
+
+        ////////////////////////////////////////////////////////////////////////////////
+        String strArray[] = {"pollinating sandboxes", "amusement & hemophilias",
+                "schoolworks = perversive",
+                "electrolysissweeteners.net",
+                "Microcomputers: the unredeemed lollipop..."};
+        for (String str : strArray) {
+            System.out.println(str + " " + str.hashCode());
+        }
+
+        String test = "pollinating sandboxes";
+        System.out.println(test.hashCode());
     }
 }
