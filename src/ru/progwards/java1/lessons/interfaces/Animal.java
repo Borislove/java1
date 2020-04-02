@@ -92,10 +92,10 @@ public class Animal implements FoodCompare {
     */
     ////////////////////-------------------8----------------------------------------------
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Animal)) return false;
-        Animal animal = (Animal) o;
+    public boolean equals(Object anObject) {
+        if (this == anObject) return true;
+        if (!(anObject instanceof Animal)) return false;
+        Animal animal = (Animal) anObject;
         return Double.compare(animal.weight, weight) == 0;
     }
 
@@ -118,7 +118,7 @@ public class Animal implements FoodCompare {
         UNKNOWN: 0*/
     ////////////////////-------------------8----------------------------------------------
 
-    public double getFood1kgPrice() {
+    public double getFood1kgPrice() {         //OK: Тест "Метод getFood1kgPrice()" пройден успешно.
         switch (getFoodKind()) {
             case HAY:
                 return 20;
@@ -128,11 +128,13 @@ public class Animal implements FoodCompare {
         return 0;
     }
 
-    /*1.3 В класс Animal добавить метод
-public double getFoodPrice(), который возвращает информацию о
- цене еды для данного животного по формуле calculateFoodWeight() * getFood1kgPrice()*/
-    public double getFoodPrice() {
+    ////////////////////-------------------8----------------------------------------------
+        /*1.3 В класс Animal добавить метод
+    public double getFoodPrice(), который возвращает информацию о
+     цене еды для данного животного по формуле calculateFoodWeight() * getFood1kgPrice()*/
+    public double getFoodPrice() {           //OK: Тест "Метод getFoodPrice()" пройден успешно.
         return calculateFoodWeight() * getFood1kgPrice();
     }
+    ////////////////////-------------------8----------------------------------------------
 }
 
