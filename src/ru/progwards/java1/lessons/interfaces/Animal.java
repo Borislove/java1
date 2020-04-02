@@ -1,5 +1,7 @@
 package ru.progwards.java1.lessons.interfaces;
 
+import java.util.Objects;
+
 enum AnimalKind {
     ANIMAL,
     COW,
@@ -14,6 +16,7 @@ enum FoodKind {
 }
 
 public class Animal {
+
 
     double weight;
 
@@ -77,6 +80,29 @@ public class Animal {
 
     public String toStringFull() {
         return toString() + " " + calculateFoodWeight();
+    }
+
+
+    ////////////////////-------------------8----------------------------------------------
+    /*1.1 Для класса Animal из задач 1 и 2, домашнего задания к уроку 5 реализовать метод:
+    public boolean equals(Object anObject), который возвращает true, если объекты равны и
+     false если не равны по параметру - вес животного. Убедится, что при равном весе,
+      утка все равно не равна хомяку. Обратите внимание на тип принимаемого параметра и
+      подумайте над тем, что будет делать ваша программа, если в качестве параметра
+      будет передан объект не являющийся экземпляром Animal.
+    */
+    ////////////////////-------------------8----------------------------------------------
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Animal)) return false;
+        Animal animal = (Animal) o;
+        return Double.compare(animal.weight, weight) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(weight);
     }
 }
 
