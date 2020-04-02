@@ -104,11 +104,6 @@ public class Animal implements FoodCompare {
         return Objects.hash(weight);
     }
 
-    @Override
-    public int compareFoodPrice(Animal animal) {
-        return 0;
-    }
-
     ////////////////////-------------------8----------------------------------------------
             /*1.2 В класс Animal добавить метод
         public double getFood1kgPrice(), который возвращает информацию о цене 1 кг еды.
@@ -135,6 +130,14 @@ public class Animal implements FoodCompare {
     public double getFoodPrice() {           //OK: Тест "Метод getFoodPrice()" пройден успешно.
         return calculateFoodWeight() * getFood1kgPrice();
     }
+
     ////////////////////-------------------8----------------------------------------------
+        /*1.5 В класс Animal реализовать
+    public int compareFoodPrice(Animal aminal),
+    который возвращает результаты сравнения цены еды для данного
+     животного с ценой еды для другого животного, используя Double.compare;*/
+    public int compareFoodPrice(Animal aminal) {
+        return Double.compare(this.getFoodPrice(), getFoodPrice());
+    }
 }
 
