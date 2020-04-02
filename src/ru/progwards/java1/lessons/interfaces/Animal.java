@@ -127,5 +127,12 @@ public class Animal implements FoodCompare {
         }
         return 0;
     }
+
+    /*1.3 В класс Animal добавить метод
+public double getFoodPrice(), который возвращает информацию о
+ цене еды для данного животного по формуле calculateFoodWeight() * getFood1kgPrice()*/
+    public double getFoodPrice() {
+        return calculateFoodWeight() * getFood1kgPrice();
+    }
 }
 
