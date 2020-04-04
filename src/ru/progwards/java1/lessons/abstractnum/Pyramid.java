@@ -11,6 +11,6 @@ public class Pyramid extends Figure3D {
     с основанием квадрат, и высотой равной стороне квадрата по формуле Segment*Segment*Segment/3;*/
     @Override
     public Number volume() {
-        return segment.mul(segment.mul(segment));
+        return (segment.mul(segment.mul(segment)));
     }
 }

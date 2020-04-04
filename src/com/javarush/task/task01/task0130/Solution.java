@@ -1,4 +1,4 @@
-package com.javarush.task.task0130;
+package com.javarush.task.task01.task0130;
 
 /*Метод convertCelsiusToFahrenheit(int celsius) принимает значение в градусах Цельсия. Метод должен переводить температуру и возвращать значение в градусах Фаренгейта.
 Температура по Цельсию TC и температура по Фаренгейту TF связаны следующим соотношением:

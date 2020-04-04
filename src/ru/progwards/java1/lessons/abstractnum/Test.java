@@ -20,5 +20,10 @@ public class Test {
         //7.4 Объем пирамиды в double, со стороной 3
         Pyramid pyramidDouble = new Pyramid(new DoubleNumber(3));
         System.out.println(pyramidDouble.volume());
+
+
+        //-------------------test----------------------------------
+        Pyramid pyramid1Test = new Pyramid(new IntNumber(315));
+        System.out.println("test " + pyramid1Test.volume());
     }
 }
