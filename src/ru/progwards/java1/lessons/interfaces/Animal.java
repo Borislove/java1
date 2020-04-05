@@ -137,8 +137,8 @@ public class Animal implements FoodCompare {
     который возвращает результаты сравнения цены еды для данного
      животного с ценой еды для другого животного, используя Double.compare;*/
     @Override
-    public int compareFoodPrice(Animal aminal) {
-        return Double.compare(aminal.getFoodPrice(), getFoodPrice());
+    public int compareFoodPrice(Animal o) {
+        return Double.compare(o.getFoodPrice(), getFoodPrice());
     }
 }
 
