@@ -24,22 +24,24 @@ import java.io.InputStreamReader;
 public class Solution {
 
     public static void main(String[] args) throws Exception {
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
         String b = reader.readLine();
-        int B = Integer.parseInt(b);
+        int input = Integer.parseInt(b);
 
-        if (B > 0) {
-            B = B * 2;
-            System.out.println(B);
+        if (input > 0) {
+            input = input * 2;
+            System.out.println(input);
         }
 
-        if (B == 0) {
-            System.out.println(B);
+        if (input == 0) {
+            System.out.println(input);
         }
 
-        if (B < 0) {
-            ++B;
-            System.out.println(B);
+        if (input < 0) {
+            ++input;
+            System.out.println(input);
         }
     }
 }
