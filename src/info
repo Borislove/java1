@@ -57,5 +57,6 @@ System.arraycopy - ускоряет копирование массива
 SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 import static java.lang.System.out  //
 примитивы работают быстрее
+стек быстрый, куча медленная
 
 System.out.println(System.getProperty("user.dir"));  //узнать директорию
