@@ -141,8 +141,3 @@ public class Animal implements FoodCompare {
         return Double.compare(this.getFoodPrice(), animal.getFoodPrice());
     }
 }
-
-
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-/*ERROR: Тест "Интерфейс FoodCompare, метод compareFoodPrice(Animal o)" не пройден.
-Метод возвращает неверные результаты сравнения для new Animal(1D).сompareFoodPrice(new Cow(1D)): 1, ожидалось значение меньше 0.*/
