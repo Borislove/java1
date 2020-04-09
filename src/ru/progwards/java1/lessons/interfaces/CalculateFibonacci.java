@@ -13,7 +13,7 @@ public class CalculateFibonacci {
         int a = 1;
         int b = 0;
         int fibo = 0;
-        for (int i = 0; i < 27; i++) {
+        for (int i = 0; i < n; i++) {
             fibo = a + b;
             a = b;
             b = fibo;
