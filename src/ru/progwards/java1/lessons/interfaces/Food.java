@@ -2,7 +2,9 @@ package ru.progwards.java1.lessons.interfaces;
 
 //3.5 Создать класс Food (еда), которое никак не связано иерархией наследования с Animal.
 
-public class Food {
+import java.util.Objects;
+
+abstract class Food implements CompareWeight {
 
     //3.6 В классе Food разместить приватную переменную int weight - вес еды в граммах,
     // реализовать в классе конструктор, принимающий и устанавливающий значение веса.
@@ -15,5 +17,18 @@ public class Food {
     //3.7 Реализовать метод public int getWeight(), возвращающий сохраненное значение веса.
     public int getWeight() {
         return weight;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Food food = (Food) o;
+        return weight == food.weight;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(weight);
     }
 }
