@@ -38,6 +38,11 @@ public class CalculateFibonacci {
     public static class CacheInfo {
         public int n;
         public int fibo;
+
+        public CacheInfo(int n, int fibo) {
+            this.n = n;
+            this.fibo = fibo;
+        }
     }
 
 
