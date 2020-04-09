@@ -6,7 +6,7 @@ public class Food {
 
     //3.6 В классе Food разместить приватную переменную int weight - вес еды в граммах,
     // реализовать в классе конструктор, принимающий и устанавливающий значение веса.
-    int weight;
+    private int weight;
 
     public Food(int weight) {
         this.weight = weight;
