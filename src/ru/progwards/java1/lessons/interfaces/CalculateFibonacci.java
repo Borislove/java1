@@ -16,7 +16,7 @@ public class CalculateFibonacci {
     /*2.1 Разместить в классе CalculateFibonacci функцию
     public static int fiboNumber(int n)*/
     //////////////////////////////////////////////////////////////////
-    public static int fiboNumber(int n) {
+    public static int fiboNumber(int n) {  //☺
         int a = 1;
         int b = 0;
         int fibo = 0;
@@ -24,7 +24,7 @@ public class CalculateFibonacci {
             fibo = a + b;
             a = b;
             b = fibo;
-          //  System.out.println("Fibo = " + fibo);
+            //  System.out.println("Fibo = " + fibo);
         }
         return fibo;
     }
@@ -52,7 +52,8 @@ public class CalculateFibonacci {
     }
 
     /*2.6 Реализовать метод public static void clearLastFibo(), который сбрасывает lastFibo в null*/
-    public static void clearLastFibo() {
+    public static void clearLastFibo() {  //☺
+        //fiboNumber(0);
         return;
     }
 

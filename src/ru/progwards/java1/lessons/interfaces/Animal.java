@@ -15,7 +15,7 @@ enum FoodKind {
     CORN
 }
 
-public class Animal implements FoodCompare {
+public class Animal implements FoodCompare, CompareWeight {
 
     double weight;
 

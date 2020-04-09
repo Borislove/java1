@@ -10,9 +10,11 @@ interface CompareWeight {
         GREATER
     }
 
-   /* //3.3 Интерфейс должен содержать метод public CompareResult compareWeight(CompareWeight smthHasWeigt)
+    /* //3.3 Интерфейс должен содержать метод public CompareResult compareWeight(CompareWeight smthHasWeigt)
+     */
+   /*@Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
         return null;
-    }
-*/
+        }*/
 }
+
