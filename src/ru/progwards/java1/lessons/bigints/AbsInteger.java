@@ -3,6 +3,8 @@ package ru.progwards.java1.lessons.bigints;
 /*2.1 Реализовать класс AbsInteger - абстрактное целое число*/
 public class AbsInteger extends Number {
 
+    public static AbsInteger num1;
+    public static AbsInteger num2;
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*2.3 У класса AbsInteger реализовать метод static AbsInteger add(AbsInteger num1, AbsInteger num2) - который
@@ -10,6 +12,8 @@ public class AbsInteger extends Number {
     Для того, чтобы это реализовать продумать, какие дополнительные методы нужно сделать у AbsInteger и его потомков.*/
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     static AbsInteger add(AbsInteger num1, AbsInteger num2) {
+        AbsInteger.num1 = num1;
+        AbsInteger.num2 = num2;
         return null;
     }
 
@@ -54,49 +58,43 @@ public class AbsInteger extends Number {
 
 class ByteInteger extends AbsInteger {
 
-    byte b;
+    byte bByte;
 
     public ByteInteger(byte b) {
-        this.b = b;
+        this.bByte = b;
     }
 
     @Override
     public String toString() {
-        return "ByteInteger{" +
-                "b=" + b +
-                '}';
+        return "" + bByte;
     }
 }
 
 class ShortInteger extends AbsInteger {
 
-    short s;
+    short sShort;
 
     public ShortInteger(short s) {
-        this.s = s;
+        this.sShort = s;
     }
 
     @Override
     public String toString() {
-        return "ShortInteger{" +
-                "s=" + s +
-                '}';
+        return "" + sShort;
     }
 }
 
 class IntInteger extends AbsInteger {
 
-    int x;
+    int xInteger;
 
     public IntInteger(int x) {
-        this.x = x;
+        this.xInteger = x;
     }
 
     @Override
     public String toString() {
-        return "IntInteger{" +
-                "x=" + x +
-                '}';
+        return "" + xInteger;
     }
 }
 
