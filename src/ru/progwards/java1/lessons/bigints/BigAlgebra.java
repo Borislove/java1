@@ -23,21 +23,25 @@ public class BigAlgebra {
         if (n == 1 || n == 0) {
             return BigInteger.ONE;
         }
-        BigInteger a = BigInteger.valueOf(n);
-        BigInteger b = new BigInteger("0");
-        BigInteger fibo = new BigInteger("0");
-        for (int i = 1; i <= n; i++) {
-            fibo = a.add(b);
+        int a = 1;
+        int b = 0;
+        //BigInteger b = BigInteger.valueOf(0);
+        //BigInteger fibo = BigInteger.valueOf(0);
+        int fibo = 0;
+        for (int i = 0; i < n; i++) {
+            fibo = a + b;
             a = b;
             b = fibo;
-            System.out.println(fibo.divide(BigInteger.valueOf(10)));
+            //System.out.println(fibo.divide(BigInteger.TEN));
+            System.out.println(fibo);
         }
 
-        return fibo;
+        //return fibo.divide(BigInteger.TEN);
+        return BigInteger.valueOf(fibo);
     }
 
     public static void main(String[] args) {
-        fibonacci(10);
+        fibonacci(27); //196418
 
         String a = "1157786721974097680";
         System.out.println(a.length());

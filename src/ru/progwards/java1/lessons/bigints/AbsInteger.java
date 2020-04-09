@@ -1,7 +1,7 @@
 package ru.progwards.java1.lessons.bigints;
 
 /*2.1 Реализовать класс AbsInteger - абстрактное целое число*/
-public class AbsInteger extends Number {
+public abstract class AbsInteger extends Number {
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*2.3 У класса AbsInteger реализовать метод static AbsInteger add(AbsInteger num1, AbsInteger num2) - который
