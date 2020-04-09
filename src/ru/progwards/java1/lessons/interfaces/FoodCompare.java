@@ -6,6 +6,8 @@ interface FoodCompare {
 }*/
 
 interface FoodCompare {
+    double weight = 0d;
+
     public int compareFoodPrice(Animal animal);
 }
 
