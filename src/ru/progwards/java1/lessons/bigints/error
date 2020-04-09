@@ -1,0 +1,22 @@
+В Вашем репозитории GitHub, в package ru/progwards/java1/lessons/bigints, обнаружены следующие проблемы с файлами задания:
+
+Задача 3. Класс ArrayInteger:
+Ошибка 1: Отсутствует публичный метод fromInt(java.math.BigInteger) в классе ru.progwards.java1.lessons.bigints.ArrayInteger
+Ошибка 2: Отсутствует публичный метод add(ru.progwards.java1.lessons.bigints.ArrayInteger) в классе ru.progwards.java1.lessons.bigints.ArrayInteger
+Ошибка 3: constructor ArrayInteger in class ru.progwards.java1.lessons.bigints.ArrayInteger cannot be applied to given types;
+ required: no arguments
+ found: int
+ reason: actual and formal argument lists differ in length
+Ошибка 4: constructor ArrayInteger in class ru.progwards.java1.lessons.bigints.ArrayInteger cannot be applied to given types;
+ required: no arguments
+ found: java.lang.Integer
+ reason: actual and formal argument lists differ in length
+Ошибка 5: Отсутствует публичный метод toInt() в классе ru.progwards.java1.lessons.bigints.ArrayInteger
+Задача 2. Класс AbsInteger и потомки:
+Ошибка 1: Файл класса ru/progwards/java1/lessons/bigints.ShortInteger неправильно назван либо отсутствует в папке задания
+Ошибка 2: Файл класса ru/progwards/java1/lessons/bigints.IntInteger неправильно назван либо отсутствует в папке задания
+Ошибка 3: Файл класса ru/progwards/java1/lessons/bigints.ByteInteger неправильно назван либо отсутствует в папке задания
+Задача 1. Класс BigAlgebra:
+Ошибка 1: Отсутствует публичный метод fibonacci(int) в классе ru.progwards.java1.lessons.bigints.BigAlgebra
+Ошибка 2: Отсутствует публичный метод fastPow(java.math.BigDecimal,int) в классе ru.progwards.java1.lessons.bigints.BigAlgebra
+
