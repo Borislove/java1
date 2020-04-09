@@ -20,10 +20,18 @@ public class BigAlgebra {
       Итого получаем 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 и т.д.*/
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     static BigInteger fibonacci(int n) {
-        if (n == 1 || n == 0) {
-            return BigInteger.ONE;
+        BigInteger a = BigInteger.valueOf(n);
+        int a1 = 0;
+        BigInteger b = BigInteger.valueOf(a1);
+        int f = 0;
+        BigInteger fibo = BigInteger.valueOf(f);
+        for (int i = 0; i < n; i++) {
+            fibo = a.add(b);
+            a = b;
+            b = fibo;
         }
-        return fibonacci(n - 2).add(fibonacci(n - 1));
+
+        return fibo;
     }
 
     public static void main(String[] args) {

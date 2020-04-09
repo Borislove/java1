@@ -14,7 +14,7 @@ public class AbsInteger extends Number {
     static AbsInteger add(AbsInteger num1, AbsInteger num2) {
         AbsInteger.num1 = num1;
         AbsInteger.num2 = num2;
-        return null;
+        return add(num1, num2);
     }
 
     @Override
