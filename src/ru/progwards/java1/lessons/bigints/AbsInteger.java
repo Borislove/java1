@@ -9,7 +9,7 @@ public class AbsInteger extends Number {
     Для того, чтобы это реализовать продумать, какие дополнительные методы нужно сделать у AbsInteger и его потомков.*/
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     static AbsInteger add(AbsInteger num1, AbsInteger num2) {
-        return null;
+        return AbsInteger.add(num1, num2);
     }
 
     @Override
