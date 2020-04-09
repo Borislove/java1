@@ -23,7 +23,7 @@ public class BigAlgebra {
         if (n == 1 || n == 0) {
             return BigInteger.ONE;
         }
-        int a = 1;
+      /*  int a = 1;
         int b = 0;
         //BigInteger b = BigInteger.valueOf(0);
         //BigInteger fibo = BigInteger.valueOf(0);
@@ -35,13 +35,30 @@ public class BigAlgebra {
             //System.out.println(fibo.divide(BigInteger.TEN));
             System.out.println(fibo);
         }
+*/
+        /*int a = 1;
+        int b = 0;*/
+        BigInteger a = BigInteger.valueOf(1);
+        BigInteger b = BigInteger.valueOf(0);
+        BigInteger fibo = BigInteger.valueOf(0);
+//        int fibo = 0;
+        for (int i = 0; i < n; i++) {
+            fibo = a.add(b);
+            a = b;
+            b = fibo;
+            //System.out.println(fibo.divide(BigInteger.TEN));
+            System.out.println(fibo);
+        }
 
-        //return fibo.divide(BigInteger.TEN);
-        return BigInteger.valueOf(fibo);
+        return fibo.divide(BigInteger.TEN);
+
+        //return BigInteger.valueOf(fibo);
     }
 
     public static void main(String[] args) {
-        fibonacci(27); //196418
+      //  fibonacci(27); //196418
+        fibonacci(79); //  14472334024676221
+
 
         String a = "1157786721974097680";
         System.out.println(a.length());
