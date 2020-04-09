@@ -50,19 +50,21 @@ public class BigAlgebra {
             System.out.println(fibo);
         }
 
-        return fibo.divide(BigInteger.TEN);
+        //return fibo.divide(BigInteger.TEN);
+        return fibo;
 
         //return BigInteger.valueOf(fibo);
     }
 
     public static void main(String[] args) {
-      //  fibonacci(27); //196418
-        fibonacci(79); //  14472334024676221
+        //  fibonacci(27); //196418
+        fibonacci(85); //  14472334024676221
 
 
-        String a = "1157786721974097680";
-        System.out.println(a.length());
-        String b = "23416728348467685";
+        String my = "259695496911122585";
+        System.out.println(my.length());
+        String bot = "259695496911122585";
+        System.out.println(bot.length());
     }
 }
 
