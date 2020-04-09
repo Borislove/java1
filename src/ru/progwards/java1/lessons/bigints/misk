@@ -1,0 +1,11 @@
+----------------------------------------------------
+Метод BigInteger fibonacci(int n)
+
+static BigInteger fibonacci(int n) {
+        if (n == 1 || n == 0) {
+            return BigInteger.ONE;
+        }
+        return fibonacci(n - 2).add(fibonacci(n - 1));
+    }
+
+----------------------------------------------------
