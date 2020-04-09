@@ -9,3 +9,22 @@ static BigInteger fibonacci(int n) {
     }
 
 ----------------------------------------------------
+
+BigInteger fibonacci(int n) {
+        if (n == 1 || n == 0) {
+            return BigInteger.ONE;
+        }
+        BigInteger a = BigInteger.valueOf(n);
+        int a1 = 1;
+        BigInteger b = BigInteger.valueOf(a1);
+        int f = 0;
+        BigInteger fibo = BigInteger.valueOf(f);
+        for (int i = 1; i <= n; i++) {
+            fibo = a.add(b);
+            a = b;
+            b = fibo;
+            System.out.println(fibo);
+        }
+
+        return fibo;
+    }

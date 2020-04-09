@@ -24,22 +24,20 @@ public class BigAlgebra {
             return BigInteger.ONE;
         }
         BigInteger a = BigInteger.valueOf(n);
-        int a1 = 0;
-        BigInteger b = BigInteger.valueOf(a1);
-        int f = 0;
-        BigInteger fibo = BigInteger.valueOf(f);
+        BigInteger b = new BigInteger("0");
+        BigInteger fibo = new BigInteger("0");
         for (int i = 1; i <= n; i++) {
             fibo = a.add(b);
             a = b;
             b = fibo;
-            System.out.println(fibo);
+            System.out.println(fibo.divide(BigInteger.valueOf(10)));
         }
 
         return fibo;
     }
 
     public static void main(String[] args) {
-        fibonacci(80);
+        fibonacci(10);
 
         String a = "1157786721974097680";
         System.out.println(a.length());
