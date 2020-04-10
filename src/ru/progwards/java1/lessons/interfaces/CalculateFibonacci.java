@@ -36,8 +36,8 @@ public class CalculateFibonacci {
             public int fibo - результат расчета*/
     ///////////////////////////////////////////////////////////////////
     public static class CacheInfo {
-        public int n = CalculateFibonacci.fiboNumber(this.n);
-        public int fibo = CalculateFibonacci.fiboNumber(this.fibo);
+        public int n;
+        public int fibo;
 
         public CacheInfo(int n, int fibo) {
             this.n = n;
