@@ -6,27 +6,37 @@ package ru.progwards.java1.lessons.interfaces;
 сделать сохранение одного, последнего из рассчитанных значений. Для этого
 */
 public class CalculateFibonacci {
+
     //////////////////////////////////////////////////////////////////
     /*2.3 Разместить в классе CalculateFibonacci приватную
      статическую переменную CacheInfo lastFibo;*/
     //////////////////////////////////////////////////////////////////
-    private static CacheInfo lastFibo;
+    private static CacheInfo lastFibo = null;
+
+    public static int fibo = 0;
 
     //////////////////////////////////////////////////////////////////
     /*2.1 Разместить в классе CalculateFibonacci функцию
     public static int fiboNumber(int n)*/
     //////////////////////////////////////////////////////////////////
+   /*2.4 В статической функции fiboNumber, проверять параметр n на совпадение с последним рассчитанным
+    значением, и если совпадает - возвращать уже готовый результат. Если не совпадает - рассчитывать и
+    сохранять в статической переменной lastFibo. */
+    //////////////////////////////////////////////////////////////////
     public static int fiboNumber(int n) {  //☺
         int a = 1;
         int b = 0;
-        int fibo = 0;
         for (int i = 0; i < n; i++) {
             fibo = a + b;
             a = b;
             b = fibo;
-            //  System.out.println("Fibo = " + fibo);
+//            System.out.println("Fibo = " + fibo);
         }
-        return fibo;
+        if (n == fibo) {
+            return fibo;
+        }
+        //else lastFibo;
+        return 0;
     }
 
     ///////////////////////////////////////////////////////////////////
@@ -37,17 +47,14 @@ public class CalculateFibonacci {
     ///////////////////////////////////////////////////////////////////
     public static class CacheInfo {
         public int n;
-        public int fibo;
+        public int fibo = CalculateFibonacci.fibo;
 
         public CacheInfo(int n, int fibo) {
             this.n = n;
             this.fibo = fibo;
+            System.out.println(fibo);
         }
     }
-
-    /*2.4 В статической функции fiboNumber, проверять параметр n на совпадение с последним рассчитанным
-     значением, и если совпадает - возвращать уже готовый результат. Если не совпадает - рассчитывать и
-     сохранять в статической переменной lastFibo. */
 
     /*2.5 Реализовать метод public static CacheInfo getLastFibo() который возвращает lastFibo*/
     public static CacheInfo getLastFibo() {
@@ -56,12 +63,12 @@ public class CalculateFibonacci {
 
     /*2.6 Реализовать метод public static void clearLastFibo(), который сбрасывает lastFibo в null*/
     public static void clearLastFibo() {  //☺
-        //fiboNumber(0);
-        return;
+        lastFibo = null;
     }
 
     public static void main(String[] args) {
-        fiboNumber(10);
+        // fiboNumber(10);
+        new CacheInfo(10, 55);
     }
 }
 
