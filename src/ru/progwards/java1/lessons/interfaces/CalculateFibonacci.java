@@ -5,16 +5,14 @@ package ru.progwards.java1.lessons.interfaces;
 Для функции public static int fiboNumber(int n) из задачи 3 урока 4
 сделать сохранение одного, последнего из рассчитанных значений. Для этого
 */
-
 public class CalculateFibonacci {
-
     //////////////////////////////////////////////////////////////////
     /*2.3 Разместить в классе CalculateFibonacci приватную
      статическую переменную CacheInfo lastFibo;*/
     //////////////////////////////////////////////////////////////////
     private static CacheInfo lastFibo = new CacheInfo();
 
-    public static int fibo = 0;
+    //public static int fibo = 0; //del
 
     //////////////////////////////////////////////////////////////////
     /*2.1 Разместить в классе CalculateFibonacci функцию
@@ -41,7 +39,6 @@ public class CalculateFibonacci {
         CalculateFibonacci.lastFibo.n = n;
         return CacheInfo.fibo;
     }
-
     ///////////////////////////////////////////////////////////////////
     /*2.2 Разместить вложенный класс
     public static class CacheInfo, содержащий пару свойств
@@ -52,17 +49,14 @@ public class CalculateFibonacci {
         public static int n;
         public static int fibo;
     }
-
     /*2.5 Реализовать метод public static CacheInfo getLastFibo() который возвращает lastFibo*/
     public static CacheInfo getLastFibo() {
         return lastFibo;
     }
-
     /*2.6 Реализовать метод public static void clearLastFibo(), который сбрасывает lastFibo в null*/
     public static void clearLastFibo() {  //☺
         lastFibo = null;
     }
-
     public static void main(String[] args) {
         fiboNumber(1);
         System.out.println(CacheInfo.fibo);
