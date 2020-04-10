@@ -40,16 +40,14 @@ public class CalculateFibonacci {
         public int fibo;
 
         public CacheInfo(int n, int fibo) {
-            this.n = n;
+            this.n = fiboNumber(n);
             this.fibo = fibo;
         }
     }
 
-
     /*2.4 В статической функции fiboNumber, проверять параметр n на совпадение с последним рассчитанным
      значением, и если совпадает - возвращать уже готовый результат. Если не совпадает - рассчитывать и
      сохранять в статической переменной lastFibo. */
-
 
     /*2.5 Реализовать метод public static CacheInfo getLastFibo() который возвращает lastFibo*/
     public static CacheInfo getLastFibo() {
