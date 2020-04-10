@@ -24,6 +24,10 @@ public class CalculateFibonacci {
     сохранять в статической переменной lastFibo. */
     //////////////////////////////////////////////////////////////////
     public static int fiboNumber(int n) {  //☺
+        lastFibo = new CacheInfo();
+        if (lastFibo.n == n) {
+            return lastFibo.fibo;
+        }
         int a = 1;
         int b = 0;
         for (int i = 0; i < n; i++) {
@@ -32,11 +36,8 @@ public class CalculateFibonacci {
             b = fibo;
 //            System.out.println("Fibo = " + fibo);
         }
-        if (n == fibo) {
-            return fibo;
-        }
-        //else lastFibo;
-        return 0;
+        lastFibo.fibo = fibo;
+        return fibo;
     }
 
     ///////////////////////////////////////////////////////////////////
@@ -47,13 +48,7 @@ public class CalculateFibonacci {
     ///////////////////////////////////////////////////////////////////
     public static class CacheInfo {
         public int n;
-        public int fibo = CalculateFibonacci.fibo;
-
-        public CacheInfo(int n, int fibo) {
-            this.n = n;
-            this.fibo = fibo;
-            System.out.println(fibo);
-        }
+        public int fibo;
     }
 
     /*2.5 Реализовать метод public static CacheInfo getLastFibo() который возвращает lastFibo*/
@@ -67,8 +62,6 @@ public class CalculateFibonacci {
     }
 
     public static void main(String[] args) {
-        // fiboNumber(10);
-        new CacheInfo(10, 55);
     }
 }
 
