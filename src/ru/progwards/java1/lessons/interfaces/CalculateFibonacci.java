@@ -33,13 +33,12 @@ public class CalculateFibonacci {
         int a = 1;
         int b = 0;
         for (int i = 0; i < n; i++) {
-            fibo = a + b;
+            CacheInfo.fibo = a + b;
             a = b;
             b = fibo;
 //            System.out.println("Fibo = " + fibo);
         }
-        lastFibo.n = fibo;
-        return fibo;
+        return CacheInfo.fibo;
     }
 
     ///////////////////////////////////////////////////////////////////
@@ -49,8 +48,9 @@ public class CalculateFibonacci {
     public int fibo - результат расчета*/
     ///////////////////////////////////////////////////////////////////
     public static class CacheInfo {
+        public static int fibo;
         public int n;
-        public int fibo;
+        //public int fibo;
     }
 
     /*2.5 Реализовать метод public static CacheInfo getLastFibo() который возвращает lastFibo*/
