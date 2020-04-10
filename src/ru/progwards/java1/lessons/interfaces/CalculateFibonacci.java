@@ -39,6 +39,14 @@ public class CalculateFibonacci {
         int n;
         int fibo;
     }
+
+    public static CacheInfo getLastFibo() {
+        return lastFibo;
+    }
+
+    public static void clearLastFibo() {  //☺
+        lastFibo = null;
+    }
 }
 /*
 
