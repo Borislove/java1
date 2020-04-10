@@ -12,7 +12,7 @@ public class CalculateFibonacci {
     /*2.3 Разместить в классе CalculateFibonacci приватную
      статическую переменную CacheInfo lastFibo;*/
     //////////////////////////////////////////////////////////////////
-    private static CacheInfo lastFibo = null;
+    private static CacheInfo lastFibo = new CacheInfo();
 
     public static int fibo = 0;
 
@@ -35,9 +35,10 @@ public class CalculateFibonacci {
         for (int i = 0; i < n; i++) {
             CacheInfo.fibo = a + b;
             a = b;
-            b = fibo;
-//            System.out.println("Fibo = " + fibo);
+            b = CacheInfo.fibo;
         }
+        System.out.println(CacheInfo.fibo);
+        CalculateFibonacci.lastFibo.n = n;
         return CacheInfo.fibo;
     }
 
@@ -48,9 +49,8 @@ public class CalculateFibonacci {
     public int fibo - результат расчета*/
     ///////////////////////////////////////////////////////////////////
     public static class CacheInfo {
+        public static int n;
         public static int fibo;
-        public int n;
-        //public int fibo;
     }
 
     /*2.5 Реализовать метод public static CacheInfo getLastFibo() который возвращает lastFibo*/
@@ -64,6 +64,9 @@ public class CalculateFibonacci {
     }
 
     public static void main(String[] args) {
+        fiboNumber(1);
+        System.out.println(CacheInfo.fibo);
+        System.out.println(CacheInfo.n);
     }
 }
 
