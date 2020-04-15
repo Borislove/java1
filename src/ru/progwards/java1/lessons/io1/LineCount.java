@@ -9,8 +9,8 @@ import java.util.Scanner;
 */
 public class LineCount {
 
-    public static int calcEmpty(String fileName) throws IOException {
-            int count = 0; //подсчет строк
+    public static int calcEmpty(String fileName) {
+        int count = 0; //подсчет строк
         try {
             FileReader reader = new FileReader(fileName);
             Scanner scanner = new Scanner(reader);
@@ -28,7 +28,7 @@ public class LineCount {
                 scanner.close();
             }
             return count;
-        } catch (Throwable e) {
+        } catch (IOException e) {
             // throw new IOException("файл не найден");
             return -1;
             // return -1;
