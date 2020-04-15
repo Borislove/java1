@@ -37,11 +37,3 @@ public class Food implements CompareWeight {
         return null;
     }
 }
-
-
-/*Метод CompareResult compareWeight должен возвращать
-Метод CompareResult compareWeight должен возвращать
-LESS если свой вес < веса параметра метода
-EQUAL если свой вес = веса параметра метода
-GREATER если свой вес > веса параметра метода
-*/

@@ -24,6 +24,6 @@ public class Test {
 
         //-------------------test----------------------------------
         Pyramid pyramid1Test = new Pyramid(new IntNumber(315));
-        System.out.println("test " + pyramid1Test.volume());
+        System.out.println("ru/progwards/java1/lessons/test " + pyramid1Test.volume());
     }
 }
