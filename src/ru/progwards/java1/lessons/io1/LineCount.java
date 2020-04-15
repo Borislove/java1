@@ -28,9 +28,9 @@ public class LineCount {
                 scanner.close();
             }
             return count;
-        } catch (
-                Throwable e) {
-            throw new IOException("файл не найден");
+        } catch (Throwable e) {
+            // throw new IOException("файл не найден");
+            return -1;
             // return -1;
         }
     }
