@@ -10,10 +10,10 @@ import java.util.Scanner;
 public class LineCount {
 
     public static int calcEmpty(String fileName) throws IOException {
+            int count = 0; //подсчет строк
         try {
             FileReader reader = new FileReader(fileName);
             Scanner scanner = new Scanner(reader);
-            int count = 0; //подсчет строк
 
             try {
                 while (scanner.hasNextLine()) {
