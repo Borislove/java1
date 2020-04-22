@@ -1,6 +1,5 @@
 package ru.progwards.java1.lessons.io1;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,7 +13,7 @@ import java.util.Scanner;
  оригинального файла соответствует символ code[(int)symbol] выходного файла. В случае ошибок, в файл
  с именем logName вывести название ошибки через метод класса Exception - getMessage()*/
 
-public class Coder implements AutoCloseable {
+public class Coder {
     public static void codeFile(String inFileName, String outFileName, char[] code,
                                 String logName) throws IOException {
 
@@ -43,9 +42,5 @@ public class Coder implements AutoCloseable {
         char[] code = {'a'};
         // char[] code = new char[256];
         codeFile("io1.txt", "io1_OutFile.txt", code, "log.txt");
-    }
-
-    @Override
-    public void close() throws Exception {
     }
 }
