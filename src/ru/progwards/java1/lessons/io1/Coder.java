@@ -15,12 +15,12 @@ import java.util.Scanner;
 
 public class Coder {
     public static void codeFile(String inFileName, String outFileName, char[] code,
-                                String logName) throws IOException {
+                                String logName) {
         try {
             //запись ошибок в лог
-            FileWriter error = new FileWriter(logName, true);
+            FileWriter error = new FileWriter(logName);
             //копия файла
-            FileWriter in = new FileWriter(outFileName, true);
+            FileWriter in = new FileWriter(outFileName);
             try {
                 //чтение
                 FileReader reader = new FileReader(inFileName);
@@ -51,6 +51,6 @@ public class Coder {
 
         char[] code = {'a'};
         // char[] code = new char[256];
-        codeFile("1io1.txt", "io1_OutFile.txt", code, "log.txt");
+        codeFile("io1.txt", "io1_OutFile.txt", code, "log.txt");
     }
 }
