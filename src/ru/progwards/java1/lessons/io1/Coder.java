@@ -16,31 +16,34 @@ import java.util.Scanner;
 public class Coder {
     public static void codeFile(String inFileName, String outFileName, char[] code,
                                 String logName) throws IOException {
-
-        //запись ошибок в лог
-        FileWriter error = new FileWriter(logName, true);
-        //копия файла
-        FileWriter in = new FileWriter(outFileName, true);
         try {
-            //чтение
-            FileReader reader = new FileReader(inFileName);
-            Scanner scanner = new Scanner(reader);
-            //запись
+            //запись ошибок в лог
+            FileWriter error = new FileWriter(logName, true);
+            //копия файла
+            FileWriter in = new FileWriter(outFileName, true);
+            try {
+                //чтение
+                FileReader reader = new FileReader(inFileName);
+                Scanner scanner = new Scanner(reader);
+                //запись
 
-            while (scanner.hasNextLine()) {
-                String strFromFile = scanner.nextLine();
+                while (scanner.hasNextLine()) {
+                    String strFromFile = scanner.nextLine();
 
-                in.write(strFromFile + "\n");
+                    in.write(strFromFile + "\n");
+                }
+                in.close();
+                scanner.close();
+
+            } catch (Exception e) {
+                //error.write(e.toString());
+                error.write(e.getMessage());
+                error.close();
+                throw new RuntimeException(e);
+                //  throw new IOException("файл не найден");
             }
-            in.close();
-            scanner.close();
-
         } catch (Exception e) {
-            //error.write(e.toString());
-            error.write(e.getMessage());
-            error.close();
             throw new RuntimeException(e);
-            //  throw new IOException("файл не найден");
         }
     }
 
