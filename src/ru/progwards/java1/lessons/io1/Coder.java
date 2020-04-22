@@ -31,12 +31,15 @@ public class Coder {
 
                     String strFromFile = scanner.nextLine();
 
-                    int a = 0;
-                    // in.write(strFromFile + "\n");
-                    for (char value : code) {
-                        //    System.out.println((int) value);
-                        a += value;
-                    in.write(Integer.valueOf(a));
+                    for (int i = 0; i < strFromFile.length(); i++) {
+
+                        int a = 0;
+                        // in.write(strFromFile + "\n");
+                        for (char value : code) {
+                            //    System.out.println((int) value);
+                            a += value;
+                            in.write(Integer.valueOf(a)+"\n");
+                        }
                     }
                 }
                 in.close();
