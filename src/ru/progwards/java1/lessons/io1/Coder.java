@@ -34,7 +34,7 @@ public class Coder {
                     // in.write(strFromFile + "\n");
 
                     for (char value : code) {
-                        in.write(value + "\n");
+                        in.write(value );
                     }
                 }
                 in.close();
@@ -53,7 +53,7 @@ public class Coder {
 
     public static void main(String[] args) throws IOException {
 
-        char[] code = {'a'};
+        char[] code = {'a', 'b', 'c', 'd', 'e'};
         codeFile("io1.txt", "io1_OutFile.txt", code, "log.txt");
     }
 }
