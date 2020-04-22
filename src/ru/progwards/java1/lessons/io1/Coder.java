@@ -16,30 +16,26 @@ import java.util.Scanner;
 
 public class Coder implements AutoCloseable {
     public static void codeFile(String inFileName, String outFileName, char[] code,
-                                String logName) throws FileNotFoundException, IOException {
+                                String logName) throws IOException {
 
-
-        String str = " ";
+        FileWriter in = new FileWriter(outFileName, true);
         try {
             //чтение
             FileReader reader = new FileReader(inFileName);
             Scanner scanner = new Scanner(reader);
             //запись
-            FileWriter in = new FileWriter(outFileName, true);
 
             while (scanner.hasNextLine()) {
                 String strFromFile = scanner.nextLine();
-                str += strFromFile;
-                //in.write(String.valueOf(strFromFile)+"\n");
-                //in.write(scanner.nextLine());
-            }
-            in.write(str + "\n");
 
+                in.write(strFromFile + "\n");
+            }
+            in.close();
+            scanner.close();
 
         } catch (Throwable e) {
             throw new IOException("файл не найден");
         }
-
     }
 
     public static void main(String[] args) throws IOException {
