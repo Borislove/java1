@@ -17,7 +17,9 @@ public class Coder {
     public static void codeFile(String inFileName, String outFileName, char[] code,
                                 String logName) throws IOException {
 
+        //запись ошибок в лог
         FileWriter error = new FileWriter(logName, true);
+        //копия файла
         FileWriter in = new FileWriter(outFileName, true);
         try {
             //чтение
@@ -37,7 +39,8 @@ public class Coder {
             //error.write(e.toString());
             error.write(e.getMessage());
             error.close();
-            throw new IOException("файл не найден");
+            throw new RuntimeException(e);
+            //  throw new IOException("файл не найден");
         }
     }
 
