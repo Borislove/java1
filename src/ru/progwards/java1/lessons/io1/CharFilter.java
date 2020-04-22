@@ -13,4 +13,8 @@ Javaстроготипизированныйобъектноориентиров
 компаниейSunMicrosystemsвпоследующемприобретённойкомпаниейOracle */
 
 public class CharFilter {
+
+    public static void filterFile(String inFileName, String outFileName, String filter) {
+
+    }
 }

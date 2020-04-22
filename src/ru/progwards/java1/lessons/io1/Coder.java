@@ -17,6 +17,7 @@ public class Coder {
     public static void codeFile(String inFileName, String outFileName, char[] code,
                                 String logName) throws IOException {
 
+        FileWriter error = new FileWriter(logName, true);
         FileWriter in = new FileWriter(outFileName, true);
         try {
             //чтение
@@ -32,7 +33,10 @@ public class Coder {
             in.close();
             scanner.close();
 
-        } catch (Throwable e) {
+        } catch (Exception e) {
+            //error.write(e.toString());
+            error.write(e.getMessage());
+            error.close();
             throw new IOException("файл не найден");
         }
     }
@@ -41,6 +45,6 @@ public class Coder {
 
         char[] code = {'a'};
         // char[] code = new char[256];
-        codeFile("io1.txt", "io1_OutFile.txt", code, "log.txt");
+        codeFile("1io1.txt", "io1_OutFile.txt", code, "log.txt");
     }
 }
