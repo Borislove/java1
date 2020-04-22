@@ -18,7 +18,7 @@ public class LineCount {
             try {
                 while (scanner.hasNextLine()) {
                     String strFromFile = scanner.nextLine();
-                    //  count++;
+
                     if (strFromFile.length() == 0) {
                         count++;
                     }
@@ -29,15 +29,11 @@ public class LineCount {
             }
             return count;
         } catch (IOException e) {
-            // throw new IOException("файл не найден");
             return -1;
-            // return -1;
         }
     }
 
     public static void main(String[] args) throws IOException {
-        //  calcEmpty(null);
-        //   calcEmpty("src\\test.txt");
         System.out.println(calcEmpty("src\\test.txt"));
     }
 }
