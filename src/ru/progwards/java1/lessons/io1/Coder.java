@@ -28,13 +28,15 @@ public class Coder {
                 //запись
 
                 while (scanner.hasNextLine()) {
+
                     String strFromFile = scanner.nextLine();
 
-
+                    int a = 0;
                     // in.write(strFromFile + "\n");
-
                     for (char value : code) {
-                        in.write(value );
+                        //    System.out.println((int) value);
+                        a += value;
+                    in.write(Integer.valueOf(a));
                     }
                 }
                 in.close();
@@ -54,6 +56,10 @@ public class Coder {
     public static void main(String[] args) throws IOException {
 
         char[] code = {'a', 'b', 'c', 'd', 'e'};
+
         codeFile("io1.txt", "io1_OutFile.txt", code, "log.txt");
+
+        /*char a = 'b';
+        System.out.println((int) a);*/
     }
 }
