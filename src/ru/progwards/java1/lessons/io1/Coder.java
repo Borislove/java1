@@ -30,17 +30,21 @@ public class Coder {
                 while (scanner.hasNextLine()) {
                     String strFromFile = scanner.nextLine();
 
-                    in.write(strFromFile + "\n");
+
+                    // in.write(strFromFile + "\n");
+
+                    for (char value : code) {
+                        in.write(value + "\n");
+                    }
                 }
                 in.close();
                 scanner.close();
 
             } catch (Exception e) {
-                //error.write(e.toString());
+
                 error.write(e.getMessage());
                 error.close();
                 throw new RuntimeException(e);
-                //  throw new IOException("файл не найден");
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -50,7 +54,6 @@ public class Coder {
     public static void main(String[] args) throws IOException {
 
         char[] code = {'a'};
-        // char[] code = new char[256];
         codeFile("io1.txt", "io1_OutFile.txt", code, "log.txt");
     }
 }

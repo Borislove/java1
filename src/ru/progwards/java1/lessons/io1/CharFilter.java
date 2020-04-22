@@ -37,15 +37,12 @@ public class CharFilter {
             String strFromFile = scanner.nextLine();
 
 
-
             in.write(strFromFile + "\n");
 
         }
         in.close();
         filt.close();
         scanner.close();
-
-
     }
 
     public static void main(String[] args) throws IOException {
