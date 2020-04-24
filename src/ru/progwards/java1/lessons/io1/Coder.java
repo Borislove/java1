@@ -25,41 +25,55 @@ public class Coder {
                 //чтение
                 FileReader reader = new FileReader(inFileName);
                 Scanner scanner = new Scanner(reader);
-                //запись
 
+
+                //*****************************************************************
                 while (scanner.hasNextLine()) {
+
+                    //*while (scanner.hasNext()) {
 
                     String strFromFile = scanner.nextLine();
 
-                    for (int i = 0; i < strFromFile.length(); i++) {
 
+
+                    for (int i = 0; i < strFromFile.length(); i++) {
                         int a = 0;
                         // in.write(strFromFile + "\n");
                         for (char value : code) {
                             //    System.out.println((int) value);
                             a += value;
-                            in.write(Integer.valueOf(a)+"\n");
+//                            System.out.println("\n");
+                            // in.write("" + Integer.valueOf(a));   //строка
+                            in.write("" + Integer.valueOf(a) + "\n");   //столбец
                         }
                     }
                 }
+                //*****************************************************************
+
+
                 in.close();
                 scanner.close();
 
             } catch (Exception e) {
-
                 error.write(e.getMessage());
                 error.close();
                 throw new RuntimeException(e);
             }
-        } catch (Exception e) {
+        } catch (
+                Exception e) {
             throw new RuntimeException(e);
         }
+
     }
 
     public static void main(String[] args) throws IOException {
 
-        char[] code = {'a', 'b', 'c', 'd', 'e'};
+        //char[] code = {'a', 'b', 'c', 'd', 'e'};
+        //char[] code = {'w', 'z', 'x', 'g', 'r','g','o','p'};
 
+
+        char[] code = new char[256];
+        for (int i = 0; i < 256; i++) code[i] = (char) (Character.isDigit((char) i) ? i + 1 : i);
         codeFile("io1.txt", "io1_OutFile.txt", code, "log.txt");
 
         /*char a = 'b';

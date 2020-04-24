@@ -12,7 +12,6 @@ obscene = " -,.()"
 Javaстроготипизированныйобъектноориентированныйязыкпрограммированияразработанный
 компаниейSunMicrosystemsвпоследующемприобретённойкомпаниейOracle */
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -20,29 +19,27 @@ import java.util.Scanner;
 
 public class CharFilter {
 
-    public static void filterFile(String inFileName, String outFileName, String filter) throws FileNotFoundException, IOException {
+    public static void filterFile(String inFileName, String outFileName, String filter) {
 
-        //чтение файла
-        FileReader reader = new FileReader(inFileName);
-        Scanner scanner = new Scanner(reader);
-
-        //чтение фильтра
-        FileReader filt = new FileReader(filter);
-        Scanner filtDoc = new Scanner(filt);
-
-        //запись в новый файл с применение фильтра
-        FileWriter in = new FileWriter(outFileName);
-
-        while (scanner.hasNextLine()) {
-            String strFromFile = scanner.nextLine();
+        try {
+            //чтение файла
+            FileReader reader = new FileReader(inFileName);
+            Scanner scanner = new Scanner(reader);
+            //чтение фильтра
+            FileReader filt = new FileReader(filter);
+            Scanner filtScan = new Scanner(filt);
+            //запись в новый файл с применение фильтра
+            FileWriter in = new FileWriter(outFileName);
 
 
-            in.write(strFromFile + "\n");
 
+            in.close();
+            filt.close();
+            scanner.close();
+            filtScan.close();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
-        in.close();
-        filt.close();
-        scanner.close();
     }
 
     public static void main(String[] args) throws IOException {
