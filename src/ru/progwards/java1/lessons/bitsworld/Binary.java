@@ -17,10 +17,12 @@ public class Binary {
     public String toString(), который возвращает двоичное представление числа типа byte,
     используя только битовые операции. В выводимом значении всегда должно быть 8 символов*/
     ////////////////////////////////////////////////////////////////////////////////////////
-
     public String toString() {
-        int value = num & 0b0000000_0000000_0000000_11111111;
-        return String.format("%8s", Integer.toBinaryString(value)).replace(' ', '0');
+        String str = "";
+        for (int i = 0; i < 8; i++) {
+            str += (num >> i) & 0b00000001;
+        }
+        return str;
     }
 
     public static void main(String[] args) {
