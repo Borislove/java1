@@ -9,8 +9,23 @@ public class BigAlgebra {
         Реализовать алгоритм быстрого возведения в степень pow числа num в BigDecimal
         описание алгоритма можно прочитать например в Википедии*/
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    static BigDecimal fastPow(BigDecimal num, int pow) {
-        return num.pow(pow);
+    static BigDecimal fastPow(BigDecimal num, int pow) {   //num число, pow степень
+
+        BigDecimal b = num;
+        int k = pow;
+        BigDecimal p = new BigDecimal(1);
+
+        while (k > 0) {
+            if (k % 2 != 0) {
+                k = k / 2;
+                b = b.multiply(b);
+            } else
+                k--;
+            p = b.multiply(p);
+        }
+        // pow >=0  !
+        //return num.pow(pow);
+        return p;
     }
 
 
@@ -34,6 +49,11 @@ public class BigAlgebra {
             b = fibo;
         }
         return fibo;
+    }
+
+    public static void main(String[] args) {
+        fastPow(BigDecimal.valueOf(123), 1);
+        System.out.println(fastPow(BigDecimal.valueOf(123), 1));
     }
 }
 
