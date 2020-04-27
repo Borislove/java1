@@ -11,23 +11,20 @@ public class BigAlgebra {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     static BigDecimal fastPow(BigDecimal num, int pow) {   //num число, pow степень
 
-        BigDecimal b = num;
-        int k = pow;
-        BigDecimal p = new BigDecimal(1);
+        BigDecimal p = BigDecimal.ONE;
 
-        while (k > 0) {
-            if (k % 2 != 0) {
-                k = k / 2;
-                b = b.multiply(b);
-            } else
-                k--;
-            p = b.multiply(p);
+        while (pow != 0) {
+            if (pow % 2 == 0) {
+                pow = pow / 2;
+                num = num.multiply(num);
+            } else {
+                pow--;
+                p = num.multiply(p);
+            }
         }
-        // pow >=0  !
-        //return num.pow(pow);
         return p;
+        //return num.pow(pow);
     }
-
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /*1.2 Метод BigInteger fibonacci(int n)
@@ -52,8 +49,8 @@ public class BigAlgebra {
     }
 
     public static void main(String[] args) {
-        fastPow(BigDecimal.valueOf(123), 1);
-        System.out.println(fastPow(BigDecimal.valueOf(123), 1));
+        // fastPow(BigDecimal.valueOf(123), 1);
+        System.out.println(fastPow(BigDecimal.valueOf(940), 95));
     }
 }
 
