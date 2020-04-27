@@ -19,7 +19,7 @@ public class Binary {
     ////////////////////////////////////////////////////////////////////////////////////////
     public String toString() {
         String str = "";
-        for (int i = 0; i < 8; i++) {
+        for (int i = 8; i > 0; i--) {
             str += (num >> i) & 0b00000001;
         }
         return str;
