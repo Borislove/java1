@@ -14,6 +14,6 @@ interface CompareWeight {
 
     /* 3.3 Интерфейс должен содержать метод public CompareResult compareWeight(CompareWeight smthHasWeigt)*/
 
-    public CompareResult compareWeight(CompareWeight smthHasWeigt);
+    public boolean compareWeight(CompareWeight smthHasWeigt);
 }
 

@@ -33,7 +33,7 @@ public class Food implements CompareWeight {
     }
 
     @Override
-    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
+    public boolean compareWeight(CompareWeight smthHasWeigt) {
         return null;
     }
 }
