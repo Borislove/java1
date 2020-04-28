@@ -143,7 +143,7 @@ public class Animal implements FoodCompare, CompareWeight {
 
 
     @Override
-    public boolean compareWeight(CompareWeight smthHasWeigt) {
+    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
         return null;
     }
 }
