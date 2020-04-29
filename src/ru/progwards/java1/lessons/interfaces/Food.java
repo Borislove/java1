@@ -40,7 +40,7 @@ public class Food implements CompareWeight {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Food food = (Food) o;
-        return Double.compare(weight, this.weight) == 0;
+        return Double.compare(food.weight, this.weight) == 0;
         //  return weight == food.weight;
     }
 
