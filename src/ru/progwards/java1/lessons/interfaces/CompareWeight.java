@@ -32,7 +32,7 @@ interface CompareWeight {
         if (weight == smthHasWeigt.weight) {
             return CompareResult.EQUAL;
         }
-        if (weight > this.weight) {
+        if (weight > smthHasWeigt.weight) {
             return CompareResult.GREATER;
         }
         return CompareResult.NULL;

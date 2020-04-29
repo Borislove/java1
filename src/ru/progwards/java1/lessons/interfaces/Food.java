@@ -40,10 +40,25 @@ public class Food implements CompareWeight {
         if (weight == smthHasWeigt.weight) {
             return CompareResult.EQUAL;
         }
-        if (weight > this.weight) {
+        if (weight > smthHasWeigt.weight) {
             return CompareResult.GREATER;
         }
         return CompareResult.NULL;
+    }
+
+
+    public static void main(String[] args) {
+        new Cow(300).compareWeight(new Duck(200));
+
+        System.out.println(new Cow(300).compareWeight(new Duck(200)));
+
+        new Food(300).compareWeight(new Food(300));
+        System.out.println(new Food(300).compareWeight(new Food(300)));
+
+        System.out.println(new Food(300).compareWeight(new Food(400)));
+
+        System.out.println(new Animal(300D).compareWeight(new Cow(300D)));
+
     }
 }
 
