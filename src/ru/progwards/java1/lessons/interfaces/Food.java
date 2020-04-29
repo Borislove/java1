@@ -20,19 +20,6 @@ public class Food implements CompareWeight {
         return weight;
     }
 
-    @Override
-    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        if (this.weight <smthHasWeigt.weight) {
-            return CompareResult.LESS;
-        }
-        if (this.weight == smthHasWeigt.weight) {
-            return CompareResult.EQUAL;
-        }
-        if (this.weight > smthHasWeigt.weight) {
-            return CompareResult.GREATER;
-        }
-        return CompareResult.NULL;
-    }
 
 
     public static void main(String[] args) {
