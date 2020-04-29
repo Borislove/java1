@@ -8,7 +8,7 @@ public class Food implements CompareWeight {
 
     //3.6 В классе Food разместить приватную переменную int weight - вес еды в граммах,
     // реализовать в классе конструктор, принимающий и устанавливающий значение веса.
-    private int weight;
+    private static int weight;
 
     public Food(int weight) {
         // super();
@@ -19,7 +19,6 @@ public class Food implements CompareWeight {
     public int getWeight() {
         return weight;
     }
-
 
 
     public static void main(String[] args) {
@@ -41,7 +40,8 @@ public class Food implements CompareWeight {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Food food = (Food) o;
-        return weight == food.weight;
+        return Double.compare(Food.weight, this.weight) == 0;
+        //  return weight == food.weight;
     }
 
     @Override
