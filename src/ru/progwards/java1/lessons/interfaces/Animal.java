@@ -96,7 +96,7 @@ public class Animal implements FoodCompare, CompareWeight {
         if (this == anObject) return true;
         if (!(anObject instanceof Animal)) return false;
         Animal animal = (Animal) anObject;
-        return Double.compare(animal.calculateFoodWeight(), this.calculateFoodWeight()) == 0;
+        return Double.compare(this.calculateFoodWeight(), animal.calculateFoodWeight()) == 0;
     }
 
     @Override
