@@ -15,7 +15,8 @@ interface CompareWeight {
     public enum CompareResult {
         LESS,   //меньше
         EQUAL,   //равно
-        GREATER   //повышение
+        GREATER,   //повышение
+        NULL       //
         ;
     }
 

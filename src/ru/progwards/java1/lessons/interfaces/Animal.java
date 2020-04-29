@@ -145,12 +145,16 @@ public class Animal implements FoodCompare, CompareWeight {
     @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
         if (weight > this.weight) {
-            return CompareResult.EQUAL;
+            return CompareResult.GREATER;
         }
         if (weight < this.weight) {
             return CompareResult.LESS;
-        } else
-            return CompareResult.GREATER;
+        }
+        if (weight == this.weight) {
+            return CompareResult.EQUAL;
+        }
+        return CompareResult.NULL;
+
     }
 }
 
