@@ -140,6 +140,12 @@ public class Animal implements FoodCompare, CompareWeight {
     public int compareFoodPrice(Animal animal) {
         return Double.compare(this.getFoodPrice(), animal.getFoodPrice());
     }
+
+    public static void main(String[] args) {
+        System.out.println(new Hamster(1D).equals(new Hamster(2D)));
+    }
+
+
 }
 
 

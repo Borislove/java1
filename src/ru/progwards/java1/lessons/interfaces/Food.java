@@ -48,5 +48,19 @@ public class Food implements CompareWeight {
     public int hashCode() {
         return Objects.hash(weight);
     }
+
+    @Override
+    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
+        if (this.weight < smthHasWeigt.weight) {
+            return CompareResult.LESS;
+        }
+        if (this.weight == smthHasWeigt.weight) {
+            return CompareResult.EQUAL;
+        }
+        if (this.weight > smthHasWeigt.weight) {
+            return CompareResult.GREATER;
+        }
+        return CompareResult.NULL;
+    }
 }
 

@@ -22,20 +22,9 @@ interface CompareWeight {
 
     /* 3.3 Интерфейс должен содержать метод public CompareResult compareWeight(CompareWeight smthHasWeigt)*/
 
-   // public CompareResult compareWeight(CompareWeight smthHasWeigt);
+    public CompareResult compareWeight(CompareWeight smthHasWeigt);
 
 
-    public default CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        if (this.weight < smthHasWeigt.weight) {
-            return CompareResult.LESS;
-        }
-        if (this.weight == smthHasWeigt.weight) {
-            return CompareResult.EQUAL;
-        }
-        if (this.weight > smthHasWeigt.weight) {
-            return CompareResult.GREATER;
-        }
-        return CompareResult.NULL;
-    }
+
 }
 
