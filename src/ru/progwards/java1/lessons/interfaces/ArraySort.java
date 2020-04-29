@@ -4,9 +4,13 @@ package ru.progwards.java1.lessons.interfaces;
 // класса ArraySort из задачи 2 урока 6 и переделать сортировку массива
 // целых чисел на сортировку через интерфейс CompareWeight public static void sort(CompareWeight[] a)
 
-public abstract class ArraySort implements Comparable<CompareWeight> {
+public class ArraySort implements Comparable<CompareWeight> {
+    @Override
+    public int compareTo(CompareWeight o) {
+        return 0;
+    }
 
-    /*public static void sort(int[] a) {
+    public static void sort(int[] a) {
         int number = 0;
         for (int i = 0; i < a.length; i++) {
             for (int j = i + 1; j < a.length; j++) {
@@ -17,7 +21,7 @@ public abstract class ArraySort implements Comparable<CompareWeight> {
                 }
             }
         }
-    }*/
+    }
 }
 
 
