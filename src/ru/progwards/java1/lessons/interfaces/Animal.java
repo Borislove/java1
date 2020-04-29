@@ -15,7 +15,7 @@ enum FoodKind {
     CORN
 }
 
-public abstract class Animal implements FoodCompare, CompareWeight {
+public class Animal implements FoodCompare, CompareWeight {
 
     static double weight;
 
@@ -145,11 +145,19 @@ public abstract class Animal implements FoodCompare, CompareWeight {
         System.out.println(new Hamster(1D).equals(new Hamster(2D)));
     }
 
-
-    /*@Override
+    @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        return null;
-    }*/
+        if (this.weight < smthHasWeigt.weight) {
+            return CompareResult.LESS;
+        }
+        if (this.weight == smthHasWeigt.weight) {
+            return CompareResult.EQUAL;
+        }
+        if (this.weight > smthHasWeigt.weight) {
+            return CompareResult.GREATER;
+        }
+        return CompareResult.NULL;
+    }
 }
 
 
