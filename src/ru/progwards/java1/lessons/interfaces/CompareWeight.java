@@ -3,7 +3,7 @@ package ru.progwards.java1.lessons.interfaces;
 //3.1 Создать интерфейс CompareWeight
 interface CompareWeight {
 
-    double weight = 0d;
+    double weight = 0;
 
     /*CompareResult less = CompareResult.LESS;
     CompareResult equal = CompareResult.EQUAL;
@@ -22,17 +22,17 @@ interface CompareWeight {
 
     /* 3.3 Интерфейс должен содержать метод public CompareResult compareWeight(CompareWeight smthHasWeigt)*/
 
-    //public CompareResult compareWeight(CompareWeight smthHasWeigt);
+   // public CompareResult compareWeight(CompareWeight smthHasWeigt);
 
 
     public default CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        if (weight < smthHasWeigt.weight) {
+        if (this.weight < smthHasWeigt.weight) {
             return CompareResult.LESS;
         }
-        if (weight == smthHasWeigt.weight) {
+        if (this.weight == smthHasWeigt.weight) {
             return CompareResult.EQUAL;
         }
-        if (weight > smthHasWeigt.weight) {
+        if (this.weight > smthHasWeigt.weight) {
             return CompareResult.GREATER;
         }
         return CompareResult.NULL;

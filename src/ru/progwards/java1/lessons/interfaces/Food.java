@@ -11,6 +11,7 @@ public class Food implements CompareWeight {
     private int weight;
 
     public Food(int weight) {
+        // super();
         this.weight = weight;
     }
 
@@ -20,27 +21,14 @@ public class Food implements CompareWeight {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Food food = (Food) o;
-        return weight == food.weight;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(weight);
-    }
-
-    @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        if (weight < smthHasWeigt.weight) {
+        if (this.weight <smthHasWeigt.weight) {
             return CompareResult.LESS;
         }
-        if (weight == smthHasWeigt.weight) {
+        if (this.weight == smthHasWeigt.weight) {
             return CompareResult.EQUAL;
         }
-        if (weight > smthHasWeigt.weight) {
+        if (this.weight > smthHasWeigt.weight) {
             return CompareResult.GREATER;
         }
         return CompareResult.NULL;
@@ -48,17 +36,17 @@ public class Food implements CompareWeight {
 
 
     public static void main(String[] args) {
-        new Cow(300).compareWeight(new Duck(200));
+
 
         System.out.println(new Cow(300).compareWeight(new Duck(200)));
 
-        new Food(300).compareWeight(new Food(300));
         System.out.println(new Food(300).compareWeight(new Food(300)));
 
         System.out.println(new Food(300).compareWeight(new Food(400)));
 
-        System.out.println(new Animal(300D).compareWeight(new Cow(300D)));
+        System.out.println(new Animal(300D).compareWeight(new Cow(300D)));  //Возвращено: GREATER, ожидалось: EQUAL.
 
+        System.out.println(new Cow(300D).compareWeight(new Duck(2D))); //Возвращено: EQUAL, ожидалось: GREATER.
     }
 }
 

@@ -17,7 +17,7 @@ enum FoodKind {
 
 public class Animal implements FoodCompare, CompareWeight {
 
-    double weight;
+    static double weight;
 
     /*1.0 Реализовать конструктор
     public Animal(double weight), который сохраняет вес животного.*/
@@ -45,7 +45,7 @@ public class Animal implements FoodCompare, CompareWeight {
     /*2.1 В классе Animal реализовать метод:
     public double getWeight(), который возвращает вес животного*/
 
-    public double getWeight() {
+    public static double getWeight() {
         return weight;
     }
 
