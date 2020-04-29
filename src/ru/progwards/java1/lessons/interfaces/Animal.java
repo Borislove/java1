@@ -153,23 +153,30 @@ public class Animal implements FoodCompare, CompareWeight {
         return Double.compare(this.getFoodPrice(), animal.getFoodPrice());
     }
 
-    public static void main(String[] args) {
-        System.out.println(new Hamster(1D).equals(new Hamster(2D)));
-    }
 
     @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        if (this.weight < smthHasWeigt.weight) {
+        if (getWeight() < smthHasWeigt.weight) {
             return CompareResult.LESS;
         }
-        if (this.weight == smthHasWeigt.weight) {
+        if (getWeight() == 0) {
             return CompareResult.EQUAL;
         }
-        if (this.weight > smthHasWeigt.weight) {
+        if (getWeight() > smthHasWeigt.weight) {
             return CompareResult.GREATER;
         }
         return CompareResult.NULL;
     }
+
+    //---------------------------MAIN----------------------------------------------
+    public static void main(String[] args) {
+        System.out.println(new Hamster(1D).equals(new Hamster(2D)));
+
+
+        System.out.println(new Animal(300D).compareWeight(new Cow(300D))); //Возвращено: GREATER, ожидалось: EQUAL.
+        System.out.println(new Animal(400D).compareWeight(new Cow(300D))); //Возвращено: GREATER, ожидалось: EQUAL.
+    }
+
 }
 
 
