@@ -35,5 +35,18 @@ public class Food implements CompareWeight {
 
         System.out.println(new Cow(300D).compareWeight(new Duck(2D))); //Возвращено: EQUAL, ожидалось: GREATER.
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Food food = (Food) o;
+        return weight == food.weight;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(weight);
+    }
 }
 
