@@ -39,7 +39,11 @@ public class Food implements CompareWeight {
         }
         if (weight < this.weight) {
             return CompareResult.LESS;
-        } else
+        }
+        if (weight == this.weight) {
             return CompareResult.EQUAL;
+        }
+        return CompareResult.NULL;
+
     }
 }
