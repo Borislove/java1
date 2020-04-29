@@ -34,16 +34,16 @@ public class Food implements CompareWeight {
 
     @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
+        if (weight < smthHasWeigt.weight) {
+            return CompareResult.LESS;
+        }
+        if (weight == smthHasWeigt.weight) {
+            return CompareResult.EQUAL;
+        }
         if (weight > this.weight) {
             return CompareResult.GREATER;
         }
-        if (weight < this.weight) {
-            return CompareResult.LESS;
-        }
-        if (weight == this.weight) {
-            return CompareResult.EQUAL;
-        }
         return CompareResult.NULL;
-
     }
 }
+
