@@ -24,7 +24,5 @@ interface CompareWeight {
 
     public CompareResult compareWeight(CompareWeight smthHasWeigt);
 
-
-
 }
 
