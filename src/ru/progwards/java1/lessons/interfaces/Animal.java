@@ -96,7 +96,7 @@ public class Animal implements FoodCompare, CompareWeight {
         if (this == anObject) return true;
         if (!(anObject instanceof Animal)) return false;
         Animal animal = (Animal) anObject;
-        return Double.compare(this.calculateFoodWeight(), animal.calculateFoodWeight()) == 0;
+        return Double.compare(animal.calculateFoodWeight(), this.calculateFoodWeight()) == 0;
     }
 
     @Override
@@ -141,23 +141,8 @@ public class Animal implements FoodCompare, CompareWeight {
         return Double.compare(this.getFoodPrice(), animal.getFoodPrice());
     }
 
-    public static void main(String[] args) {
-        System.out.println(new Hamster(1D).equals(new Hamster(2D)));
-    }
-
     @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        if (this.weight < smthHasWeigt.weight) {
-            return CompareResult.LESS;
-        }
-        if (this.weight == smthHasWeigt.weight) {
-            return CompareResult.EQUAL;
-        }
-        if (this.weight > smthHasWeigt.weight) {
-            return CompareResult.GREATER;
-        }
-        return CompareResult.NULL;
+        return null;
     }
 }
-
-
