@@ -9,29 +9,19 @@ import java.util.Arrays;
 
 public abstract class ArraySort implements Comparable<CompareWeight> {
 
-    /*static CompareWeight compareWeight = {CompareWeight.CompareResult.LESS, CompareWeight.CompareResult.GREATER, CompareWeight.CompareResult.EQUAL};
-
-     *//*public CompareWeight[] getCompareWeight() {
-        return compareWeight;
-    }*//*
 
     public static void sort(CompareWeight[] a) {
 
-        for (int i = 0; i < a.length; i++) {
-            for (int j = i + 1; j < a.length; j++) {
-                if (a[i].equals(a[j])) {
-                    compareWeight = a[i];
-                    a[i] = a[j];
-                    a[j] = number;
-                }
-            }
-        }
+        Arrays.sort(a);
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(compareWeight));
+
+
+        CompareWeight[] a = {new Animal(200.5), new Animal(10.3), new Animal(300.0)};
+        //System.out.println(Arrays.toString(a));
     }
-}*/
+}
 
     /*
 
@@ -48,12 +38,7 @@ public abstract class ArraySort implements Comparable<CompareWeight> {
             }
         }
     }
+*/
 
 
 
-    */
-
-    public static void sort(CompareWeight[] a) {
-
-    }
-}
