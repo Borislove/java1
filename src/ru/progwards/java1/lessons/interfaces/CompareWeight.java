@@ -5,6 +5,7 @@ interface CompareWeight {
 
     double getWeight();
 
+
     //3.2 В нем создать public enum CompareResult, со значениями LESS, EQUAL, GREATER
     public enum CompareResult {
         LESS,   //меньше
