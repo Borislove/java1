@@ -11,9 +11,18 @@ public abstract class ArraySort implements Comparable<CompareWeight> {
 
 
     public static void sort(CompareWeight[] a) {
-
-        Arrays.sort(a);
+        Comparable tmpValue;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i].getWeight() > a[i].getWeight()) {
+                    tmpValue = (Comparable) a[i];
+                    a[i] = a[j];
+                    a[j] = (CompareWeight) tmpValue;
+                }
+            }
+        }
     }
+
 
     public static void main(String[] args) {
 
