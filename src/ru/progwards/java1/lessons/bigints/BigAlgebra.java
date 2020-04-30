@@ -23,6 +23,8 @@ public class BigAlgebra {
             }
         }
         return p;
+
+        //------------------RESULT------------------
         //return num.pow(pow);
     }
 

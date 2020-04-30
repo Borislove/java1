@@ -17,7 +17,7 @@ enum FoodKind {
 
 public class Animal implements FoodCompare, CompareWeight {
 
-    double weight;
+    private double weight;
 
     //----------------------------------------------------------------------------------------
     /*1.0 Реализовать конструктор
@@ -48,7 +48,7 @@ public class Animal implements FoodCompare, CompareWeight {
     /*2.1 В классе Animal реализовать метод:
     public double getWeight(), который возвращает вес животного*/
     //----------------------------------------------------------------------------------------
-
+    @Override
     public double getWeight() {
         return this.weight;
     }
@@ -93,7 +93,6 @@ public class Animal implements FoodCompare, CompareWeight {
         return toString() + " " + calculateFoodWeight();
     }
 
-
     ////////////////////-------------------8----------------------------------------------
     /*1.1 Для класса Animal из задач 1 и 2, домашнего задания к уроку 5 реализовать метод:
     public boolean equals(Object anObject), который возвращает true, если объекты равны и
@@ -109,12 +108,14 @@ public class Animal implements FoodCompare, CompareWeight {
         if (!(anObject instanceof Animal)) return false;
         Animal animal = (Animal) anObject;
         return Double.compare(animal.calculateFoodWeight(), calculateFoodWeight()) == 0;
+
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(weight);
     }
+
 
     ////////////////////-------------------8----------------------------------------------
             /*1.2 В класс Animal добавить метод
@@ -156,27 +157,29 @@ public class Animal implements FoodCompare, CompareWeight {
 
     @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        if (getWeight() < smthHasWeigt.weight) {
+
+        if (this.weight < smthHasWeigt.getWeight()) {
             return CompareResult.LESS;
         }
-        if (getWeight() == 0) {
+        if (this.weight == smthHasWeigt.getWeight()) {
             return CompareResult.EQUAL;
         }
-        if (getWeight() > smthHasWeigt.weight) {
+        if (this.weight > smthHasWeigt.getWeight()) {
             return CompareResult.GREATER;
         }
         return CompareResult.NULL;
     }
 
+
+
     //---------------------------MAIN----------------------------------------------
     public static void main(String[] args) {
         System.out.println(new Hamster(1D).equals(new Hamster(2D)));
 
-
-        System.out.println(new Animal(300D).compareWeight(new Cow(300D))); //Возвращено: GREATER, ожидалось: EQUAL.
+         System.out.println(new Animal(300D).compareWeight(new Cow(300D))); //Возвращено: GREATER, ожидалось: EQUAL.
         System.out.println(new Animal(400D).compareWeight(new Cow(300D))); //Возвращено: GREATER, ожидалось: EQUAL.
+        System.out.println(new Animal(400D).compareWeight(new Cow(500D))); //Возвращено: GREATER, ожидалось: EQUAL.
     }
-
 }
 
 

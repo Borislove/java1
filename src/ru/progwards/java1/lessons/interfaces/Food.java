@@ -1,10 +1,9 @@
+/*
 package ru.progwards.java1.lessons.interfaces;
 
 //3.5 Создать класс Food (еда), которое никак не связано иерархией наследования с Animal.
 
-import java.util.Objects;
-
-public class Food implements CompareWeight {
+public abstract class Food implements CompareWeight {
 
     //----------------------------------------------------------------------------------------
     //3.6 В классе Food разместить приватную переменную int weight - вес еды в граммах,
@@ -12,45 +11,37 @@ public class Food implements CompareWeight {
     private int weight;
 
     public Food(int weight) {
-        //super();
         this.weight = weight;
+
     }
     //----------------------------------------------------------------------------------------
 
     //----------------------------------------------------------------------------------------
     //3.7 Реализовать метод public int getWeight(), возвращающий сохраненное значение веса.
+
     public int getWeight() {
         return weight;
     }
     //----------------------------------------------------------------------------------------
 
-    @Override
+@Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
 
-        if (weight > smthHasWeigt.weight) {
+
+        */
+/*if (weight < smthHasWeigt.weight) {
             return CompareResult.LESS;
+
         }
         if (weight == smthHasWeigt.weight) {
             return CompareResult.EQUAL;
         }
-        if (weight < smthHasWeigt.weight) {
+        if (weight > smthHasWeigt.weight) {
             return CompareResult.GREATER;
         }
-        return CompareResult.NULL;
-    }
+        return CompareResult.NULL;*//*
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        //
-        Food food = (Food) o;
-        return food.weight == weight;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(weight);
+        return null;
     }
 
     //----------------------------------------MAIN--------------------------------------------------------------
@@ -67,9 +58,7 @@ public class Food implements CompareWeight {
         System.out.println(new Cow(300D).compareWeight(new Duck(2D))); //Возвращено: EQUAL, ожидалось: GREATER.
 
         System.out.println(new Cow(300D).compareWeight(new Cow(300D)));
-
     }
-
-
 }
 
+*/
