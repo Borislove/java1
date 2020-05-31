@@ -1,6 +1,7 @@
 package ru.progwards.java1.lessons.bigints;
 
 import java.math.BigInteger;
+import java.util.Arrays;
 
 public class ArrayInteger {
     //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -8,7 +9,7 @@ public class ArrayInteger {
      Каждый элемент массива digits[i] может хранить только цифру, то есть число от 0 до 9.
       Например, число 159 должно занять 3 ячейки массива digits[0] = 9; digits[1] = 5; digits[2] = 1;*/
     //////////////////////////////////////////////////////////////////////////////////////////////////////
-    byte[] digits;
+    byte[] digits = {};
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     /*3.1 ArrayInteger(int n) - инициализирует класс,
@@ -16,6 +17,8 @@ public class ArrayInteger {
     //////////////////////////////////////////////////////////////////////////////////////////////////////
     ArrayInteger(int n) {
 
+        Integer arr[] = new Integer[n];
+        System.out.println(Arrays.toString(arr));
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -41,5 +44,12 @@ public class ArrayInteger {
 
     boolean add(ArrayInteger num) {
         return false;
+    }
+
+
+    //---------------------MAIN---------------------------
+    public static void main(String[] args) {
+        ArrayInteger arrayInteger = new ArrayInteger(12);
+
     }
 }

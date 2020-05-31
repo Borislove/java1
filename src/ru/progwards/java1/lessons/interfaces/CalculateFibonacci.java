@@ -39,6 +39,7 @@ public class CalculateFibonacci {
         CalculateFibonacci.lastFibo.n = n;
         return CacheInfo.fibo;
     }
+
     ///////////////////////////////////////////////////////////////////
     /*2.2 Разместить вложенный класс
     public static class CacheInfo, содержащий пару свойств
@@ -49,14 +50,17 @@ public class CalculateFibonacci {
         public static int n;
         public static int fibo;
     }
+
     /*2.5 Реализовать метод public static CacheInfo getLastFibo() который возвращает lastFibo*/
     public static CacheInfo getLastFibo() {
         return lastFibo;
     }
+
     /*2.6 Реализовать метод public static void clearLastFibo(), который сбрасывает lastFibo в null*/
     public static void clearLastFibo() {  //☺
         lastFibo = null;
     }
+
     public static void main(String[] args) {
         fiboNumber(1);
         System.out.println(CacheInfo.fibo);

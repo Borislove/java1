@@ -1,5 +1,7 @@
 package ru.progwards.java1.lessons.interfaces;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Objects;
 
 enum AnimalKind {
@@ -170,16 +172,22 @@ public class Animal implements FoodCompare, CompareWeight {
         return CompareResult.NULL;
     }
 
-
-
     //---------------------------MAIN----------------------------------------------
     public static void main(String[] args) {
-        System.out.println(new Hamster(1D).equals(new Hamster(2D)));
+      /*  System.out.println(new Hamster(1D).equals(new Hamster(2D)));
 
-         System.out.println(new Animal(300D).compareWeight(new Cow(300D))); //Возвращено: GREATER, ожидалось: EQUAL.
+        System.out.println(new Animal(300D).compareWeight(new Cow(300D))); //Возвращено: GREATER, ожидалось: EQUAL.
         System.out.println(new Animal(400D).compareWeight(new Cow(300D))); //Возвращено: GREATER, ожидалось: EQUAL.
         System.out.println(new Animal(400D).compareWeight(new Cow(500D))); //Возвращено: GREATER, ожидалось: EQUAL.
+*/
+
+        CompareWeight[] a = {new Animal(200.5), new Animal(10.3), new Animal(300.0)};
+        Arrays.sort(a);
+        System.out.println(Arrays.toString(a));
     }
 }
+
+
+
 
 
