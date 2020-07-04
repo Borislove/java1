@@ -39,7 +39,7 @@ public class PhoneNumber {
         }
         System.out.println("");
 
-        if (counter == 10 || counter == 11) {
+        if (counter > 10 ) {
             throw new RuntimeException("Неправильный номер");
         }
 
@@ -77,6 +77,7 @@ public class PhoneNumber {
         format("8 999 111 22 33");
         format("123()3123)23(1)2");
         format("123**3123s2h(1,2///...6");
+        format("73314759721");
 
         System.out.println(format("2111111111123123123zz..."));
         System.out.println("+7(999)111-2233");
