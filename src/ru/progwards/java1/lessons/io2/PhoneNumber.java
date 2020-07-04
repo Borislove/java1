@@ -13,8 +13,8 @@ package ru.progwards.java1.lessons.io2;
 - добавить, если нужно +7
 - отформатировать под выходной шаблон*/
 
-        import java.io.IOException;
-        import java.util.Arrays;
+import java.io.IOException;
+import java.util.Arrays;
 
 // TODO: 04.07.2020 Вначале сделать проверку если 11 цифр ок, если нет выйти
 public class PhoneNumber {
@@ -39,7 +39,7 @@ public class PhoneNumber {
         }
         System.out.println("");
 
-        if (counter > 10 ) {
+        if (counter != 11) {
             throw new RuntimeException("Неправильный номер");
         }
 
@@ -79,8 +79,10 @@ public class PhoneNumber {
         format("123**3123s2h(1,2///...6");
         format("73314759721");
 
-        System.out.println(format("2111111111123123123zz..."));
+        //  System.out.println(format("2111111111123123123zz..."));
         System.out.println("+7(999)111-2233");
+
+        format("7(151)190-98-24");
     }
 }
 
