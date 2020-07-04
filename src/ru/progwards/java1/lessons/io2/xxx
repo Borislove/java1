@@ -1,0 +1,31 @@
+    //  phoneArray[0] = '+';   //0 индекс
+        //   phoneArray[1] = '7';   //1 индекс
+
+        // String out = Arrays.toString(phoneArray);
+        //  System.out.println(out);
+
+        String out = "+" + "";
+
+        for (int i = 0; i < phoneArray.length; i++) {
+
+
+            if (phoneArray[0] == 8) {
+                phoneArray[0] = 7;
+            }
+            System.out.print(phoneArray[i]);
+        }
+        System.out.println("");
+
+        // System.out.println(Arrays.toString(phoneArray)); //вывод массива
+
+
+
+
+try {
+                    if (counter == 11 || counter == 10)
+                        System.out.println("is' ok");
+
+                } catch (ArithmeticException e) {
+                    e.getMessage();
+                    System.out.println("все плохо");
+                }
