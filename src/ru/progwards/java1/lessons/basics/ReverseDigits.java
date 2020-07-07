@@ -64,3 +64,32 @@ class ReverseDigitsTest1 {
         return Integer.parseInt(str1);
     }
 }
+
+
+// TODO: 07.07.2020 опять потерялось решение!
+/*
+
+public class ReverseDigits {
+
+
+    static int number ;
+    public static int reverseDigits (int number){
+
+        Integer numb = Integer.valueOf(number);
+        String str = numb.toString();
+        // str = new String(str);
+        StringBuffer rev = new StringBuffer(str);
+        rev.reverse();
+
+        int reva = Integer.parseInt(rev.toString());
+        System.out.println(reva);
+        return reva;
+    }
+
+
+    public static void main(String[] args) {
+        reverseDigits(number);
+
+        reverseDigits(212);
+    }
+}*/
