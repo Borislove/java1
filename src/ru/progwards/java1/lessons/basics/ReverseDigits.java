@@ -1,95 +1,50 @@
 package ru.progwards.java1.lessons.basics;
 
-
-//Sun Mar 15 05:01:53 MSK 2020
-//ноль исчезает...плохой реверс!
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*1.1 Реализовать функцию
-public static int reverseDigits(int number), которая получает параметром number трёхзначное положительное число,
-а вернуть должна число в котором цифры идут в обратном порядке (например, если на вход передаётся 123, то функция должна вернуть 321).
+/*Задача 1. Класс ReverseDigits
+1.1 Реализовать функцию
+public static int reverseDigits(int number),
+которая получает параметром number трёхзначное положительное число,
+ а вернуть должна число в котором цифры идут в обратном порядке (например, если на вход передаётся 123, то функция должна вернуть 321).
 
 Подсказки:
 для реализации задачи вспомните особенности деления в Java (в середине лекции "БНФ, константы, операторы, приоритеты").
 */
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 public class ReverseDigits {
 
+    //только для 3-х
     public static int reverseDigits(int number) {
 
-        int numberOne = number % 10;
-        int numberTwo = number % 100 / 10;
-        int numberThree = number / 100;
+        System.err.println("original number: " + number);
 
-        String str = "" + numberOne + "" + numberTwo + "" + numberThree;
+        //1 число 2 индекс (конец)
+        int oneNumber = number % 10;
+        System.out.println("oneNumber = " + oneNumber);
+        String oneNumberString = Integer.toString(oneNumber);  //преобразовали в строку
 
-        Integer integer = Integer.parseInt(str);
-        return integer;
+        //2 число 1 индекс (не меняется) преобразовать не обязательно
+        int twoNumber = number % 100 / 10;
+        System.out.println("twoNumber = " + twoNumber);   //2 число 1 элемент
+        String twoNumberString = Integer.toString(twoNumber); //преобразовали в строку
+
+        //3 число 0 индекс
+        int threeNumber = number / 100;
+        System.out.println("threeNumber = " + threeNumber);
+        String threeNumberString = Integer.toString(threeNumber); //преобразовали в строку
+
+        //склеивание строк
+        //String strResult = (oneNumberString + twoNumberString +threeNumberString);   //3 строки
+        String strResult = (oneNumberString + twoNumber + threeNumberString);   // строка + 1 число + строка
+        System.out.println("strResult = " + strResult);
+
+        //преобразование строки в int и возвратить результат
+        return Integer.parseInt(strResult);
     }
 
     public static void main(String[] args) {
-
+        System.out.println(reverseDigits(102));
         System.out.println(reverseDigits(123));
-        System.out.println(reverseDigits(987));
-        System.out.println(reverseDigits(567));
-        System.out.println(reverseDigits(560));
-
-       /* System.out.println(ReverseDigitsTest.reverseDigits(890));
-        System.out.println(ReverseDigitsTest.reverseDigits(891));*/
-
-        System.out.println(ReverseDigitsTest1.reverseDigits(567));
-        System.out.println(ReverseDigitsTest.reverseDigits(560));
+        System.out.println(reverseDigits(321));
+        System.out.println(reverseDigits(678));
+        System.out.println(reverseDigits(1234));  //4312
     }
 }
-
-
-class ReverseDigitsTest {
-
-    public static int reverseDigits(int number) {
-        String str1 = Integer.toString(number % 10);
-        String str2 = Integer.toString(number % 100 / 10);
-        String str3 = Integer.toString(number / 100);
-        String str = str1 + str2 + str3;
-        System.out.println(str);
-        return Integer.parseInt(str1 + "" + str2 + str3);
-    }
-}
-
-
-class ReverseDigitsTest1 {
-
-    public static int reverseDigits(int number) {
-        String str1 = Integer.toString(number % 10 + number % 100 / 10 + number / 100);   //все не то
-        return Integer.parseInt(str1);
-    }
-}
-
-
-// TODO: 07.07.2020 опять потерялось решение!
-/*
-
-public class ReverseDigits {
-
-
-    static int number ;
-    public static int reverseDigits (int number){
-
-        Integer numb = Integer.valueOf(number);
-        String str = numb.toString();
-        // str = new String(str);
-        StringBuffer rev = new StringBuffer(str);
-        rev.reverse();
-
-        int reva = Integer.parseInt(rev.toString());
-        System.out.println(reva);
-        return reva;
-    }
-
-
-    public static void main(String[] args) {
-        reverseDigits(number);
-
-        reverseDigits(212);
-    }
-}*/
