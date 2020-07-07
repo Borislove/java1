@@ -9,6 +9,9 @@ public static int reverseDigits(int number),
 Подсказки:
 для реализации задачи вспомните особенности деления в Java (в середине лекции "БНФ, константы, операторы, приоритеты").
 */
+
+
+//v2
 public class ReverseDigits {
 
     //только для 3-х
