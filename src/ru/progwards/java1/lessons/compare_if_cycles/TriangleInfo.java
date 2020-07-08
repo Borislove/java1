@@ -38,11 +38,11 @@ public class TriangleInfo {
             return false;
         }
         //сумма квадратов катетов равна квадрату гипотенузы
-        boolean side_c = (int) (sqrt(a) + sqrt(b)) > (int) sqrt(c);
-        boolean side_b = (int) (sqrt(a) + sqrt(c)) > (int) sqrt(b);
-        boolean side_a = (int) (sqrt(b) + sqrt(c)) > (int) sqrt(a);
+        boolean side_c = (int) (sqrt(a) + sqrt(b)) == (int) sqrt(c);
+        boolean side_b = (int) (sqrt(a) + sqrt(c)) == (int) sqrt(b);
+        boolean side_a = (int) (sqrt(b) + sqrt(c)) == (int) sqrt(a);
 
-        return side_a && side_b && side_c;
+        return side_a || side_b || side_c;
     }
 
     /*2.3 Реализовать функцию
@@ -55,7 +55,7 @@ public class TriangleInfo {
     }
 
     public static void main(String[] args) {
-        System.out.println(isTriangle(1, 2, 4));
+ /*       System.out.println(isTriangle(1, 2, 4));
         System.out.println(isTriangle(2, 2, 4));
         System.out.println(isTriangle(2, 2, 5));
         System.out.println(isTriangle(4, 2, 5));
@@ -68,6 +68,8 @@ public class TriangleInfo {
 
         System.out.println(isIsoscelesTriangle(2,2,3));
         System.out.println(isIsoscelesTriangle(1,2,3));
-        System.out.println(isIsoscelesTriangle(3,2,3));
+        System.out.println(isIsoscelesTriangle(3,2,3));*/
+
+        System.out.println(isRightTriangle(5, 7, 7));
     }
 }
