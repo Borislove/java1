@@ -2,8 +2,6 @@ package ru.progwards.java1.lessons.compare_if_cycles;
 
 //Задача 2. Класс TriangleInfo
 
-import static java.lang.Math.sqrt;
-
 public class TriangleInfo {
 
     /*2.1 Реализовать функцию
@@ -34,15 +32,16 @@ public class TriangleInfo {
     (сумма квадратов катетов равна квадрату гипотенузы).*/
     public static boolean isRightTriangle(int a, int b, int c) {
 
+        // TODO: 08.07.2020  SQRT это не квадрат!!!
         if (a <= 0 || b <= 0 || c <= 0) {
             return false;
         }
         //сумма квадратов катетов равна квадрату гипотенузы
-        boolean side_c = (int) (sqrt(a) + sqrt(b)) == (int) sqrt(c);
-        boolean side_b = (int) (sqrt(a) + sqrt(c)) == (int) sqrt(b);
-        boolean side_a = (int) (sqrt(b) + sqrt(c)) == (int) sqrt(a);
+        boolean side_c = a * a + b * b == c * c;
+        boolean side_b = a * a + c * c == b * b;
+        boolean side_a = b * b + c * c == a * a;
 
-        return side_a || side_b || side_c;
+        return side_c || side_b || side_a;
     }
 
     /*2.3 Реализовать функцию
@@ -70,6 +69,7 @@ public class TriangleInfo {
         System.out.println(isIsoscelesTriangle(1,2,3));
         System.out.println(isIsoscelesTriangle(3,2,3));*/
 
-        System.out.println(isRightTriangle(5, 7, 7));
+        //   System.out.println(isRightTriangle(5, 7, 7));
+        System.out.println(isRightTriangle(3, 4, 5));
     }
 }
