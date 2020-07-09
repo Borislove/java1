@@ -73,7 +73,7 @@ public class CyclesGoldenFibo {
 
 
         //15 первых чисел фибонначи
-        for (int i = 1; i <= 15; i++) {
+        for (int i = 1; i <= 14; i++) {
               System.out.println(i+ " = " +fiboNumber(i));
         }
     }
