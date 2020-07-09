@@ -2,8 +2,13 @@ package ru.progwards.java1.lessons.compare_if_cycles;
 
 //Задача 2. Класс TriangleInfo
 
-public class TriangleInfo {
+/**
+ * @author "Вечный студент"
+ */
 
+// v2 09.07.2020
+public class TriangleInfo {
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*2.1 Реализовать функцию
     public static boolean isTriangle(int a, int b, int c), которая возвращает true,
     если по данным трём сторонам (a, b, c) можно построить треугольник.
@@ -16,7 +21,6 @@ public class TriangleInfo {
             System.err.println("сторона не может быть меньше 0 или равнятся");
             return false;
         }
-
         //проверка сторон
         boolean side_a = b + c > a;
         boolean side_b = a + c > b;
@@ -25,6 +29,7 @@ public class TriangleInfo {
         return side_a && side_b && side_c;
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*2.2 Реализовать функцию
     public static boolean isRightTriangle(int a, int b, int c),
     которая возвращает true, если треугольник со сторонами a, b, c является прямоугольным.
@@ -32,7 +37,7 @@ public class TriangleInfo {
     (сумма квадратов катетов равна квадрату гипотенузы).*/
     public static boolean isRightTriangle(int a, int b, int c) {
 
-        // TODO: 08.07.2020  SQRT это не квадрат!!!
+        // TODO: 08.07.2020  SQRT это не квадрат!!!это корень...
         if (a <= 0 || b <= 0 || c <= 0) {
             return false;
         }
@@ -43,7 +48,7 @@ public class TriangleInfo {
 
         return side_c || side_b || side_a;
     }
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*2.3 Реализовать функцию
     public static boolean isIsoscelesTriangle(int a, int b, int c),
     которая возвращает true, если треугольник со сторонами a, b, c является равнобедренным.
@@ -53,6 +58,7 @@ public class TriangleInfo {
         return a == b || b == c || a == c;
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public static void main(String[] args) {
  /*       System.out.println(isTriangle(1, 2, 4));
         System.out.println(isTriangle(2, 2, 4));
