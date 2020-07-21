@@ -1,6 +1,6 @@
-package ru.progwards.java1.lessons.arrays;
+package ru.progwards.java1.lessons.reserve.arrays;
 
-/*Задача 2. Свой алгоритм сортировки, класс ArraySort
+/*Свой алгоритм сортировки, класс ArraySort
 
 2.1 Реализовать метод, сортирующий произвольный массив целых чисел:
 public static void sort(int[] a), по следующему алгоритму:
@@ -15,4 +15,17 @@ public static void sort(int[] a), по следующему алгоритму:
  Внутренний цикл начинается от i+1, и если a[i] > a[j], то нужно поменять элементы a[i] и a[j] местами. */
 
 public class ArraySort {
+
+    public static void sort(int[] a) {
+        int number = 0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i] > a[j]) {
+                    number = a[i];
+                    a[i] = a[j];
+                    a[j] = number;
+                }
+            }
+        }
+    }
 }
