@@ -38,7 +38,7 @@ public class Animal {
         I am <AnimalKind>, eat <FoodKind>*/
     ////////////////////////////////////////////////////////////////////
     public String toString() {
-        return "I am " + getKind() + ", " + getFoodKind();
+        return "I am " + getKind() + ", eat " + getFoodKind();
     }
 
     ////////////////////////////////////////////////////////////////////
