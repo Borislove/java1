@@ -1,4 +1,4 @@
-package ru.progwards.java1.lessons.classes;
+package ru.progwards.java1.lessons.reserve.classes;
 
 public class Duck extends Animal {
 
@@ -6,13 +6,13 @@ public class Duck extends Animal {
         super(weight);
     }
 
-    //1.8 public AnimalKind getKind(), который возвращает DUCK.
+    /*1.8 public AnimalKind getKind(), который возвращает DUCK.*/
     @Override
     public AnimalKind getKind() {
         return AnimalKind.DUCK;
     }
 
-    //1.9 public FoodKind getFoodKind(), который возвращает CORN
+    /*1.9 public FoodKind getFoodKind(), который возвращает CORN*/
     @Override
     public FoodKind getFoodKind() {
         return FoodKind.CORN;
@@ -24,4 +24,5 @@ public class Duck extends Animal {
     public double getFoodCoeff() {
         return 0.04;
     }
+
 }
