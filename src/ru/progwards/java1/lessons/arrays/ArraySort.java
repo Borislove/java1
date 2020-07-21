@@ -15,4 +15,8 @@ public static void sort(int[] a), по следующему алгоритму:
  Внутренний цикл начинается от i+1, и если a[i] > a[j], то нужно поменять элементы a[i] и a[j] местами. */
 
 public class ArraySort {
+
+    public static void sort(int[] a) {
+
+    }
 }
