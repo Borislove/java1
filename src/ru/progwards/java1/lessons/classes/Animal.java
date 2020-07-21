@@ -8,7 +8,7 @@ public class Animal {
     /*1.0 Реализовать конструктор
     public Animal(double weight), который сохраняет вес животного.*/
     ////////////////////////////////////////////////////////////////////
-    protected double weight;
+    private double weight;
 
     public Animal(double weight) {
         this.weight = weight;
