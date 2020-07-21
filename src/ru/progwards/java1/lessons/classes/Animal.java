@@ -1,6 +1,7 @@
 package ru.progwards.java1.lessons.classes;
 
 //v2
+//* private weight
 
 public class Animal {
 
