@@ -24,10 +24,7 @@ public class DIntArray {
     public void add(int num) {
         int[] array = new int[z.length + 1];  //инициализируем массив и увеличиваем размер на 1
         int[] arrayCopy = Arrays.copyOf(array, array.length); //копируем массив
-
-        for (int i = 0; i < arrayCopy.length; i++) {   //перебираем и добавляем в итый элемент хвост
-            arrayCopy[i] = num;
-        }
+        arrayCopy[arrayCopy.length-1] = num;
         System.out.println(Arrays.toString(arrayCopy));
     }
     //////////////////////////////////////////////////////////////////////
