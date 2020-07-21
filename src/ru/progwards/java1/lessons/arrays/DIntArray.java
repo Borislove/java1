@@ -2,14 +2,18 @@ package ru.progwards.java1.lessons.arrays;
 
 //Реализовать динамический, саморастущий массив целых чисел, по следующей спецификации:
 
+import java.util.Arrays;
+
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
+    private int[] z = {};              // z - целое число
 
+    //3.2 конструктор - по умолчанию.   --------????
 
-    //3.2 конструктор - по умолчанию.
-    public DIntArray() {
-    }
+    /*public DIntArray() {
+
+    }*/
 
     //////////////////////////////////////////////////////////////////////
     /*3.2 метод
@@ -18,7 +22,13 @@ public class DIntArray {
      Для этого нужно будет разместить новый массив нужного размера,
      скопировать в него старый, и добавить в хвост элемент num.*/
     public void add(int num) {
+        int[] array = new int[z.length + 1];  //инициализируем массив и увеличиваем размер на 1
+        int[] arrayCopy = Arrays.copyOf(array, array.length); //копируем массив
 
+        for (int i = 0; i < arrayCopy.length; i++) {   //перебираем и добавляем в итый элемент хвост
+            arrayCopy[i] = num;
+        }
+        System.out.println(Arrays.toString(arrayCopy));
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -51,9 +61,15 @@ public class DIntArray {
     /*3.5 метод
     public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
-        return 0; // TODO: 21.07.2020 заглуша 
+        return 0; // TODO: 21.07.2020 заглуша
     }
     //////////////////////////////////////////////////////////////////////
+
+    public static void main(String[] args) {
+        DIntArray dIntArray = new DIntArray();
+
+        dIntArray.add(2);
+    }
 }
 
 
