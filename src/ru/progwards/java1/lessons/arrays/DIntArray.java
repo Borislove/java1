@@ -7,12 +7,11 @@ import java.util.Arrays;
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
-    private int[] z = {};              // z - целое число
+    private int[] z = {1, 2, 3, 4};              // z - целое число
 
     //3.2 конструктор - по умолчанию.   --------????
     /*public DIntArray() {
     }*/
-
 
     /////////////////////////////////////////////////////////////
    /* private DIntArray(int[] z) {
@@ -20,11 +19,13 @@ public class DIntArray {
     }*/
     ////////////
     static int[] zTestAdd;   //массив после добавления num
+    private int num;
     //////////////////////////////////////////////////////////////
 
     private int[] getZ() {
         return z;
     }
+
 
     //////////////////////////////////////////////////////////////////////
     /*3.2 метод
@@ -34,6 +35,7 @@ public class DIntArray {
      скопировать в него старый, и добавить в хвост элемент num.*/
     public void add(int num) {
 
+        this.num = num;
         // int[] originalArray = new int[z.length];  // !!!! не длину надо, а значения)
         int[] originalArray = getZ();  //инициализируем массив
 
@@ -65,10 +67,7 @@ public class DIntArray {
      скопировать в него старый, c учетом того, что новый элемент
      окажется где-то в середине, и потом положить в нужный индекс элемент num.*/
     public void atInsert(int pos, int num) {
-        int[] arrayCopy = new int[z.length + 1];
-        System.arraycopy(z, pos, arrayCopy, pos + 1, z.length - pos);
-        arrayCopy[pos] = num;
-        z = arrayCopy;
+
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -89,7 +88,7 @@ public class DIntArray {
     /*3.5 метод
     public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
-        return 0;
+        return z[pos] = num;
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -107,7 +106,9 @@ public class DIntArray {
         DIntArray dIntArray = new DIntArray();
 
         //добавли значение
-        dIntArray.add(3);
+        dIntArray.add(99);
+
+        System.out.println(dIntArray.at(3));
     }
 }
 
