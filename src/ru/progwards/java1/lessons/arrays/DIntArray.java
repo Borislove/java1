@@ -82,7 +82,7 @@ public class DIntArray {
      скопировать в него старый, уже без элемента, который был в позиции pos.*/
     public void atDelete(int pos) {
         int[] originalArray = getZ();
-        z = Arrays.copyOf(originalArray, z.length - pos);
+        z = Arrays.copyOf(originalArray, z.length - pos - 1);
     }
     //////////////////////////////////////////////////////////////////////
 
