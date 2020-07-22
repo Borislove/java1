@@ -7,20 +7,24 @@ import java.util.Arrays;
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
-    private int[] z;              // z - целое число
+    private int[] z = {};              // z - целое число
 
     //3.2 конструктор - по умолчанию.   --------????
     /*public DIntArray() {
-
     }*/
-    private DIntArray(int[] z) {
+
+
+    /////////////////////////////////////////////////////////////
+   /* private DIntArray(int[] z) {
         this.z = z;
-    }
+    }*/
+    ////////////
+    static int[] zTestAdd;   //массив после добавления num
+    //////////////////////////////////////////////////////////////
 
     private int[] getZ() {
         return z;
     }
-
 
     //////////////////////////////////////////////////////////////////////
     /*3.2 метод
@@ -33,7 +37,8 @@ public class DIntArray {
         // int[] originalArray = new int[z.length];  // !!!! не длину надо, а значения)
         int[] originalArray = getZ();  //инициализируем массив
 
-        int[] arrayCopy = Arrays.copyOf(originalArray, this.z.length + 1);
+        //int[] arrayCopy = Arrays.copyOf(originalArray, this.z.length + 1);
+        int[] arrayCopy = Arrays.copyOf(originalArray, z.length + 1);
         //int[] arrayCopy = Arrays.copyOf(originalArray, originalArray.length + 1); //копируем массив и добавляем к длине 1
 
         arrayCopy[arrayCopy.length - 1] = num;   //отнимаем единицу от длины массива и пихаем туда num
@@ -44,6 +49,9 @@ public class DIntArray {
         //длины массивов
         System.out.println("originalArray lenght: " + originalArray.length);
         System.out.println("arrayCopy length: " + arrayCopy.length);
+
+        //тестовый массив
+        zTestAdd = arrayCopy;
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -84,9 +92,19 @@ public class DIntArray {
     //////////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
-        int[] z = {1, 2, 3, 4, 5};
-        DIntArray dIntArray = new DIntArray(z);
 
+        /////////////////////////////////////
+        //для конструктора
+        int k = 12;
+        int[] z = {1, 2, 3, 4, 5, 6, k};
+        //  DIntArray dIntArray = new DIntArray(z);
+        //сравнили на равенство
+        System.out.println(Arrays.equals(z, zTestAdd));
+        /////////////////////////////////////
+
+        DIntArray dIntArray = new DIntArray();
+
+        //добавли значение
         dIntArray.add(3);
     }
 }
