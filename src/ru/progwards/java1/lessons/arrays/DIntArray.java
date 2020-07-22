@@ -7,13 +7,20 @@ import java.util.Arrays;
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
-    private int[] z = {};              // z - целое число
+    private int[] z;              // z - целое число
 
     //3.2 конструктор - по умолчанию.   --------????
-
     /*public DIntArray() {
 
     }*/
+    private DIntArray(int[] z) {
+        this.z = z;
+    }
+
+    private int[] getZ() {
+        return z;
+    }
+
 
     //////////////////////////////////////////////////////////////////////
     /*3.2 метод
@@ -22,10 +29,21 @@ public class DIntArray {
      Для этого нужно будет разместить новый массив нужного размера,
      скопировать в него старый, и добавить в хвост элемент num.*/
     public void add(int num) {
-        int[] array = new int[z.length + 1];  //инициализируем массив и увеличиваем размер на 1
-        int[] arrayCopy = Arrays.copyOf(array, array.length); //копируем массив
-        arrayCopy[arrayCopy.length - 1] = num;
-        System.out.println(Arrays.toString(arrayCopy));
+
+        // int[] originalArray = new int[z.length];  // !!!! не длину надо, а значения)
+        int[] originalArray = getZ();  //инициализируем массив
+
+        int[] arrayCopy = Arrays.copyOf(originalArray, this.z.length + 1);
+        //int[] arrayCopy = Arrays.copyOf(originalArray, originalArray.length + 1); //копируем массив и добавляем к длине 1
+
+        arrayCopy[arrayCopy.length - 1] = num;   //отнимаем единицу от длины массива и пихаем туда num
+
+        System.out.println(Arrays.toString(originalArray));   //проверка значений в оригинале
+        System.out.println(Arrays.toString(arrayCopy));  //проверка значений в копии (добавлена длина на 1)
+
+        //длины массивов
+        System.out.println("originalArray lenght: " + originalArray.length);
+        System.out.println("arrayCopy length: " + arrayCopy.length);
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -37,10 +55,10 @@ public class DIntArray {
      скопировать в него старый, c учетом того, что новый элемент
      окажется где-то в середине, и потом положить в нужный индекс элемент num.*/
     public void atInsert(int pos, int num) {
-        int[] array = new int[z.length + 1];  //инициализируем массив и увеличиваем размер на 1
+        /*int[] array = new int[z.length + 1];  //инициализируем массив и увеличиваем размер на 1
         int[] arrayCopy = Arrays.copyOf(array, array.length); //копируем массив
         arrayCopy[arrayCopy.length - pos] = num;
-        System.out.println(Arrays.toString(arrayCopy));
+        System.out.println(Arrays.toString(arrayCopy));*/
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -66,9 +84,10 @@ public class DIntArray {
     //////////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
-        DIntArray dIntArray = new DIntArray();
+        int[] z = {1, 2, 3, 4, 5};
+        DIntArray dIntArray = new DIntArray(z);
 
-        dIntArray.add(2);
+        dIntArray.add(3);
     }
 }
 
