@@ -19,7 +19,8 @@ public class DIntArray {
     }*/
     ////////////
     static int[] zTestAdd;   //массив после добавления num
-    private int num;
+
+    private int value;
     //////////////////////////////////////////////////////////////
 
     private int[] getZ() {
@@ -35,7 +36,6 @@ public class DIntArray {
      скопировать в него старый, и добавить в хвост элемент num.*/
     public void add(int num) {
 
-        this.num = num;
         // int[] originalArray = new int[z.length];  // !!!! не длину надо, а значения)
         int[] originalArray = getZ();  //инициализируем массив
 
@@ -56,6 +56,8 @@ public class DIntArray {
         zTestAdd = arrayCopy;
 
         z = arrayCopy;
+
+        value = num;
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -89,7 +91,7 @@ public class DIntArray {
     public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
         //return z[pos] = num; //возвратил последнее значение
-        return z[0] = num;
+        return value;
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -107,9 +109,9 @@ public class DIntArray {
         DIntArray dIntArray = new DIntArray();
 
         //добавли значение
-        dIntArray.add(991);
+        dIntArray.add(99);
 
-        System.out.println(dIntArray.at(9));
+        System.out.println(dIntArray.at(6));
     }
 }
 
