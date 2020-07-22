@@ -63,10 +63,10 @@ public class DIntArray {
      скопировать в него старый, c учетом того, что новый элемент
      окажется где-то в середине, и потом положить в нужный индекс элемент num.*/
     public void atInsert(int pos, int num) {
-        /*int[] array = new int[z.length + 1];  //инициализируем массив и увеличиваем размер на 1
-        int[] arrayCopy = Arrays.copyOf(array, array.length); //копируем массив
-        arrayCopy[arrayCopy.length - pos] = num;
-        System.out.println(Arrays.toString(arrayCopy));*/
+        int[] arrayCopy = new int[z.length + 1];
+        System.arraycopy(z, pos, arrayCopy, pos + 1, z.length - pos);
+        arrayCopy[pos] = num;
+        z = arrayCopy;
     }
     //////////////////////////////////////////////////////////////////////
 
