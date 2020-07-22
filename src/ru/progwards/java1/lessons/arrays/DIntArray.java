@@ -7,11 +7,12 @@ import java.util.Arrays;
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
-
+    //выделяем память под массив!!!
     private int[] z = new int[]{};              // z - целое число
 
+    //private int[] z = {};              // <--- так не делать! веселье еще то...
 
-    //3.2 конструктор - по умолчанию.   --------????
+    //3.2 конструктор - по умолчанию.   --------???? по default
     /*public DIntArray() {
     }*/
 
@@ -20,10 +21,11 @@ public class DIntArray {
         this.z = z;
     }*/
     ////////////
-    static int[] zTestAdd;   //массив после добавления num
+    // static int[] zTestAdd;   //массив после добавления num
 
     //////////////////////////////////////////////////////////////
 
+    //надо же кудато воткнуть...
     private int[] getZ() {
         return z;
     }
@@ -79,7 +81,8 @@ public class DIntArray {
     Для этого нужно будет разместить новый массив нужного размера,
      скопировать в него старый, уже без элемента, который был в позиции pos.*/
     public void atDelete(int pos) {
-
+        int[] originalArray = getZ();
+        z = Arrays.copyOf(originalArray, z.length - pos);
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -97,22 +100,23 @@ public class DIntArray {
 
         /////////////////////////////////////
         //для конструктора
-        int k = 12;
-        int[] z = {1, 2, 3, 4, 5, 6, k};
+//        int k = 12;
+////        int[] z = {1, 2, 3, 4, 5, 6, k};
         //  DIntArray dIntArray = new DIntArray(z);
         //сравнили на равенство
-        System.out.println("equals " + Arrays.equals(z, zTestAdd));
+        // System.out.println("equals " + Arrays.equals(z, zTestAdd));
         /////////////////////////////////////
 
-        DIntArray dIntArray = new DIntArray();
 
+        DIntArray dIntArray = new DIntArray();
         //добавли значение
         int number = 10;
         dIntArray.add(number);
-
         dIntArray.add(number + 10);
 
-
+        System.out.println(Arrays.toString(dIntArray.getZ()));
+        dIntArray.atDelete(1);
+        System.out.println(Arrays.toString(dIntArray.getZ()));
     }
 }
 
