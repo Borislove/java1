@@ -87,7 +87,7 @@ public class DIntArray {
     /*3.5 метод
     public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
-        return 0; // TODO: 21.07.2020 заглуша
+        return z[pos];
     }
     //////////////////////////////////////////////////////////////////////
 
