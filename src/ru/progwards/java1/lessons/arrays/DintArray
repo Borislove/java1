@@ -7,9 +7,7 @@ import java.util.Arrays;
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
-
-    private int[] z = new int[]{};              // z - целое число
-
+    private int[] z = {};              // z - целое число
 
     //3.2 конструктор - по умолчанию.   --------????
     /*public DIntArray() {
@@ -53,7 +51,7 @@ public class DIntArray {
         System.out.println("arrayCopy length: " + arrayCopy.length);
 
         //тестовый массив
-        // zTestAdd = arrayCopy;
+        zTestAdd = arrayCopy;
 
         z = arrayCopy;
     }
@@ -101,18 +99,15 @@ public class DIntArray {
         int[] z = {1, 2, 3, 4, 5, 6, k};
         //  DIntArray dIntArray = new DIntArray(z);
         //сравнили на равенство
-        System.out.println("equals " + Arrays.equals(z, zTestAdd));
+        System.out.println(Arrays.equals(z, zTestAdd));
         /////////////////////////////////////
 
         DIntArray dIntArray = new DIntArray();
 
         //добавли значение
-        int number = 10;
-        dIntArray.add(number);
+        dIntArray.add(99);
 
-        dIntArray.add(number + 10);
-
-
+        System.err.println(dIntArray.at(6));
     }
 }
 
