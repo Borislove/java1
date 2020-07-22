@@ -88,7 +88,8 @@ public class DIntArray {
     /*3.5 метод
     public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
-        return z[pos] = num;
+        //return z[pos] = num; //возвратил последнее значение
+        return z[0] = num;
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -106,9 +107,9 @@ public class DIntArray {
         DIntArray dIntArray = new DIntArray();
 
         //добавли значение
-        dIntArray.add(99);
+        dIntArray.add(991);
 
-        System.out.println(dIntArray.at(3));
+        System.out.println(dIntArray.at(9));
     }
 }
 
