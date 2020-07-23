@@ -37,22 +37,21 @@ public class DIntArray {
      Для этого нужно будет разместить новый массив нужного размера,
      скопировать в него старый, и добавить в хвост элемент num.*/
     public void add(int num) {
-
         // int[] originalArray = new int[z.length];  // !!!! не длину надо, а значения)
-        int[] originalArray = getZ();  //инициализируем массив
+        //int[] originalArray = getZ();  //инициализируем массив
 
         //int[] arrayCopy = Arrays.copyOf(originalArray, this.z.length + 1);
-        int[] arrayCopy = Arrays.copyOf(originalArray, z.length + 1);
+        int[] arrayCopy = Arrays.copyOf(getZ(), getZ().length + 1);
         //int[] arrayCopy = Arrays.copyOf(originalArray, originalArray.length + 1); //копируем массив и добавляем к длине 1
 
         arrayCopy[arrayCopy.length - 1] = num;   //отнимаем единицу от длины массива и пихаем туда num
 
-        System.out.println(Arrays.toString(originalArray));   //проверка значений в оригинале
-        System.out.println(Arrays.toString(arrayCopy));  //проверка значений в копии (добавлена длина на 1)
+        //  System.out.println(Arrays.toString(originalArray));   //проверка значений в оригинале
+        //  System.out.println(Arrays.toString(arrayCopy));  //проверка значений в копии (добавлена длина на 1)
 
         //длины массивов
-        System.out.println("originalArray lenght: " + originalArray.length);
-        System.out.println("arrayCopy length: " + arrayCopy.length);
+        //  System.out.println("originalArray lenght: " + originalArray.length);
+        //  System.out.println("arrayCopy length: " + arrayCopy.length);
 
         //тестовый массив
         // zTestAdd = arrayCopy;
@@ -81,20 +80,19 @@ public class DIntArray {
     Для этого нужно будет разместить новый массив нужного размера,
      скопировать в него старый, уже без элемента, который был в позиции pos.*/
     public void atDelete(int pos) {
-        int[] originalArray = getZ();
-        int[] arrayCopy = Arrays.copyOf(originalArray, z.length - pos);
-        z = arrayCopy;
-
-        /*int[] arrayCopy = new int[z.length - 1];
-        System.arraycopy(z, pos + 1, arrayCopy, pos, z.length - pos - 1);
-        z = arrayCopy;*/
+        int[] arrayCopy = Arrays.copyOf(getZ(), getZ().length);
+        int[] arr = Arrays.copyOf(arrayCopy, arrayCopy.length - pos);
+        z = arr;
     }
-    //////////////////////////////////////////////////////////////////////
 
-    //////////////////////////////////////////////////////////////////////
+    /*
+        }
+        //////////////////////////////////////////////////////////////////////
 
-    /*3.5 метод
-    public int at(int pos) - возвращает элемент по индексу pos.*/
+        //////////////////////////////////////////////////////////////////////
+
+        /*3.5 метод
+        public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
         //return z[pos] = num; //возвратил последнее значение
         return z[pos];
