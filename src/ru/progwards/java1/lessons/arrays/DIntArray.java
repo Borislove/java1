@@ -38,7 +38,7 @@ public class DIntArray {
      скопировать в него старый, и добавить в хвост элемент num.*/
     public void add(int num) {
         // int[] originalArray = new int[z.length];  // !!!! не длину надо, а значения)
-        //int[] originalArray = getZ();  //инициализируем массив
+        int[] originalArray = getZ();  //инициализируем массив
 
         //int[] arrayCopy = Arrays.copyOf(originalArray, this.z.length + 1);
         int[] arrayCopy = Arrays.copyOf(getZ(), getZ().length + 1);
@@ -69,6 +69,7 @@ public class DIntArray {
      окажется где-то в середине, и потом положить в нужный индекс элемент num.*/
     public void atInsert(int pos, int num) {
 
+
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -81,8 +82,27 @@ public class DIntArray {
      скопировать в него старый, уже без элемента, который был в позиции pos.*/
     public void atDelete(int pos) {
         int[] arrayCopy = Arrays.copyOf(getZ(), getZ().length);
-        int[] arr = Arrays.copyOf(arrayCopy, arrayCopy.length - pos);
-        z = arr;
+
+        //найдем элемент pos, окажется в начале
+        for (int i = pos; i < arrayCopy.length; i++) {
+            arrayCopy[i - pos] = arrayCopy[i];
+
+        }
+        System.out.println(Arrays.toString(arrayCopy));
+        System.out.println(Arrays.toString(z));
+
+        //развернем массив pos окажется в конце
+        int[] reversedArray = new int[arrayCopy.length];
+        for (int i = 0; i < arrayCopy.length; i++) {
+            reversedArray[arrayCopy.length - 1 - i] = arrayCopy[i];
+
+        }
+        System.out.println(Arrays.toString(reversedArray));
+
+        //удалим последний элемент
+        int[] end = Arrays.copyOf(reversedArray, reversedArray.length - 1);
+        z = end;
+        System.out.println(Arrays.toString(z));
     }
 
     /*
@@ -113,12 +133,20 @@ public class DIntArray {
 
         DIntArray dIntArray = new DIntArray();
         //добавли значение
-        int number = 10;
-        dIntArray.add(number);
-        dIntArray.add(number + 10);
+        // int number = 10;
+        //dIntArray.add(number);
+        //dIntArray.add(number + 10);
 
-        System.out.println(Arrays.toString(dIntArray.getZ()));
-        dIntArray.atDelete(1);
+        //System.out.println(Arrays.toString(dIntArray.getZ()));
+
+
+        int test[] = {6, -48, 24, -35, 48, 78, 8, 58, -31, 2, -28, 90, -9, 51, -11, -58, 31};
+        for (int i = 0; i < test.length; i++) {
+
+            dIntArray.add(test[i]);
+        }
+
+        dIntArray.atDelete(5); //78
         System.out.println(Arrays.toString(dIntArray.getZ()));
     }
 }
