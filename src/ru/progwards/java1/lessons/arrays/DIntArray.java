@@ -81,13 +81,13 @@ public class DIntArray {
     Для этого нужно будет разместить новый массив нужного размера,
      скопировать в него старый, уже без элемента, который был в позиции pos.*/
     public void atDelete(int pos) {
-        /*int[] originalArray = getZ();
-        z = Arrays.copyOf(originalArray, z.length - pos - 1);
-        */
-
-        int[] arrayCopy = new int[z.length - 1];
-        System.arraycopy(z, pos + 1, arrayCopy, pos, z.length - pos - 1);
+        int[] originalArray = getZ();
+        int[] arrayCopy = Arrays.copyOf(originalArray, z.length - pos);
         z = arrayCopy;
+
+        /*int[] arrayCopy = new int[z.length - 1];
+        System.arraycopy(z, pos + 1, arrayCopy, pos, z.length - pos - 1);
+        z = arrayCopy;*/
     }
     //////////////////////////////////////////////////////////////////////
 
