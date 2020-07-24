@@ -7,11 +7,13 @@ import java.util.Arrays;
 public class DIntArray {
 
     //3.1 в классе разместить private переменную - массив целых чисел.
-    private static int[] z = new int[]{};              // z - целое число
+    private int[] z = new int[]{};              // z - целое число
 
     //3.2 конструктор - по умолчанию.   ------- default
 
-    private static int[] arrayCopy = new int[z.length + 1];  //копия оригинала
+    private int[] getZ() {
+        return z;
+    }
 
     //////////////////////////////////////////////////////////////////////
     /*3.2 метод
@@ -20,6 +22,7 @@ public class DIntArray {
      Для этого нужно будет разместить новый массив нужного размера,
      скопировать в него старый, и добавить в хвост элемент num.*/
     public void add(int num) {
+        int[] arrayCopy = Arrays.copyOf(getZ(), getZ().length + 1); //добавляем длину
         arrayCopy[arrayCopy.length - 1] = num;   //последний индекс= num
         z = arrayCopy;
     }
@@ -33,6 +36,7 @@ public class DIntArray {
      скопировать в него старый, c учетом того, что новый элемент
      окажется где-то в середине, и потом положить в нужный индекс элемент num.*/
     public void atInsert(int pos, int num) {
+        int[] arrayCopy = new int[z.length + 1];
         for (int i = 0; i < arrayCopy.length; i++) {
             if (i < pos) {
                 arrayCopy[i] = z[i];
@@ -43,7 +47,7 @@ public class DIntArray {
             }
         }
         z = arrayCopy;
-        //  System.out.println(Arrays.toString(z));
+      //  System.out.println(Arrays.toString(z));
     }
     //////////////////////////////////////////////////////////////////////
 
@@ -55,16 +59,15 @@ public class DIntArray {
     Для этого нужно будет разместить новый массив нужного размера,
      скопировать в него старый, уже без элемента, который был в позиции pos.*/
     public void atDelete(int pos) {
-        //int[] arrayCopy = new int[z.length - 1];
-        int[] arrayCopy1 = Arrays.copyOf(arrayCopy, arrayCopy.length - 2);
+        int[] arrayCopy = new int[getZ().length - 1];
         for (int i = 0; i < z.length; i++) {
             if (i < pos) {
-                arrayCopy1[i] = z[i];
+                arrayCopy[i] = z[i];
             } else if (i > pos) {
-                arrayCopy1[i - 1] = z[i];
+                arrayCopy[i - 1] = z[i];
             }
         }
-        z = arrayCopy1;
+        z = arrayCopy;
     }
 
     //////////////////////////////////////////////////////////////////////
@@ -83,14 +86,20 @@ public class DIntArray {
         DIntArray dIntArray = new DIntArray();
 
         int test[] = {6, -48, 24, -35, 48, 78, 8, 58, -31, 2, -28, 90, -9, 51, -11, -58, 31};
-       /* for (int i = 0; i < test.length; i++) {
+        for (int i = 0; i < test.length; i++) {
             dIntArray.add(test[i]);
-        }*/
+        }
 
-        //   dIntArray.atInsert(10, 999);
+        // dIntArray.atDelete(5); //78
+        System.out.println(Arrays.toString(dIntArray.getZ()));
 
-        dIntArray.add(10);
-        System.out.println(Arrays.toString(z));
+        //  dIntArray.atDelete(1); //78
+        System.out.println(Arrays.toString(dIntArray.getZ()));
+
+        // dIntArray.atDelete(5); //
+        System.out.println(Arrays.toString(dIntArray.getZ()));
+
+        dIntArray.atInsert(10, 999);
     }
 }
 
