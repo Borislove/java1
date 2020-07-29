@@ -4,9 +4,7 @@ package ru.progwards.java1.lessons.interfaces;
 и переделать сортировку массива целых чисел на сортировку через интерфейс
 CompareWeight public static void sort(CompareWeight[] a)
 */
-public class TestClass3 {
-
-    private double weight;
+public class ArraySort {
 
     public static void sort(CompareWeight[] a) {
 
