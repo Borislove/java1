@@ -171,7 +171,6 @@ public class Animal implements FoodCompare, CompareWeight {
         }
         return CompareResult.NULL;
     }
-
     //---------------------------MAIN----------------------------------------------
     public static void main(String[] args) {
       /*  System.out.println(new Hamster(1D).equals(new Hamster(2D)));

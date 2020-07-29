@@ -4,12 +4,11 @@ package ru.progwards.java1.lessons.interfaces;
 
 public class Food implements CompareWeight {
 
-
     //----------------------------------------------------------------------------------------
     //3.6 В классе Food разместить приватную переменную int weight - вес еды в граммах,
-    // реализовать в классе конструктор, принимающий и устанавливающий значение веса.
     private int weight;
 
+    // реализовать в классе конструктор, принимающий и устанавливающий значение веса.
     public Food(int weight) {
         this.weight = weight;
 
@@ -24,6 +23,7 @@ public class Food implements CompareWeight {
     }
     //----------------------------------------------------------------------------------------
 
+    //3.7 Для класса Food реализовать интерфейс CompareWeight..Сравнение сделать на основе веса еды.
     @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
 

@@ -3,7 +3,7 @@ package ru.progwards.java1.lessons.interfaces;
 //3.1 Создать интерфейс CompareWeight
 interface CompareWeight {
 
-    double getWeight();
+   double getWeight();
 
     //3.2 В нем создать public enum CompareResult, со значениями LESS, EQUAL, GREATER
     public enum CompareResult {
