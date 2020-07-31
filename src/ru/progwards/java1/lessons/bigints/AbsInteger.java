@@ -13,42 +13,50 @@ public class AbsInteger {
      возвращать приведенное к строке значение соответствующего классу типа.*/
 
 
-    class ByteInteger extends AbsInteger {
-        byte value;
+    /*2.3 У класса AbsInteger реализовать метод static AbsInteger add(AbsInteger num1, AbsInteger num2)
+      - который вычисляет сумму num1 и num2. При этом надо учесть, что num1 и num2 могут быть разных типов.
+      Для того, чтобы это реализовать продумать, какие дополнительные методы нужно сделать у AbsInteger и его потомков.*/
+   /* static AbsInteger add(AbsInteger num1, AbsInteger num2) {
 
-        public ByteInteger(byte value) {
-            this.value = value;
-        }
+    }*/
+}
 
-        @Override
-        public String toString() {
-            return Byte.toString(value);
-        }
+class ByteInteger extends AbsInteger {
+    byte value;
+
+    public ByteInteger(byte value) {
+        this.value = value;
     }
 
-    class ShortInteger extends AbsInteger {
-        short value;
-
-        public ShortInteger(short value) {
-            this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return Short.toString(value);
-        }
-    }
-
-    class IntInteger extends AbsInteger {
-        int value;
-
-        public IntInteger(int value) {
-            this.value = value;
-        }
-
-        @Override
-        public String toString() {
-            return Integer.toString(value);
-        }
+    @Override
+    public String toString() {
+        return Byte.toString(value);
     }
 }
+
+class ShortInteger extends AbsInteger {
+    short value;
+
+    public ShortInteger(short value) {
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return Short.toString(value);
+    }
+}
+
+class IntInteger extends AbsInteger {
+    int value;
+
+    public IntInteger(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return Integer.toString(value);
+    }
+}
+
