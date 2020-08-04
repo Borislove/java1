@@ -23,7 +23,10 @@ public class Test {
 
 
         //-------------------test----------------------------------
-        Pyramid pyramid1Test = new Pyramid(new IntNumber(315));
-        System.out.println("ru/progwards/java1/lessons/test " + pyramid1Test.volume());
+        Pyramid pyramid1Test = new Pyramid(new IntNumber(588));
+        System.out.println("test: " + pyramid1Test.volume()   + " need: 67765824");
+
+
+
     }
 }

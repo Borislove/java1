@@ -1,9 +1,8 @@
 package ru.progwards.java1.lessons.abstractnum;
 
 public class Number {
-
     /*1.1 public Number mul(Number num), который будет возвращать произведение содержимого класса на num.
-    Для класса Number - null*/
+             Для класса Number - null*/
     public Number mul(Number num) {
         return null;
     }

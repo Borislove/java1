@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.abstractnum;
 
 public class Figure3D {
 
-    protected Number segment;
+    Number segment;
 
     /*4.1 конструктор
     public Figure3D(Number segment), который будет сохранять в

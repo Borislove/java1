@@ -13,21 +13,15 @@ public class LineCount {
         int count = 0; //подсчет строк
         try {
             FileReader reader = new FileReader(fileName);
-            Scanner scanner = new Scanner(reader);
-
-            try {
+            try (reader; Scanner scanner = new Scanner(reader)) {
                 while (scanner.hasNextLine()) {
                     String strFromFile = scanner.nextLine();
-
-                    if (strFromFile.length() == 0) {
+                    if (strFromFile.length() == 0) {   //подсчет ПУСТЫХ строк
                         count++;
                     }
                 }
-            } finally {
-                reader.close();
-                scanner.close();
-            }
             return count;
+            }
         } catch (IOException e) {
             return -1;
         }

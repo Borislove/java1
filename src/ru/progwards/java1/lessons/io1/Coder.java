@@ -14,7 +14,10 @@ import java.util.Scanner;
  с именем logName вывести название ошибки через метод класса Exception - getMessage()*/
 
 public class Coder {
-    public static void codeFile(String inFileName, String outFileName, char[] code,
+
+    public static void codeFile(String inFileName,
+                                String outFileName,
+                                char[] code,
                                 String logName) {
         try {
             //запись ошибок в лог
@@ -35,7 +38,6 @@ public class Coder {
                     String strFromFile = scanner.nextLine();
 
 
-
                     for (int i = 0; i < strFromFile.length(); i++) {
                         int a = 0;
                         // in.write(strFromFile + "\n");
@@ -49,8 +51,6 @@ public class Coder {
                     }
                 }
                 //*****************************************************************
-
-
                 in.close();
                 scanner.close();
 

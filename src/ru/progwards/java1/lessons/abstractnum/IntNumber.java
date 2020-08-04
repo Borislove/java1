@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.abstractnum;
 
 public class IntNumber extends Number {
 
-    private int value;
+    private int value ;
 
     /*2.1 конструктор
     public IntNumber(int num), который будет сохранять в классе значение целого числа.*/
