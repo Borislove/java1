@@ -1,8 +1,6 @@
 package ru.progwards.java1.lessons.io1;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -14,7 +12,79 @@ import java.util.Scanner;
  оригинального файла соответствует символ code[(int)symbol] выходного файла. В случае ошибок, в файл
  с именем logName вывести название ошибки через метод класса Exception - getMessage()*/
 
+
+
 public class Coder {
+
+    public static void codeFile1(String inFileName, String outFileName, char[] code, String logName) {
+        try (
+                FileInputStream fIn = new FileInputStream(inFileName);
+                BufferedInputStream bIn = new BufferedInputStream(fIn);
+                FileOutputStream fOut = new FileOutputStream(inFileName);
+                BufferedOutputStream bOut = new BufferedOutputStream(fOut);
+        ) {
+            int i;
+            while ((i = bIn.read()) != -1) {
+                bOut.write(code[i]);
+            }
+        } catch (Throwable e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static void codeFile(String inFileName, String outFileName, char[] code, String logName) {
+        FileInputStream fIn = null;
+        BufferedInputStream bIn = null;
+        FileOutputStream fOut = null;
+        BufferedOutputStream bOut = null;
+        try {
+            fIn = new FileInputStream(inFileName);
+            bIn = new BufferedInputStream(fIn);
+            fOut = new FileOutputStream(outFileName);
+            bOut = new BufferedOutputStream(fOut);
+            int i;
+            while ((i = bIn.read()) != -1) {
+                bOut.write(code[i]);
+            }
+        } catch (Throwable e) {
+            FileWriter fEOut = null;
+            BufferedWriter bEOut = null;
+            try {
+                fEOut = new FileWriter(logName, true);
+                bEOut = new BufferedWriter(fEOut);
+                bEOut.write(e.getMessage());
+            } catch (Throwable e2) {
+            } finally {
+                try {
+                    if (bEOut != null) bEOut.close();
+                    if (fEOut != null) fEOut.close();
+                } catch (Throwable e3) {
+                }
+            }
+        } finally {
+            try {
+                if (bOut != null) bOut.close();
+                if (fOut != null) fOut.close();
+                if (bIn != null) bIn.close();
+                if (fIn != null) fIn.close();
+            } catch (Throwable e) {
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        char[] code = new char[256];
+        //for (int i = 0; i < 256; i++) code[i] = (char)i;
+        for (int i = 0; i < 256; i++) code[i] = (char) (Character.isDigit((char) i) ? i + 1 : i);
+        codeFile("src\\ru\\progwards\\java1\\lessons\\io1\\Coder1.txt",
+                "src\\ru\\progwards\\java1\\lessons\\io1\\Coder.txt",
+                code,
+                "src\\ru\\progwards\\java1\\lessons\\io1\\Coder.log");
+    }
+
+}
+
+/*public class Coder {
 
     public static void codeFile(String inFileName,
                                 String outFileName,
@@ -37,7 +107,7 @@ public class Coder {
                     String str = scanner.nextLine();
                     System.out.println(str);
 
-                    char[] charsIn = str.toCharArray();
+                    char[] charsIn = str.toCharArray(); //преобразование оригинального текста в массив символов
                     System.out.println(Arrays.toString(charsIn));
 
                     for (int i = 0; i < charsIn.length; i++) {
@@ -45,12 +115,12 @@ public class Coder {
                         charsIn[i] = code[i];
                         in.write(code[i]);
                     }
-                        //System.out.println(Arrays.toString(code));
-                        System.out.println(Arrays.toString(charsIn));
+                    //System.out.println(Arrays.toString(code));
+                    System.out.println(Arrays.toString(charsIn));
 
 
-                    /*for (Character c : code)
-                        in.write((int) c);*/
+                    *//*for (Character c : code)
+                        in.write((int) c);*//*
                 }
 
 
@@ -64,6 +134,7 @@ public class Coder {
                 //*****************************************************************
                 in.close();
                 scanner.close();
+                readerOriginal.close();
 
             } catch (Exception e) {
                 error.write(e.getMessage());
@@ -85,7 +156,7 @@ public class Coder {
         for (int i = 0; i < 256; i++) code[i] = (char) (Character.isDigit((char) i) ? i + 1 : i);
         codeFile("io1.txt", "io1_OutFile.txt", code, "log.txt");
 
-        /*char a = 'b';
-        System.out.println((int) a);*/
+        *//*char a = 'b';
+        System.out.println((int) a);*//*
     }
-}
+}*/
