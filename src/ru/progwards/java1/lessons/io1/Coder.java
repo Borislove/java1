@@ -36,7 +36,7 @@ public class Coder {
                     System.out.println(str);
 
                     for (Character c : code)
-                        in.write(c);
+                        in.write((int) c);
                 }
 
 
