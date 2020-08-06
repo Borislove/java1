@@ -19,15 +19,27 @@ public class Coder {
                                 String outFileName,
                                 char[] code,
                                 String logName) {
+
         try {
             //запись ошибок в лог
             FileWriter error = new FileWriter(logName);
+
             //копия файла
             FileWriter in = new FileWriter(outFileName);
+
             try {
+                //прочитать файл inFileName
+                FileReader readerOriginal = new FileReader(inFileName);
+                Scanner scanner = new Scanner(readerOriginal);
+                while (scanner.hasNextLine()) {
+                    String str = scanner.nextLine();
+                    System.out.println(str);
+                }
+
+
                 //чтение
                 FileReader reader = new FileReader(inFileName);
-                Scanner scanner = new Scanner(reader);
+                //   Scanner scanner = new Scanner(reader);
 
 
                 //*****************************************************************
@@ -59,11 +71,9 @@ public class Coder {
                 error.close();
                 throw new RuntimeException(e);
             }
-        } catch (
-                Exception e) {
-            throw new RuntimeException(e);
+        } catch (IOException e) {
+            e.getMessage();
         }
-
     }
 
     public static void main(String[] args) throws IOException {
