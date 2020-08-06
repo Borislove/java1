@@ -16,22 +16,6 @@ import java.util.Scanner;
 
 public class Coder {
 
-    public static void codeFile1(String inFileName, String outFileName, char[] code, String logName) {
-        try (
-                FileInputStream fIn = new FileInputStream(inFileName);
-                BufferedInputStream bIn = new BufferedInputStream(fIn);
-                FileOutputStream fOut = new FileOutputStream(inFileName);
-                BufferedOutputStream bOut = new BufferedOutputStream(fOut);
-        ) {
-            int i;
-            while ((i = bIn.read()) != -1) {
-                bOut.write(code[i]);
-            }
-        } catch (Throwable e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
     public static void codeFile(String inFileName, String outFileName, char[] code, String logName) {
         FileInputStream fIn = null;
         BufferedInputStream bIn = null;
@@ -76,7 +60,7 @@ public class Coder {
         char[] code = new char[256];
         //for (int i = 0; i < 256; i++) code[i] = (char)i;
         for (int i = 0; i < 256; i++) code[i] = (char) (Character.isDigit((char) i) ? i + 1 : i);
-        codeFile("src\\ru\\progwards\\java1\\lessons\\io1\\Coder1.txt",
+        codeFile("src\\ru\\progwards\\java1\\lessons\\io1\\Coder.java",
                 "src\\ru\\progwards\\java1\\lessons\\io1\\Coder.txt",
                 code,
                 "src\\ru\\progwards\\java1\\lessons\\io1\\Coder.log");
