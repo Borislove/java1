@@ -34,6 +34,8 @@ public class Coder {
                 while (scanner.hasNextLine()) {
                     String str = scanner.nextLine();
                     System.out.println(str);
+
+                    in.write(str);
                 }
 
 
