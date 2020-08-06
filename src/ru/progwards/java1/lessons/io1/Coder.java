@@ -35,7 +35,8 @@ public class Coder {
                     String str = scanner.nextLine();
                     System.out.println(str);
 
-                    in.write(str);
+                    for (Character c : code)
+                        in.write(c);
                 }
 
 
@@ -45,25 +46,7 @@ public class Coder {
 
 
                 //*****************************************************************
-                while (scanner.hasNextLine()) {
 
-                    //*while (scanner.hasNext()) {
-
-                    String strFromFile = scanner.nextLine();
-
-
-                    for (int i = 0; i < strFromFile.length(); i++) {
-                        int a = 0;
-                        // in.write(strFromFile + "\n");
-                        for (char value : code) {
-                            //    System.out.println((int) value);
-                            a += value;
-//                            System.out.println("\n");
-                            // in.write("" + Integer.valueOf(a));   //строка
-                            in.write("" + Integer.valueOf(a) + "\n");   //столбец
-                        }
-                    }
-                }
                 //*****************************************************************
                 in.close();
                 scanner.close();
