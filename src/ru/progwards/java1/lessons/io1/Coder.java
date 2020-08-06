@@ -3,6 +3,7 @@ package ru.progwards.java1.lessons.io1;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 // import java.io.Closeable;
@@ -20,6 +21,7 @@ public class Coder {
                                 char[] code,
                                 String logName) {
 
+
         try {
             //запись ошибок в лог
             FileWriter error = new FileWriter(logName);
@@ -35,8 +37,20 @@ public class Coder {
                     String str = scanner.nextLine();
                     System.out.println(str);
 
-                    for (Character c : code)
-                        in.write((int) c);
+                    char[] charsIn = str.toCharArray();
+                    System.out.println(Arrays.toString(charsIn));
+
+                    for (int i = 0; i < charsIn.length; i++) {
+                        //code[i] = charsIn[i];
+                        charsIn[i] = code[i];
+                        in.write(code[i]);
+                    }
+                        //System.out.println(Arrays.toString(code));
+                        System.out.println(Arrays.toString(charsIn));
+
+
+                    /*for (Character c : code)
+                        in.write((int) c);*/
                 }
 
 
