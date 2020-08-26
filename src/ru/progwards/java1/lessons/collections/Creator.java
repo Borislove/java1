@@ -13,7 +13,7 @@ public class Creator {
      последовательностью четных возрастающих чисел начиная с 2, количество элементов в коллекции n*/
     public static Collection<Integer> fillEven(int n) {
 
-        ArrayList<Integer> list = new ArrayList(n);
+        ArrayList<Integer> list = new ArrayList();
         list.add(0, 2);
 
         if (n % 2 != 0) {
@@ -29,7 +29,7 @@ public class Creator {
     public static Collection<Integer> fillOdd(int n) - создать коллекцию и заполнить
      последовательностью нечетных убывающих чисел, минимальное число в коллекции 1, количество элементов в коллекции n*/
     public static Collection<Integer> fillOdd(int n) {
-        ArrayList<Integer> list = new ArrayList(n);
+        ArrayList<Integer> list = new ArrayList();
         list.add(0, 1);
 
         if (n % 3 != 0) {
