@@ -14,14 +14,13 @@ public class Creator {
      последовательностью четных возрастающих чисел начиная с 2, количество элементов в коллекции n*/
     public static Collection<Integer> fillEven(int n) {
 
-        List<Integer> list = new ArrayList();
-
-        for (int i = 2; i <= n; i++) {
-            if (i % 2 == 0) {
-                list.add(i);
-            }
+        List<Integer> arrayList = new ArrayList();
+        int num = 0;
+        for (int i = 0; i < n; i++) {
+            num += 2;
+            arrayList.add(num);
         }
-        return list;
+        return arrayList;
     }
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -31,13 +30,13 @@ public class Creator {
     public static Collection<Integer> fillOdd(int n) - создать коллекцию и заполнить
      последовательностью нечетных убывающих чисел, минимальное число в коллекции 1, количество элементов в коллекции n*/
     public static Collection<Integer> fillOdd(int n) {
-        List<Integer> list = new ArrayList(n);
-        list.add(0, 1);
-
-        if (n % 3 != 0) {
-            list.add(n);
+        List<Integer> arrayList = new ArrayList();
+        int num = 0;
+        for (int i = 0; i < n; i++) {
+            num += 3;
+            arrayList.add(num);
         }
-        return list;
+        return arrayList;
     }
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -68,3 +67,4 @@ public class Creator {
         //  System.out.println(fillEven(14));
     }
 }
+
