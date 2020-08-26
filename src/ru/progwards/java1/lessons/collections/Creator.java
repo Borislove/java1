@@ -4,6 +4,7 @@ package ru.progwards.java1.lessons.collections;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 public class Creator {
 
@@ -13,11 +14,12 @@ public class Creator {
      последовательностью четных возрастающих чисел начиная с 2, количество элементов в коллекции n*/
     public static Collection<Integer> fillEven(int n) {
 
-        ArrayList<Integer> list = new ArrayList();
-        list.add(0, 2);
+        List<Integer> list = new ArrayList();
 
-        if (n % 2 != 0) {
-            list.add(n);
+        for (int i = 2; i <= n; i++) {
+            if (i % 2 == 0) {
+                list.add(i);
+            }
         }
         return list;
     }
@@ -29,7 +31,7 @@ public class Creator {
     public static Collection<Integer> fillOdd(int n) - создать коллекцию и заполнить
      последовательностью нечетных убывающих чисел, минимальное число в коллекции 1, количество элементов в коллекции n*/
     public static Collection<Integer> fillOdd(int n) {
-        ArrayList<Integer> list = new ArrayList();
+        List<Integer> list = new ArrayList(n);
         list.add(0, 1);
 
         if (n % 3 != 0) {
@@ -54,12 +56,15 @@ public class Creator {
 
     public static void main(String[] args) {
 
-        ArrayList list = new ArrayList();
+     /*   ArrayList list = new ArrayList();
         for (int i = 0; i < 10; i++) {
             list.add(i);
         }
         System.out.println(list);
 
-        fillEven(10);
+        fillEven(10);*/
+
+        fillEven(14);
+        //  System.out.println(fillEven(14));
     }
 }
