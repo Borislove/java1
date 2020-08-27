@@ -35,14 +35,21 @@ public class Creator {
         }
         return arrayList;*/
         //--------------------------------------
+
         List<Integer> linkedList = new LinkedList();
+
+        // int num = 0;
         for (int i = 0; i < n; i++) {
             linkedList.add(i + 1);
         }
+
         //for (Iterator<Integer> iterator = linkedList.iterator(); iterator.hasNext(); ) {
         linkedList.removeIf(intObj -> intObj % 2 == 0);
-        // System.out.println(linkedList);
+
+        System.out.println(linkedList);
         return linkedList;
+
+        //--------------------------------------------
     }
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
