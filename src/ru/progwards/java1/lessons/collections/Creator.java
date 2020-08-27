@@ -1,10 +1,7 @@
 package ru.progwards.java1.lessons.collections;
 
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Creator {
 
@@ -30,13 +27,22 @@ public class Creator {
     public static Collection<Integer> fillOdd(int n) - создать коллекцию и заполнить
      последовательностью нечетных убывающих чисел, минимальное число в коллекции 1, количество элементов в коллекции n*/
     public static Collection<Integer> fillOdd(int n) {
-        List<Integer> arrayList = new ArrayList();
-        int num = 0;
+        // List<Integer> arrayList = new ArrayList();
+       /* int num = 0;
         for (int i = 0; i < n; i++) {
             num += 3;
             arrayList.add(num);
         }
-        return arrayList;
+        return arrayList;*/
+        //--------------------------------------
+        List<Integer> linkedList = new LinkedList();
+        for (int i = 0; i < n; i++) {
+            linkedList.add(i + 1);
+        }
+        //for (Iterator<Integer> iterator = linkedList.iterator(); iterator.hasNext(); ) {
+        linkedList.removeIf(intObj -> intObj % 2 == 0);
+        // System.out.println(linkedList);
+        return linkedList;
     }
     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -63,8 +69,10 @@ public class Creator {
 
         fillEven(10);*/
 
-        fillEven(14);
+        // fillEven(14);
         //  System.out.println(fillEven(14));
+
+        fillOdd(15);
     }
 }
 
