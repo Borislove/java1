@@ -1,53 +1,68 @@
 package ru.progwards.java1.lessons.basics;
 
-/*Задача 1. Класс ReverseDigits
-1.1 Реализовать функцию
-public static int reverseDigits(int number),
-которая получает параметром number трёхзначное положительное число,
- а вернуть должна число в котором цифры идут в обратном порядке (например, если на вход передаётся 123, то функция должна вернуть 321).
+/*1.1 Реализовать функцию
+public static int reverseDigits(int number), которая получает параметром number трёхзначное положительное число,
+а вернуть должна число в котором цифры идут в обратном порядке (например, если на вход передаётся 123, то функция должна вернуть 321).
 
-Подсказки:
-для реализации задачи вспомните особенности деления в Java (в середине лекции "БНФ, константы, операторы, приоритеты").
-*/
+Рекомендации:
+для реализации задачи вспомните особенности деления в Java (в середине лекции "БНФ, константы, операторы, приоритеты")
+Для тестирования решения используйте функцию main, и проверьте как минимум 3 значения, например 123, 456, 789*/
 
-
-//v2
 public class ReverseDigits {
 
-    //только для 3-х
     public static int reverseDigits(int number) {
+        if (checkNum(number)) {
+            return unit(number) + dozens(number) + hundred(number);
+        } else
+            return 0;
+    }
 
-        System.err.println("original number: " + number);
+    //единицыл
+    private static int unit(int number) {
+        return number % 10 * 100;
+    }
 
-        //1 число 2 индекс (конец)
-        int oneNumber = number % 10;
-        System.out.println("oneNumber = " + oneNumber);
-        String oneNumberString = Integer.toString(oneNumber);  //преобразовали в строку
+    //десятки
+    private static int dozens(int number) {
+        return number / 10 % 10 * 10;
+    }
 
-        //2 число 1 индекс (не меняется) преобразовать не обязательно
-        int twoNumber = number % 100 / 10;
-        System.out.println("twoNumber = " + twoNumber);   //2 число 1 элемент
-        String twoNumberString = Integer.toString(twoNumber); //преобразовали в строку
+    //сотни
+    private static int hundred(int number) {
+        return number / 100;
+    }
 
-        //3 число 0 индекс
-        int threeNumber = number / 100;
-        System.out.println("threeNumber = " + threeNumber);
-        String threeNumberString = Integer.toString(threeNumber); //преобразовали в строку
+    //проверка числа
+    public static boolean checkNum(int number) {
 
-        //склеивание строк
-        //String strResult = (oneNumberString + twoNumberString +threeNumberString);   //3 строки
-        String strResult = (oneNumberString + twoNumber + threeNumberString);   // строка + 1 число + строка
-        System.out.println("strResult = " + strResult);
+//   TODO: 12.08.2021 String.valueOf(number).length() // оболочка
+        if (Integer.toString(number).length() == 3) {
+            return true;
+        } else
+            System.err.println("Число не трехзначное!!!или отрицательное!!!" + " получено: " + number);
+        return false;
+    }
 
-        //преобразование строки в int и возвратить результат
-        return Integer.parseInt(strResult);
+    //печать
+    private static String print(int number) {
+        if (checkNum(number)) {
+            System.out.println("Получено число: " + number);
+            System.out.println("Реверс числа: " + reverseDigits(number));
+        }
+        return " ";
     }
 
     public static void main(String[] args) {
-        System.out.println(reverseDigits(102));
-        System.out.println(reverseDigits(123));
-        System.out.println(reverseDigits(321));
-        System.out.println(reverseDigits(678));
-        System.out.println(reverseDigits(1234));  //4312
+        print(2221);
+        print(21);
+        print(231);
+        print(-231);
+        print(0);
+        print(120);
+        // TODO: 12.08.2021    120 -- 21
+
+        System.out.println(unit(123));
+        System.out.println(dozens(456));
+        System.out.println(hundred(789));
     }
 }
