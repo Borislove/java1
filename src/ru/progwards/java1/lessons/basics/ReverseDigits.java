@@ -10,7 +10,7 @@ public static int reverseDigits(int number), которая получает п�
 
 public class ReverseDigits {
 
-    public static int reverseDigits(int number) {
+   /* public static int reverseDigits(int number) {
         if (checkNum(number)) {
             return unit(number) + dozens(number) + hundred(number);
         } else
@@ -62,8 +62,8 @@ public class ReverseDigits {
         print(120);
         // TODO: 12.08.2021    120 -- 21
 
-     /*   System.out.println(unit(123));
+     *//*   System.out.println(unit(123));
         System.out.println(dozens(456));
-        System.out.println(hundred(789));*/
-    }
+        System.out.println(hundred(789));*//*
+    }*/
 }
