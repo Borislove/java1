@@ -17,7 +17,7 @@ public class ReverseDigits {
             return 0;
     }
 
-    //единицыл
+    //единицы
     private static int unit(int number) {
         return number % 10 * 100;
     }
@@ -55,14 +55,15 @@ public class ReverseDigits {
     public static void main(String[] args) {
         print(2221);
         print(21);
+        print(-544);
         print(231);
         print(-231);
         print(0);
         print(120);
         // TODO: 12.08.2021    120 -- 21
 
-        System.out.println(unit(123));
+     /*   System.out.println(unit(123));
         System.out.println(dozens(456));
-        System.out.println(hundred(789));
+        System.out.println(hundred(789));*/
     }
 }
