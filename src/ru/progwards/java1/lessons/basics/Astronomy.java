@@ -69,9 +69,9 @@ public class Astronomy {
     public static Double earthVsJupiter(),
     которая вычисляет отношение площади поверхности Земли
      к площади поверхности Юпитера используя готовые функции площадей планет*/
- /*   public static Double earthVsJupiter() {
+    public static Double earthVsJupiter() {
         return earthSquare() / jupiterSquare();
-    }*/
+    }
     ////////////////////////////////////////////////////////////////////////////////
 
     public static void main(String[] args) {
