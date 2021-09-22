@@ -1,6 +1,6 @@
 package ru.progwards.java1_2.lessons.compare_if_cycles;
 
-//Задача 1. Класс TriangleSimpleInfo
+//Задача 1. Класс TriangleSimpleInfo_5
 
 // v2 09.07.2020
 public class TriangleSimpleInfo {
