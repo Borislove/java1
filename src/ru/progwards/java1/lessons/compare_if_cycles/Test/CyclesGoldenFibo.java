@@ -1,6 +1,7 @@
-package ru.progwards.java1.lessons.compare_if_cycles;
+package ru.progwards.java1.lessons.compare_if_cycles.Test;
 
 //Задача 3. Класс CyclesGoldenFibo
+
 
 public class CyclesGoldenFibo {
 
@@ -9,7 +10,7 @@ public class CyclesGoldenFibo {
     public static boolean containsDigit(int number, int digit), которая будет возвращать true,
     если число number содержит цифру digit.*/
     public static boolean containsDigit(int number, int digit) {
-     //   print(number, digit);
+        //return String.valueOf(number).contains(String.valueOf(digit));
         return parse(number).contains(parse(digit));
     }
 
@@ -17,9 +18,21 @@ public class CyclesGoldenFibo {
         return String.valueOf(value);
     }
 
-    private static void print(int number, int digit) {
-        System.out.print("number = " + number + " digit = " + digit + " ");
+    // TODO: 25.09.2021 wtf?
+    //цифра ли это
+    /*public static boolean isDigit(int digit) {
+        System.out.print("Digit = " + digit + " ");
+        return digit >= 0 && digit <= 9 || isPositive(digit);
     }
+
+    private static boolean isPositive(int digit) {
+        return isOne(digit) >= 0 && isOne(digit) <= 9;
+    }
+
+    private static int isOne(int digit) {
+        return digit * -1;
+    }
+*/
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*3.2 Реализовать, используя любой цикл, функцию
@@ -75,16 +88,24 @@ public class CyclesGoldenFibo {
         //Числа Фибоначчи это ряд чисел 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 
 
-        System.out.println(containsDigit(999, 5));
-        System.out.println(containsDigit(999, 9));
-        System.out.println(containsDigit(921312599, 9));
-        System.out.println(containsDigit(921312599, 1));
-        System.out.println(containsDigit(921312599, 2));
-        System.out.println(containsDigit(921312599, 3));
-        System.out.println(containsDigit(921312599, 4));
-        System.out.println(containsDigit(921312599, 5));
-        System.out.println(containsDigit(921312599, 6));
-        System.out.println(containsDigit(921312549, 4));
+        //проверка на цифру
+       /* System.out.println(isDigit(9));
+        System.out.println(isDigit(1));
+        System.out.println(isDigit(10));
+        System.out.println(isDigit(0));
+        System.out.println(isDigit(-5));
+        System.out.println(isDigit(-999));
+
+
+        System.out.println(containsDigit(999,5));
+        System.out.println(containsDigit(999,9));
+        System.out.println(containsDigit(921312599,9));
+        System.out.println(containsDigit(921312599,1));
+        System.out.println(containsDigit(921312599,2));
+        System.out.println(containsDigit(921312599,3));
+        System.out.println(containsDigit(921312599,4));
+        System.out.println(containsDigit(921312599,5));
+        System.out.println(containsDigit(921312599,6));*/
     }
 }
 
