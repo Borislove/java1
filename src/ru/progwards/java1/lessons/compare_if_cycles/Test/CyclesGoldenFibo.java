@@ -20,7 +20,7 @@ public class CyclesGoldenFibo {
 
     // TODO: 25.09.2021 wtf?
     //цифра ли это
-    /*public static boolean isDigit(int digit) {
+    public static boolean isDigit(int digit) {
         System.out.print("Digit = " + digit + " ");
         return digit >= 0 && digit <= 9 || isPositive(digit);
     }
@@ -32,7 +32,6 @@ public class CyclesGoldenFibo {
     private static int isOne(int digit) {
         return digit * -1;
     }
-*/
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
     /*3.2 Реализовать, используя любой цикл, функцию
