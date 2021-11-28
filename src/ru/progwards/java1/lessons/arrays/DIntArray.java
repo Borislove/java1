@@ -39,7 +39,7 @@ public class DIntArray {
      при этом размер массива должен увеличиться на 1
     Для этого нужно будет разместить новый массив нужного размера, скопировать в него старый,
     c учетом того, что новый элемент окажется где-то в середине, и потом положить в нужный индекс элемент num.*/
-    public void atInsert(int pos, int num) {
+    public static void atInsert(int pos, int num) {
         System.out.println("position: " + pos + " число: " + num);
         int[] arrayIntCopy = Arrays.copyOf(numbersArray, numbersArray.length + 1);
         add(num);
@@ -48,6 +48,9 @@ public class DIntArray {
             arrayIntCopy[pos] = num;
 
         stringArray(arrayIntCopy);
+
+        numbersArray = arrayIntCopy;
+        stringArray(numbersArray);
     }
 
     private static void originalArray(int[] a) {
@@ -134,7 +137,7 @@ public class DIntArray {
         System.out.println(dIntArray.at(1));*/
         ///////////////////////////////////////////////
 
-        add(10);
+     /*   add(10);
         add(12);
         add(14);
         add(16);
@@ -144,7 +147,25 @@ public class DIntArray {
         //[10, 12, 14, 16, 999]
         //[10, 999, 14, 16, 0]
 
-        dIntArray.atDelete(2);
+        dIntArray.atDelete(2);*/
+
+
+        add(54);
+        add(-76);
+        add(-32);
+        add(21);
+        add(89);
+        add(90);
+        add(-10);
+        add(96);
+        add(-13);
+        add(-28);
+        add(-82);
+        add(13);
+        add(-85);
+        add(-85);
+
+        DIntArray.atInsert(1, 67);
     }
 }
 

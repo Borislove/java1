@@ -18,7 +18,7 @@ import java.util.Arrays;
 
 public class ArraySort {
 
-    private static void sort(int[] a) {
+    public static void sort(int[] a) {
         print("My array:");
         int lenght = a.length;
 
