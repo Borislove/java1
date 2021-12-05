@@ -72,6 +72,7 @@ public class DIntArray {
     public int at(int pos) - возвращает элемент по индексу pos.*/
     public int at(int pos) {
         System.out.println("Индекс: " + pos);
+        System.out.println("Number: " + numbersArray[pos]);
         return numbersArray.length > pos ? numbersArray[pos] : 0;
     }
 
@@ -83,21 +84,30 @@ public class DIntArray {
      Для этого нужно будет разместить новый массив нужного размера,
      скопировать в него старый, уже без элемента, который был в позиции pos.*/
     public void atDelete(int pos) {
-        System.out.println("Delete position: " + pos);
 
-        if (numbersArray.length > pos) {
-            int[] arrayIntCopy = Arrays.copyOf(numbersArray, numbersArray.length);
-
-
-
-            /*Arrays.sort(arrayIntCopy);
-            Arrays.binarySearch(arrayIntCopy, pos);*/
-
-            //arrayIntCopy[pos] = num;
-            stringArray(arrayIntCopy);
+        if (pos > numbersArray.length) {
+            System.out.println("позиция не может быть больше длины массива");
         }
-        /*Arrays.sort(arrayIntCopy);
-        Arrays.binarySearch(arrayIntCopy, pos);*/
+
+        originalArray(numbersArray);
+
+        int[] arr = new int[numbersArray.length - 1];
+
+        for (int i = 0; i < numbersArray.length; i++) {
+            if (i < pos) {
+                arr[i] = numbersArray[i];
+            }
+            if (i > pos) {
+                arr[i - 1] = numbersArray[i];
+            }
+            // stringArray(arr);
+        }
+        stringArray(arr);
+
+        at(pos);
+
+        numbersArray = arr;
+        originalArray(numbersArray);
     }
 
 
@@ -105,7 +115,7 @@ public class DIntArray {
 
         DIntArray dIntArray = new DIntArray();
 
-        //   dIntArray.numbersArray = new int[]{1, 2, 3, 4, 5};
+        dIntArray.numbersArray = new int[]{11, 22, 33, 44, 55, 66, 77};
 
         //originalArray(dIntArray.numbersArray);
 
@@ -150,7 +160,7 @@ public class DIntArray {
         dIntArray.atDelete(2);*/
 
 
-        add(54);
+       /* add(54);
         add(-76);
         add(-32);
         add(21);
@@ -165,7 +175,21 @@ public class DIntArray {
         add(-85);
         add(-85);
 
-        DIntArray.atInsert(1, 67);
+        DIntArray.atInsert(1, 67);*/
+
+        ////////////////////////////////////////////
+        //originalArray(numbersArray);
+        //dIntArray.atDelete(2);
+
+
+        //  dIntArray.atDelete(3);
+
+        //{11, 22, 33, 44, 55};
+        dIntArray.atDelete(3);
+
     }
 }
 
+
+
+/* последовательно добавлены значения: 82,-6,-81,-79,92. Вызван метод atDelete(0). Вызов метода at(0) возвратил значение: -63. Ожидалось: -6*/
