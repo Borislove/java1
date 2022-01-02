@@ -89,7 +89,7 @@ public class DIntArray {
             System.out.println("позиция не может быть больше длины массива");
         }
 
-        originalArray(numbersArray);
+      //  originalArray(numbersArray);
 
         int[] arr = new int[numbersArray.length - 1];
 
@@ -104,7 +104,7 @@ public class DIntArray {
         }
         stringArray(arr);
 
-        at(pos);
+      //  at(pos);
 
         numbersArray = arr;
         originalArray(numbersArray);
@@ -115,7 +115,7 @@ public class DIntArray {
 
         DIntArray dIntArray = new DIntArray();
 
-        dIntArray.numbersArray = new int[]{11, 22, 33, 44, 55, 66, 77};
+        //  dIntArray.numbersArray = new int[]{11, 22, 33, 44, 55, 66, 77};
 
         //originalArray(dIntArray.numbersArray);
 
@@ -185,8 +185,20 @@ public class DIntArray {
         //  dIntArray.atDelete(3);
 
         //{11, 22, 33, 44, 55};
-        dIntArray.atDelete(3);
 
+        //dIntArray.atDelete(3);
+
+        //-11,-16,67,-41,-80
+
+        add(-11);
+        add(-16);
+        add(67);
+        add(-41);
+        add(80);
+
+        dIntArray.atDelete(1);
+
+        dIntArray.at(1);
     }
 }
 
