@@ -11,7 +11,7 @@ package ru.progwards.java1.lessons.bitsworld;
 
 public class SumBits {
 
-    private static int sumBits(byte value) {
+    static int sumBits(byte value) {
         int sum = 0;
         for (int i = 0; i < 8; i++) {
             sum += last(value);
